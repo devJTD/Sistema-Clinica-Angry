@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Historial de Citas - Clínica</title>
+
+    <link th:href="@{/css/historial-style.css}" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+    <!-- =================== ENCABEZADO PRINCIPAL =================== -->
+    <header class="encabezado-principal">
+        <div class="contenido-encabezado contenedor">
+            <!-- Logo de la clínica -->
+            <div class="espacio-logo">
+                <img th:src="@{/img/Logo.png}" alt="Logo de la Clínica" class="logo" />
+            </div>
+
+            <!-- Navegación principal -->
+            <nav class="navegacion-principal">
+                <ul>
+                    <li><a th:href="@{/}">Inicio</a></li>
+                    <li><a th:href="@{/reserva}">Reservar Cita</a></li>
+                    <li><a th:href="@{/historial}" class="activo">Ver Historial</a></li>
+                </ul>
+            </nav>
+
+            <!-- Información del usuario -->
+            <div class="informacion-usuario">
+                <span>Hola, <strong th:text="${nombreUsuario}">Nombre y Apellido</strong></span>
+                <form th:action="@{/logout}" method="post">
+                    <button type="submit" id="botonCerrarSesion">Cerrar Sesión</button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <!-- =================== CONTENIDO PRINCIPAL =================== -->
+    <div class="container">
+        <!-- Título principal -->
+        <h2>Historial de Citas</h2>
+
+        <!-- Leyenda para colores de citas -->
+        <div class="legend">
+            <div class="legend-item">
+                <span class="legend-color color-procedimiento"></span>
+                Procedimiento
+            </div>
+            <div class="legend-item">
+                <span class="legend-color color-cita"></span>
+                Cita Médica
+            </div>
+        </div>
+
+        <!-- Pestañas para cambiar vistas -->
+        <div class="tabs">
+            <button class="tab active" onclick="mostrarSeccion('programadas')">Programadas</button>
+            <button class="tab" onclick="mostrarSeccion('historial')">Historial</button>
+        </div>
+
+        <!-- Sección de citas programadas -->
+        <div id="programadas" class="seccion">
+            <div class="empty-state">
+                No hay citas programadas aún.
+            </div>
+        </div>
+
+        <!-- Sección del historial de citas -->
+        <div id="historial" class="seccion oculto">
+            <div class="empty-state">
+                No hay citas anteriores por el momento.
+            </div>
+        </div>
+    </div>
+
+<script>
+function mostrarSeccion(idSeccion) {
+    // Oculta todas las secciones
+    document.querySelectorAll('.seccion').forEach(seccion => {
+        seccion.classList.add('oculto');
+    });
+
+    // Muestra la sección seleccionada
+    document.getElementById(idSeccion).classList.remove('oculto');
+
+    // Quita la clase 'active' de todas las pestañas
+    document.querySelectorAll('.tab').forEach(tab => {
+        tab.classList.remove('active');
+    });
+
+    // Añade la clase 'active' a la pestaña clicada
+    const pestañaActiva = Array.from(document.querySelectorAll('.tab')).find(tab => {
+        return tab.textContent.trim().toLowerCase() === idSeccion.toLowerCase();
+    });
+    if (pestañaActiva) {
+        pestañaActiva.classList.add('active');
+    }
+}
+</script>
+
+</body>
+</html>

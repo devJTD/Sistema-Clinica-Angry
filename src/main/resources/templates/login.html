@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" th:href="@{/css/login-style.css}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Iniciar Sesión</h1>
+        <form id="loginForm" th:action="@{/login}" method="post">
+            <div class="input-group">
+                <i class="fas fa-envelope"></i>
+                <input type="email" name="correo" placeholder="Correo Electrónico" required />
+            </div>
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" name="contraseña" placeholder="Contraseña" required />
+            </div>
+            <button type="submit" class="btn">Iniciar Sesión</button>
+        </form>
+
+        <!-- Mensajes desde query params -->
+        <div class="message-container error-message" th:if="${param.error}">Usuario o contraseña incorrectos.</div>
+        <div class="message-container success-message" th:if="${param.logout}">Has cerrado sesión exitosamente.</div>
+        <div class="message-container success-message" th:if="${param.registro}">¡Registro exitoso! Por favor, inicia sesión.</div>
+
+        <div class="links">
+            <a th:href="@{/registro}">¿No tienes cuenta? Regístrate aquí</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica - Menú Principal</title>
+    
+    <link rel="stylesheet" th:href="@{/css/inicio-style.css}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- =================== ENCABEZADO PRINCIPAL =================== -->
+    <header class="encabezado-principal">
+        <div class="contenido-encabezado contenedor">
+            <div class="espacio-logo">
+                <img th:src="@{/img/Logo.png}" alt="Logo de la Clínica" class="logo">
+            </div>
+
+            <nav class="navegacion-principal">
+                <ul>
+                    <li><a th:href="@{/}" class="activo">Inicio</a></li>
+                    <li><a th:href="@{/reserva}">Reservar Cita</a></li>
+                    <li><a th:href="@{/historial}">Ver Historial</a></li>
+                </ul>
+            </nav>
+
+            <div class="informacion-usuario">
+                <span>Hola, <strong th:text="${nombreCompleto}">Nombre y Apellido</strong></span>
+                <form th:action="@{/logout}" method="post">
+                    <button type="submit" id="botonCerrarSesion">Cerrar Sesión</button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <!-- =================== SECCIÓN BANNER =================== -->
+    <section class="seccion-banner">
+        <div class="contenido-banner contenedor">
+            <h2>Bienvenido a la Clínica Angry</h2>
+            <p>Tu salud es nuestra prioridad. Agenda tu cita hoy mismo.</p>
+        </div>
+    </section>
+
+    <!-- =================== SECCIÓN DE SERVICIOS =================== -->
+    <div class="contenedor contenido-principal">
+        <h2 class="titulo-seccion">Nuestros Servicios Principales</h2>
+        <div class="cuadricula-menu">
+            <a th:href="@{/reserva}" class="elemento-menu">
+                <i class="fas fa-calendar-alt icono"></i>
+                <h3>Reserva de Citas</h3>
+                <p>Programa tu consulta con médicos especialistas de forma rápida y sencilla.</p>
+            </a>
+            <a th:href="@{/historial}" class="elemento-menu">
+                <i class="fas fa-history icono"></i>
+                <h3>Historial de Citas</h3>
+                <p>Accede y gestiona un registro completo de tus citas médicas pasadas y futuras.</p>
+            </a>
+            <div class="elemento-menu">
+                <i class="fas fa-user-circle icono"></i>
+                <h3>Información de Paciente</h3>
+                <p>Actualiza tus datos personales y revisa tu información médica.</p>
+            </div>
+            <div class="elemento-menu">
+                <i class="fas fa-headset icono"></i>
+                <h3>Contacta con Nosotros</h3>
+                <p>¿Necesitas ayuda? Ponte en contacto con nuestro equipo de soporte.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
