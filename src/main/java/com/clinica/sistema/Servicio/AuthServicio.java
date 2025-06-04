@@ -13,28 +13,24 @@ import java.util.List;
 
 @Service
 public class AuthServicio {
-    // Ruta de pacientes.json donde se almacenan los pacientes
-    private final String ruta = "src/main/resources/data/pacientes.json";
+
+    // Ruta externa donde está el archivo pacientes.json (fuera del jar)
+    private final String rutaPacientes = "data/pacientes.json";
 
     private final ObjectMapper mapper = new ObjectMapper();
-
-    // Loggers para registrar eventos
     private final Logger logger = LoggerFactory.getLogger(AuthServicio.class);
 
     // Carga la lista de pacientes desde el archivo JSON.
     public List<Paciente> listarPacientes() {
-        try {
-            File file = new File(ruta);
+        File file = new File(rutaPacientes);
 
-            // Si el archivo no existe, se devuelve una lista vacía
+        try {
             if (!file.exists()) {
                 logger.warn("Archivo pacientes.json no encontrado, devolviendo lista vacía.");
                 return new ArrayList<>();
             }
 
-            // Leer y mapear la lista de pacientes desde el archivo JSON
-            List<Paciente> pacientes = mapper.readValue(file, new TypeReference<List<Paciente>>() {
-            });
+            List<Paciente> pacientes = mapper.readValue(file, new TypeReference<List<Paciente>>() {});
             logger.info("Se han cargado {} pacientes desde el archivo JSON.", pacientes.size());
             return pacientes;
 
@@ -48,11 +44,13 @@ public class AuthServicio {
     public boolean existePacientePorEmailODni(String email, String dni) {
         boolean existe = listarPacientes().stream()
                 .anyMatch(p -> p.getCorreo().equalsIgnoreCase(email) || p.getDni().equals(dni));
+
         if (existe) {
             logger.warn("Se encontró un paciente existente con el correo {} o DNI {}.", email, dni);
         } else {
             logger.info("No existe un paciente con el correo {} ni DNI {}. Se puede registrar.", email, dni);
         }
+
         return existe;
     }
 
@@ -65,7 +63,8 @@ public class AuthServicio {
         pacientes.add(paciente);
 
         try {
-            mapper.writeValue(new File(ruta), pacientes);
+            File file = new File(rutaPacientes);
+            mapper.writerWithDefaultPrettyPrinter().writeValue(file, pacientes);
             logger.info("Paciente guardado exitosamente con ID {} y correo {}", paciente.getId(), paciente.getCorreo());
         } catch (IOException e) {
             logger.error("Error al guardar el paciente en el archivo JSON: {}", e.getMessage());
@@ -80,5 +79,4 @@ public class AuthServicio {
         }
         return null;
     }
-
 }

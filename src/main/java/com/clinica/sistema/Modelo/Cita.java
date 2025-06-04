@@ -3,7 +3,6 @@ package com.clinica.sistema.Modelo;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import java.time.LocalDate;
 import java.time.LocalTime;
 
@@ -15,8 +14,6 @@ public class Cita {
     private LocalDate fecha;
     private LocalTime hora;
     private String estado;
-
     private Paciente paciente;
     private Medico medico;
-    private Notificacion notificacion;
 }

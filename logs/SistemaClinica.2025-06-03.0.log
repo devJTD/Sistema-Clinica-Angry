@@ -1,0 +1,166 @@
+2025-06-03 21:03:00.715 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 11500 (C:\Users\Jeanpierre Chipa\Desktop\sistema\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistema)
+2025-06-03 21:03:00.721 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-06-03 21:03:05.093 INFO  - Started SistemaApplication in 5.798 seconds (process running for 7.281)
+2025-06-03 21:03:12.329 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-03 21:04:00.642 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 21524 (C:\Users\Jeanpierre Chipa\Desktop\sistema\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistema)
+2025-06-03 21:04:00.646 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-06-03 21:04:04.842 INFO  - Started SistemaApplication in 5.599 seconds (process running for 7.024)
+2025-06-03 21:04:16.682 INFO  - El usuario ha accedido a la página de reserva de cita.
+2025-06-03 21:04:18.817 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-03 21:04:19.816 INFO  - El usuario ha accedido a la página de reserva de cita.
+2025-06-03 21:04:54.124 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-06-03 21:04:56.072 INFO  - El usuario ha accedido a la página de reserva de cita.
+2025-06-03 21:04:56.759 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-03 21:04:57.507 INFO  - El usuario ha accedido a la página de reserva de cita.
+2025-06-03 21:05:09.826 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-06-03 21:05:12.041 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-03 21:05:13.095 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-03 21:05:13.934 INFO  - El usuario ha accedido a la página de reserva de cita.
+2025-06-03 21:05:18.282 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-03 21:05:19.546 INFO  - El usuario ha accedido a la página de reserva de cita.
+2025-06-03 21:29:49.847 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 10460 (C:\Users\Jeanpierre Chipa\Desktop\sistema\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistema)
+2025-06-03 21:29:49.852 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-06-03 21:29:54.742 INFO  - Started SistemaApplication in 6.241 seconds (process running for 8.004)
+2025-06-03 21:30:01.416 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-06-03 21:30:02.878 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-03 21:30:06.630 INFO  - El usuario ha accedido a la página de reserva de cita.
+2025-06-03 21:30:13.770 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-03 21:30:14.922 INFO  - El usuario ha accedido a la página de reserva de cita.
+2025-06-03 21:30:24.061 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-06-03 21:31:10.467 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-03 21:31:11.852 INFO  - El usuario ha accedido a la página de reserva de cita.
+2025-06-03 21:31:12.943 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-06-03 21:31:13.577 INFO  - El usuario ha accedido a la página de reserva de cita.
+2025-06-03 21:32:23.264 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 2728 (C:\Users\Jeanpierre Chipa\Desktop\sistema\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistema)
+2025-06-03 21:32:23.270 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-06-03 21:32:27.627 INFO  - Started SistemaApplication in 5.705 seconds (process running for 7.156)
+2025-06-03 21:32:29.367 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-03 21:32:31.416 INFO  - El usuario ha accedido a la página de reserva de cita.
+2025-06-03 21:32:32.413 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-06-03 21:32:33.057 INFO  - El usuario ha accedido a la página de reserva de cita.
+2025-06-03 21:32:33.617 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-03 21:32:34.455 INFO  - El usuario ha accedido a la página de reserva de cita.
+2025-06-03 21:32:34.849 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-06-03 21:32:35.255 INFO  - El usuario ha accedido a la página de reserva de cita.
+2025-06-03 21:32:35.604 INFO  - El usuario ha accedido a la página de reserva de cita.
+2025-06-03 21:32:35.912 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-03 21:32:36.385 INFO  - El usuario ha accedido a la página de reserva de cita.
+2025-06-03 21:32:36.756 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-06-03 21:32:37.137 INFO  - El usuario ha accedido a la página de reserva de cita.
+2025-06-03 21:32:38.022 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-03 21:32:39.732 INFO  - El usuario ha accedido a la página de reserva de cita.
+2025-06-03 21:32:41.920 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-03 21:32:43.610 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-06-03 21:37:06.855 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 6628 (C:\Users\Jeanpierre Chipa\Desktop\sistema\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistema)
+2025-06-03 21:37:06.857 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-06-03 21:37:10.852 INFO  - Started SistemaApplication in 5.257 seconds (process running for 6.673)
+2025-06-03 21:38:02.502 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-06-03 21:38:04.473 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-03 21:38:11.618 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-03 21:38:13.323 INFO  - El usuario ha accedido a la página de reserva de cita.
+2025-06-03 21:38:14.781 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-06-03 21:38:16.525 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-03 21:39:30.467 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-03 21:39:33.590 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-03 21:39:34.003 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-03 21:39:34.165 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-03 21:39:34.298 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-03 21:39:34.467 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-03 21:39:54.308 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 29228 (C:\Users\Jeanpierre Chipa\Desktop\sistema\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistema)
+2025-06-03 21:39:54.318 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-06-03 21:39:59.770 INFO  - Started SistemaApplication in 7.965 seconds (process running for 10.15)
+2025-06-03 21:40:00.168 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-03 21:40:02.859 INFO  - El usuario ha accedido a la página de reserva de cita.
+2025-06-03 21:40:04.192 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-06-03 21:40:43.309 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-03 21:40:47.534 INFO  - El usuario ha accedido a la página de reserva de cita.
+2025-06-03 21:40:47.908 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-06-03 21:40:48.957 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-03 21:41:00.172 INFO  - El usuario ha accedido a la página de login.
+2025-06-03 21:41:47.293 INFO  - El usuario ha accedido a la página de registro.
+2025-06-03 21:42:46.576 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 6328 (C:\Users\Jeanpierre Chipa\Desktop\sistema\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistema)
+2025-06-03 21:42:46.580 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-06-03 21:42:50.863 INFO  - Started SistemaApplication in 5.554 seconds (process running for 6.915)
+2025-06-03 21:43:01.877 INFO  - El usuario ha accedido a la página de registro.
+2025-06-03 21:43:10.363 INFO  - El usuario ha accedido a la página de login.
+2025-06-03 21:43:15.257 INFO  - El usuario ha accedido a la página de registro.
+2025-06-03 21:43:30.935 INFO  - El usuario ha accedido a la página de registro.
+2025-06-03 21:50:48.218 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 18784 (C:\Users\Jeanpierre Chipa\Desktop\sistema\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistema)
+2025-06-03 21:50:48.225 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-06-03 21:50:53.241 INFO  - Started SistemaApplication in 6.134 seconds (process running for 7.901)
+2025-06-03 21:53:13.156 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 12376 (C:\Users\Jeanpierre Chipa\Desktop\sistema\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistema)
+2025-06-03 21:53:13.156 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-06-03 21:53:17.902 INFO  - Started SistemaApplication in 6.056 seconds (process running for 7.357)
+2025-06-03 21:56:48.204 INFO  - Intentando registrar paciente con correo: chipa.robladillo@gmail.com y DNI: 71632364
+2025-06-03 21:56:48.210 WARN  - Archivo pacientes.json no encontrado, devolviendo lista vacía.
+2025-06-03 21:56:48.212 INFO  - No existe un paciente con el correo chipa.robladillo@gmail.com ni DNI 71632364. Se puede registrar.
+2025-06-03 21:56:48.213 WARN  - Archivo pacientes.json no encontrado, devolviendo lista vacía.
+2025-06-03 21:56:48.475 INFO  - Paciente guardado exitosamente con ID 1749005808214 y correo chipa.robladillo@gmail.com
+2025-06-03 21:56:48.477 INFO  - Paciente registrado exitosamente: chipa.robladillo@gmail.com
+2025-06-03 21:56:48.497 INFO  - El usuario ha accedido a la página de login.
+2025-06-03 21:59:00.173 INFO  - Intentando registrar paciente con correo: chipa.robladillo@gmail.com y DNI: 71632364
+2025-06-03 21:59:00.267 INFO  - Se han cargado 1 pacientes desde el archivo JSON.
+2025-06-03 21:59:00.267 WARN  - Se encontró un paciente existente con el correo chipa.robladillo@gmail.com o DNI 71632364.
+2025-06-03 21:59:00.268 WARN  - Registro fallido: paciente con correo chipa.robladillo@gmail.com o DNI 71632364 ya existe.
+2025-06-03 22:06:54.835 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 24068 (C:\Users\Jeanpierre Chipa\Desktop\sistema\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistema)
+2025-06-03 22:06:54.837 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-06-03 22:06:59.230 INFO  - Started SistemaApplication in 5.446 seconds (process running for 6.669)
+2025-06-03 22:07:24.948 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-03 22:07:28.940 INFO  - El usuario ha accedido a la página de login.
+2025-06-03 22:07:55.535 INFO  - El usuario ha accedido a la página de login.
+2025-06-03 22:13:04.773 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 18988 (C:\Users\Jeanpierre Chipa\Desktop\sistema\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistema)
+2025-06-03 22:13:04.779 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-06-03 22:13:10.533 INFO  - Started SistemaApplication in 7.161 seconds (process running for 9.208)
+2025-06-03 22:13:45.090 INFO  - El usuario ha accedido a la página de login.
+2025-06-03 22:24:53.094 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 27588 (C:\Users\Jeanpierre Chipa\Desktop\sistema\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistema)
+2025-06-03 22:24:53.100 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-06-03 22:24:56.758 INFO  - Started SistemaApplication in 4.806 seconds (process running for 6.196)
+2025-06-03 22:25:24.690 INFO  - El usuario ha accedido a la página de login.
+2025-06-03 22:25:34.978 INFO  - Se han cargado 1 pacientes desde el archivo JSON.
+2025-06-03 22:28:06.218 INFO  - El usuario ha accedido a la página de login.
+2025-06-03 22:28:13.580 INFO  - Se han cargado 1 pacientes desde el archivo JSON.
+2025-06-03 22:28:13.590 INFO  - El usuario ha accedido a la página de login.
+2025-06-03 22:28:24.307 INFO  - Se han cargado 1 pacientes desde el archivo JSON.
+2025-06-03 22:29:02.585 INFO  - El usuario ha accedido a la página de login.
+2025-06-03 22:29:15.589 INFO  - Se han cargado 1 pacientes desde el archivo JSON.
+2025-06-03 22:29:34.287 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 21248 (C:\Users\Jeanpierre Chipa\Desktop\sistema\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistema)
+2025-06-03 22:29:34.291 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-06-03 22:29:38.185 INFO  - Started SistemaApplication in 4.806 seconds (process running for 6.049)
+2025-06-03 22:29:50.627 INFO  - El usuario ha accedido a la página de login.
+2025-06-03 22:30:00.506 INFO  - Se han cargado 1 pacientes desde el archivo JSON.
+2025-06-03 22:30:00.525 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-03 22:30:06.073 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-06-03 22:30:06.699 INFO  - El usuario ha accedido a la página de reserva de cita.
+2025-06-03 22:30:07.248 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-03 22:30:08.445 INFO  - El usuario ha accedido a la página de reserva de cita.
+2025-06-03 22:30:11.517 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-03 22:31:50.262 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 19564 (C:\Users\Jeanpierre Chipa\Desktop\sistema\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistema)
+2025-06-03 22:31:50.269 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-06-03 22:31:57.291 INFO  - Started SistemaApplication in 7.894 seconds (process running for 9.039)
+2025-06-03 22:31:59.825 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-03 22:34:34.481 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-03 22:34:50.937 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 21608 (C:\Users\Jeanpierre Chipa\Desktop\sistema\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistema)
+2025-06-03 22:34:50.945 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-06-03 22:34:56.022 INFO  - Started SistemaApplication in 6.311 seconds (process running for 7.592)
+2025-06-03 22:34:57.876 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-03 22:35:00.838 INFO  - El usuario ha accedido a la página de login.
+2025-06-03 22:35:21.884 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-03 22:35:23.225 INFO  - El usuario ha accedido a la página de reserva de cita.
+2025-06-03 22:35:24.080 INFO  - El usuario ha accedido a la página de login.
+2025-06-03 22:35:35.258 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-03 22:35:39.410 INFO  - El usuario ha accedido a la página de reserva de cita.
+2025-06-03 22:35:41.258 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-06-03 22:35:41.980 INFO  - El usuario ha accedido a la página de reserva de cita.
+2025-06-03 22:35:42.440 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-03 22:35:42.959 INFO  - El usuario ha accedido a la página de reserva de cita.
+2025-06-03 22:35:43.264 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-06-03 22:35:43.904 INFO  - El usuario ha accedido a la página de reserva de cita.
+2025-06-03 22:35:45.111 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-06-03 22:35:45.512 INFO  - El usuario ha accedido a la página de reserva de cita.
+2025-06-03 22:35:47.651 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-03 22:37:05.467 INFO  - El usuario ha accedido a la página de reserva de cita.
+2025-06-03 22:37:07.474 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-03 22:37:08.980 INFO  - El usuario ha accedido a la página de reserva de cita.
+2025-06-03 22:37:11.287 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-03 22:37:19.092 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-03 22:37:49.366 INFO  - El usuario ha accedido a la página de reserva de cita.

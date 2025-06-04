@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -8,6 +9,7 @@
     <link th:href="@{/css/historial-style.css}" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
+
 <body>
 
     <!-- =================== ENCABEZADO PRINCIPAL =================== -->
@@ -62,10 +64,31 @@
 
         <!-- Sección de citas programadas -->
         <div id="programadas" class="seccion">
-            <div class="empty-state">
+
+            <!-- Mostrar mensaje si no hay citas pendientes -->
+            <div th:if="${#lists.isEmpty(citasPendientes)}" class="empty-state">
                 No hay citas programadas aún.
             </div>
+
+            <!-- Mostrar lista de citas pendientes -->
+            <div th:if="${!#lists.isEmpty(citasPendientes)}" class="lista-citas">
+                <div th:each="cita : ${citasPendientes}" class="cita-contenedor">
+                    <div class="info-cita">
+                        <p><strong>ID:</strong> <span th:text="${cita.id}">1</span></p>
+                        <p><strong>Fecha:</strong> <span th:text="${cita.fecha}">2025-06-05</span></p>
+                        <p><strong>Hora:</strong> <span th:text="${cita.hora}">10:00</span></p>
+                        <p><strong>Médico:</strong> <span th:text="${cita.medico.nombreCompleto}">Dr. Juan Pérez</span>
+                        </p>
+                        <p><strong>Especialidad:</strong> <span
+                                th:text="${cita.medico.especialidad.nombre}">Cardiología</span></p>
+                    </div>
+                    <div class="acciones-cita">
+                        <button class="btn-cancelar">Cancelar Cita</button>
+                    </div>
+                </div>
+            </div>
         </div>
+
 
         <!-- Sección del historial de citas -->
         <div id="historial" class="seccion oculto">
@@ -75,30 +98,31 @@
         </div>
     </div>
 
-<script>
-function mostrarSeccion(idSeccion) {
-    // Oculta todas las secciones
-    document.querySelectorAll('.seccion').forEach(seccion => {
-        seccion.classList.add('oculto');
-    });
+    <script>
+        function mostrarSeccion(idSeccion) {
+            // Oculta todas las secciones
+            document.querySelectorAll('.seccion').forEach(seccion => {
+                seccion.classList.add('oculto');
+            });
 
-    // Muestra la sección seleccionada
-    document.getElementById(idSeccion).classList.remove('oculto');
+            // Muestra la sección seleccionada
+            document.getElementById(idSeccion).classList.remove('oculto');
 
-    // Quita la clase 'active' de todas las pestañas
-    document.querySelectorAll('.tab').forEach(tab => {
-        tab.classList.remove('active');
-    });
+            // Quita la clase 'active' de todas las pestañas
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
 
-    // Añade la clase 'active' a la pestaña clicada
-    const pestañaActiva = Array.from(document.querySelectorAll('.tab')).find(tab => {
-        return tab.textContent.trim().toLowerCase() === idSeccion.toLowerCase();
-    });
-    if (pestañaActiva) {
-        pestañaActiva.classList.add('active');
-    }
-}
-</script>
+            // Añade la clase 'active' a la pestaña clicada
+            const pestañaActiva = Array.from(document.querySelectorAll('.tab')).find(tab => {
+                return tab.textContent.trim().toLowerCase() === idSeccion.toLowerCase();
+            });
+            if (pestañaActiva) {
+                pestañaActiva.classList.add('active');
+            }
+        }
+    </script>
 
 </body>
+
 </html>

@@ -6,21 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Reservar Cita</title>
 
-    <!-- CSS general para reserva + header -->
-    <link th:href="@{/css/reserva-style.css}" rel="stylesheet" type="text/css" />
+    <!-- Estilo CSS para el formulario -->
+    <link th:href="@{/css/reserva-style.css}" rel="stylesheet" />
 
-    <!-- Íconos de Font Awesome -->
+    <!-- Íconos Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 
 <body>
-    <!-- =================== ENCABEZADO PRINCIPAL =================== -->
     <header class="encabezado-principal">
         <div class="contenido-encabezado contenedor">
             <div class="espacio-logo">
                 <img th:src="@{/img/Logo.png}" alt="Logo de la Clínica" class="logo" />
             </div>
-
             <nav class="navegacion-principal">
                 <ul>
                     <li><a th:href="@{/}">Inicio</a></li>
@@ -28,7 +26,6 @@
                     <li><a th:href="@{/historial}">Ver Historial</a></li>
                 </ul>
             </nav>
-
             <div class="informacion-usuario">
                 <span>Hola, <strong th:text="${nombreUsuario}">Nombre y Apellido</strong></span>
                 <form th:action="@{/logout}" method="post">
@@ -38,7 +35,6 @@
         </div>
     </header>
 
-    <!-- CONTENIDO PRINCIPAL: FORMULARIO DE RESERVA -->
     <main class="reserva-container">
         <h2>Agenda tu Cita</h2>
         <form th:action="@{/reserva/confirmar}" method="post" class="reserva-form">
@@ -48,57 +44,54 @@
                 <label for="idEspecialidad">Especialidad:</label>
                 <select id="idEspecialidad" name="idEspecialidad" required>
                     <option value="">Selecciona una especialidad</option>
-                    <option value="1">Cardiología</option>
-                    <option value="2">Dermatología</option>
-                    <option value="3">Pediatría</option>
-                    <option value="4">Oftalmología</option>
-                    <option value="5">Odontología</option>
                 </select>
             </div>
 
             <!-- Médico -->
             <div class="input-group">
                 <label for="idMedico">Médico:</label>
-                <select id="idMedico" name="idMedico" required>
+                <select id="idMedico" name="idMedico" required disabled>
                     <option value="">Selecciona un médico</option>
-                    <option value="101">Dr. Juan Pérez (Cardiología)</option>
-                    <option value="102">Dra. Ana García (Dermatología)</option>
-                    <option value="103">Dr. Carlos Ruíz (Pediatría)</option>
                 </select>
             </div>
 
             <!-- Fecha -->
             <div class="input-group">
                 <label for="fechaCita">Fecha de la Cita:</label>
-                <input type="date" id="fechaCita" name="fechaCita" required />
+                <input type="date" id="fechaCita" name="fechaCita" required disabled />
             </div>
 
             <!-- Hora -->
             <div class="input-group">
                 <label for="horaCita">Hora de la Cita:</label>
-                <select id="horaCita" name="horaCita" required>
+                <select id="horaCita" name="horaCita" required disabled>
                     <option value="">Selecciona una hora</option>
-                    <option value="09:00">09:00 AM</option>
-                    <option value="10:00">10:00 AM</option>
-                    <option value="11:00">11:00 AM</option>
-                    <option value="12:00">12:00 PM</option>
-                    <option value="13:00">01:00 PM</option>
-                    <option value="14:00">02:00 PM</option>
-                    <option value="15:00">03:00 PM</option>
-                    <option value="16:00">04:00 PM</option>
-                    <option value="17:00">05:00 PM</option>
                 </select>
             </div>
 
-            <!-- Botón -->
-            <button type="submit" class="btn-primary">Confirmar Cita</button>
+            <!-- Botón que muestra el modal -->
+            <button type="button" class="btn-primary" onclick="mostrarConfirmacion()">Confirmar Cita</button>
+
+            <!-- Modal de confirmación -->
+            <div id="modalConfirmacion" class="modal">
+                <div class="modal-contenido">
+                    <h3>¿Confirmar Cita?</h3>
+                    <p>¿Estás seguro de que deseas reservar esta cita médica?</p>
+                    <div class="modal-acciones">
+                        <button type="button" onclick="confirmarCita()">Sí, Confirmar</button>
+                        <button type="button" onclick="cerrarModal()">Cancelar</button>
+                    </div>
+                </div>
+            </div>
         </form>
 
-        <!-- Link para volver -->
         <div class="links">
             <a th:href="@{/}">← Volver al Inicio</a>
         </div>
     </main>
+
+    <!-- JavaScript externo -->
+    <script th:src="@{/js/reserva-script.js}"></script>
 </body>
 
 </html>
