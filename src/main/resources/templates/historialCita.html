@@ -42,6 +42,12 @@
         <!-- Título principal -->
         <h2>Historial de Citas</h2>
 
+        <div class="excel-export-button">
+            <a th:href="@{/historial/exportar/excel}" class="btn btn-exportar">
+                <i class="fas fa-file-excel"></i> Exportar a Excel
+            </a>
+        </div>
+
         <!-- Leyenda para colores de citas -->
         <div class="legend">
             <div class="legend-item">
@@ -75,7 +81,7 @@
                         <p><strong>ID:</strong> <span th:text="${cita.id}">1</span></p>
                         <p><strong>Fecha:</strong> <span th:text="${cita.fecha}">2025-06-05</span></p>
                         <p><strong>Hora:</strong> <span th:text="${cita.hora}">10:00</span></p>
-                        <p><strong>Médico:</strong> <span th:text="${cita.idMedico}">Dr. Juan Pérez</span>
+                        <p><strong>Médico:</strong> <span th:text="${cita.idMedico}">105</span>
                         </p>
                     </div>
                     <div class="acciones-cita">

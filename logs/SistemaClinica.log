@@ -127,3 +127,224 @@
 2025-06-06 13:35:21.857 INFO  - El usuario ha accedido a la página de inicio.
 2025-06-06 13:36:00.400 INFO  - El usuario ha accedido a la página de historial de citas.
 2025-06-06 13:36:32.522 INFO  - El usuario ha accedido a la página de login.
+2025-06-06 14:25:02.313 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 18612 (C:\Users\Jeanpierre Chipa\Desktop\sistemas seguir\Sistema-Clinica-Angry\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistemas seguir\Sistema-Clinica-Angry)
+2025-06-06 14:25:02.317 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-06-06 14:25:04.700 INFO  - Archivo pacientes.json creado en: C:\Users\Jeanpierre Chipa\.clinica-sistema\pacientes.json
+2025-06-06 14:25:05.471 INFO  - Started SistemaApplication in 4.027 seconds (process running for 5.104)
+2025-06-06 14:40:00.059 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 22944 (C:\Users\Jeanpierre Chipa\Desktop\sistemas seguir\Sistema-Clinica-Angry\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistemas seguir\Sistema-Clinica-Angry)
+2025-06-06 14:40:00.086 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-06-06 14:40:14.187 INFO  - Archivo pacientes.json encontrado en: C:\Users\Jeanpierre Chipa\.clinica-sistema\pacientes.json
+2025-06-06 14:40:20.161 INFO  - Started SistemaApplication in 23.498 seconds (process running for 26.379)
+2025-06-06 14:40:25.776 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-06 14:40:33.498 INFO  - El usuario ha accedido a la página de login.
+2025-06-06 14:41:38.936 INFO  - Intentando registrar paciente con correo: chipa.robladillo5@gmail.com y DNI: 71632478
+2025-06-06 14:41:38.950 INFO  - No existe un paciente con el correo chipa.robladillo5@gmail.com ni DNI 71632478. Se puede registrar.
+2025-06-06 14:41:38.993 INFO  - Paciente guardado exitosamente con ID 1749238898950 y correo chipa.robladillo5@gmail.com
+2025-06-06 14:41:39.017 INFO  - Paciente registrado exitosamente: chipa.robladillo5@gmail.com
+2025-06-06 14:41:39.027 INFO  - El usuario ha accedido a la página de login.
+2025-06-06 14:41:46.723 INFO  - Paciente encontrado para login: chipa.robladillo5@gmail.com
+2025-06-06 14:41:46.725 INFO  - Login exitoso para el correo: chipa.robladillo5@gmail.com
+2025-06-06 14:41:46.731 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-06 14:41:50.282 INFO  - Accediendo a la página de reserva de cita.
+2025-06-06 14:42:00.496 INFO  - Intentando crear cita con fecha: 2025-06-07, hora: 11:00, idMedico: 107
+2025-06-06 14:42:00.498 INFO  - Intentando crear cita para fecha: 2025-06-07, hora: 11:00, medicoId: 107
+2025-06-06 14:42:00.567 ERROR - Error de E/S al crear cita: Unrecognized field "especialidad" (class com.clinica.sistema.Modelo.Medico), not marked as ignorable (4 known properties: "horarios", "id", "nombreCompleto", "idEspecialidad"])
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 2, column: 69] (through reference chain: java.util.ArrayList[0]->com.clinica.sistema.Modelo.Medico["especialidad"])
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "especialidad" (class com.clinica.sistema.Modelo.Medico), not marked as ignorable (4 known properties: "horarios", "id", "nombreCompleto", "idEspecialidad"])
+ at [Source: REDACTED (`StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION` disabled); line: 2, column: 69] (through reference chain: java.util.ArrayList[0]->com.clinica.sistema.Modelo.Medico["especialidad"])
+	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:1180)
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:2244)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1823)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownVanilla(BeanDeserializerBase.java:1801)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:308)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:169)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeFromArray(CollectionDeserializer.java:360)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:245)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:29)
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:342)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4971)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3887)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3870)
+	at com.clinica.sistema.Servicio.CitaServicio.obtenerMedicoPorId(CitaServicio.java:148)
+	at com.clinica.sistema.Servicio.CitaServicio.crearCita(CitaServicio.java:100)
+	at com.clinica.sistema.Controlador.ReservaControlador.confirmarCita(ReservaControlador.java:58)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2025-06-06 14:42:00.583 INFO  - Accediendo a la página de reserva de cita.
+2025-06-06 14:44:30.334 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 19324 (C:\Users\Jeanpierre Chipa\Desktop\sistemas seguir\Sistema-Clinica-Angry\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistemas seguir\Sistema-Clinica-Angry)
+2025-06-06 14:44:30.337 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-06-06 14:44:32.423 INFO  - Archivo pacientes.json encontrado en: C:\Users\Jeanpierre Chipa\.clinica-sistema\pacientes.json
+2025-06-06 14:44:33.144 INFO  - Started SistemaApplication in 3.529 seconds (process running for 4.523)
+2025-06-06 14:44:38.475 INFO  - Accediendo a la página de reserva de cita.
+2025-06-06 14:44:42.921 INFO  - Accediendo a la página de reserva de cita.
+2025-06-06 14:44:47.678 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-06 14:44:48.998 INFO  - Accediendo a la página de reserva de cita.
+2025-06-06 14:45:20.024 INFO  - Intentando crear cita con fecha: 2025-06-06, hora: 11:00, idMedico: 129
+2025-06-06 14:45:20.024 WARN  - Intento de confirmar cita sin paciente logueado.
+2025-06-06 14:45:20.032 INFO  - El usuario ha accedido a la página de login.
+2025-06-06 14:45:39.675 INFO  - Paciente encontrado para login: chipa.robladillo5@gmail.com
+2025-06-06 14:45:39.676 INFO  - Login exitoso para el correo: chipa.robladillo5@gmail.com
+2025-06-06 14:45:39.684 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-06 14:45:40.909 INFO  - Accediendo a la página de reserva de cita.
+2025-06-06 14:45:51.330 INFO  - Intentando crear cita con fecha: 2025-06-06, hora: 11:00, idMedico: 129
+2025-06-06 14:45:51.330 INFO  - Intentando crear cita para fecha: 2025-06-06, hora: 11:00, medicoId: 129
+2025-06-06 14:45:51.371 INFO  - Cita construida con ID: 3, Fecha: 2025-06-06, Hora: 11:00, Paciente: 1749005808214, Medico: 129
+2025-06-06 14:45:51.406 INFO  - Citas guardadas exitosamente en: data/citas.json
+2025-06-06 14:45:51.407 INFO  - Cita guardada exitosamente.
+2025-06-06 14:45:51.407 INFO  - Cita creada correctamente
+2025-06-06 14:45:51.414 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-06-06 14:59:54.449 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 12576 (C:\Users\Jeanpierre Chipa\Desktop\sistemas seguir\Sistema-Clinica-Angry\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistemas seguir\Sistema-Clinica-Angry)
+2025-06-06 14:59:54.452 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-06-06 14:59:56.544 INFO  - Archivo pacientes.json encontrado en: C:\Users\Jeanpierre Chipa\.clinica-sistema\pacientes.json
+2025-06-06 14:59:57.356 INFO  - Started SistemaApplication in 3.691 seconds (process running for 4.785)
+2025-06-06 15:00:02.238 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-06-06 15:00:02.239 WARN  - Usuario no logueado intentó acceder a historial.
+2025-06-06 15:00:02.262 INFO  - El usuario ha accedido a la página de login.
+2025-06-06 15:00:13.807 INFO  - Paciente encontrado para login: chipa.robladillo5@gmail.com
+2025-06-06 15:00:13.808 INFO  - Login exitoso para el correo: chipa.robladillo5@gmail.com
+2025-06-06 15:00:13.814 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-06 15:00:15.097 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-06-06 15:00:50.813 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 15356 (C:\Users\Jeanpierre Chipa\Desktop\sistemas seguir\Sistema-Clinica-Angry\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistemas seguir\Sistema-Clinica-Angry)
+2025-06-06 15:00:50.817 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-06-06 15:00:52.786 INFO  - Archivo pacientes.json encontrado en: C:\Users\Jeanpierre Chipa\.clinica-sistema\pacientes.json
+2025-06-06 15:00:53.643 INFO  - Started SistemaApplication in 3.584 seconds (process running for 4.562)
+2025-06-06 15:00:56.894 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-06-06 15:00:56.895 WARN  - Usuario no logueado intentó acceder a historial.
+2025-06-06 15:00:56.915 INFO  - El usuario ha accedido a la página de login.
+2025-06-06 15:01:05.665 WARN  - Paciente no encontrado para login con correo: chipa.robladillo@gmail.com
+2025-06-06 15:01:05.665 WARN  - Login fallido para el correo: chipa.robladillo@gmail.com
+2025-06-06 15:01:05.672 INFO  - El usuario ha accedido a la página de login.
+2025-06-06 15:01:16.793 WARN  - Paciente no encontrado para login con correo: chipa.robladillo@gmail.com
+2025-06-06 15:01:16.794 WARN  - Login fallido para el correo: chipa.robladillo@gmail.com
+2025-06-06 15:01:16.800 INFO  - El usuario ha accedido a la página de login.
+2025-06-06 15:01:39.119 WARN  - Paciente no encontrado para login con correo: chipa.robladillo@gmail.com
+2025-06-06 15:01:39.119 WARN  - Login fallido para el correo: chipa.robladillo@gmail.com
+2025-06-06 15:01:39.126 INFO  - El usuario ha accedido a la página de login.
+2025-06-06 15:01:44.381 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-06 15:01:48.342 INFO  - El usuario ha accedido a la página de login.
+2025-06-06 15:02:00.872 WARN  - Paciente no encontrado para login con correo: chipa.robladillo@gmail.com
+2025-06-06 15:02:00.873 WARN  - Login fallido para el correo: chipa.robladillo@gmail.com
+2025-06-06 15:02:00.878 INFO  - El usuario ha accedido a la página de login.
+2025-06-06 15:02:09.665 INFO  - Paciente encontrado para login: chipa.robladillo5@gmail.com
+2025-06-06 15:02:09.665 INFO  - Login exitoso para el correo: chipa.robladillo5@gmail.com
+2025-06-06 15:02:09.673 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-06 15:11:20.205 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 16700 (C:\Users\Jeanpierre Chipa\Desktop\sistemas seguir\Sistema-Clinica-Angry\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistemas seguir\Sistema-Clinica-Angry)
+2025-06-06 15:11:20.210 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-06-06 15:11:22.513 INFO  - Archivo pacientes.json encontrado en: C:\Users\Jeanpierre Chipa\Desktop\sistemas seguir\Sistema-Clinica-Angry\data\pacientes.json
+2025-06-06 15:11:23.448 INFO  - Started SistemaApplication in 3.936 seconds (process running for 5.021)
+2025-06-06 15:12:46.395 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-06 15:12:53.054 INFO  - El usuario ha accedido a la página de login.
+2025-06-06 15:13:01.885 INFO  - Paciente encontrado para login: chipa.robladillo@gmail.com
+2025-06-06 15:13:01.886 INFO  - Login exitoso para el correo: chipa.robladillo@gmail.com
+2025-06-06 15:13:01.893 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-06 15:13:03.355 INFO  - Accediendo a la página de reserva de cita.
+2025-06-06 15:13:04.007 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-06-06 15:13:10.497 INFO  - Sesión cerrada.
+2025-06-06 15:13:10.503 INFO  - El usuario ha accedido a la página de login.
+2025-06-06 15:13:18.606 WARN  - Paciente no encontrado para login con correo: chipa.robladillo5@gmail.com
+2025-06-06 15:13:18.607 WARN  - Login fallido para el correo: chipa.robladillo5@gmail.com
+2025-06-06 15:13:18.617 INFO  - El usuario ha accedido a la página de login.
+2025-06-06 15:13:52.066 INFO  - Intentando registrar paciente con correo: chipa.robladillo5@gmail.com y DNI: 78456984
+2025-06-06 15:13:52.067 INFO  - No existe un paciente con el correo chipa.robladillo5@gmail.com ni DNI 78456984. Se puede registrar.
+2025-06-06 15:13:52.101 INFO  - Paciente guardado exitosamente con ID 1749005808215 y correo chipa.robladillo5@gmail.com
+2025-06-06 15:13:52.128 INFO  - Paciente registrado exitosamente: chipa.robladillo5@gmail.com
+2025-06-06 15:13:52.134 INFO  - El usuario ha accedido a la página de login.
+2025-06-06 15:13:58.142 INFO  - Paciente encontrado para login: chipa.robladillo5@gmail.com
+2025-06-06 15:13:58.142 INFO  - Login exitoso para el correo: chipa.robladillo5@gmail.com
+2025-06-06 15:13:58.150 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-06 15:13:59.440 INFO  - Accediendo a la página de reserva de cita.
+2025-06-06 15:14:00.513 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-06-06 15:14:03.337 INFO  - Accediendo a la página de reserva de cita.
+2025-06-06 15:14:35.323 INFO  - Accediendo a la página de reserva de cita.
+2025-06-06 15:14:49.670 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 13328 (C:\Users\Jeanpierre Chipa\Desktop\sistemas seguir\Sistema-Clinica-Angry\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistemas seguir\Sistema-Clinica-Angry)
+2025-06-06 15:14:49.673 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-06-06 15:14:51.688 INFO  - Archivo pacientes.json encontrado en: C:\Users\Jeanpierre Chipa\Desktop\sistemas seguir\Sistema-Clinica-Angry\data\pacientes.json
+2025-06-06 15:14:52.477 INFO  - Started SistemaApplication in 3.491 seconds (process running for 4.499)
+2025-06-06 15:15:01.815 INFO  - Accediendo a la página de reserva de cita.
+2025-06-06 15:16:07.891 INFO  - Accediendo a la página de reserva de cita.
+2025-06-06 15:16:17.004 INFO  - Intentando crear cita con fecha: 2025-06-06, hora: 11:00, idMedico: 115
+2025-06-06 15:16:17.005 WARN  - Intento de confirmar cita sin paciente logueado.
+2025-06-06 15:16:17.014 INFO  - El usuario ha accedido a la página de login.
+2025-06-06 15:16:28.883 INFO  - Paciente encontrado para login: chipa.robladillo5@gmail.com
+2025-06-06 15:16:28.884 INFO  - Login exitoso para el correo: chipa.robladillo5@gmail.com
+2025-06-06 15:16:28.891 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-06 15:16:29.998 INFO  - Accediendo a la página de reserva de cita.
+2025-06-06 15:16:39.438 INFO  - Intentando crear cita con fecha: 2025-06-07, hora: 11:00, idMedico: 132
+2025-06-06 15:16:39.438 INFO  - Intentando crear cita para fecha: 2025-06-07, hora: 11:00, medicoId: 132
+2025-06-06 15:16:39.466 INFO  - Cita construida con ID: 4, Fecha: 2025-06-07, Hora: 11:00, Paciente: 1749005808214, Medico: 132
+2025-06-06 15:16:39.500 INFO  - Citas guardadas exitosamente en: data/citas.json
+2025-06-06 15:16:39.500 INFO  - Cita guardada exitosamente.
+2025-06-06 15:16:39.500 INFO  - Cita creada correctamente
+2025-06-06 15:16:39.510 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-06-06 15:18:50.510 INFO  - Sesión cerrada.
+2025-06-06 15:18:50.518 INFO  - El usuario ha accedido a la página de login.
+2025-06-06 15:18:57.402 INFO  - Paciente encontrado para login: chipa.robladillo@gmail.com
+2025-06-06 15:18:57.403 INFO  - Login exitoso para el correo: chipa.robladillo@gmail.com
+2025-06-06 15:18:57.409 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-06 15:18:58.740 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-06-06 15:19:06.433 INFO  - Sesión cerrada.
+2025-06-06 15:19:06.439 INFO  - El usuario ha accedido a la página de login.
+2025-06-06 15:20:12.889 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 17132 (C:\Users\Jeanpierre Chipa\Desktop\sistemas seguir\Sistema-Clinica-Angry\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistemas seguir\Sistema-Clinica-Angry)
+2025-06-06 15:20:12.894 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-06-06 15:20:15.315 INFO  - Archivo pacientes.json encontrado en: C:\Users\Jeanpierre Chipa\Desktop\sistemas seguir\Sistema-Clinica-Angry\data\pacientes.json
+2025-06-06 15:20:16.261 INFO  - Started SistemaApplication in 4.12 seconds (process running for 5.09)
+2025-06-06 15:20:16.788 INFO  - El usuario ha accedido a la página de login.
+2025-06-06 15:20:18.572 INFO  - El usuario ha accedido a la página de login.
+2025-06-06 15:20:26.729 WARN  - Paciente no encontrado para login con correo: chipa.robladillo@gmail.com
+2025-06-06 15:20:26.729 WARN  - Login fallido para el correo: chipa.robladillo@gmail.com
+2025-06-06 15:20:26.739 INFO  - El usuario ha accedido a la página de login.
+2025-06-06 15:20:44.599 WARN  - Paciente no encontrado para login con correo: chipa.robladillo@gmail.com
+2025-06-06 15:20:44.599 WARN  - Login fallido para el correo: chipa.robladillo@gmail.com
+2025-06-06 15:20:44.607 INFO  - El usuario ha accedido a la página de login.
+2025-06-06 15:20:54.081 INFO  - Paciente encontrado para login: chipa.robladillo@gmail.com
+2025-06-06 15:20:54.084 INFO  - Login exitoso para el correo: chipa.robladillo@gmail.com
+2025-06-06 15:20:54.093 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-06 15:20:59.728 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-06-06 15:21:04.661 INFO  - Reporte Excel de citas generado para paciente ID: 1749005808214
