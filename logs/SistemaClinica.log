@@ -1,565 +1,129 @@
-2025-06-04 10:32:00.391 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 29644 (C:\Users\Jeanpierre Chipa\Desktop\sistema\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistema)
-2025-06-04 10:32:00.411 INFO  - No active profile set, falling back to 1 default profile: "default"
-2025-06-04 10:32:05.420 INFO  - Started SistemaApplication in 7.245 seconds (process running for 9.731)
-2025-06-04 10:32:12.424 INFO  - El usuario ha accedido a la página de inicio.
-2025-06-04 10:32:17.809 INFO  - El usuario ha accedido a la página de login.
-2025-06-04 10:32:28.398 WARN  - Archivo pacientes.json no encontrado, devolviendo lista vacía.
-2025-06-04 10:32:28.409 INFO  - El usuario ha accedido a la página de login.
-2025-06-04 10:32:39.514 WARN  - Archivo pacientes.json no encontrado, devolviendo lista vacía.
-2025-06-04 10:32:39.542 INFO  - El usuario ha accedido a la página de login.
-2025-06-04 10:33:34.726 INFO  - El usuario ha accedido a la página de login.
-2025-06-04 10:33:37.055 INFO  - El usuario ha accedido a la página de login.
-2025-06-04 10:33:45.783 WARN  - Archivo pacientes.json no encontrado, devolviendo lista vacía.
-2025-06-04 10:33:45.791 INFO  - El usuario ha accedido a la página de login.
-2025-06-04 10:34:02.252 WARN  - Archivo pacientes.json no encontrado, devolviendo lista vacía.
-2025-06-04 10:34:02.262 INFO  - El usuario ha accedido a la página de login.
-2025-06-04 10:42:05.958 INFO  - Se han cargado 1 pacientes desde el archivo JSON.
-2025-06-04 10:42:05.972 INFO  - El usuario ha accedido a la página de inicio.
-2025-06-04 10:42:08.606 INFO  - El usuario ha accedido a la página de reserva de cita.
-2025-06-04 10:47:43.814 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 28432 (C:\Users\Jeanpierre Chipa\Desktop\sistema\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistema)
-2025-06-04 10:47:43.818 INFO  - No active profile set, falling back to 1 default profile: "default"
-2025-06-04 10:47:46.407 INFO  - Started SistemaApplication in 3.283 seconds (process running for 4.217)
-2025-06-04 10:47:52.588 INFO  - El usuario ha accedido a la página de reserva de cita.
-2025-06-04 10:47:54.484 INFO  - El usuario ha accedido a la página de reserva de cita.
-2025-06-04 11:22:08.748 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 22896 (C:\Users\Jeanpierre Chipa\Desktop\sistema\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistema)
-2025-06-04 11:22:08.754 INFO  - No active profile set, falling back to 1 default profile: "default"
-2025-06-04 11:22:11.330 INFO  - Started SistemaApplication in 3.288 seconds (process running for 4.326)
-2025-06-04 11:22:38.689 INFO  - El usuario ha accedido a la página de inicio.
-2025-06-04 11:22:40.552 INFO  - El usuario ha accedido a la página de reserva de cita.
-2025-06-04 11:33:56.010 INFO  - El usuario ha accedido a la página de reserva de cita.
-2025-06-04 11:41:12.768 INFO  - El usuario ha accedido a la página de reserva de cita.
-2025-06-04 11:41:36.425 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 8900 (C:\Users\Jeanpierre Chipa\Desktop\sistema\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistema)
-2025-06-04 11:41:36.429 INFO  - No active profile set, falling back to 1 default profile: "default"
-2025-06-04 11:41:39.106 INFO  - Started SistemaApplication in 3.471 seconds (process running for 4.518)
-2025-06-04 11:54:09.628 INFO  - El usuario ha accedido a la página de reserva de cita.
-2025-06-04 11:54:10.363 INFO  - El usuario ha accedido a la página de reserva de cita.
-2025-06-04 11:54:23.114 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 19416 (C:\Users\Jeanpierre Chipa\Desktop\sistema\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistema)
-2025-06-04 11:54:23.119 INFO  - No active profile set, falling back to 1 default profile: "default"
-2025-06-04 11:54:25.898 INFO  - Started SistemaApplication in 3.537 seconds (process running for 4.446)
-2025-06-04 11:55:21.316 INFO  - El usuario ha accedido a la página de reserva de cita.
-2025-06-04 11:58:01.000 INFO  - El usuario ha accedido a la página de reserva de cita.
-2025-06-04 11:58:01.927 INFO  - El usuario ha accedido a la página de reserva de cita.
-2025-06-04 11:58:03.569 INFO  - El usuario ha accedido a la página de inicio.
-2025-06-04 11:58:03.600 INFO  - El usuario ha accedido a la página de inicio.
-2025-06-04 11:58:04.469 INFO  - El usuario ha accedido a la página de reserva de cita.
-2025-06-04 12:02:26.179 INFO  - El usuario ha accedido a la página de reserva de cita.
-2025-06-04 12:02:37.308 INFO  - El usuario ha accedido a la página de historial de citas.
-2025-06-04 12:05:34.532 INFO  - El usuario ha accedido a la página de reserva de cita.
-2025-06-04 12:05:43.800 INFO  - El usuario ha accedido a la página de historial de citas.
-2025-06-04 12:06:16.177 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 19288 (C:\Users\Jeanpierre Chipa\Desktop\sistema\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistema)
-2025-06-04 12:06:16.180 INFO  - No active profile set, falling back to 1 default profile: "default"
-2025-06-04 12:06:18.907 INFO  - Started SistemaApplication in 3.477 seconds (process running for 4.439)
-2025-06-04 12:06:58.256 INFO  - El usuario ha accedido a la página de reserva de cita.
-2025-06-04 12:07:16.591 INFO  - El usuario ha accedido a la página de historial de citas.
-2025-06-04 12:16:16.227 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 7144 (C:\Users\Jeanpierre Chipa\Desktop\sistema\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistema)
-2025-06-04 12:16:16.233 INFO  - No active profile set, falling back to 1 default profile: "default"
-2025-06-04 12:16:20.392 INFO  - Started SistemaApplication in 5.242 seconds (process running for 6.502)
-2025-06-04 12:16:36.425 INFO  - El usuario ha accedido a la página de historial de citas.
-2025-06-04 12:16:37.769 INFO  - El usuario ha accedido a la página de inicio.
-2025-06-04 12:16:38.703 INFO  - El usuario ha accedido a la página de reserva de cita.
-2025-06-04 12:16:48.334 INFO  - El usuario ha accedido a la página de historial de citas.
-2025-06-04 12:59:09.713 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 27796 (C:\Users\Jeanpierre Chipa\Desktop\sistema\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistema)
-2025-06-04 12:59:09.719 INFO  - No active profile set, falling back to 1 default profile: "default"
-2025-06-04 12:59:14.036 INFO  - Started SistemaApplication in 5.505 seconds (process running for 6.778)
-2025-06-04 13:00:07.919 INFO  - El usuario ha accedido a la página de historial de citas.
-2025-06-04 13:00:09.516 INFO  - El usuario ha accedido a la página de reserva de cita.
-2025-06-04 13:00:37.127 ERROR - Error al procesar la reserva de cita
-java.lang.IllegalArgumentException: argument "src" is null
-	at com.fasterxml.jackson.databind.ObjectMapper._assertNotNull(ObjectMapper.java:5126)
-	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3931)
-	at com.clinica.sistema.Controlador.ReservaControlador.confirmarReserva(ReservaControlador.java:48)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
-	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
-	at java.base/java.lang.Thread.run(Unknown Source)
-2025-06-04 13:00:58.955 ERROR - Error al procesar la reserva de cita
-java.lang.IllegalArgumentException: argument "src" is null
-	at com.fasterxml.jackson.databind.ObjectMapper._assertNotNull(ObjectMapper.java:5126)
-	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3931)
-	at com.clinica.sistema.Controlador.ReservaControlador.confirmarReserva(ReservaControlador.java:48)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
-	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
-	at java.base/java.lang.Thread.run(Unknown Source)
-2025-06-04 13:02:52.959 ERROR - Error al procesar la reserva de cita
-java.lang.IllegalArgumentException: argument "src" is null
-	at com.fasterxml.jackson.databind.ObjectMapper._assertNotNull(ObjectMapper.java:5126)
-	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3931)
-	at com.clinica.sistema.Controlador.ReservaControlador.confirmarReserva(ReservaControlador.java:48)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
-	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
-	at java.base/java.lang.Thread.run(Unknown Source)
-2025-06-04 13:03:01.194 ERROR - Error al procesar la reserva de cita
-java.lang.IllegalArgumentException: argument "src" is null
-	at com.fasterxml.jackson.databind.ObjectMapper._assertNotNull(ObjectMapper.java:5126)
-	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3931)
-	at com.clinica.sistema.Controlador.ReservaControlador.confirmarReserva(ReservaControlador.java:48)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
-	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
-	at java.base/java.lang.Thread.run(Unknown Source)
-2025-06-04 13:04:38.192 ERROR - Error al procesar la reserva de cita
-java.lang.IllegalArgumentException: argument "src" is null
-	at com.fasterxml.jackson.databind.ObjectMapper._assertNotNull(ObjectMapper.java:5126)
-	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3931)
-	at com.clinica.sistema.Controlador.ReservaControlador.confirmarReserva(ReservaControlador.java:48)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
-	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
-	at java.base/java.lang.Thread.run(Unknown Source)
-2025-06-04 13:04:40.340 INFO  - El usuario ha accedido a la página de reserva de cita.
-2025-06-04 13:05:02.494 INFO  - El usuario ha accedido a la página de reserva de cita.
-2025-06-04 13:05:11.686 ERROR - Error al procesar la reserva de cita
-java.lang.IllegalArgumentException: argument "src" is null
-	at com.fasterxml.jackson.databind.ObjectMapper._assertNotNull(ObjectMapper.java:5126)
-	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3931)
-	at com.clinica.sistema.Controlador.ReservaControlador.confirmarReserva(ReservaControlador.java:48)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
-	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
-	at java.base/java.lang.Thread.run(Unknown Source)
-2025-06-04 13:05:14.833 INFO  - El usuario ha accedido a la página de reserva de cita.
-2025-06-04 13:05:32.026 INFO  - El usuario ha accedido a la página de reserva de cita.
-2025-06-04 13:05:39.826 ERROR - Error al procesar la reserva de cita
-java.lang.IllegalArgumentException: argument "src" is null
-	at com.fasterxml.jackson.databind.ObjectMapper._assertNotNull(ObjectMapper.java:5126)
-	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3931)
-	at com.clinica.sistema.Controlador.ReservaControlador.confirmarReserva(ReservaControlador.java:48)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
-	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
-	at java.base/java.lang.Thread.run(Unknown Source)
-2025-06-04 13:07:04.783 INFO  - El usuario ha accedido a la página de reserva de cita.
-2025-06-04 13:07:16.105 ERROR - Error al procesar la reserva de cita
-java.lang.IllegalArgumentException: argument "src" is null
-	at com.fasterxml.jackson.databind.ObjectMapper._assertNotNull(ObjectMapper.java:5126)
-	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3931)
-	at com.clinica.sistema.Controlador.ReservaControlador.confirmarReserva(ReservaControlador.java:48)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source)
-	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
-	at java.base/java.lang.Thread.run(Unknown Source)
-2025-06-04 13:11:31.772 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 9436 (C:\Users\Jeanpierre Chipa\Desktop\sistema\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistema)
-2025-06-04 13:11:31.777 INFO  - No active profile set, falling back to 1 default profile: "default"
-2025-06-04 13:11:34.331 INFO  - Started SistemaApplication in 3.315 seconds (process running for 4.267)
-2025-06-04 13:11:42.617 INFO  - El usuario ha accedido a la página de reserva de cita.
-2025-06-04 13:12:30.285 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 8728 (C:\Users\Jeanpierre Chipa\Desktop\sistema\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistema)
-2025-06-04 13:12:30.292 INFO  - No active profile set, falling back to 1 default profile: "default"
-2025-06-04 13:12:32.996 INFO  - Started SistemaApplication in 3.414 seconds (process running for 4.303)
-2025-06-04 13:12:40.718 INFO  - El usuario ha accedido a la página de reserva de cita.
-2025-06-04 13:12:43.477 INFO  - El usuario ha accedido a la página de reserva de cita.
-2025-06-04 13:40:45.275 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 5800 (C:\Users\Jeanpierre Chipa\Desktop\sistema\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistema)
-2025-06-04 13:40:45.278 INFO  - No active profile set, falling back to 1 default profile: "default"
-2025-06-04 13:40:47.793 INFO  - Started SistemaApplication in 3.236 seconds (process running for 4.148)
-2025-06-04 13:46:59.033 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 15552 (C:\Users\Jeanpierre Chipa\Desktop\sistema\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistema)
-2025-06-04 13:46:59.036 INFO  - No active profile set, falling back to 1 default profile: "default"
-2025-06-04 13:47:01.539 INFO  - Started SistemaApplication in 3.279 seconds (process running for 4.313)
-2025-06-04 13:50:06.358 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 14700 (C:\Users\Jeanpierre Chipa\Desktop\sistema\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistema)
-2025-06-04 13:50:06.358 INFO  - No active profile set, falling back to 1 default profile: "default"
-2025-06-04 13:50:09.084 INFO  - Started SistemaApplication in 3.478 seconds (process running for 4.464)
-2025-06-04 13:50:12.804 INFO  - El usuario ha accedido a la página de inicio.
-2025-06-04 13:53:55.759 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 10120 (C:\Users\Jeanpierre Chipa\Desktop\sistema\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistema)
-2025-06-04 13:53:55.766 INFO  - No active profile set, falling back to 1 default profile: "default"
-2025-06-04 13:53:58.401 INFO  - Started SistemaApplication in 3.384 seconds (process running for 4.266)
-2025-06-04 13:59:21.972 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 13900 (C:\Users\Jeanpierre Chipa\Desktop\sistema\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistema)
-2025-06-04 13:59:21.972 INFO  - No active profile set, falling back to 1 default profile: "default"
-2025-06-04 13:59:24.673 INFO  - Started SistemaApplication in 3.393 seconds (process running for 4.237)
-2025-06-04 13:59:36.684 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 2136 (C:\Users\Jeanpierre Chipa\Desktop\sistema\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistema)
-2025-06-04 13:59:36.687 INFO  - No active profile set, falling back to 1 default profile: "default"
-2025-06-04 13:59:39.176 INFO  - Started SistemaApplication in 3.2 seconds (process running for 4.172)
-2025-06-04 13:59:53.373 INFO  - Intentando crear cita...
-2025-06-04 14:05:34.824 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 4172 (C:\Users\Jeanpierre Chipa\Desktop\sistema\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistema)
-2025-06-04 14:05:34.832 INFO  - No active profile set, falling back to 1 default profile: "default"
-2025-06-04 14:05:37.404 INFO  - Started SistemaApplication in 3.249 seconds (process running for 4.183)
-2025-06-04 14:05:41.888 INFO  - El usuario ha accedido a la página de inicio.
-2025-06-04 14:05:42.022 INFO  - El usuario ha accedido a la página de login.
-2025-06-04 14:05:45.389 INFO  - El usuario ha accedido a la página de login.
-2025-06-04 14:05:54.544 WARN  - Archivo pacientes.json no encontrado, devolviendo lista vacía.
-2025-06-04 14:05:54.547 INFO  - El usuario ha accedido a la página de login.
-2025-06-04 14:06:11.331 WARN  - Archivo pacientes.json no encontrado, devolviendo lista vacía.
-2025-06-04 14:06:11.338 INFO  - El usuario ha accedido a la página de login.
-2025-06-04 14:08:34.564 INFO  - Se han cargado 1 pacientes desde el archivo JSON.
-2025-06-04 14:08:34.572 INFO  - El usuario ha accedido a la página de inicio.
-2025-06-04 14:12:02.814 INFO  - Intentando crear cita...
-2025-06-04 14:13:56.638 INFO  - Intentando crear cita...
-2025-06-04 14:14:17.018 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 8648 (C:\Users\Jeanpierre Chipa\Desktop\sistema\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistema)
-2025-06-04 14:14:17.021 INFO  - No active profile set, falling back to 1 default profile: "default"
-2025-06-04 14:14:19.574 INFO  - Started SistemaApplication in 3.289 seconds (process running for 4.319)
-2025-06-04 14:14:23.473 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 29404 (C:\Users\Jeanpierre Chipa\Desktop\sistema\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistema)
-2025-06-04 14:14:23.483 INFO  - No active profile set, falling back to 1 default profile: "default"
-2025-06-04 14:14:36.013 INFO  - Intentando crear cita...
-2025-06-04 14:14:55.026 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 9016 (C:\Users\Jeanpierre Chipa\Desktop\sistema\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistema)
-2025-06-04 14:14:55.031 INFO  - No active profile set, falling back to 1 default profile: "default"
-2025-06-04 14:14:57.649 INFO  - Started SistemaApplication in 3.38 seconds (process running for 4.355)
-2025-06-04 14:15:15.738 INFO  - Intentando crear cita...
-2025-06-04 14:16:35.074 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 13252 (C:\Users\Jeanpierre Chipa\Desktop\sistema\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistema)
-2025-06-04 14:16:35.077 INFO  - No active profile set, falling back to 1 default profile: "default"
-2025-06-04 14:16:37.596 INFO  - Started SistemaApplication in 3.235 seconds (process running for 4.139)
-2025-06-04 14:16:52.734 INFO  - Intentando crear cita...
-2025-06-04 14:16:52.907 INFO  - Cita creada correctamente.
-2025-06-04 14:16:52.924 INFO  - El usuario ha accedido a la página de historial de citas.
-2025-06-04 14:39:47.213 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 27180 (C:\Users\Jeanpierre Chipa\Desktop\sistema\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistema)
-2025-06-04 14:39:47.218 INFO  - No active profile set, falling back to 1 default profile: "default"
-2025-06-04 14:39:49.809 INFO  - Started SistemaApplication in 3.339 seconds (process running for 4.188)
-2025-06-04 14:40:23.559 INFO  - Intentando crear cita...
-2025-06-04 14:40:23.720 INFO  - Cita creada correctamente.
-2025-06-04 14:40:23.742 INFO  - El usuario ha accedido a la página de historial de citas.
-2025-06-04 14:40:54.545 INFO  - El usuario ha accedido a la página de inicio.
-2025-06-04 14:40:55.594 INFO  - El usuario ha accedido a la página de historial de citas.
-2025-06-04 14:41:46.224 INFO  - El usuario ha accedido a la página de inicio.
-2025-06-04 14:41:48.999 INFO  - El usuario ha accedido a la página de login.
-2025-06-04 14:41:58.231 INFO  - Se han cargado 1 pacientes desde el archivo JSON.
-2025-06-04 14:41:58.233 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-06 07:53:42.360 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 12508 (C:\Users\Jeanpierre Chipa\Desktop\sistemaprueba\Sistema-Clinica-Angry\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistemaprueba\Sistema-Clinica-Angry)
+2025-06-06 07:53:42.360 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-06-06 07:53:46.105 INFO  - Started SistemaApplication in 4.535 seconds (process running for 5.619)
+2025-06-06 07:53:48.610 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-06 08:55:23.131 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 7740 (C:\Users\Jeanpierre Chipa\Desktop\sistemaprueba\Sistema-Clinica-Angry\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistemaprueba\Sistema-Clinica-Angry)
+2025-06-06 08:55:23.131 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-06-06 08:55:25.828 INFO  - Started SistemaApplication in 3.398 seconds (process running for 4.36)
+2025-06-06 08:55:27.907 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-06 08:55:33.977 INFO  - El usuario ha accedido a la página de chat.
+2025-06-06 08:57:37.289 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-06 08:57:37.672 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-06 08:57:38.685 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-06 08:57:39.336 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-06 08:57:52.874 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 11740 (C:\Users\Jeanpierre Chipa\Desktop\sistemaprueba\Sistema-Clinica-Angry\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistemaprueba\Sistema-Clinica-Angry)
+2025-06-06 08:57:52.877 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-06-06 08:57:55.302 INFO  - Started SistemaApplication in 3.104 seconds (process running for 3.973)
+2025-06-06 08:58:06.437 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-06 08:58:11.154 INFO  - El usuario ha accedido a la página de chat.
+2025-06-06 08:58:49.037 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-06 08:58:51.262 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-06-06 08:58:53.263 INFO  - El usuario ha accedido a la página de chat.
+2025-06-06 09:06:54.543 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 9236 (C:\Users\Jeanpierre Chipa\Desktop\sistemaprueba\Sistema-Clinica-Angry\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistemaprueba\Sistema-Clinica-Angry)
+2025-06-06 09:06:54.545 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-06-06 09:06:56.964 INFO  - Started SistemaApplication in 3.068 seconds (process running for 3.92)
+2025-06-06 09:07:20.197 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-06-06 09:07:22.831 INFO  - El usuario ha accedido a la página de chat.
+2025-06-06 09:08:57.677 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 24656 (C:\Users\Jeanpierre Chipa\Desktop\sistemaprueba\Sistema-Clinica-Angry\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistemaprueba\Sistema-Clinica-Angry)
+2025-06-06 09:08:57.682 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-06-06 09:09:00.030 INFO  - Started SistemaApplication in 3.164 seconds (process running for 4.396)
+2025-06-06 09:09:02.932 INFO  - El usuario ha accedido a la página de chat.
+2025-06-06 09:09:09.681 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-06-06 09:09:10.443 INFO  - El usuario ha accedido a la página de chat.
+2025-06-06 09:09:11.104 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-06-06 09:09:11.619 INFO  - El usuario ha accedido a la página de chat.
+2025-06-06 09:09:12.322 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-06-06 09:09:12.843 INFO  - El usuario ha accedido a la página de chat.
+2025-06-06 09:09:13.259 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-06-06 09:09:13.601 INFO  - El usuario ha accedido a la página de chat.
+2025-06-06 09:09:14.273 INFO  - El usuario ha accedido a la página de chat.
+2025-06-06 09:09:15.185 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-06-06 09:09:15.547 INFO  - El usuario ha accedido a la página de chat.
+2025-06-06 09:09:16.065 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-06-06 09:09:17.154 INFO  - El usuario ha accedido a la página de chat.
+2025-06-06 09:09:17.946 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-06-06 09:09:18.394 INFO  - El usuario ha accedido a la página de chat.
+2025-06-06 09:13:09.078 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 25352 (C:\Users\Jeanpierre Chipa\Desktop\sistemaprueba\Sistema-Clinica-Angry\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistemaprueba\Sistema-Clinica-Angry)
+2025-06-06 09:13:09.078 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-06-06 09:13:11.297 INFO  - Started SistemaApplication in 2.93 seconds (process running for 3.779)
+2025-06-06 09:13:16.873 INFO  - El usuario ha accedido a la página de chat.
+2025-06-06 09:13:49.597 INFO  - El usuario ha accedido a la página de chat.
+2025-06-06 09:13:51.508 INFO  - El usuario ha accedido a la página de chat.
+2025-06-06 09:13:51.706 INFO  - El usuario ha accedido a la página de chat.
+2025-06-06 09:13:51.831 INFO  - El usuario ha accedido a la página de chat.
+2025-06-06 09:13:51.977 INFO  - El usuario ha accedido a la página de chat.
+2025-06-06 09:13:52.137 INFO  - El usuario ha accedido a la página de chat.
+2025-06-06 09:13:52.290 INFO  - El usuario ha accedido a la página de chat.
+2025-06-06 09:14:45.030 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 8440 (C:\Users\Jeanpierre Chipa\Desktop\sistemaprueba\Sistema-Clinica-Angry\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistemaprueba\Sistema-Clinica-Angry)
+2025-06-06 09:14:45.034 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-06-06 09:14:47.569 INFO  - Started SistemaApplication in 3.203 seconds (process running for 4.16)
+2025-06-06 09:14:52.544 INFO  - El usuario ha accedido a la página de chat.
+2025-06-06 09:16:38.747 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 15532 (C:\Users\Jeanpierre Chipa\Desktop\sistemaprueba\Sistema-Clinica-Angry\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistemaprueba\Sistema-Clinica-Angry)
+2025-06-06 09:16:38.750 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-06-06 09:16:41.312 INFO  - Started SistemaApplication in 3.238 seconds (process running for 4.254)
+2025-06-06 09:16:42.766 INFO  - El usuario ha accedido a la página de chat.
+2025-06-06 09:16:43.546 INFO  - El usuario ha accedido a la página de chat.
+2025-06-06 09:16:56.643 INFO  - El usuario ha accedido a la página de chat.
+2025-06-06 09:17:08.516 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 22952 (C:\Users\Jeanpierre Chipa\Desktop\sistemaprueba\Sistema-Clinica-Angry\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistemaprueba\Sistema-Clinica-Angry)
+2025-06-06 09:17:08.519 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-06-06 09:17:11.402 INFO  - Started SistemaApplication in 3.523 seconds (process running for 4.407)
+2025-06-06 09:17:12.772 INFO  - El usuario ha accedido a la página de chat.
+2025-06-06 09:17:49.562 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 9724 (C:\Users\Jeanpierre Chipa\Desktop\sistemaprueba\Sistema-Clinica-Angry\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistemaprueba\Sistema-Clinica-Angry)
+2025-06-06 09:17:49.565 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-06-06 09:17:52.066 INFO  - Started SistemaApplication in 3.205 seconds (process running for 4.087)
+2025-06-06 09:17:53.712 INFO  - El usuario ha accedido a la página de chat.
+2025-06-06 09:19:48.440 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 25064 (C:\Users\Jeanpierre Chipa\Desktop\sistemaprueba\Sistema-Clinica-Angry\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistemaprueba\Sistema-Clinica-Angry)
+2025-06-06 09:19:48.441 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-06-06 09:19:50.672 INFO  - Started SistemaApplication in 2.921 seconds (process running for 3.75)
+2025-06-06 09:19:58.076 INFO  - El usuario ha accedido a la página de chat.
+2025-06-06 09:21:59.986 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 21964 (C:\Users\Jeanpierre Chipa\Desktop\sistemaprueba\Sistema-Clinica-Angry\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistemaprueba\Sistema-Clinica-Angry)
+2025-06-06 09:21:59.989 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-06-06 09:22:02.347 INFO  - Started SistemaApplication in 3.011 seconds (process running for 3.883)
+2025-06-06 09:22:07.663 INFO  - El usuario ha accedido a la página de chat.
+2025-06-06 09:29:23.322 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 10336 (C:\Users\Jeanpierre Chipa\Desktop\sistemaprueba\Sistema-Clinica-Angry\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistemaprueba\Sistema-Clinica-Angry)
+2025-06-06 09:29:23.327 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-06-06 09:29:25.596 INFO  - Started SistemaApplication in 2.938 seconds (process running for 3.78)
+2025-06-06 09:29:34.528 INFO  - El usuario ha accedido a la página de chat.
+2025-06-06 09:40:37.066 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-06-06 09:40:37.766 INFO  - El usuario ha accedido a la página de chat.
+2025-06-06 09:40:38.396 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-06-06 09:40:39.149 INFO  - El usuario ha accedido a la página de chat.
+2025-06-06 09:40:39.703 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-06-06 09:40:40.446 INFO  - El usuario ha accedido a la página de chat.
+2025-06-06 09:40:42.108 INFO  - El usuario ha accedido a la página de chat.
+2025-06-06 09:40:44.383 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-06 09:40:44.909 INFO  - El usuario ha accedido a la página de chat.
+2025-06-06 09:40:46.742 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-06-06 09:40:47.237 INFO  - El usuario ha accedido a la página de chat.
+2025-06-06 09:40:47.694 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-06-06 09:40:48.254 INFO  - El usuario ha accedido a la página de chat.
+2025-06-06 09:40:49.538 INFO  - El usuario ha accedido a la página de chat.
+2025-06-06 09:40:49.974 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-06-06 09:40:50.221 INFO  - El usuario ha accedido a la página de chat.
+2025-06-06 09:40:50.623 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-06-06 09:40:50.916 INFO  - El usuario ha accedido a la página de chat.
+2025-06-06 09:40:51.174 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-06-06 09:40:51.488 INFO  - El usuario ha accedido a la página de chat.
+2025-06-06 09:40:54.685 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-06 09:40:57.558 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-06-06 09:40:58.365 INFO  - El usuario ha accedido a la página de chat.
+2025-06-06 11:06:48.788 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 25108 (C:\Users\Jeanpierre Chipa\Desktop\sistemaprueba\Sistema-Clinica-Angry\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistemaprueba\Sistema-Clinica-Angry)
+2025-06-06 11:06:48.791 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-06-06 11:07:42.838 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 16492 (C:\Users\Jeanpierre Chipa\Desktop\sistemaprueba\Sistema-Clinica-Angry\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistemaprueba\Sistema-Clinica-Angry)
+2025-06-06 11:07:42.842 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-06-06 11:10:57.095 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 21640 (C:\Users\Jeanpierre Chipa\Desktop\sistemaprueba\Sistema-Clinica-Angry\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistemaprueba\Sistema-Clinica-Angry)
+2025-06-06 11:10:57.095 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-06-06 11:10:59.604 INFO  - Started SistemaApplication in 3.185 seconds (process running for 4.045)
+2025-06-06 11:11:10.237 INFO  - El usuario ha accedido a la página de chat.
+2025-06-06 11:16:38.273 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 14632 (C:\Users\Jeanpierre Chipa\Desktop\sistemaprueba\Sistema-Clinica-Angry\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistemaprueba\Sistema-Clinica-Angry)
+2025-06-06 11:16:38.275 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-06-06 11:16:40.734 INFO  - Started SistemaApplication in 3.141 seconds (process running for 4.033)
+2025-06-06 11:18:05.906 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 10744 (C:\Users\Jeanpierre Chipa\Desktop\sistemaprueba\Sistema-Clinica-Angry\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistemaprueba\Sistema-Clinica-Angry)
+2025-06-06 11:18:05.909 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-06-06 11:18:08.378 INFO  - Started SistemaApplication in 3.172 seconds (process running for 4.059)
+2025-06-06 13:35:12.096 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 21724 (C:\Users\Jeanpierre Chipa\Desktop\sistema devJeanpierre\Sistema-Clinica-Angry\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistema devJeanpierre\Sistema-Clinica-Angry)
+2025-06-06 13:35:12.098 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-06-06 13:35:14.819 INFO  - Started SistemaApplication in 3.457 seconds (process running for 4.347)
+2025-06-06 13:35:21.857 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-06 13:36:00.400 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-06-06 13:36:32.522 INFO  - El usuario ha accedido a la página de login.

@@ -15,21 +15,19 @@
     <!-- =================== ENCABEZADO PRINCIPAL =================== -->
     <header class="encabezado-principal">
         <div class="contenido-encabezado contenedor">
-            <!-- Logo de la clínica -->
             <div class="espacio-logo">
                 <img th:src="@{/img/Logo.png}" alt="Logo de la Clínica" class="logo" />
             </div>
 
-            <!-- Navegación principal -->
             <nav class="navegacion-principal">
                 <ul>
                     <li><a th:href="@{/}">Inicio</a></li>
                     <li><a th:href="@{/reserva}">Reservar Cita</a></li>
                     <li><a th:href="@{/historial}" class="activo">Ver Historial</a></li>
+                    <li><a th:href="@{/chat}">Chat con tu Médico</a></li>
                 </ul>
             </nav>
 
-            <!-- Información del usuario -->
             <div class="informacion-usuario">
                 <span>Hola, <strong th:text="${nombreUsuario}">Nombre y Apellido</strong></span>
                 <form th:action="@{/logout}" method="post">
@@ -77,10 +75,8 @@
                         <p><strong>ID:</strong> <span th:text="${cita.id}">1</span></p>
                         <p><strong>Fecha:</strong> <span th:text="${cita.fecha}">2025-06-05</span></p>
                         <p><strong>Hora:</strong> <span th:text="${cita.hora}">10:00</span></p>
-                        <p><strong>Médico:</strong> <span th:text="${cita.medico.nombreCompleto}">Dr. Juan Pérez</span>
+                        <p><strong>Médico:</strong> <span th:text="${cita.idMedico}">Dr. Juan Pérez</span>
                         </p>
-                        <p><strong>Especialidad:</strong> <span
-                                th:text="${cita.medico.especialidad.nombre}">Cardiología</span></p>
                     </div>
                     <div class="acciones-cita">
                         <button class="btn-cancelar">Cancelar Cita</button>

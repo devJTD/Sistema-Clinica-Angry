@@ -10,5 +10,5 @@ import lombok.NoArgsConstructor;
 public class Notificacion {
     private Long id;
     private String mensaje;
-    private Cita cita;
+    private Long idCita;
 }

@@ -63,8 +63,8 @@ public class CitaServicio {
         cita.setFecha(LocalDate.parse(fechaStr));
         cita.setHora(LocalTime.parse(horaStr));
         cita.setEstado("Pendiente");
-        cita.setPaciente(paciente);
-        cita.setMedico(medico);
+        cita.setIdPaciente(paciente.getId());
+        cita.setIdMedico(medico.getId());
 
         // 5) Añadir y guardar
         citas.add(cita);
