@@ -585,3 +585,8 @@ java.lang.IllegalArgumentException: argument "src" is null
 2025-06-09 18:25:55.442 INFO  - El usuario ha accedido a la página de inicio.
 2025-06-09 18:25:57.871 INFO  - El usuario ha accedido a la página de login.
 2025-06-09 18:26:33.915 INFO  - El usuario ha accedido a la página de login.
+2025-06-09 18:38:36.745 INFO  - Starting SistemaApplication using Java 17.0.8 with PID 13432 (C:\Users\Ariana\Desktop\Sistema-Clinica-Angry\target\classes started by Ariana in C:\Users\Ariana\Desktop\Sistema-Clinica-Angry)
+2025-06-09 18:38:36.745 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-06-09 18:38:38.572 INFO  - Started SistemaApplication in 2.37 seconds (process running for 2.985)
+2025-06-09 18:38:43.770 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-09 18:38:46.833 INFO  - El usuario ha accedido a la página de login.
