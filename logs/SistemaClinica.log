@@ -571,3 +571,17 @@ java.lang.IllegalArgumentException: argument "src" is null
 2025-06-09 17:23:01.984 INFO  - El usuario ha accedido a la página de historial de citas.
 2025-06-09 17:25:34.287 INFO  - El usuario ha accedido a la página de login.
 2025-06-09 17:29:14.424 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-09 17:31:14.612 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-09 17:31:17.326 INFO  - El usuario ha accedido a la página de login.
+2025-06-09 17:31:24.034 INFO  - El usuario ha accedido a la página de login.
+2025-06-09 17:44:13.657 INFO  - El usuario ha accedido a la página de login.
+2025-06-09 17:44:22.454 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-09 17:44:25.419 INFO  - El usuario ha accedido a la página de login.
+2025-06-09 17:45:08.075 INFO  - El usuario ha accedido a la página de login.
+2025-06-09 17:54:46.034 INFO  - Starting SistemaApplication using Java 17.0.8 with PID 20132 (C:\Users\Ariana\Desktop\Sistema-Clinica-Angry\target\classes started by Ariana in C:\Users\Ariana\Desktop\Sistema-Clinica-Angry)
+2025-06-09 17:54:46.037 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-06-09 17:54:47.360 INFO  - Started SistemaApplication in 1.738 seconds (process running for 2.248)
+2025-06-09 17:55:33.008 INFO  - El usuario ha accedido a la p�gina de login.
+2025-06-09 18:25:55.442 INFO  - El usuario ha accedido a la p�gina de inicio.
+2025-06-09 18:25:57.871 INFO  - El usuario ha accedido a la p�gina de login.
+2025-06-09 18:26:33.915 INFO  - El usuario ha accedido a la p�gina de login.

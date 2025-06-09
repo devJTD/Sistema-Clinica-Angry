@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #ccc;
+    background-color: #ffffff; /* fondo blanco puro */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,16 +15,16 @@ body {
 }
 
 .container {
-    background-color: #1e1e1e;
+    background-color: #ffffff; /* también blanco puro */
     padding: 30px 20px;
     border-radius: 20px;
     width: 90%;
     max-width: 450px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); /* sombra más suave */
 }
 
 .form h2 {
-    color: #fff;
+    color: #006c72; /* tono hospitalario fuerte */
     text-align: center;
     margin-bottom: 25px;
     position: relative;
@@ -36,7 +36,7 @@ body {
     display: block;
     height: 4px;
     width: 60px;
-    background-color: #00c78c;
+    background-color: #38b6b2; /* turquesa médico */
     margin: 8px auto 0;
     border-radius: 2px;
 }
@@ -44,20 +44,21 @@ body {
 .input-group {
     display: flex;
     align-items: center;
-    background-color: #333;
+    background-color: #f0fafa; /* contraste suave */
     margin-bottom: 15px;
     padding: 10px;
     border-radius: 8px;
+    border: 1px solid #b6e2e2;
     transition: all 0.3s ease;
 }
 
 .input-group:focus-within {
-    box-shadow: 0 0 0 2px #00c78c;
-    border: 1px solid #00c78c;
+    box-shadow: 0 0 0 2px #38b6b2;
+    border: 1px solid #38b6b2;
 }
 
 .input-group i {
-    color: #00c78c;
+    color: #38b6b2;
     margin-right: 12px;
     font-size: 1.1em;
 }
@@ -66,22 +67,23 @@ body {
     background: none;
     border: none;
     outline: none;
-    color: #fff;
+    color: #003c3c; /* texto oscuro sobre fondo claro */
     width: 100%;
     font-size: 1rem;
 }
 
 .input-group input::placeholder {
-    color: #b0b0b0;
+    color: #7b9a9a;
 }
 
 .main-button-container {
-    text-align: center; 
-    margin-top: 25px; 
-    margin-bottom: 15px; 
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 15px;
 }
+
 .register-btn {
-    background-color: #00c78c;
+    background-color: #38b6b2;
     color: #fff;
     border: none;
     padding: 12px 20px;
@@ -95,9 +97,10 @@ body {
 }
 
 .register-btn:hover {
-    background-color: #00a87a;
+    background-color: #2aa4a1;
     transform: translateY(-2px);
 }
+
 .register-btn:active {
     transform: translateY(0);
 }
@@ -106,18 +109,18 @@ body {
     text-align: center;
     margin-top: 20px;
     font-size: 0.9em;
-    color: #ccc;
+    color: #556b6b;
 }
 
 .login-link-message a {
-    color: #00c78c;
+    color: #38b6b2;
     text-decoration: none;
     transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
 .login-link-message a:hover {
     text-decoration: underline;
-    color: #00a87a;
+    color: #2aa4a1;
 }
 
 .message-container {
