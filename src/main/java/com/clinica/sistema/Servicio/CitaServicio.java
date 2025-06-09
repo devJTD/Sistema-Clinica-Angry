@@ -7,6 +7,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+
 import java.io.File;
 import java.io.IOException;
 import java.time.LocalDate;
@@ -86,5 +87,32 @@ public class CitaServicio {
                 .filter(m -> m.getId().equals(idMedico))
                 .findFirst()
                 .orElse(null);
+    }
+
+    // Nuevo método para cancelar cita
+    public boolean cancelarCita(Long id) {
+        try {
+            List<Cita> citas = leerCitas();
+            boolean encontrada = false;
+
+            for (Cita cita : citas) {
+                if (cita.getId().equals(id)) {
+                    cita.setEstado("Cancelada");
+                    encontrada = true;
+                    break;
+                }
+            }
+
+            if (encontrada) {
+                guardarCitas(citas);
+                return true;
+            } else {
+                return false;
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 }
