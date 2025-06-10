@@ -2,14 +2,14 @@
   "id" : 1,
   "fecha" : "2025-06-06",
   "hora" : "12:00:00",
-  "estado" : "Pendiente",
+  "estado" : "Cancelada",
   "idPaciente" : 1749005808214,
   "idMedico" : 135
 }, {
   "id" : 2,
   "fecha" : "2025-06-06",
   "hora" : "10:00:00",
-  "estado" : "Pendiente",
+  "estado" : "Cancelada",
   "idPaciente" : 1749005808214,
   "idMedico" : 131
 }, {

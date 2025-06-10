@@ -26,6 +26,8 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import java.io.ByteArrayOutputStream;
 
+import org.springframework.http.HttpStatus;
+
 @Controller
 public class HistorialControlador {
 
@@ -155,6 +157,23 @@ public class HistorialControlador {
         } catch (IllegalArgumentException e) {
             logger.error("Error de argumento al generar el reporte: {}", e.getMessage());
             return ResponseEntity.badRequest().body(e.getMessage().getBytes());
+        }
+    }
+
+     // Nueva funcionalidad: cancelar cita (cambiar estado a "cancelada")
+    @PostMapping("/cancelar-cita")
+    @ResponseBody
+    public ResponseEntity<String> cancelarCita(@RequestParam Long id) {
+        try {
+            boolean exito = citaServicio.cancelarCita(id);
+            if (exito) {
+                return ResponseEntity.ok("Cita cancelada");
+            } else {
+                return ResponseEntity.status(HttpStatus.NOT_FOUND).body("No se encontró la cita");
+            }
+        } catch (Exception e) {
+            logger.error("Error al cancelar cita", e);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error al cancelar la cita");
         }
     }
 }
