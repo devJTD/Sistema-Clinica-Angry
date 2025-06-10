@@ -152,9 +152,39 @@ public class CitaServicio {
     }
 
     public List<Cita> obtenerCitasPorPaciente(Long idPaciente) throws IOException {
-        List<Cita> todas = leerCitas();
-        return todas.stream()
-                .filter(c -> c.getIdPaciente() != null && c.getIdPaciente().equals(idPaciente))
-                .collect(Collectors.toList());
+    List<Cita> todas = leerCitas();
+    return todas.stream()
+            .filter(c -> c.getIdPaciente() != null
+                      && c.getIdPaciente().equals(idPaciente)
+                      && "Pendiente".equalsIgnoreCase(c.getEstado()))
+            .collect(Collectors.toList());
+}
+
+
+    // Nuevo método para cancelar cita
+    public boolean cancelarCita(Long id) {
+        try {
+            List<Cita> citas = leerCitas();
+            boolean encontrada = false;
+
+            for (Cita cita : citas) {
+                if (cita.getId().equals(id)) {
+                    cita.setEstado("Cancelada");
+                    encontrada = true;
+                    break;
+                }
+            }
+
+            if (encontrada) {
+                guardarCitas(citas);
+                return true;
+            } else {
+                return false;
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 }
