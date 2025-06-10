@@ -13,6 +13,6 @@ public class InicioControlador {
     @GetMapping("/")
     public String mostrarPaginaInicio() {
         logger.info("El usuario ha accedido a la página de inicio.");
-        return "inicio"; 
+        return "inicio";
     }
 }

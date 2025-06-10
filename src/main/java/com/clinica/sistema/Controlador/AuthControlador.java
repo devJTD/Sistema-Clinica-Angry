@@ -12,63 +12,71 @@ import org.springframework.web.bind.annotation.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import org.apache.commons.lang3.StringUtils; 
+import com.google.common.base.Preconditions; 
+
 @Controller
 public class AuthControlador {
 
-    // Inyección del servicio que maneja lógica de autenticación y registro
     @Autowired
     private AuthServicio authServicio;
 
-    // Logger para registrar eventos importantes
     private Logger logger = LoggerFactory.getLogger(AuthControlador.class);
 
-    // Muestra la página de login
     @GetMapping("/login")
     public String mostrarFormularioLogin() {
         logger.info("El usuario ha accedido a la página de login.");
-        return "login"; // Devuelve la vista login.html
+        return "login";
     }
 
     @PostMapping("/login")
     public String procesarLogin(@RequestParam("correo") String correo,
-            @RequestParam("contraseña") String contraseña,
-            HttpSession session) {
+                                @RequestParam("contraseña") String contraseña,
+                                HttpSession session) {
 
-        // Usa el método del servicio que ya busca en pacientes.json
+        if (StringUtils.isBlank(correo) || StringUtils.isBlank(contraseña)) {
+            logger.warn("Intento de login con correo o contraseña vacíos.");
+            return "redirect:/login?error=camposvacios";
+        }
+
         Paciente paciente = authServicio.buscarPorCorreoYPassword(correo, contraseña);
         if (paciente != null) {
             session.setAttribute("usuario", paciente);
+            logger.info("Login exitoso para el correo: {}", correo);
             return "redirect:/";
         }
-        return "redirect:/login?error";
+        logger.warn("Login fallido para el correo: {}", correo);
+        return "redirect:/login?error=credenciales";
 
     }
 
-    // Muestra la página de login tras cerrar sesión
     @PostMapping("/logout")
     public String cerrarSesion(HttpSession session) {
-        // Invalida la sesión actual
         session.invalidate();
-
-        // Redirige al login con parámetro de éxito
+        logger.info("Sesión cerrada.");
         return "redirect:/login?logout";
     }
 
-    // Muestra la página de registro
     @GetMapping("/registro")
     public String mostrarFormularioRegistro(Model model) {
-        model.addAttribute("paciente", new Paciente()); // Esto evita el error en Thymeleaf
-        return "registro"; // Este es tu archivo registro.html
+        model.addAttribute("paciente", new Paciente());
+        return "registro";
     }
 
-    /**
-     * Procesa los datos del formulario de registro.
-     * Verifica si el paciente ya existe por correo o DNI.
-     * Si no existe, lo guarda en pacientes.json y redirige al login.
-     */
     @PostMapping("/registro")
     public String procesarRegistro(@ModelAttribute Paciente paciente) {
         logger.info("Intentando registrar paciente con correo: {} y DNI: {}", paciente.getCorreo(), paciente.getDni());
+
+        Preconditions.checkNotNull(paciente, "El objeto Paciente no puede ser nulo.");
+
+        if (StringUtils.isBlank(paciente.getNombre()) ||
+            StringUtils.isBlank(paciente.getApellido()) ||
+            StringUtils.isBlank(paciente.getCorreo()) ||
+            StringUtils.isBlank(paciente.getContraseña()) ||
+            StringUtils.isBlank(paciente.getDni())) {
+            logger.warn("Registro fallido: campos obligatorios vacíos para el paciente.");
+            return "redirect:/registro?error=camposvacios";
+        }
 
         if (authServicio.existePacientePorEmailODni(paciente.getCorreo(), paciente.getDni())) {
             logger.warn("Registro fallido: paciente con correo {} o DNI {} ya existe.", paciente.getCorreo(),

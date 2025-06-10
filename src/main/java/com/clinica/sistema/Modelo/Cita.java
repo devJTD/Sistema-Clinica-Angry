@@ -14,6 +14,6 @@ public class Cita {
     private LocalDate fecha;
     private LocalTime hora;
     private String estado;
-    private Paciente paciente;
-    private Medico medico;
+    private Long idPaciente;
+    private Long idMedico;
 }
