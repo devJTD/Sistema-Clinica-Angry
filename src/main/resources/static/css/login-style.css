@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #ccc;
+    background-color: #f5fefe; /* celeste muy claro */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,11 +15,11 @@ body {
 }
 
 .login-container {
-    background: #1e1e1e;
-    color: #e0e0e0;
+    background: #ffffff;
+    color: #2c3e50;
     padding: 30px 20px;
     border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     width: 90%;
     max-width: 450px;
     text-align: center;
@@ -27,7 +27,7 @@ body {
 
 h1 {
     margin-bottom: 25px;
-    color: #fff;
+    color: #008080; /* turquesa hospitalario */
     font-size: 2em;
     position: relative;
 }
@@ -37,7 +37,7 @@ h1::after {
     display: block;
     height: 4px;
     width: 60px;
-    background-color: #00c78c;
+    background-color: #56c8c2;
     margin: 8px auto 0;
     border-radius: 2px;
 }
@@ -45,32 +45,32 @@ h1::after {
 .input-group {
     display: flex;
     align-items: center;
-    background-color: #333;
+    background-color: #e6f7f7;
     margin-bottom: 15px;
     padding: 10px;
     border-radius: 8px;
+    border: 1px solid #cdeeee;
     transition: all 0.3s ease;
 }
 
 .input-group:focus-within {
-    box-shadow: 0 0 0 2px #00c78c;
-    border: 1px solid #00c78c;
+    box-shadow: 0 0 0 2px #56c8c2;
+    border: 1px solid #56c8c2;
 }
 
 .input-group i {
-    color: #00c78c;
+    color: #56c8c2;
     margin-right: 12px;
     font-size: 1.1em;
 }
 
-/* Modificación aquí para asegurar que el fondo se elimine para 'email' */
 input[type="text"],
 input[type="password"],
-input[type="email"] { 
-    background: none; /* Esto asegura que no haya fondo blanco */
+input[type="email"] {
+    background: none;
     border: none;
     outline: none;
-    color: #fff;
+    color: #2c3e50;
     width: 100%;
     font-size: 1rem;
     padding: 0;
@@ -78,17 +78,11 @@ input[type="email"] {
 }
 
 input::placeholder {
-    color: #b0b0b0;
-}
-
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="email"]:focus {
-    transform: none;
+    color: #7f8c8d;
 }
 
 .btn {
-    background: #00c78c;
+    background: #56c8c2;
     color: white;
     border: none;
     padding: 12px 20px;
@@ -103,7 +97,7 @@ input[type="email"]:focus {
 }
 
 .btn:hover {
-    background: #00a87a;
+    background: #3ab7af;
     transform: translateY(-2px);
 }
 
@@ -114,12 +108,12 @@ input[type="email"]:focus {
 .links {
     margin-top: 20px;
     font-size: 0.9em;
-    color: #ccc;
+    color: #6c757d;
 }
 
 .links a {
     display: inline;
-    color: #00c78c;
+    color: #56c8c2;
     text-decoration: none;
     margin: 0;
     transition: color 0.3s ease, text-decoration 0.3s ease;
@@ -127,7 +121,7 @@ input[type="email"]:focus {
 
 .links a:hover {
     text-decoration: underline;
-    color: #00a87a;
+    color: #3ab7af;
 }
 
 .message-container {
