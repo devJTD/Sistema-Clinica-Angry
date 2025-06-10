@@ -15,7 +15,6 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.NoSuchElementException; 
 import java.util.Optional; 
 
 import org.apache.commons.io.FileUtils; 
@@ -23,7 +22,12 @@ import org.apache.commons.lang3.StringUtils;
 import com.google.common.base.Preconditions;
 import org.slf4j.Logger; 
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Service; 
+import org.springframework.stereotype.Service;
+import org.springframework.ui.Model;
+
+import java.util.stream.Collectors;
+
+import jakarta.servlet.http.HttpSession;
 
 @Service 
 public class CitaServicio {
@@ -77,7 +81,7 @@ public class CitaServicio {
         logger.info("Citas guardadas exitosamente en: {}", rutaCitas);
     }
 
-    public void crearCita(String fechaStr, String horaStr, Long idMedico) throws IOException {
+    public void crearCita(String fechaStr, String horaStr, Long idMedico, HttpSession session, Model model) throws IOException {
         Preconditions.checkArgument(StringUtils.isNotBlank(fechaStr), "La fecha de la cita no puede estar vacía.");
         Preconditions.checkArgument(StringUtils.isNotBlank(horaStr), "La hora de la cita no puede estar vacía.");
         Preconditions.checkNotNull(idMedico, "El ID del médico no puede ser nulo.");
@@ -86,7 +90,7 @@ public class CitaServicio {
 
         List<Cita> citas = leerCitas();
 
-        Paciente paciente = obtenerPrimerPaciente();
+        Paciente paciente = (Paciente) session.getAttribute("usuario");
         Preconditions.checkNotNull(paciente, "No se encontró el paciente para crear la cita. Asegúrese de que haya al menos un paciente registrado.");
         logger.debug("Paciente obtenido para cita: {}", paciente.getId());
 
@@ -112,21 +116,6 @@ public class CitaServicio {
         citas.add(cita);
         guardarCitas(citas);
         logger.info("Cita guardada exitosamente.");
-    }
-
-    private Paciente obtenerPrimerPaciente() throws IOException {
-        File file = new File(rutaPacientes);
-        if (!file.exists() || file.length() == 0) {
-            throw new IOException("El archivo de pacientes no existe o está vacío: " + rutaPacientes);
-        }
-        String jsonContent = FileUtils.readFileToString(file, StandardCharsets.UTF_8);
-        List<Paciente> pacientes = mapper.readValue(jsonContent, new TypeReference<List<Paciente>>() {});
-        
-        if (pacientes.isEmpty()) {
-            throw new NoSuchElementException("No hay pacientes en el archivo: " + rutaPacientes);
-        }
-        logger.debug("Primer paciente obtenido: {}", pacientes.get(0).getId());
-        return pacientes.get(0);
     }
 
     public Medico obtenerMedicoPorId(Long idMedico) throws IOException { // Public para posible uso externo
@@ -160,5 +149,12 @@ public class CitaServicio {
         }
         String jsonContent = FileUtils.readFileToString(file, StandardCharsets.UTF_8);
         return mapper.readValue(jsonContent, new TypeReference<List<Medico>>() {});
+    }
+
+    public List<Cita> obtenerCitasPorPaciente(Long idPaciente) throws IOException {
+        List<Cita> todas = leerCitas();
+        return todas.stream()
+                .filter(c -> c.getIdPaciente() != null && c.getIdPaciente().equals(idPaciente))
+                .collect(Collectors.toList());
     }
 }

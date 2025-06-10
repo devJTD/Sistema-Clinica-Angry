@@ -1,11 +1,11 @@
 package com.clinica.sistema.Controlador;
 
 import com.clinica.sistema.Modelo.Cita;
-import com.clinica.sistema.Modelo.Paciente; 
-import com.clinica.sistema.Modelo.Medico; 
+import com.clinica.sistema.Modelo.Paciente;
+import com.clinica.sistema.Modelo.Medico;
 import com.clinica.sistema.Servicio.CitaServicio;
 
-import jakarta.servlet.http.HttpSession; 
+import jakarta.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -28,42 +28,35 @@ import java.io.ByteArrayOutputStream;
 public class HistorialControlador {
 
     private Logger logger = LoggerFactory.getLogger(HistorialControlador.class);
-
-    private final CitaServicio citaServicio;
+    private CitaServicio citaServicio = new CitaServicio();
 
     public HistorialControlador(CitaServicio citaServicio) {
         this.citaServicio = citaServicio;
     }
 
     @GetMapping("/historial")
-public String mostrarPaginaHistorialCitas(Model model, HttpSession session) {
-    logger.info("El usuario ha accedido a la página de historial de citas.");
+    public String mostrarPaginaHistorialCitas(HttpSession session, Model model) {
+        logger.info("El usuario ha accedido a la página de historial de citas.");
 
-    Paciente pacienteLogueado = (Paciente) session.getAttribute("usuario");
-    if (pacienteLogueado == null) {
-        logger.warn("Usuario no logueado intentó acceder a historial.");
-        return "redirect:/login"; 
+        try {
+            Paciente usuario = (Paciente) session.getAttribute("usuario");
+            if (usuario == null) {
+                return "redirect:/login";
+            }
+
+            // Obtener solo citas del paciente logueado
+            List<Cita> citasUsuario = citaServicio.obtenerCitasPorPaciente(usuario.getId());
+
+            model.addAttribute("citasPendientes", citasUsuario);
+            model.addAttribute("nombreUsuario", usuario.getNombre());
+
+        } catch (IOException e) {
+            logger.error("Error al leer citas", e);
+            model.addAttribute("citasPendientes", List.of());
+        }
+
+        return "historialCita";
     }
-
-    try {
-        List<Cita> todasCitas = citaServicio.leerCitas();
-
-        List<Cita> citasPendientes = todasCitas.stream()
-            .filter(cita -> cita.getIdPaciente().equals(pacienteLogueado.getId())) // Filtrar por ID del paciente
-            .filter(cita -> "Pendiente".equalsIgnoreCase(cita.getEstado()))
-            .collect(Collectors.toList());
-
-        model.addAttribute("citasPendientes", citasPendientes);
-        model.addAttribute("nombreUsuario", pacienteLogueado.getNombre() + " " + pacienteLogueado.getApellido());
-
-    } catch (IOException e) {
-        logger.error("Error al leer citas para el historial: {}", e.getMessage(), e);
-        model.addAttribute("citasPendientes", List.of());
-        model.addAttribute("errorCitas", "Error al cargar historial de citas.");
-    }
-
-    return "historialCita";
-}
 
     @GetMapping("/historial/exportar/excel")
     public ResponseEntity<byte[]> exportarHistorialCitasExcel(HttpSession session) {
@@ -106,7 +99,7 @@ public String mostrarPaginaHistorialCitas(Model model, HttpSession session) {
                             .orElse(null);
 
                     if (medicoAsociado != null) {
-          
+
                         row.createCell(4).setCellValue(medicoAsociado.getNombreCompleto()); // O getNombreCompleto() si
                                                                                             // lo tienes
                         row.createCell(5).setCellValue(medicoAsociado.getIdEspecialidad());
@@ -121,7 +114,7 @@ public String mostrarPaginaHistorialCitas(Model model, HttpSession session) {
                     sheet.autoSizeColumn(i);
                 }
 
-                workbook.write(outputStream); 
+                workbook.write(outputStream);
                 logger.info("Reporte Excel de citas generado para paciente ID: {}", pacienteLogueado.getId());
 
                 HttpHeaders httpHeaders = new HttpHeaders();

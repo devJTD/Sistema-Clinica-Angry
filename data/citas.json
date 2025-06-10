@@ -26,4 +26,18 @@
   "estado" : "Pendiente",
   "idPaciente" : 1749005808214,
   "idMedico" : 132
+}, {
+  "id" : 5,
+  "fecha" : "2025-06-07",
+  "hora" : "11:00:00",
+  "estado" : "Pendiente",
+  "idPaciente" : 1749005808214,
+  "idMedico" : 132
+}, {
+  "id" : 6,
+  "fecha" : "2025-06-07",
+  "hora" : "11:00:00",
+  "estado" : "Pendiente",
+  "idPaciente" : 1749005808215,
+  "idMedico" : 120
 } ]

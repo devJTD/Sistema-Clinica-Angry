@@ -7,6 +7,8 @@ import jakarta.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.ui.Model;
+
 import java.io.IOException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -34,7 +36,7 @@ public class ReservaControlador {
     public String confirmarCita(@RequestParam("fechaCita") String fecha,
                                 @RequestParam("horaCita") String hora,
                                 @RequestParam("idMedico") Long idMedico,
-                                HttpSession session) {
+                                HttpSession session, Model model) {
         logger.info("Intentando crear cita con fecha: {}, hora: {}, idMedico: {}", fecha, hora, idMedico);
 
         Paciente pacienteLogueado = (Paciente) session.getAttribute("usuario");
@@ -51,7 +53,7 @@ public class ReservaControlador {
             Preconditions.checkArgument(idMedico > 0, "El ID del médico debe ser un valor positivo.");
             Preconditions.checkNotNull(idPacienteActual, "El ID del paciente no pudo ser determinado.");
 
-            citaServicio.crearCita(fecha, hora, idMedico);
+            citaServicio.crearCita(fecha, hora, idMedico, session, model);
             logger.info("Cita creada correctamente");
             return "redirect:/historial?success";
 

@@ -1,53 +1,76 @@
-2025-06-09 11:06:43.795 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 22824 (C:\Users\Jeanpierre Chipa\Desktop\sistemas seguir\Sistema-Clinica-Angry\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistemas seguir\Sistema-Clinica-Angry)
-2025-06-09 11:06:43.803 INFO  - No active profile set, falling back to 1 default profile: "default"
-2025-06-09 11:06:45.951 INFO  - Archivo pacientes.json encontrado en: C:\Users\Jeanpierre Chipa\Desktop\sistemas seguir\Sistema-Clinica-Angry\data\pacientes.json
-2025-06-09 11:06:46.769 INFO  - Started SistemaApplication in 3.696 seconds (process running for 4.714)
-2025-06-09 11:07:23.938 INFO  - El usuario ha accedido a la página de inicio.
-2025-06-09 11:07:30.760 INFO  - El usuario ha accedido a la página de login.
-2025-06-09 11:08:46.169 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 22808 (C:\Users\Jeanpierre Chipa\Desktop\sistemas seguir\Sistema-Clinica-Angry\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistemas seguir\Sistema-Clinica-Angry)
-2025-06-09 11:08:46.175 INFO  - No active profile set, falling back to 1 default profile: "default"
-2025-06-09 11:08:48.009 INFO  - Archivo pacientes.json encontrado en: C:\Users\Jeanpierre Chipa\Desktop\sistemas seguir\Sistema-Clinica-Angry\data\pacientes.json
-2025-06-09 11:08:48.635 INFO  - Started SistemaApplication in 3.09 seconds (process running for 3.959)
-2025-06-09 11:08:55.805 INFO  - El usuario ha accedido a la página de login.
-2025-06-09 11:08:56.762 WARN  - Intento de login con correo o contraseña vacíos.
-2025-06-09 11:08:56.767 INFO  - El usuario ha accedido a la página de login.
-2025-06-09 11:09:03.863 WARN  - Intento de login con correo o contraseña vacíos.
-2025-06-09 11:09:03.868 INFO  - El usuario ha accedido a la página de login.
-2025-06-09 11:09:09.714 WARN  - Intento de login con correo o contraseña vacíos.
-2025-06-09 11:09:09.720 INFO  - El usuario ha accedido a la página de login.
-2025-06-09 11:10:15.159 WARN  - Paciente no encontrado para login con correo: noexiste@dominio.com
-2025-06-09 11:10:15.159 WARN  - Login fallido para el correo: noexiste@dominio.com
-2025-06-09 11:10:15.168 INFO  - El usuario ha accedido a la página de login.
-2025-06-09 11:10:23.961 WARN  - Paciente no encontrado para login con correo: chipa.robladillo@gmail.com
-2025-06-09 11:10:23.961 WARN  - Login fallido para el correo: chipa.robladillo@gmail.com
-2025-06-09 11:10:23.965 INFO  - El usuario ha accedido a la página de login.
-2025-06-09 11:11:09.973 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 9344 (C:\Users\Jeanpierre Chipa\Desktop\sistemas seguir\Sistema-Clinica-Angry\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistemas seguir\Sistema-Clinica-Angry)
-2025-06-09 11:11:09.977 INFO  - No active profile set, falling back to 1 default profile: "default"
-2025-06-09 11:11:11.790 INFO  - Archivo pacientes.json encontrado en: C:\Users\Jeanpierre Chipa\Desktop\sistemas seguir\Sistema-Clinica-Angry\data\pacientes.json
-2025-06-09 11:11:12.551 INFO  - Started SistemaApplication in 3.619 seconds (process running for 4.974)
-2025-06-09 11:11:12.716 INFO  - El usuario ha accedido a la página de login.
-2025-06-09 11:11:59.176 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 2540 (C:\Users\Jeanpierre Chipa\Desktop\sistemas seguir\Sistema-Clinica-Angry\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistemas seguir\Sistema-Clinica-Angry)
-2025-06-09 11:11:59.176 INFO  - No active profile set, falling back to 1 default profile: "default"
-2025-06-09 11:12:00.870 INFO  - Archivo pacientes.json encontrado en: C:\Users\Jeanpierre Chipa\Desktop\sistemas seguir\Sistema-Clinica-Angry\data\pacientes.json
-2025-06-09 11:12:01.530 INFO  - Started SistemaApplication in 2.963 seconds (process running for 3.836)
-2025-06-09 11:12:19.845 INFO  - Intentando registrar paciente con correo: chipa.robladillo@gmail.com y DNI: 71632345
-2025-06-09 11:12:19.858 WARN  - Registro fallido: campos obligatorios vacíos para el paciente.
-2025-06-09 11:13:33.726 INFO  - Intentando registrar paciente con correo: chipa.robladillo@gmail.com y DNI: 71632369
-2025-06-09 11:13:33.729 WARN  - Se encontró un paciente existente con el correo chipa.robladillo@gmail.com o DNI 71632369.
-2025-06-09 11:13:33.729 WARN  - Registro fallido: paciente con correo chipa.robladillo@gmail.com o DNI 71632369 ya existe.
-2025-06-09 11:15:20.435 INFO  - El usuario ha accedido a la página de login.
-2025-06-09 11:15:26.209 WARN  - Intento de login con correo o contraseña vacíos.
-2025-06-09 11:15:26.215 INFO  - El usuario ha accedido a la página de login.
-2025-06-09 11:17:21.187 INFO  - Paciente encontrado para login: chipa.robladillo@gmail.com
-2025-06-09 11:17:21.189 INFO  - Login exitoso para el correo: chipa.robladillo@gmail.com
-2025-06-09 11:17:21.195 INFO  - El usuario ha accedido a la página de inicio.
-2025-06-09 11:20:53.971 INFO  - Sesión cerrada.
-2025-06-09 11:20:53.979 INFO  - El usuario ha accedido a la página de login.
-2025-06-09 11:21:06.232 WARN  - Paciente no encontrado para login con correo: chipa.robladillo@gmail.com
-2025-06-09 11:21:06.233 WARN  - Login fallido para el correo: chipa.robladillo@gmail.com
-2025-06-09 11:21:06.240 INFO  - El usuario ha accedido a la página de login.
-2025-06-09 11:21:23.186 INFO  - Paciente encontrado para login: chipa.robladillo@gmail.com
-2025-06-09 11:21:23.186 INFO  - Login exitoso para el correo: chipa.robladillo@gmail.com
-2025-06-09 11:21:23.190 INFO  - El usuario ha accedido a la página de inicio.
-2025-06-09 11:21:26.049 INFO  - Sesión cerrada.
-2025-06-09 11:21:26.056 INFO  - El usuario ha accedido a la página de login.
+2025-06-10 08:57:32.166 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 11080 (C:\Users\Jeanpierre Chipa\Desktop\sistemas seguir\Sistema-Clinica-Angry\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistemas seguir\Sistema-Clinica-Angry)
+2025-06-10 08:57:32.174 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-06-10 08:57:34.552 INFO  - Archivo pacientes.json encontrado en: C:\Users\Jeanpierre Chipa\Desktop\sistemas seguir\Sistema-Clinica-Angry\data\pacientes.json
+2025-06-10 08:57:35.273 INFO  - Started SistemaApplication in 3.723 seconds (process running for 4.716)
+2025-06-10 08:57:54.723 INFO  - El usuario ha accedido a la página de login.
+2025-06-10 08:57:57.164 INFO  - El usuario ha accedido a la página de login.
+2025-06-10 08:58:03.021 INFO  - El usuario ha accedido a la página de login.
+2025-06-10 08:58:03.558 INFO  - El usuario ha accedido a la página de login.
+2025-06-10 08:58:06.374 INFO  - El usuario ha accedido a la página de login.
+2025-06-10 08:58:08.287 INFO  - El usuario ha accedido a la página de login.
+2025-06-10 08:58:08.326 INFO  - El usuario ha accedido a la página de login.
+2025-06-10 08:58:25.750 WARN  - Paciente no encontrado para login con correo: chipa.robladillo@gmail.com
+2025-06-10 08:58:25.751 WARN  - Login fallido para el correo: chipa.robladillo@gmail.com
+2025-06-10 08:58:25.761 INFO  - El usuario ha accedido a la página de login.
+2025-06-10 08:58:25.807 INFO  - El usuario ha accedido a la página de login.
+2025-06-10 08:58:45.846 WARN  - Paciente no encontrado para login con correo: chipa.robladillo@gmail.com
+2025-06-10 08:58:45.848 WARN  - Login fallido para el correo: chipa.robladillo@gmail.com
+2025-06-10 08:58:45.853 INFO  - El usuario ha accedido a la página de login.
+2025-06-10 08:58:45.893 INFO  - El usuario ha accedido a la página de login.
+2025-06-10 08:59:59.582 INFO  - Paciente encontrado para login: chipa.robladillo@gmail.com
+2025-06-10 08:59:59.583 INFO  - Login exitoso para el correo: chipa.robladillo@gmail.com
+2025-06-10 08:59:59.591 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-10 09:00:02.413 INFO  - Sesión cerrada.
+2025-06-10 09:00:02.419 INFO  - El usuario ha accedido a la página de login.
+2025-06-10 09:00:13.701 INFO  - Paciente encontrado para login: chipa.robladillo@gmail.com
+2025-06-10 09:00:13.701 INFO  - Login exitoso para el correo: chipa.robladillo@gmail.com
+2025-06-10 09:00:13.706 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-10 09:00:15.540 INFO  - Accediendo a la página de reserva de cita.
+2025-06-10 09:00:27.670 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-06-10 09:00:44.565 INFO  - Accediendo a la página de reserva de cita.
+2025-06-10 09:00:46.245 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-10 09:00:46.661 INFO  - Accediendo a la página de reserva de cita.
+2025-06-10 09:00:47.044 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-06-10 09:01:18.591 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-10 09:01:42.935 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-06-10 09:05:45.674 INFO  - Sesión cerrada.
+2025-06-10 09:05:45.681 INFO  - El usuario ha accedido a la página de login.
+2025-06-10 09:05:45.708 INFO  - Sesión cerrada.
+2025-06-10 09:05:45.718 INFO  - El usuario ha accedido a la página de login.
+2025-06-10 09:06:44.952 INFO  - Paciente encontrado para login: chipa.robladillo5@gmail.com
+2025-06-10 09:06:44.953 INFO  - Login exitoso para el correo: chipa.robladillo5@gmail.com
+2025-06-10 09:06:44.959 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-10 09:06:57.593 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-06-10 09:06:59.905 INFO  - Accediendo a la página de reserva de cita.
+2025-06-10 09:07:24.268 INFO  - Intentando crear cita con fecha: 2025-06-07, hora: 11:00, idMedico: 132
+2025-06-10 09:07:24.269 INFO  - Intentando crear cita para fecha: 2025-06-07, hora: 11:00, medicoId: 132
+2025-06-10 09:07:24.288 INFO  - Cita construida con ID: 5, Fecha: 2025-06-07, Hora: 11:00, Paciente: 1749005808214, Medico: 132
+2025-06-10 09:07:24.317 INFO  - Citas guardadas exitosamente en: data/citas.json
+2025-06-10 09:07:24.318 INFO  - Cita guardada exitosamente.
+2025-06-10 09:07:24.318 INFO  - Cita creada correctamente
+2025-06-10 09:07:24.326 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-06-10 09:15:31.635 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 10884 (C:\Users\Jeanpierre Chipa\Desktop\sistemas seguir\Sistema-Clinica-Angry\target\classes started by Jeanpierre Chipa in C:\Users\Jeanpierre Chipa\Desktop\sistemas seguir\Sistema-Clinica-Angry)
+2025-06-10 09:15:31.637 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-06-10 09:15:33.517 INFO  - Archivo pacientes.json encontrado en: C:\Users\Jeanpierre Chipa\Desktop\sistemas seguir\Sistema-Clinica-Angry\data\pacientes.json
+2025-06-10 09:15:34.231 INFO  - Started SistemaApplication in 3.212 seconds (process running for 4.104)
+2025-06-10 09:15:47.062 INFO  - El usuario ha accedido a la página de login.
+2025-06-10 09:15:57.733 INFO  - Paciente encontrado para login: chipa.robladillo@gmail.com
+2025-06-10 09:15:57.734 INFO  - Login exitoso para el correo: chipa.robladillo@gmail.com
+2025-06-10 09:15:57.742 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-10 09:15:59.572 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-06-10 09:15:59.638 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-06-10 09:16:06.561 INFO  - Sesión cerrada.
+2025-06-10 09:16:06.567 INFO  - El usuario ha accedido a la página de login.
+2025-06-10 09:16:12.143 INFO  - Paciente encontrado para login: chipa.robladillo5@gmail.com
+2025-06-10 09:16:12.144 INFO  - Login exitoso para el correo: chipa.robladillo5@gmail.com
+2025-06-10 09:16:12.151 INFO  - El usuario ha accedido a la página de inicio.
+2025-06-10 09:16:13.564 INFO  - Accediendo a la página de reserva de cita.
+2025-06-10 09:16:14.987 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-06-10 09:16:15.460 INFO  - Accediendo a la página de reserva de cita.
+2025-06-10 09:16:23.055 INFO  - Intentando crear cita con fecha: 2025-06-07, hora: 11:00, idMedico: 120
+2025-06-10 09:16:23.056 INFO  - Intentando crear cita para fecha: 2025-06-07, hora: 11:00, medicoId: 120
+2025-06-10 09:16:23.072 INFO  - Cita construida con ID: 6, Fecha: 2025-06-07, Hora: 11:00, Paciente: 1749005808215, Medico: 120
+2025-06-10 09:16:23.108 INFO  - Citas guardadas exitosamente en: data/citas.json
+2025-06-10 09:16:23.109 INFO  - Cita guardada exitosamente.
+2025-06-10 09:16:23.109 INFO  - Cita creada correctamente
+2025-06-10 09:16:23.114 INFO  - El usuario ha accedido a la página de historial de citas.
