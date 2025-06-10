@@ -85,7 +85,8 @@
                         </p>
                     </div>
                     <div class="acciones-cita">
-                        <button class="btn-cancelar">Cancelar Cita</button>
+                        <button class="btn-cancelar" th:onclick="'cancelarCita(' + ${cita.id} + ')'">Cancelar
+                            Cita</button>
                     </div>
                 </div>
             </div>
@@ -121,6 +122,21 @@
             });
             if (pestañaActiva) {
                 pestañaActiva.classList.add('active');
+            }
+        }
+
+        function cancelarCita(id) {
+            if (confirm("¿Estás segura que deseas cancelar esta cita?")) {
+                fetch(`/cancelar-cita?id=${id}`, {
+                    method: 'POST'
+                }).then(response => {
+                    if (response.ok) {
+                        alert("Cita cancelada exitosamente");
+                        location.reload(); // recarga para actualizar
+                    } else {
+                        alert("Hubo un error al cancelar la cita");
+                    }
+                });
             }
         }
     </script>
