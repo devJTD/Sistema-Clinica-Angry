@@ -1,7 +1,11 @@
 package com.clinica.sistema.Controlador;
 
 import com.clinica.sistema.Modelo.Cita;
+import com.clinica.sistema.Modelo.Paciente;
 import com.clinica.sistema.Servicio.CitaServicio;
+
+import jakarta.servlet.http.HttpSession;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -19,22 +23,20 @@ public class HistorialControlador {
     private CitaServicio citaServicio = new CitaServicio();
 
     @GetMapping("/historial")
-    public String mostrarPaginaHistorialCitas(Model model) {
+    public String mostrarPaginaHistorialCitas(HttpSession session, Model model) {
         logger.info("El usuario ha accedido a la página de historial de citas.");
 
         try {
-            // Obtener todas las citas
-            List<Cita> todasCitas = citaServicio.leerCitas();
+            Paciente usuario = (Paciente) session.getAttribute("usuario");
+            if (usuario == null) {
+                return "redirect:/login";
+            }
 
-            // Filtrar solo las pendientes
-            List<Cita> citasPendientes = todasCitas.stream()
-                .filter(cita -> "Pendiente".equalsIgnoreCase(cita.getEstado()))
-                .collect(Collectors.toList());
+            // Obtener solo citas del paciente logueado
+            List<Cita> citasUsuario = citaServicio.obtenerCitasPorPaciente(usuario.getId());
 
-            model.addAttribute("citasPendientes", citasPendientes);
-
-            // Nombre de usuario fijo por ahora
-            model.addAttribute("nombreUsuario", "Jeanpierre Chipa");
+            model.addAttribute("citasPendientes", citasUsuario);
+            model.addAttribute("nombreUsuario", usuario.getNombre());
 
         } catch (IOException e) {
             logger.error("Error al leer citas", e);
@@ -43,4 +45,5 @@ public class HistorialControlador {
 
         return "historialCita";
     }
+
 }
