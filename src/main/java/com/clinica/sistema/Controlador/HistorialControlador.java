@@ -100,8 +100,8 @@ public class HistorialControlador {
 
                     if (medicoAsociado != null) {
 
-                        row.createCell(4).setCellValue(medicoAsociado.getNombreCompleto()); // O getNombreCompleto() si
-                                                                                            // lo tienes
+                        row.createCell(4).setCellValue(medicoAsociado.getNombreCompleto()); 
+                                                                                            
                         row.createCell(5).setCellValue(medicoAsociado.getIdEspecialidad());
                     } else {
                         row.createCell(4).setCellValue("Médico Desconocido");
@@ -142,3 +142,4 @@ public class HistorialControlador {
         }
     }
 }
+
