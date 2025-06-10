@@ -1,1 +1,17 @@
-[{"id":1749005808214,"nombre":"Jeanpierre Antonio","apellido":"Chipa Robladillo","dni":"71632364","telefono":"921340064","correo":"chipa.robladillo@gmail.com","contraseña":"jeanpierreCR=25"}]
+[ {
+  "id" : 1749005808214,
+  "nombre" : "Jeanpierre Antonio",
+  "apellido" : "Chipa Robladillo",
+  "dni" : "71632364",
+  "telefono" : "921340064",
+  "correo" : "chipa.robladillo@gmail.com",
+  "contraseña" : "jeanpierreCR=25"
+}, {
+  "id" : 1749005808215,
+  "nombre" : "Arthur  ",
+  "apellido" : "Leywing   ",
+  "dni" : "78456984",
+  "telefono" : "921340068",
+  "correo" : "chipa.robladillo5@gmail.com",
+  "contraseña" : "25o08o2003"
+} ]

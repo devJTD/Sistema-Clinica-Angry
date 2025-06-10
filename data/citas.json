@@ -2,46 +2,42 @@
   "id" : 1,
   "fecha" : "2025-06-06",
   "hora" : "12:00:00",
-  "estado" : "Cancelada",
-  "paciente" : {
-    "id" : 1749005808214,
-    "nombre" : "Jeanpierre Antonio",
-    "apellido" : "Chipa Robladillo",
-    "dni" : "71632364",
-    "telefono" : "921340064",
-    "correo" : "chipa.robladillo@gmail.com",
-    "contraseña" : "jeanpierreCR=25"
-  },
-  "medico" : {
-    "id" : 135,
-    "nombreCompleto" : "Dra. Teresa Alarcón",
-    "especialidad" : {
-      "id" : 12,
-      "nombre" : "Oncología"
-    },
-    "horarios" : [ ]
-  }
+  "estado" : "Pendiente",
+  "idPaciente" : 1749005808214,
+  "idMedico" : 135
 }, {
   "id" : 2,
   "fecha" : "2025-06-06",
   "hora" : "10:00:00",
   "estado" : "Pendiente",
-  "paciente" : {
-    "id" : 1749005808214,
-    "nombre" : "Jeanpierre Antonio",
-    "apellido" : "Chipa Robladillo",
-    "dni" : "71632364",
-    "telefono" : "921340064",
-    "correo" : "chipa.robladillo@gmail.com",
-    "contraseña" : "jeanpierreCR=25"
-  },
-  "medico" : {
-    "id" : 131,
-    "nombreCompleto" : "Dra. Lorena Ibáñez",
-    "especialidad" : {
-      "id" : 11,
-      "nombre" : "Gastroenterología"
-    },
-    "horarios" : [ ]
-  }
+  "idPaciente" : 1749005808214,
+  "idMedico" : 131
+}, {
+  "id" : 3,
+  "fecha" : "2025-06-06",
+  "hora" : "11:00:00",
+  "estado" : "Pendiente",
+  "idPaciente" : 1749005808214,
+  "idMedico" : 129
+}, {
+  "id" : 4,
+  "fecha" : "2025-06-07",
+  "hora" : "11:00:00",
+  "estado" : "Pendiente",
+  "idPaciente" : 1749005808214,
+  "idMedico" : 132
+}, {
+  "id" : 5,
+  "fecha" : "2025-06-07",
+  "hora" : "11:00:00",
+  "estado" : "Pendiente",
+  "idPaciente" : 1749005808214,
+  "idMedico" : 132
+}, {
+  "id" : 6,
+  "fecha" : "2025-06-07",
+  "hora" : "11:00:00",
+  "estado" : "Pendiente",
+  "idPaciente" : 1749005808215,
+  "idMedico" : 120
 } ]

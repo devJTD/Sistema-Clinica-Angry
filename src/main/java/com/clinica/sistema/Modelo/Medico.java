@@ -12,6 +12,6 @@ import java.util.List;
 public class Medico {
     private Long id;
     private String nombreCompleto;
-    private Especialidad especialidad;
+    private Long idEspecialidad;
     private List<Horario> horarios;
 }
