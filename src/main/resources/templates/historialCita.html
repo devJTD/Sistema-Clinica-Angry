@@ -24,7 +24,6 @@
                     <li><a th:href="@{/}">Inicio</a></li>
                     <li><a th:href="@{/reserva}">Reservar Cita</a></li>
                     <li><a th:href="@{/historial}" class="activo">Ver Historial</a></li>
-                    <li><a th:href="@{/chat}">Chat con tu Médico</a></li>
                 </ul>
             </nav>
 
@@ -81,7 +80,7 @@
                         <p><strong>ID:</strong> <span th:text="${cita.id}">1</span></p>
                         <p><strong>Fecha:</strong> <span th:text="${cita.fecha}">2025-06-05</span></p>
                         <p><strong>Hora:</strong> <span th:text="${cita.hora}">10:00</span></p>
-                        <p><strong>Médico:</strong> <span th:text="${cita.idMedico}">105</span>
+                        <p><strong>Médico:</strong> <span th:text="${cita.medico.id}">105</span>
                         </p>
                     </div>
                     <div class="acciones-cita">
