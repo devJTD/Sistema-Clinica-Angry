@@ -5,7 +5,10 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne; // Importación para la relación OneToOne
 import jakarta.persistence.Table;
+
+import java.time.LocalDate;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -24,6 +27,12 @@ public class Notificacion {
     @Column(nullable = false, length = 500) // Un mensaje puede ser largo
     private String mensaje;
 
-    @Column(name = "id_cita", nullable = false) // Nombre de columna explícito, no nulo
-    private Long idCita; // Este campo podría ser una relación con la entidad Cita
+    @Column(nullable = false, length = 100) // Email del destinatario
+    private String emailDestinatario;
+
+    @Column(nullable = false) // Fecha y hora en que se intentó/realizó el envío
+    private LocalDate fechaEnvio;
+
+    @OneToOne(mappedBy = "notificacion")
+    private Cita cita; // Referencia inversa a la Cita a la que pertenece esta Notificacion
 }

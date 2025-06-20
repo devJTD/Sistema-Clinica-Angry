@@ -5,37 +5,46 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Column;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+import java.util.ArrayList;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity // Indica que esta clase es una entidad JPA
-@Table(name = "pacientes") // Mapea la entidad a una tabla llamada "pacientes"
+@Entity
+@Table(name = "pacientes")
 public class Paciente {
 
-    @Id // Marca este campo como la clave primaria
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // Configura la generación automática del ID
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, length = 100) // Configura la columna para no ser nula y tener una longitud máxima
+    @Column(nullable = false, length = 100)
     private String nombre;
 
     @Column(nullable = false, length = 100)
     private String apellido;
 
-    @Column(nullable = false, unique = true, length = 8) // DNI debe ser único y tener longitud 8
+    @Column(nullable = false, unique = true, length = 8)
     private String dni;
 
-    @Column(length = 20) // Teléfono puede ser más corto
+    @Column(length = 20)
     private String telefono;
 
-    @Column(nullable = false, unique = true, length = 100) // Correo debe ser único
+    @Column(nullable = false, unique = true, length = 100)
     private String correo;
 
-    @Column(nullable = false, length = 255) // Contraseña puede ser más larga para seguridad (hashing)
+    @Column(nullable = false, length = 255)
     private String contraseña;
+
+    @OneToMany(mappedBy = "paciente", cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
+    private List<Direccion> direcciones = new ArrayList<>();
 }
