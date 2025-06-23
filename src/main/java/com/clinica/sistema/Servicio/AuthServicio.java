@@ -1,7 +1,9 @@
 package com.clinica.sistema.Servicio;
 
 import com.clinica.sistema.Modelo.Paciente;
+import com.clinica.sistema.Modelo.Direccion; // Importar la entidad Direccion
 import com.clinica.sistema.Repositorio.PacienteRepositorio;
+import com.clinica.sistema.Repositorio.DireccionRepositorio; // Posiblemente necesites un repositorio para Direccion
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -10,20 +12,23 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.Optional;
+import java.util.ArrayList; // Para inicializar la lista de direcciones
 
 @Service
 public class AuthServicio {
 
     private final PacienteRepositorio pacienteRepositorio;
+    private final DireccionRepositorio direccionRepositorio; // Inyectar el repositorio de Direccion
 
     @Autowired
     private PasswordEncoder passwordEncoder;
 
     private final Logger logger = LoggerFactory.getLogger(AuthServicio.class);
 
-    public AuthServicio(PacienteRepositorio pacienteRepositorio) {
+    public AuthServicio(PacienteRepositorio pacienteRepositorio, DireccionRepositorio direccionRepositorio) {
         this.pacienteRepositorio = pacienteRepositorio;
-        logger.info("AuthServicio inicializado con PacienteRepositorio.");
+        this.direccionRepositorio = direccionRepositorio; // Asignar el repositorio
+        logger.info("AuthServicio inicializado con PacienteRepositorio y DireccionRepositorio.");
     }
 
     public boolean existePacientePorEmailODni(String email, String dni) {
@@ -48,7 +53,8 @@ public class AuthServicio {
     }
 
     @Transactional
-    public Paciente guardarPaciente(Paciente paciente) {
+    public Paciente guardarPaciente(Paciente paciente, Direccion direccion) {
+        // Validaciones del paciente (pueden ser más detalladas si es necesario)
         if (paciente == null) {
             throw new IllegalArgumentException("El paciente a guardar no puede ser nulo.");
         }
@@ -67,15 +73,32 @@ public class AuthServicio {
         if (paciente.getContraseña() == null || paciente.getContraseña().isBlank()) {
             throw new IllegalArgumentException("La contraseña del paciente no puede estar vacía.");
         }
+        
+        // Validaciones de la dirección
+        if (direccion == null || direccion.getDireccionCompleta() == null || direccion.getDireccionCompleta().isBlank()) {
+            throw new IllegalArgumentException("La dirección no puede ser nula o vacía.");
+        }
 
+        // 1. Encriptar la contraseña del paciente
         String hashedPassword = passwordEncoder.encode(paciente.getContraseña());
         paciente.setContraseña(hashedPassword);
         logger.debug("Contraseña del paciente {} encriptada antes de guardar.", paciente.getCorreo());
 
+        // 2. Asegurarse de que la lista de direcciones esté inicializada
+        if (paciente.getDirecciones() == null) {
+            paciente.setDirecciones(new ArrayList<>());
+        }
+
+        // 3. Establecer la relación bidireccional
+        direccion.setPaciente(paciente);
+        paciente.getDirecciones().add(direccion); // Añadir la dirección a la lista del paciente
+
+        // 4. Guardar el paciente (esto también guardará la dirección debido a CascadeType.ALL)
         Paciente pacienteGuardado = pacienteRepositorio.save(paciente);
-        logger.info("Paciente guardado exitosamente con ID {} y correo {}", pacienteGuardado.getId(), pacienteGuardado.getCorreo());
+        logger.info("Paciente y dirección guardados exitosamente para el paciente con ID {} y correo {}", pacienteGuardado.getId(), pacienteGuardado.getCorreo());
         return pacienteGuardado;
     }
+
 
     public Optional<Paciente> buscarPorCorreo(String correo) {
         if (correo == null || correo.isBlank()) {

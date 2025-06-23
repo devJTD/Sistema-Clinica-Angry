@@ -31,28 +31,55 @@ public class ReservaControlador {
     public ReservaControlador(CitaServicio citaServicio, AuthServicio authServicio) {
         this.citaServicio = citaServicio;
         this.authServicio = authServicio;
+        logger.info("[ReservaControlador] - Controlador inicializado con CitaServicio y AuthServicio.");
     }
 
     private Paciente getPacienteLogueado() {
+        logger.debug("[ReservaControlador] - Intentando obtener paciente logueado.");
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        if (authentication == null || !authentication.isAuthenticated() || authentication.getPrincipal() instanceof String) {
+
+        if (authentication == null || !authentication.isAuthenticated()) {
+            logger.debug("[ReservaControlador] - No hay autenticación o el usuario no está autenticado.");
             return null;
         }
-        UserDetails userDetails = (UserDetails) authentication.getPrincipal();
-        String correoUsuario = userDetails.getUsername();
-        Optional<Paciente> pacienteOpt = authServicio.buscarPorCorreo(correoUsuario);
-        return pacienteOpt.orElse(null);
+
+        if (authentication.getPrincipal() instanceof String) {
+            // Esto puede ocurrir si es "anonymousUser" o si el principal es solo el nombre de usuario
+            logger.warn("[ReservaControlador] - Principal de autenticación es String ({}). Puede ser usuario anónimo o no un UserDetails completo.", authentication.getPrincipal());
+            return null;
+        }
+
+        try {
+            UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+            String correoUsuario = userDetails.getUsername();
+            logger.info("[ReservaControlador] - Usuario autenticado detectado: {}. Buscando paciente en base de datos.", correoUsuario);
+            Optional<Paciente> pacienteOpt = authServicio.buscarPorCorreo(correoUsuario);
+            if (pacienteOpt.isPresent()) {
+                logger.debug("[ReservaControlador] - Paciente logueado encontrado: ID {}, Correo: {}.", pacienteOpt.get().getId(), pacienteOpt.get().getCorreo());
+                return pacienteOpt.get();
+            } else {
+                logger.warn("[ReservaControlador] - Paciente no encontrado en la base de datos para el correo: {}.", correoUsuario);
+                return null;
+            }
+        } catch (ClassCastException e) {
+            logger.error("[ReservaControlador] - Error de casteo al obtener UserDetails: {}. Principal type: {}", e.getMessage(), authentication.getPrincipal().getClass().getName());
+            return null;
+        } catch (Exception e) {
+            logger.error("[ReservaControlador] - Error inesperado al obtener paciente logueado: {}", e.getMessage(), e);
+            return null;
+        }
     }
 
     @GetMapping("/reserva")
     public String mostrarPaginaReservaCita(Model model) {
-        logger.info("Accediendo a la página de reserva de cita.");
+        logger.info("[ReservaControlador] - Accediendo a la página de reserva de cita (/reserva).");
 
         Paciente pacienteLogueado = getPacienteLogueado();
         if (pacienteLogueado != null) {
+            logger.info("[ReservaControlador] - Paciente logueado {} {} reconocido para la página de reserva.", pacienteLogueado.getNombre(), pacienteLogueado.getApellido());
             model.addAttribute("nombreUsuario", pacienteLogueado.getNombre() + " " + pacienteLogueado.getApellido());
         } else {
-            logger.warn("Usuario no autenticado intentó acceder a /reserva.");
+            logger.warn("[ReservaControlador] - Usuario no autenticado o no encontrado intentó acceder a /reserva. Redireccionando a login.");
             return "redirect:/login?error=nologin";
         }
 
@@ -64,29 +91,31 @@ public class ReservaControlador {
                                  @RequestParam("horaCita") String horaStr,
                                  @RequestParam("idMedico") Long idMedico,
                                  Model model) {
-        logger.info("Intentando crear cita con fecha: {}, hora: {}, idMedico: {}", fechaStr, horaStr, idMedico);
+        logger.info("[ReservaControlador] - INICIO: Solicitud POST para confirmar cita. Fecha: {}, Hora: {}, ID Médico: {}.", fechaStr, horaStr, idMedico);
 
         Paciente pacienteLogueado = getPacienteLogueado();
         if (pacienteLogueado == null || pacienteLogueado.getId() == null) {
-            logger.warn("Intento de confirmar cita sin paciente logueado o ID de paciente nulo.");
+            logger.warn("[ReservaControlador] - Intento de confirmar cita sin paciente logueado o con ID de paciente nulo. Redireccionando a login.");
             return "redirect:/login?error=Sesion expirada o no iniciada. Por favor, vuelve a iniciar sesión.";
         }
+        logger.debug("[ReservaControlador] - Paciente logueado para confirmar cita: ID {}.", pacienteLogueado.getId());
 
         Long idPacienteActual = pacienteLogueado.getId();
 
         try {
+            logger.info("[ReservaControlador] - Llamando a CitaServicio.crearCita con fecha: {}, hora: {}, idMedico: {}, idPaciente: {}.", fechaStr, horaStr, idMedico, idPacienteActual);
             citaServicio.crearCita(fechaStr, horaStr, idMedico, idPacienteActual);
-            logger.info("Cita creada correctamente para paciente ID: {}", idPacienteActual);
+            logger.info("[ReservaControlador] - Cita creada correctamente en el servicio para paciente ID: {}. Redireccionando a /historial.", idPacienteActual);
             return "redirect:/historial";
 
         } catch (IllegalArgumentException e) {
-            logger.error("Error al confirmar cita (datos inválidos/no encontrados): {}", e.getMessage());
+            logger.error("[ReservaControlador] - Error al confirmar cita (datos inválidos o no encontrados): {}", e.getMessage());
             return "redirect:/reserva?error=" + e.getMessage();
         } catch (IllegalStateException e) {
-            logger.error("Error al confirmar cita (lógica de negocio): {}", e.getMessage());
+            logger.error("[ReservaControlador] - Error al confirmar cita (lógica de negocio/estado inválido): {}", e.getMessage());
             return "redirect:/reserva?error=" + e.getMessage();
         } catch (Exception e) {
-            logger.error("Error inesperado al confirmar cita: {}", e.getMessage(), e);
+            logger.error("[ReservaControlador] - ERROR INESPERADO al confirmar cita: {}", e.getMessage(), e);
             return "redirect:/reserva?error=Ha ocurrido un error inesperado al reservar la cita.";
         }
     }
@@ -94,15 +123,19 @@ public class ReservaControlador {
     @GetMapping("/api/especialidades")
     @ResponseBody
     public List<Especialidad> obtenerTodasLasEspecialidades() {
-        logger.info("Solicitando todas las especialidades a través de CitaServicio.");
-        return citaServicio.obtenerTodasLasEspecialidades();
+        logger.info("[ReservaControlador] - Solicitud API: Obtener todas las especialidades.");
+        List<Especialidad> especialidades = citaServicio.obtenerTodasLasEspecialidades();
+        logger.debug("[ReservaControlador] - Retornando {} especialidades.", especialidades.size());
+        return especialidades;
     }
 
     @GetMapping("/api/medicos-por-especialidad")
     @ResponseBody
     public List<Medico> obtenerMedicosPorEspecialidad(@RequestParam("idEspecialidad") Long idEspecialidad) {
-        logger.info("Solicitando médicos para especialidad ID: {} a través de CitaServicio.", idEspecialidad);
-        return citaServicio.obtenerMedicosPorEspecialidad(idEspecialidad);
+        logger.info("[ReservaControlador] - Solicitud API: Obtener médicos para especialidad ID: {}.", idEspecialidad);
+        List<Medico> medicos = citaServicio.obtenerMedicosPorEspecialidad(idEspecialidad);
+        logger.debug("[ReservaControlador] - Retornando {} médicos para especialidad ID {}.", medicos.size(), idEspecialidad);
+        return medicos;
     }
 
     @GetMapping("/api/horarios-disponibles")
@@ -110,8 +143,10 @@ public class ReservaControlador {
     public List<Horario> obtenerHorariosDisponibles(
             @RequestParam("idMedico") Long idMedico,
             @RequestParam("fechaCita") String fechaCitaStr) {
-        logger.info("Solicitando horarios disponibles para médico ID: {} en fecha: {} a través de CitaServicio.", idMedico, fechaCitaStr);
+        logger.info("[ReservaControlador] - Solicitud API: Obtener horarios disponibles para médico ID: {} en fecha: {}.", idMedico, fechaCitaStr);
         LocalDate fecha = LocalDate.parse(fechaCitaStr);
-        return citaServicio.obtenerHorariosDisponiblesPorMedicoYFecha(idMedico, fecha);
+        List<Horario> horarios = citaServicio.obtenerHorariosDisponiblesPorMedicoYFecha(idMedico, fecha);
+        logger.debug("[ReservaControlador] - Retornando {} horarios para médico ID {} en fecha {}.", horarios.size(), idMedico, fechaCitaStr);
+        return horarios;
     }
 }

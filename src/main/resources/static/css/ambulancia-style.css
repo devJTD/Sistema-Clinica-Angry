@@ -1,0 +1,202 @@
+/* Estilos básicos para los modales y el contenedor de direcciones */
+.ambulancia-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.responsability-message {
+  background-color: #ffe0b2; /* Naranja claro */
+  border-left: 5px solid #ff9800; /* Naranja */
+  padding: 15px;
+  margin-bottom: 25px;
+  border-radius: 5px;
+  text-align: left;
+  color: #333;
+}
+
+.responsability-message h3 {
+  margin-top: 0;
+  color: #e65100; /* Naranja oscuro */
+}
+
+.responsability-message p {
+  margin-bottom: 0;
+  font-size: 0.95em;
+  line-height: 1.4;
+}
+
+.direccion-section {
+  margin-top: 30px;
+  text-align: left;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.direccion-section h3 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.direcciones-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.direcciones-list li {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.direcciones-list li.selected {
+  background-color: #e0f7fa; /* Azul claro */
+  border-color: #00bcd4; /* Azul */
+  font-weight: bold;
+}
+
+.direcciones-list li span {
+  flex-grow: 1;
+}
+
+.direcciones-list li input[type="radio"] {
+  margin-right: 10px;
+}
+
+.btn-add-direccion,
+.btn-solicitar,
+.modal-acciones button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.btn-add-direccion:hover,
+.btn-solicitar:hover,
+.modal-acciones button:hover {
+  background-color: #0056b3;
+}
+
+.btn-add-direccion {
+  display: block;
+  margin: 20px auto;
+  width: fit-content;
+}
+
+.btn-solicitar {
+  background-color: #dc3545; /* Rojo para la emergencia */
+  margin-top: 30px;
+  padding: 15px 30px;
+  font-size: 1.2em;
+}
+
+.btn-solicitar:hover {
+  background-color: #c82333;
+}
+
+/* Estilos del modal */
+.modal {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-contenido {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 30px;
+  border: 1px solid #888;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-contenido h3 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.modal-acciones {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.modal-acciones button {
+  padding: 10px 25px;
+  font-size: 1em;
+}
+
+.modal-acciones .cancel-btn {
+  background-color: #6c757d;
+}
+.modal-acciones .cancel-btn:hover {
+  background-color: #5a6268;
+}
+
+.modal-form .input-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+.modal-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.modal-form input[type="text"],
+.modal-form textarea {
+  width: calc(100% - 22px); /* Ajuste para padding */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.success-message,
+.error-message {
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.success-message {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+.error-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+.links {
+  margin-top: 30px;
+}

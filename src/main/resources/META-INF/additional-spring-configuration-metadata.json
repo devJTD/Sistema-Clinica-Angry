@@ -1,0 +1,9 @@
+{
+  "properties": [
+    {
+      "name": "empresa.email",
+      "type": "java.lang.String",
+      "description": "La dirección de correo electrónico de la empresa desde la que se envían las notificaciones."
+    }
+  ]
+}

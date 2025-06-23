@@ -12,7 +12,6 @@
 
 <body>
 
-    <!-- =================== ENCABEZADO PRINCIPAL =================== -->
     <header class="encabezado-principal">
         <div class="contenido-encabezado contenedor">
             <div class="espacio-logo">
@@ -24,6 +23,7 @@
                     <li><a th:href="@{/}" class="activo">Inicio</a></li>
                     <li><a th:href="@{/reserva}">Reservar Cita</a></li>
                     <li><a th:href="@{/historial}">Ver Historial</a></li>
+                    <li><a th:href="@{/ambulancia}">Llamar Ambulancia</a></li>
                 </ul>
             </nav>
 
@@ -36,7 +36,6 @@
         </div>
     </header>
 
-    <!-- =================== SECCIÓN BANNER =================== -->
     <section class="seccion-banner">
         <div class="contenido-banner contenedor">
             <h2>Bienvenido a la Clínica Angry</h2>
@@ -44,7 +43,6 @@
         </div>
     </section>
 
-    <!-- =================== SECCIÓN DE SERVICIOS =================== -->
     <div class="contenedor contenido-principal">
         <h2 class="titulo-seccion">Nuestros Servicios Principales</h2>
         <div class="cuadricula-menu">
@@ -58,10 +56,9 @@
                 <h3>Historial de Citas</h3>
                 <p>Accede y gestiona un registro completo de tus citas médicas pasadas y futuras.</p>
             </a>
-            <a th:href="@{/chat}" class="elemento-menu">
-                <i class="fas fa-comment-dots icono"></i>
-                <h3>Habla con tu médico</h3>
-                <p>Consulta directamente con tu médico para resolver tus dudas.</p>
+            <a th:href="@{/ambulancia}" class="elemento-menu">
+                <i class="fas fa-ambulance icono"></i> <h3>Llamar Ambulancia</h3>
+                <p>Solicita una ambulancia en caso de emergencia médica.</p>
             </a>
         </div>
     </div>
