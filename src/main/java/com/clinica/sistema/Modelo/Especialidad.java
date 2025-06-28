@@ -6,21 +6,51 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-@Entity // Indica que esta clase es una entidad JPA
-@Table(name = "especialidades") // Mapea la entidad a una tabla llamada "especialidades"
+@Entity
+@Table(name = "especialidades")
 public class Especialidad {
 
-    @Id // Marca este campo como la clave primaria
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // Configura la generación automática del ID
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, unique = true, length = 100) // El nombre de la especialidad debe ser único y no nulo
+    @Column(nullable = false, unique = true, length = 100)
     private String nombre;
+
+    // Constructor vacío
+    public Especialidad() {
+    }
+
+    // Constructor con todos los campos
+    public Especialidad(Long id, String nombre) {
+        this.id = id;
+        this.nombre = nombre;
+    }
+
+    // Getters y Setters
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    @Override
+    public String toString() {
+        return "Especialidad{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                '}';
+    }
 }
