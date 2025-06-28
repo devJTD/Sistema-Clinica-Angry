@@ -1,3 +1,4 @@
+/*
 package com.clinica.sistema.Configuracion;
 
 import jakarta.servlet.http.HttpServletRequest;
@@ -21,3 +22,4 @@ public class InterceptorSesion implements HandlerInterceptor {
         return true;
     }
 }
+ */

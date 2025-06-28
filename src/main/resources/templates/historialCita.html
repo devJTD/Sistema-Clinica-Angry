@@ -11,8 +11,6 @@
 </head>
 
 <body>
-
-    <!-- =================== ENCABEZADO PRINCIPAL PROBANADO AQUI HOLA MUNDO... xd ================== -->
     <header class="encabezado-principal">
         <div class="contenido-encabezado contenedor">
             <div class="espacio-logo">
@@ -24,7 +22,7 @@
                     <li><a th:href="@{/}">Inicio</a></li>
                     <li><a th:href="@{/reserva}">Reservar Cita</a></li>
                     <li><a th:href="@{/historial}" class="activo">Ver Historial</a></li>
-                    <li><a th:href="@{/chat}">Chat con tu Médico</a></li>
+                    <li><a th:href="@{/ambulancia}">Llamar Ambulancia</a></li>
                 </ul>
             </nav>
 
@@ -37,9 +35,7 @@
         </div>
     </header>
 
-    <!-- =================== CONTENIDO PRINCIPAL =================== -->
     <div class="container">
-        <!-- Título principal -->
         <h2>Historial de Citas</h2>
 
         <div class="excel-export-button">
@@ -48,7 +44,6 @@
             </a>
         </div>
 
-        <!-- Leyenda para colores de citas -->
         <div class="legend">
             <div class="legend-item">
                 <span class="legend-color color-procedimiento"></span>
@@ -60,28 +55,24 @@
             </div>
         </div>
 
-        <!-- Pestañas para cambiar vistas -->
         <div class="tabs">
             <button class="tab active" onclick="mostrarSeccion('programadas')">Programadas</button>
             <button class="tab" onclick="mostrarSeccion('historial')">Historial</button>
         </div>
 
-        <!-- Sección de citas programadas -->
         <div id="programadas" class="seccion">
 
-            <!-- Mostrar mensaje si no hay citas pendientes -->
             <div th:if="${#lists.isEmpty(citasPendientes)}" class="empty-state">
                 No hay citas programadas aún.
             </div>
 
-            <!-- Mostrar lista de citas pendientes -->
             <div th:if="${!#lists.isEmpty(citasPendientes)}" class="lista-citas">
                 <div th:each="cita : ${citasPendientes}" class="cita-contenedor">
                     <div class="info-cita">
                         <p><strong>ID:</strong> <span th:text="${cita.id}">1</span></p>
                         <p><strong>Fecha:</strong> <span th:text="${cita.fecha}">2025-06-05</span></p>
                         <p><strong>Hora:</strong> <span th:text="${cita.hora}">10:00</span></p>
-                        <p><strong>Médico:</strong> <span th:text="${cita.idMedico}">105</span>
+                        <p><strong>Médico:</strong> <span th:text="${cita.medico.id}">105</span>
                         </p>
                     </div>
                     <div class="acciones-cita">
@@ -92,7 +83,6 @@
         </div>
 
 
-        <!-- Sección del historial de citas -->
         <div id="historial" class="seccion oculto">
             <div class="empty-state">
                 No hay citas anteriores por el momento.

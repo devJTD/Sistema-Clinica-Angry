@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Llamar Ambulancia</title>
+
+    <link rel="stylesheet" th:href="@{/css/inicio-style.css}" />
+    <link rel="stylesheet" th:href="@{/css/ambulancia-style.css}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="encabezado-principal">
+        <div class="contenido-encabezado contenedor">
+            <div class="espacio-logo">
+                <img th:src="@{/img/Logo.png}" alt="Logo de la Clínica" class="logo">
+            </div>
+
+            <nav class="navegacion-principal">
+                <ul>
+                    <li><a th:href="@{/}">Inicio</a></li>
+                    <li><a th:href="@{/reserva}">Reservar Cita</a></li>
+                    <li><a th:href="@{/historial}">Ver Historial</a></li>
+                    <li><a th:href="@{/ambulancia}" class="activo">Llamar Ambulancia</a></li>
+                </ul>
+            </nav>
+
+            <div class="informacion-usuario">
+                <span>Hola, <strong th:text="${nombreCompleto}">Nombre y Apellido</strong></span>
+                <form th:action="@{/logout}" method="post">
+                    <button type="submit" id="botonCerrarSesion">Cerrar Sesión</button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <main class="ambulancia-container">
+        <h2>Servicio de Ambulancia</h2>
+
+        <div class="responsability-message">
+            <h3>Mensaje Importante de Responsabilidad:</h3>
+            <p>Este servicio está diseñado para emergencias médicas reales. Por favor, utilícelo de manera responsable. El uso indebido puede afectar la disponibilidad de recursos para quienes realmente los necesitan. En situaciones de vida o muerte, siempre marque directamente al 911 (o su número de emergencia local) de inmediato.</p>
+        </div>
+
+        <div class="direccion-section">
+            <h3>Mis Direcciones Registradas:</h3>
+            <p th:if="${#lists.isEmpty(direccionesPaciente)}">No tienes direcciones registradas aún. Por favor, añade una.</p>
+            <ul class="direcciones-list">
+                <li th:each="direccion : ${direccionesPaciente}">
+                    <input type="radio" name="selectedDireccion" th:id="'direccion-' + ${direccion.id}" th:value="${direccion.id}" 
+                           onclick="highlightSelected(this)" />
+                    <label th:for="'direccion-' + ${direccion.id}" th:text="${direccion.direccionCompleta}"></label>
+                </li>
+            </ul>
+            <button type="button" class="btn-add-direccion" onclick="mostrarModalAddDireccion()">
+                <i class="fas fa-plus"></i> Añadir Nueva Dirección
+            </button>
+        </div>
+
+        <p>Por favor, seleccione una dirección de las opciones anteriores o añada una nueva para el servicio de ambulancia.</p>
+        
+        <button type="button" class="btn-solicitar" onclick="mostrarConfirmacionAmbulancia()">
+            Confirmar Solicitud de Ambulancia
+        </button>
+
+        <div id="modalAddDireccion" class="modal">
+            <div class="modal-contenido">
+                <h3>Añadir Nueva Dirección</h3>
+                <form id="formAddDireccion" class="modal-form">
+                    <div class="input-group">
+                        <label for="nuevaDireccionCompleta">Dirección Completa:</label>
+                        <textarea id="nuevaDireccionCompleta" name="direccionCompleta" rows="3" placeholder="Ej. Av. Siempreviva 123, Urb. Los Jardines, Lima"></textarea>
+                    </div>
+                    <div class="modal-acciones">
+                        <button type="button" onclick="guardarNuevaDireccion()">Guardar Dirección</button>
+                        <button type="button" class="cancel-btn" onclick="cerrarModal('modalAddDireccion')">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="modalConfirmacionAmbulancia" class="modal">
+            <div class="modal-contenido">
+                <h3>Confirmar Solicitud</h3>
+                <p>¿Estás seguro de que deseas solicitar una ambulancia a la dirección seleccionada?</p>
+                <div class="modal-acciones">
+                    <button type="button" onclick="procesarSolicitudAmbulancia()">Sí, Solicitar</button>
+                    <button type="button" class="cancel-btn" onclick="cerrarModal('modalConfirmacionAmbulancia')">Cancelar</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="modalAmbulanciaEnCamino" class="modal">
+            <div class="modal-contenido">
+                <i class="fas fa-ambulance" style="font-size: 3em; color: #dc3545; margin-bottom: 15px;"></i>
+                <h3>¡Ambulancia en Camino!</h3>
+                <p>Su solicitud ha sido enviada. Una ambulancia está en camino a la dirección:</p>
+                <p><strong id="direccionConfirmada"></strong></p>
+                <p>Manténgase tranquilo y siga las instrucciones del personal de emergencia.</p>
+                <div class="modal-acciones">
+                    <button type="button" onclick="cerrarModal('modalAmbulanciaEnCamino'); window.location.href='/'">Aceptar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="links">
+            <a th:href="@{/}">← Volver al Inicio</a>
+        </div>
+    </main>
+
+    <script th:inline="javascript">
+        /*<![CDATA[*/
+        // Obtener la lista de direcciones del modelo de Spring
+        const direccionesDelPaciente = /*[[${direccionesPaciente}]]*/ [];
+        /*]]>*/
+
+        function highlightSelected(radio) {
+            document.querySelectorAll('.direcciones-list li').forEach(li => {
+                li.classList.remove('selected');
+            });
+            if (radio.checked) {
+                radio.closest('li').classList.add('selected');
+            }
+        }
+
+        function mostrarModal(idModal) {
+            document.getElementById(idModal).style.display = 'flex';
+        }
+
+        function cerrarModal(idModal) {
+            document.getElementById(idModal).style.display = 'none';
+        }
+
+        function mostrarModalAddDireccion() {
+            mostrarModal('modalAddDireccion');
+        }
+
+        async function guardarNuevaDireccion() {
+            const nuevaDireccionTexto = document.getElementById('nuevaDireccionCompleta').value.trim();
+            if (nuevaDireccionTexto === "") {
+                alert("Por favor, ingrese una dirección completa.");
+                return;
+            }
+
+            try {
+                // Envía la nueva dirección al backend
+                const response = await fetch('/paciente/direcciones', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ direccionCompleta: nuevaDireccionTexto })
+                });
+
+                if (response.ok) {
+                    const nuevaDireccionGuardada = await response.json();
+                    // Añadir la nueva dirección a la lista visible y seleccionarla
+                    const ul = document.querySelector('.direcciones-list');
+                    const li = document.createElement('li');
+                    li.innerHTML = `
+                        <input type="radio" name="selectedDireccion" id="direccion-${nuevaDireccionGuardada.id}" value="${nuevaDireccionGuardada.id}" checked onclick="highlightSelected(this)" />
+                        <label for="direccion-${nuevaDireccionGuardada.id}">${nuevaDireccionGuardada.direccionCompleta}</label>
+                    `;
+                    ul.appendChild(li);
+                    highlightSelected(li.querySelector('input[type="radio"]')); // Seleccionar y resaltar
+                    
+                    alert("Dirección guardada exitosamente.");
+                    cerrarModal('modalAddDireccion');
+                    document.getElementById('nuevaDireccionCompleta').value = ''; // Limpiar el campo
+                    // Considera recargar las direcciones si tu backend las maneja dinámicamente o añadirla al array `direccionesDelPaciente`
+                    direccionesDelPaciente.push(nuevaDireccionGuardada);
+
+                } else {
+                    const errorData = await response.json();
+                    alert("Error al guardar la dirección: " + (errorData.message || "Error desconocido"));
+                }
+            } catch (error) {
+                console.error('Error al guardar la dirección:', error);
+                alert("Error de conexión al guardar la dirección.");
+            }
+        }
+
+        function mostrarConfirmacionAmbulancia() {
+            const selectedRadio = document.querySelector('input[name="selectedDireccion"]:checked');
+            if (!selectedRadio) {
+                alert("Por favor, seleccione una dirección o añada una nueva antes de continuar.");
+                return;
+            }
+            mostrarModal('modalConfirmacionAmbulancia');
+        }
+
+        async function procesarSolicitudAmbulancia() {
+            cerrarModal('modalConfirmacionAmbulancia'); // Cerrar el primer modal
+
+            const selectedRadio = document.querySelector('input[name="selectedDireccion"]:checked');
+            const selectedDireccionId = selectedRadio ? selectedRadio.value : null;
+
+            if (!selectedDireccionId) {
+                alert("Error: No se ha seleccionado ninguna dirección.");
+                return;
+            }
+
+            // Encuentra la dirección completa para mostrarla en el modal final
+            const direccionCompletaTexto = selectedRadio.nextElementSibling.textContent;
+            
+            try {
+                // Aquí enviarías la solicitud al backend con la dirección seleccionada
+                const response = await fetch('/solicitar-ambulancia', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ direccionId: selectedDireccionId })
+                });
+
+                if (response.ok) {
+                    // Si la solicitud es exitosa, muestra el modal de "Ambulancia en Camino"
+                    document.getElementById('direccionConfirmada').textContent = direccionCompletaTexto;
+                    mostrarModal('modalAmbulanciaEnCamino');
+                } else {
+                    const errorData = await response.json();
+                    alert("Hubo un error al procesar su solicitud: " + (errorData.message || "Error desconocido"));
+                }
+            } catch (error) {
+                console.error('Error al enviar la solicitud de ambulancia:', error);
+                alert("Error de conexión al solicitar la ambulancia.");
+            }
+        }
+    </script>
+</body>
+
+</html>

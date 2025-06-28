@@ -2,10 +2,8 @@ package com.clinica.sistema.Controlador;
 
 import com.clinica.sistema.Modelo.Cita;
 import com.clinica.sistema.Modelo.Paciente;
-import com.clinica.sistema.Modelo.Medico;
 import com.clinica.sistema.Servicio.CitaServicio;
-
-import jakarta.servlet.http.HttpSession;
+import com.clinica.sistema.Servicio.AuthServicio;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,86 +13,95 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.io.IOException;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
+
 import java.util.List;
-import java.util.stream.Collectors;
+import java.util.Optional;
 
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import java.io.ByteArrayOutputStream;
-
+import java.io.IOException;
 
 @Controller
 public class HistorialControlador {
 
-    private Logger logger = LoggerFactory.getLogger(HistorialControlador.class);
-    private CitaServicio citaServicio = new CitaServicio();
+    private final Logger logger = LoggerFactory.getLogger(HistorialControlador.class);
 
-    public HistorialControlador(CitaServicio citaServicio) {
+    private final CitaServicio citaServicio;
+    private final AuthServicio authServicio;
+
+    public HistorialControlador(CitaServicio citaServicio, AuthServicio authServicio) {
         this.citaServicio = citaServicio;
+        this.authServicio = authServicio;
+    }
+
+    private Paciente getPacienteLogueado() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        if (authentication == null || !authentication.isAuthenticated() || authentication.getPrincipal() instanceof String) {
+            return null;
+        }
+
+        UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+        String correoUsuario = userDetails.getUsername();
+
+        Optional<Paciente> pacienteOpt = authServicio.buscarPorCorreo(correoUsuario);
+        return pacienteOpt.orElse(null);
     }
 
     @GetMapping("/historial")
-    public String mostrarPaginaHistorialCitas(HttpSession session, Model model) {
+    public String mostrarPaginaHistorialCitas(Model model) {
         logger.info("El usuario ha accedido a la página de historial de citas.");
 
+        Paciente usuario = getPacienteLogueado();
+        if (usuario == null || usuario.getId() == null) {
+            logger.warn("Intento de acceder a historial sin paciente logueado o con ID de paciente nulo.");
+            return "redirect:/login?error=nologin";
+        }
+
         try {
-            Paciente usuario = (Paciente) session.getAttribute("usuario");
-            if (usuario == null) {
-                return "redirect:/login";
-            }
-            // Obtener solo citas del paciente logueado
-            List<Cita> citasUsuario = citaServicio.obtenerCitasPorPaciente(usuario.getId());
+            List<Cita> citasPendientes = citaServicio.obtenerCitasPendientesPorPaciente(usuario.getId());
+            List<Cita> historialCitas = citaServicio.obtenerHistorialCitasPorPaciente(usuario.getId());
 
-            model.addAttribute("citasPendientes", citasUsuario);
-            model.addAttribute("nombreUsuario", usuario.getNombre());
+            model.addAttribute("citasPendientes", citasPendientes);
+            model.addAttribute("historialCitas", historialCitas);
+            model.addAttribute("nombreUsuario", usuario.getNombre() + " " + usuario.getApellido());
 
-        } catch (IOException e) {
-            logger.error("Error al leer citas", e);
+        } catch (IllegalArgumentException e) {
+            logger.error("Error al obtener historial de citas para paciente ID {}: {}", usuario.getId(), e.getMessage());
+            model.addAttribute("error", "Error al cargar sus citas: " + e.getMessage());
             model.addAttribute("citasPendientes", List.of());
+            model.addAttribute("historialCitas", List.of());
+        } catch (Exception e) {
+            logger.error("Error inesperado al cargar el historial de citas para paciente ID {}: {}", usuario.getId(), e.getMessage(), e);
+            model.addAttribute("error", "Ocurrió un error inesperado al cargar sus citas.");
+            model.addAttribute("citasPendientes", List.of());
+            model.addAttribute("historialCitas", List.of());
         }
 
         return "historialCita";
     }
 
-    // Nueva funcionalidad: cancelar cita (cambiar estado a "cancelada")
-    @PostMapping("/cancelar-cita")
-    @ResponseBody
-    public ResponseEntity<String> cancelarCita(@RequestParam Long id) {
-        try {
-            boolean exito = citaServicio.cancelarCita(id);
-            if (exito) {
-                return ResponseEntity.ok("Cita cancelada");
-            } else {
-                return ResponseEntity.status(HttpStatus.NOT_FOUND).body("No se encontró la cita");
-            }
-        } catch (Exception e) {
-            logger.error("Error al cancelar cita", e);
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error al cancelar la cita");
-        }
-    }
-
     @GetMapping("/historial/exportar/excel")
-    public ResponseEntity<byte[]> exportarHistorialCitasExcel(HttpSession session) {
-        Paciente pacienteLogueado = (Paciente) session.getAttribute("usuario");
-        if (pacienteLogueado == null) {
-            logger.warn("Intento de exportar historial de citas sin paciente logueado.");
-            return ResponseEntity.status(401).body("No autorizado: Debes iniciar sesión para exportar.".getBytes());
+    public ResponseEntity<byte[]> exportarHistorialCitasExcel() {
+        Paciente pacienteLogueado = getPacienteLogueado();
+        if (pacienteLogueado == null || pacienteLogueado.getId() == null) {
+            logger.warn("Intento de exportar historial de citas sin paciente logueado o ID nulo.");
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("No autorizado: Debes iniciar sesión para exportar.".getBytes());
         }
 
         try {
-            List<Cita> citasDelPaciente = citaServicio.leerCitas().stream()
-                    .filter(cita -> cita.getIdPaciente().equals(pacienteLogueado.getId()))
-                    .collect(Collectors.toList());
-
-            List<Medico> todosLosMedicos = citaServicio.obtenerTodosLosMedicos();
+            List<Cita> citasDelPaciente = citaServicio.obtenerCitasPendientesPorPaciente(pacienteLogueado.getId());
+            citasDelPaciente.addAll(citaServicio.obtenerHistorialCitasPorPaciente(pacienteLogueado.getId()));
 
             try (Workbook workbook = new XSSFWorkbook();
-                    ByteArrayOutputStream outputStream = new ByteArrayOutputStream()) {
+                 ByteArrayOutputStream outputStream = new ByteArrayOutputStream()) {
                 Sheet sheet = workbook.createSheet(
-                        "Historial Citas - " + pacienteLogueado.getNombre() + " " + pacienteLogueado.getApellido());
+                                 "Historial Citas - " + pacienteLogueado.getNombre() + " " + pacienteLogueado.getApellido());
 
                 Row headerRow = sheet.createRow(0);
                 String[] headers = { "ID Cita", "Fecha", "Hora", "Estado", "Médico", "Especialidad" };
@@ -111,21 +118,17 @@ public class HistorialControlador {
                     row.createCell(2).setCellValue(cita.getHora().toString());
                     row.createCell(3).setCellValue(cita.getEstado());
 
-                    Medico medicoAsociado = todosLosMedicos.stream()
-                            .filter(m -> m.getId().equals(cita.getIdMedico()))
-                            .findFirst()
-                            .orElse(null);
-
-                    if (medicoAsociado != null) {
-
-                        row.createCell(4).setCellValue(medicoAsociado.getNombreCompleto()); 
-                                                                                            
-                        row.createCell(5).setCellValue(medicoAsociado.getIdEspecialidad());
+                    if (cita.getMedico() != null) {
+                        row.createCell(4).setCellValue(cita.getMedico().getNombre() + " " + cita.getMedico().getApellido());
+                        if (cita.getMedico().getEspecialidad() != null) {
+                            row.createCell(5).setCellValue(cita.getMedico().getEspecialidad().getNombre());
+                        } else {
+                            row.createCell(5).setCellValue("Sin Especialidad");
+                        }
                     } else {
                         row.createCell(4).setCellValue("Médico Desconocido");
                         row.createCell(5).setCellValue("N/A");
                     }
-
                 }
 
                 for (int i = 0; i < headers.length; i++) {
@@ -150,15 +153,36 @@ public class HistorialControlador {
                         .body(("Error al generar el reporte: " + e.getMessage()).getBytes());
             }
 
-        } catch (IOException e) {
-            logger.error("Error al obtener datos (JSON) para el reporte de citas en Excel para paciente ID {}: {}",
-                    pacienteLogueado.getId(), e.getMessage(), e);
-            return ResponseEntity.internalServerError().body(("Error al obtener datos: " + e.getMessage()).getBytes());
         } catch (IllegalArgumentException e) {
-            logger.error("Error de argumento al generar el reporte: {}", e.getMessage());
+            logger.error("Error de argumento (ej. paciente no encontrado) al generar el reporte de citas en Excel para paciente ID {}: {}",
+                    pacienteLogueado.getId(), e.getMessage());
             return ResponseEntity.badRequest().body(e.getMessage().getBytes());
+        } catch (Exception e) {
+            logger.error("Error inesperado al generar el reporte de citas en Excel para paciente ID {}: {}",
+                    pacienteLogueado.getId(), e.getMessage(), e);
+            return ResponseEntity.internalServerError().body(("Error inesperado al generar el reporte: " + e.getMessage()).getBytes());
         }
     }
 
+    @PostMapping("/cancelar-cita")
+    @ResponseBody
+    public ResponseEntity<String> cancelarCita(@RequestParam Long id) {
+        try {
+            boolean exito = citaServicio.cancelarCita(id);
+            if (exito) {
+                logger.info("Cita ID {} cancelada exitosamente por solicitud del controlador.", id);
+                return ResponseEntity.ok("Cita cancelada correctamente.");
+            } else {
+                logger.warn("Intento de cancelar cita ID {} fallido: Cita no encontrada.", id);
+                return ResponseEntity.status(HttpStatus.NOT_FOUND).body("No se encontró la cita para cancelar.");
+            }
+        } catch (IllegalArgumentException e) {
+            logger.error("Error de argumento al intentar cancelar cita ID {}: {}", id, e.getMessage());
+            return ResponseEntity.badRequest().body("Error al cancelar la cita: " + e.getMessage());
+        } catch (Exception e) {
+            logger.error("Error inesperado al cancelar cita ID {}: {}", id, e.getMessage(), e);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error interno al cancelar la cita.");
+        }
+    }
 }
 

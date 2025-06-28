@@ -1,5 +1,16 @@
 package com.clinica.sistema.Repositorio;
 
-public class CitaRepositorio {
-    
+import com.clinica.sistema.Modelo.Cita;
+import com.clinica.sistema.Modelo.Paciente;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface CitaRepositorio extends JpaRepository<Cita, Long> {
+    List<Cita> findByPacienteAndEstado(Paciente paciente, String estado);
+    List<Cita> findByPacienteAndEstadoNot(Paciente paciente, String estado);
+
 }

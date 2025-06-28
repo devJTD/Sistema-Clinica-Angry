@@ -22,10 +22,9 @@
             <button type="submit" class="btn">Iniciar Sesión</button>
         </form>
 
-        <!-- Mensajes desde query params -->
         <div class="message-container error-message" th:if="${param.error}">Usuario o contraseña incorrectos.</div>
         <div class="message-container success-message" th:if="${param.logout}">Has cerrado sesión exitosamente.</div>
-        <div class="message-container success-message" th:if="${param.registro}">¡Registro exitoso! Por favor, inicia sesión.</div>
+        <div class="message-container success-message" th:if="${param.registroExitoso}">¡Registro exitoso! Por favor, inicia sesión.</div>
 
         <div class="links">
             <a th:href="@{/registro}">¿No tienes cuenta? Regístrate aquí</a>

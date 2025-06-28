@@ -6,10 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Reservar Cita</title>
 
-    <!-- Estilo CSS para el formulario -->
     <link th:href="@{/css/reserva-style.css}" rel="stylesheet" />
 
-    <!-- Íconos Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 
@@ -24,7 +22,7 @@
                     <li><a th:href="@{/}">Inicio</a></li>
                     <li><a th:href="@{/reserva}" class="activo">Reservar Cita</a></li>
                     <li><a th:href="@{/historial}">Ver Historial</a></li>
-                    <li><a th:href="@{/chat}">Chat con tu Médico</a></li>
+                    <li><a th:href="@{/ambulancia}">Llamar Ambulancia</a></li>
                 </ul>
             </nav>
             <div class="informacion-usuario">
@@ -40,7 +38,6 @@
         <h2>Agenda tu Cita</h2>
         <form th:action="@{/reserva/confirmar}" method="post" class="reserva-form">
 
-            <!-- Especialidad -->
             <div class="input-group">
                 <label for="idEspecialidad">Especialidad:</label>
                 <select id="idEspecialidad" name="idEspecialidad" required>
@@ -48,7 +45,6 @@
                 </select>
             </div>
 
-            <!-- Médico -->
             <div class="input-group">
                 <label for="idMedico">Médico:</label>
                 <select id="idMedico" name="idMedico" required disabled>
@@ -56,13 +52,11 @@
                 </select>
             </div>
 
-            <!-- Fecha -->
             <div class="input-group">
                 <label for="fechaCita">Fecha de la Cita:</label>
                 <input type="date" id="fechaCita" name="fechaCita" required disabled />
             </div>
 
-            <!-- Hora -->
             <div class="input-group">
                 <label for="horaCita">Hora de la Cita:</label>
                 <select id="horaCita" name="horaCita" required disabled>
@@ -70,10 +64,8 @@
                 </select>
             </div>
 
-            <!-- Botón que muestra el modal -->
             <button type="button" class="btn-primary" onclick="mostrarConfirmacion()">Confirmar Cita</button>
 
-            <!-- Modal de confirmación -->
             <div id="modalConfirmacion" class="modal">
                 <div class="modal-contenido">
                     <h3>¿Confirmar Cita?</h3>
@@ -91,7 +83,6 @@
         </div>
     </main>
 
-    <!-- JavaScript externo -->
     <script th:src="@{/js/reserva-script.js}"></script>
 </body>
 
