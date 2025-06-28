@@ -3,7 +3,6 @@ package com.clinica.sistema.Servicio;
 import com.clinica.sistema.Modelo.Paciente;
 import com.clinica.sistema.Modelo.Direccion; // Importar la entidad Direccion
 import com.clinica.sistema.Repositorio.PacienteRepositorio;
-import com.clinica.sistema.Repositorio.DireccionRepositorio; // Posiblemente necesites un repositorio para Direccion
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -18,16 +17,14 @@ import java.util.ArrayList; // Para inicializar la lista de direcciones
 public class AuthServicio {
 
     private final PacienteRepositorio pacienteRepositorio;
-    private final DireccionRepositorio direccionRepositorio; // Inyectar el repositorio de Direccion
 
     @Autowired
     private PasswordEncoder passwordEncoder;
 
     private final Logger logger = LoggerFactory.getLogger(AuthServicio.class);
 
-    public AuthServicio(PacienteRepositorio pacienteRepositorio, DireccionRepositorio direccionRepositorio) {
+    public AuthServicio(PacienteRepositorio pacienteRepositorio) {
         this.pacienteRepositorio = pacienteRepositorio;
-        this.direccionRepositorio = direccionRepositorio; // Asignar el repositorio
         logger.info("AuthServicio inicializado con PacienteRepositorio y DireccionRepositorio.");
     }
 
