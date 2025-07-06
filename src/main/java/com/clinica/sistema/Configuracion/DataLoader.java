@@ -1,18 +1,5 @@
 package com.clinica.sistema.Configuracion;
 
-import com.clinica.sistema.Modelo.Especialidad;
-import com.clinica.sistema.Modelo.Medico;
-import com.clinica.sistema.Modelo.Horario;
-import com.clinica.sistema.Repositorio.EspecialidadRepositorio;
-import com.clinica.sistema.Repositorio.MedicoRepositorio;
-import com.clinica.sistema.Repositorio.HorarioRepositorio;
-
-import org.springframework.boot.CommandLineRunner;
-import org.springframework.stereotype.Component;
-import org.springframework.transaction.annotation.Transactional;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Arrays;
@@ -20,6 +7,19 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.clinica.sistema.Modelo.Especialidad;
+import com.clinica.sistema.Modelo.Horario;
+import com.clinica.sistema.Modelo.Medico;
+import com.clinica.sistema.Repositorio.EspecialidadRepositorio;
+import com.clinica.sistema.Repositorio.HorarioRepositorio;
+import com.clinica.sistema.Repositorio.MedicoRepositorio;
 
 @Component
 public class DataLoader implements CommandLineRunner {
@@ -73,7 +73,6 @@ public class DataLoader implements CommandLineRunner {
 
             if (existingEspecialidad.isPresent()) {
                 especialidad = existingEspecialidad.get();
-                logger.debug("Especialidad '{}' ya existe (ID: {}). No se creará nuevamente.", especialidad.getNombre(), especialidad.getId());
             } else {
                 especialidad = new Especialidad();
                 especialidad.setNombre(nombreEspecialidad);
@@ -135,6 +134,7 @@ public class DataLoader implements CommandLineRunner {
         );
 
         logger.info("Procesando {} médicos...", medicosData.size());
+        int medicosNuevosCount = 0;
         for (Map<String, Object> data : medicosData) {
             String nombreCompleto = (String) data.get("nombreCompleto");
             Long idEspecialidadRef = (Long) data.get("idEspecialidad");
@@ -159,23 +159,22 @@ public class DataLoader implements CommandLineRunner {
 
             if (existingMedico.isPresent()) {
                 medico = existingMedico.get();
-                logger.debug("Médico '{} {}' ya existe (ID: {}). No se creará nuevamente.", medico.getNombre(), medico.getApellido(), medico.getId());
             } else {
                 medico = new Medico();
                 medico.setNombre(nombre);
                 medico.setApellido(apellido);
-                
+
                 Especialidad especialidad = especialidadesMap.get(idEspecialidadRef);
                 if (especialidad == null) {
                     logger.error("No se encontró especialidad con ID de referencia {} para el médico {}. Este médico se creará sin especialidad.", idEspecialidadRef, nombreCompleto);
                 }
                 medico.setEspecialidad(especialidad);
                 medico = medicoRepositorio.save(medico);
-                logger.info("Médico '{} {}' creado con ID: {}.", medico.getNombre(), medico.getApellido(), medico.getId());
+                medicosNuevosCount++;
             }
             medicosMap.put(idReferenciaMedico, medico);
         }
-        logger.info("Médicos procesados.");
+        logger.info("Médicos procesados. Nuevos médicos creados: {}", medicosNuevosCount);
 
         LocalDate startDate = LocalDate.of(2025, 6, 19);
         LocalDate endDate = LocalDate.of(2025, 6, 21);
@@ -192,7 +191,6 @@ public class DataLoader implements CommandLineRunner {
                 for (LocalTime time : horasDisponibles) {
                     Optional<Horario> existingHorario = horarioRepositorio.findByMedicoAndFechaAndHora(medico, date, time);
                     if (existingHorario.isPresent()) {
-                        logger.debug("Horario para médico ID {} en {} a las {} ya existe. No se creará nuevamente.", medico.getId(), date, time);
                         continue;
                     }
 
@@ -207,7 +205,6 @@ public class DataLoader implements CommandLineRunner {
             }
         }
         logger.info("Total de horarios procesados: {}", horariosCreadosCount);
-
         logger.info("Carga de datos iniciales completada.");
     }
 }
