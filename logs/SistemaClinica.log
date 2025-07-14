@@ -1988,3 +1988,19 @@
 2025-07-05 23:14:40.245 INFO  - El usuario ha accedido a la página de login.
 2025-07-05 23:14:41.841 INFO  - El usuario ha accedido a la página de login.
 2025-07-05 23:14:41.896 INFO  - El usuario ha accedido a la página de login.
+2025-07-09 14:20:43.267 INFO  - Starting SistemaApplicationTests using Java 21.0.7 with PID 7884 (started by Jeanp in C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador\Sistema-Clinica-Angry)
+2025-07-09 14:20:43.269 DEBUG - Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-09 14:20:43.271 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-07-09 14:20:50.823 INFO  - AuthServicio inicializado con PacienteRepositorio y DireccionRepositorio.
+2025-07-09 14:20:50.982 INFO  - [NotificacionServicio] - Servicio inicializado. JavaMailSender inyectado.
+2025-07-09 14:20:50.985 INFO  - [CitaServicio] - Servicio inicializado con dependencias inyectadas.
+2025-07-09 14:20:51.001 INFO  - [ReservaControlador] - Controlador inicializado con CitaServicio y AuthServicio.
+2025-07-09 14:20:52.532 INFO  - Started SistemaApplicationTests in 9.779 seconds (process running for 11.987)
+2025-07-09 14:20:52.557 INFO  - Iniciando carga de datos de especialidades, médicos y horarios...
+2025-07-09 14:20:52.559 INFO  - Procesando 15 especialidades...
+2025-07-09 14:20:52.883 INFO  - Especialidades procesadas.
+2025-07-09 14:20:52.883 INFO  - Procesando 45 médicos...
+2025-07-09 14:20:53.070 INFO  - Médicos procesados. Nuevos médicos creados: 0
+2025-07-09 14:20:53.070 INFO  - Procesando horarios del 2025-06-19 al 2025-06-21 para cada médico...
+2025-07-09 14:20:54.530 INFO  - Total de horarios procesados: 0
+2025-07-09 14:20:54.530 INFO  - Carga de datos iniciales completada.
