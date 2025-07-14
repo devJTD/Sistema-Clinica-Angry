@@ -1,0 +1,1003 @@
+2025-07-13 20:53:54.500 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 18844 (C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador\Sistema-Clinica-Angry\target\classes started by Jeanp in C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador\Sistema-Clinica-Angry)
+2025-07-13 20:53:54.511 DEBUG - Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-13 20:53:54.513 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-07-13 20:54:04.738 INFO  - AuthServicio inicializado con PacienteRepositorio y DireccionRepositorio.
+2025-07-13 20:54:04.862 INFO  - [NotificacionServicio] - Servicio inicializado. JavaMailSender inyectado.
+2025-07-13 20:54:04.869 INFO  - [CitaServicio] - Servicio inicializado con dependencias inyectadas.
+2025-07-13 20:54:04.883 INFO  - [ReservaControlador] - Controlador inicializado con CitaServicio y AuthServicio.
+2025-07-13 20:54:06.792 INFO  - Started SistemaApplication in 13.099 seconds (process running for 14.748)
+2025-07-13 20:54:06.817 INFO  - Iniciando carga de datos de especialidades, médicos y horarios...
+2025-07-13 20:54:06.819 INFO  - Procesando 15 especialidades...
+2025-07-13 20:54:07.083 INFO  - Especialidades procesadas.
+2025-07-13 20:54:07.084 INFO  - Procesando 45 médicos...
+2025-07-13 20:54:07.274 INFO  - Médicos procesados. Nuevos médicos creados: 0
+2025-07-13 20:54:07.274 INFO  - Procesando horarios del 2025-06-19 al 2025-06-21 para cada médico...
+2025-07-13 20:54:08.883 INFO  - Total de horarios procesados: 0
+2025-07-13 20:54:08.884 INFO  - Carga de datos iniciales completada.
+2025-07-13 20:54:21.232 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 20:54:21.787 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 20:59:45.125 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 18412 (C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador\Sistema-Clinica-Angry\target\classes started by Jeanp in C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador\Sistema-Clinica-Angry)
+2025-07-13 20:59:45.128 DEBUG - Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-13 20:59:45.129 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-07-13 20:59:53.578 INFO  - AuthServicio inicializado con PacienteRepositorio y DireccionRepositorio.
+2025-07-13 20:59:53.714 INFO  - [NotificacionServicio] - Servicio inicializado. JavaMailSender inyectado.
+2025-07-13 20:59:53.721 INFO  - [CitaServicio] - Servicio inicializado con dependencias inyectadas.
+2025-07-13 20:59:53.733 INFO  - [ReservaControlador] - Controlador inicializado con CitaServicio y AuthServicio.
+2025-07-13 20:59:55.628 INFO  - Started SistemaApplication in 11.219 seconds (process running for 12.74)
+2025-07-13 20:59:55.671 INFO  - Iniciando carga de datos de especialidades, médicos y horarios...
+2025-07-13 20:59:55.676 INFO  - Procesando 15 especialidades...
+2025-07-13 20:59:56.112 INFO  - Especialidades procesadas.
+2025-07-13 20:59:56.112 INFO  - Procesando 45 médicos...
+2025-07-13 20:59:56.369 INFO  - Médicos procesados. Nuevos médicos creados: 0
+2025-07-13 20:59:56.369 INFO  - Procesando horarios del 2025-06-19 al 2025-06-21 para cada médico...
+2025-07-13 20:59:57.790 INFO  - Total de horarios procesados: 0
+2025-07-13 20:59:57.791 INFO  - Carga de datos iniciales completada.
+2025-07-13 21:00:16.007 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:00:16.410 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:00:23.406 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:00:23.455 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:00:24.865 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:01:03.860 INFO  - Intentando registrar paciente con correo: teamoariana@gmail.com y DNI: 71658964
+2025-07-13 21:01:03.861 INFO  - Dirección proporcionada: Abc calle
+2025-07-13 21:01:03.870 INFO  - No existe un paciente con el correo teamoariana@gmail.com ni DNI 71658964. Se puede registrar.
+2025-07-13 21:01:03.932 DEBUG - Contraseña del paciente teamoariana@gmail.com encriptada antes de guardar.
+2025-07-13 21:01:04.045 INFO  - Paciente y dirección guardados exitosamente para el paciente con ID 2 y correo teamoariana@gmail.com
+2025-07-13 21:01:04.064 INFO  - Paciente y dirección registrados exitosamente para el correo: teamoariana@gmail.com
+2025-07-13 21:01:04.075 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:01:04.124 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:01:09.924 INFO  - El usuario ha accedido a la página de inicio.
+2025-07-13 21:01:09.926 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 21:01:09.928 INFO  - Usuario teamoariana@gmail.com autenticado en la página de inicio.
+2025-07-13 21:04:30.694 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 19972 (C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador\Sistema-Clinica-Angry\target\classes started by Jeanp in C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador\Sistema-Clinica-Angry)
+2025-07-13 21:04:30.696 DEBUG - Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-13 21:04:30.697 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-07-13 21:04:38.820 INFO  - AuthServicio inicializado con PacienteRepositorio y DireccionRepositorio.
+2025-07-13 21:04:38.948 INFO  - [NotificacionServicio] - Servicio inicializado. JavaMailSender inyectado.
+2025-07-13 21:04:38.953 INFO  - [CitaServicio] - Servicio inicializado con dependencias inyectadas.
+2025-07-13 21:04:38.969 INFO  - [ReservaControlador] - Controlador inicializado con CitaServicio y AuthServicio.
+2025-07-13 21:04:40.495 INFO  - Started SistemaApplication in 10.454 seconds (process running for 11.945)
+2025-07-13 21:04:40.522 INFO  - Iniciando carga de datos de especialidades, médicos y horarios...
+2025-07-13 21:04:40.523 INFO  - Procesando 15 especialidades...
+2025-07-13 21:04:40.785 INFO  - Especialidades procesadas.
+2025-07-13 21:04:40.786 INFO  - Procesando 45 médicos...
+2025-07-13 21:04:40.964 INFO  - Médicos procesados. Nuevos médicos creados: 0
+2025-07-13 21:04:40.964 INFO  - Procesando horarios del 2025-06-19 al 2025-06-21 para cada médico...
+2025-07-13 21:04:42.730 INFO  - Total de horarios procesados: 0
+2025-07-13 21:04:42.730 INFO  - Carga de datos iniciales completada.
+2025-07-13 21:04:45.775 INFO  - El usuario ha accedido a la página de inicio.
+2025-07-13 21:04:45.776 INFO  - Acceso a la página de inicio por usuario no autenticado.
+2025-07-13 21:04:46.219 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:04:47.968 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:04:58.322 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:05:05.397 INFO  - El usuario ha accedido a la página de inicio.
+2025-07-13 21:05:05.402 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 21:05:05.403 INFO  - Usuario teamoariana@gmail.com autenticado en la página de inicio.
+2025-07-13 21:09:54.848 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:10:09.842 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:10:24.842 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:10:39.844 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:10:54.843 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:11:09.842 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:11:24.849 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:12:27.825 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 4156 (C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador\Sistema-Clinica-Angry\target\classes started by Jeanp in C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador\Sistema-Clinica-Angry)
+2025-07-13 21:12:27.827 DEBUG - Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-13 21:12:27.828 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-07-13 21:12:37.562 INFO  - AuthServicio inicializado con PacienteRepositorio y DireccionRepositorio.
+2025-07-13 21:12:37.693 INFO  - [NotificacionServicio] - Servicio inicializado. JavaMailSender inyectado.
+2025-07-13 21:12:37.698 INFO  - [CitaServicio] - Servicio inicializado con dependencias inyectadas.
+2025-07-13 21:12:37.712 INFO  - [ReservaControlador] - Controlador inicializado con CitaServicio y AuthServicio.
+2025-07-13 21:12:39.677 INFO  - Started SistemaApplication in 12.631 seconds (process running for 14.331)
+2025-07-13 21:12:39.707 INFO  - Iniciando carga de datos de especialidades, médicos y horarios...
+2025-07-13 21:12:39.709 INFO  - Procesando 15 especialidades...
+2025-07-13 21:12:39.987 INFO  - Especialidades procesadas.
+2025-07-13 21:12:39.988 INFO  - Procesando 45 médicos...
+2025-07-13 21:12:40.180 INFO  - Médicos procesados. Nuevos médicos creados: 0
+2025-07-13 21:12:40.181 INFO  - Procesando horarios del 2025-06-19 al 2025-06-21 para cada médico...
+2025-07-13 21:12:41.826 INFO  - Total de horarios procesados: 0
+2025-07-13 21:12:41.827 INFO  - Carga de datos iniciales completada.
+2025-07-13 21:14:40.063 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:15:39.850 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:15:54.843 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:17:34.496 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 12572 (C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador\Sistema-Clinica-Angry\target\classes started by Jeanp in C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador\Sistema-Clinica-Angry)
+2025-07-13 21:17:34.496 DEBUG - Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-13 21:17:34.509 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-07-13 21:17:43.549 INFO  - AuthServicio inicializado con PacienteRepositorio y DireccionRepositorio.
+2025-07-13 21:17:43.673 INFO  - [NotificacionServicio] - Servicio inicializado. JavaMailSender inyectado.
+2025-07-13 21:17:43.678 INFO  - [CitaServicio] - Servicio inicializado con dependencias inyectadas.
+2025-07-13 21:17:43.691 INFO  - [ReservaControlador] - Controlador inicializado con CitaServicio y AuthServicio.
+2025-07-13 21:17:45.360 INFO  - Started SistemaApplication in 11.563 seconds (process running for 13.052)
+2025-07-13 21:17:45.400 INFO  - Iniciando carga de datos de especialidades, médicos y horarios...
+2025-07-13 21:17:45.402 INFO  - Procesando 15 especialidades...
+2025-07-13 21:17:45.869 INFO  - Especialidades procesadas.
+2025-07-13 21:17:45.869 INFO  - Procesando 45 médicos...
+2025-07-13 21:17:46.045 INFO  - Médicos procesados. Nuevos médicos creados: 0
+2025-07-13 21:17:46.045 INFO  - Procesando horarios del 2025-06-19 al 2025-06-21 para cada médico...
+2025-07-13 21:17:47.586 INFO  - Total de horarios procesados: 0
+2025-07-13 21:17:47.586 INFO  - Carga de datos iniciales completada.
+2025-07-13 21:18:10.008 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:18:24.846 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:18:39.846 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:18:54.847 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:19:09.841 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:20:09.867 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 14468 (C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador\Sistema-Clinica-Angry\target\classes started by Jeanp in C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador\Sistema-Clinica-Angry)
+2025-07-13 21:20:09.867 DEBUG - Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-13 21:20:09.870 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-07-13 21:20:19.182 INFO  - AuthServicio inicializado con PacienteRepositorio y DireccionRepositorio.
+2025-07-13 21:20:19.310 INFO  - [NotificacionServicio] - Servicio inicializado. JavaMailSender inyectado.
+2025-07-13 21:20:19.316 INFO  - [CitaServicio] - Servicio inicializado con dependencias inyectadas.
+2025-07-13 21:20:19.331 INFO  - [ReservaControlador] - Controlador inicializado con CitaServicio y AuthServicio.
+2025-07-13 21:20:21.435 INFO  - Started SistemaApplication in 12.222 seconds (process running for 13.735)
+2025-07-13 21:20:21.470 INFO  - Iniciando carga de datos de especialidades, médicos y horarios...
+2025-07-13 21:20:21.472 INFO  - Procesando 15 especialidades...
+2025-07-13 21:20:21.840 INFO  - Especialidades procesadas.
+2025-07-13 21:20:21.841 INFO  - Procesando 45 médicos...
+2025-07-13 21:20:22.043 INFO  - Médicos procesados. Nuevos médicos creados: 0
+2025-07-13 21:20:22.043 INFO  - Procesando horarios del 2025-06-19 al 2025-06-21 para cada médico...
+2025-07-13 21:20:23.756 INFO  - Total de horarios procesados: 0
+2025-07-13 21:20:23.756 INFO  - Carga de datos iniciales completada.
+2025-07-13 21:22:10.032 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:22:24.846 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:22:39.844 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:22:52.068 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:22:54.843 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:22:58.682 INFO  - El usuario ha accedido a la página de inicio.
+2025-07-13 21:22:58.683 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 21:22:58.687 INFO  - Usuario teamoariana@gmail.com autenticado en la página de inicio.
+2025-07-13 21:23:26.803 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 8440 (C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador\Sistema-Clinica-Angry\target\classes started by Jeanp in C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador\Sistema-Clinica-Angry)
+2025-07-13 21:23:26.806 DEBUG - Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-13 21:23:26.807 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-07-13 21:23:34.796 INFO  - AuthServicio inicializado con PacienteRepositorio y DireccionRepositorio.
+2025-07-13 21:23:34.916 INFO  - [NotificacionServicio] - Servicio inicializado. JavaMailSender inyectado.
+2025-07-13 21:23:34.921 INFO  - [CitaServicio] - Servicio inicializado con dependencias inyectadas.
+2025-07-13 21:23:34.935 INFO  - [ReservaControlador] - Controlador inicializado con CitaServicio y AuthServicio.
+2025-07-13 21:23:36.733 INFO  - Started SistemaApplication in 10.567 seconds (process running for 12.021)
+2025-07-13 21:23:36.772 INFO  - Iniciando carga de datos de especialidades, médicos y horarios...
+2025-07-13 21:23:36.773 INFO  - Procesando 15 especialidades...
+2025-07-13 21:23:37.085 INFO  - Especialidades procesadas.
+2025-07-13 21:23:37.086 INFO  - Procesando 45 médicos...
+2025-07-13 21:23:37.249 INFO  - Médicos procesados. Nuevos médicos creados: 0
+2025-07-13 21:23:37.249 INFO  - Procesando horarios del 2025-06-19 al 2025-06-21 para cada médico...
+2025-07-13 21:23:38.768 INFO  - Total de horarios procesados: 0
+2025-07-13 21:23:38.768 INFO  - Carga de datos iniciales completada.
+2025-07-13 21:23:40.031 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:23:42.836 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:23:50.139 INFO  - El usuario ha accedido a la página de inicio.
+2025-07-13 21:23:50.142 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 21:23:50.145 INFO  - Usuario teamoariana@gmail.com autenticado en la página de inicio.
+2025-07-13 21:23:54.847 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:24:09.842 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:24:24.843 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:24:39.843 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:24:54.843 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:25:09.844 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:25:24.843 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:25:39.844 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:25:54.844 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:26:09.844 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:26:24.842 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:26:39.842 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:26:54.842 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:27:09.841 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:27:24.842 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:27:39.843 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:27:54.843 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:28:09.842 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:28:24.842 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:28:39.842 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:28:54.842 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:29:29.826 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 22992 (C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador\Sistema-Clinica-Angry\target\classes started by Jeanp in C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador\Sistema-Clinica-Angry)
+2025-07-13 21:29:29.828 DEBUG - Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-13 21:29:29.829 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-07-13 21:29:38.906 INFO  - AuthServicio inicializado con PacienteRepositorio y DireccionRepositorio.
+2025-07-13 21:29:39.060 INFO  - [NotificacionServicio] - Servicio inicializado. JavaMailSender inyectado.
+2025-07-13 21:29:39.065 INFO  - [CitaServicio] - Servicio inicializado con dependencias inyectadas.
+2025-07-13 21:29:39.082 INFO  - [ReservaControlador] - Controlador inicializado con CitaServicio y AuthServicio.
+2025-07-13 21:29:41.257 INFO  - Started SistemaApplication in 12.1 seconds (process running for 13.546)
+2025-07-13 21:29:41.283 INFO  - Iniciando carga de datos de especialidades, médicos y horarios...
+2025-07-13 21:29:41.283 INFO  - Procesando 15 especialidades...
+2025-07-13 21:29:41.585 INFO  - Especialidades procesadas.
+2025-07-13 21:29:41.585 INFO  - Procesando 45 médicos...
+2025-07-13 21:29:41.780 INFO  - Médicos procesados. Nuevos médicos creados: 0
+2025-07-13 21:29:41.780 INFO  - Procesando horarios del 2025-06-19 al 2025-06-21 para cada médico...
+2025-07-13 21:29:43.243 INFO  - Total de horarios procesados: 0
+2025-07-13 21:29:43.243 INFO  - Carga de datos iniciales completada.
+2025-07-13 21:29:51.647 INFO  - El usuario ha accedido a la página de inicio.
+2025-07-13 21:29:51.647 INFO  - Acceso a la página de inicio por usuario no autenticado.
+2025-07-13 21:29:52.271 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:29:53.684 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:29:59.804 INFO  - El usuario ha accedido a la página de inicio.
+2025-07-13 21:29:59.804 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 21:29:59.807 INFO  - Usuario teamoariana@gmail.com autenticado en la página de inicio.
+2025-07-13 21:30:39.849 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:30:54.843 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:31:09.844 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 21:34:26.182 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 14824 (C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador\Sistema-Clinica-Angry\target\classes started by Jeanp in C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador\Sistema-Clinica-Angry)
+2025-07-13 21:34:26.184 DEBUG - Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-13 21:34:26.185 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-07-13 21:34:34.499 INFO  - AuthServicio inicializado con PacienteRepositorio y DireccionRepositorio.
+2025-07-13 21:34:34.607 INFO  - [NotificacionServicio] - Servicio inicializado. JavaMailSender inyectado.
+2025-07-13 21:34:34.611 INFO  - [CitaServicio] - Servicio inicializado con dependencias inyectadas.
+2025-07-13 21:34:34.625 INFO  - [ReservaControlador] - Controlador inicializado con CitaServicio y AuthServicio.
+2025-07-13 21:34:36.326 INFO  - Started SistemaApplication in 10.79 seconds (process running for 12.208)
+2025-07-13 21:34:36.356 INFO  - Iniciando carga de datos de especialidades, médicos y horarios...
+2025-07-13 21:34:36.357 INFO  - Procesando 15 especialidades...
+2025-07-13 21:34:36.625 INFO  - Especialidades procesadas.
+2025-07-13 21:34:36.625 INFO  - Procesando 45 médicos...
+2025-07-13 21:34:36.814 INFO  - Médicos procesados. Nuevos médicos creados: 0
+2025-07-13 21:34:36.817 INFO  - Procesando horarios del 2025-06-19 al 2025-06-21 para cada médico...
+2025-07-13 21:34:38.580 INFO  - Total de horarios procesados: 0
+2025-07-13 21:34:38.580 INFO  - Carga de datos iniciales completada.
+2025-07-13 21:55:25.784 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 22:01:01.227 INFO  - El usuario ha accedido a la página de inicio.
+2025-07-13 22:01:01.227 INFO  - Acceso a la página de inicio por usuario no autenticado.
+2025-07-13 22:01:01.394 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 22:01:02.220 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 22:01:03.085 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 22:01:03.197 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 22:01:46.008 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 22:01:54.788 INFO  - El usuario ha accedido a la página de inicio.
+2025-07-13 22:01:54.790 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 22:01:54.795 INFO  - Usuario teamoariana@gmail.com autenticado en la página de inicio.
+2025-07-13 22:01:55.836 INFO  - [ReservaControlador] - Accediendo a la página de reserva de cita (/reserva).
+2025-07-13 22:01:55.836 DEBUG - [ReservaControlador] - Intentando obtener paciente logueado.
+2025-07-13 22:01:55.836 INFO  - [ReservaControlador] - Usuario autenticado detectado: teamoariana@gmail.com. Buscando paciente en base de datos.
+2025-07-13 22:01:55.836 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 22:01:55.842 DEBUG - [ReservaControlador] - Paciente logueado encontrado: ID 2, Correo: teamoariana@gmail.com.
+2025-07-13 22:01:55.842 INFO  - [ReservaControlador] - Paciente logueado Jeanpierre Davila reconocido para la página de reserva.
+2025-07-13 22:01:55.922 INFO  - [ReservaControlador] - Solicitud API: Obtener todas las especialidades.
+2025-07-13 22:01:55.923 INFO  - [CitaServicio] - Cargando todas las especialidades.
+2025-07-13 22:01:55.969 DEBUG - [ReservaControlador] - Retornando 15 especialidades.
+2025-07-13 22:01:56.223 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-07-13 22:01:56.224 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 22:01:56.228 INFO  - [CitaServicio] - Buscando citas pendientes para Paciente ID: 2.
+2025-07-13 22:01:56.249 DEBUG - [CitaServicio] - Paciente encontrado para citas pendientes: ID 2
+2025-07-13 22:01:56.315 INFO  - [CitaServicio] - Buscando historial de citas para Paciente ID: 2.
+2025-07-13 22:01:56.318 DEBUG - [CitaServicio] - Paciente encontrado para historial de citas: ID 2
+2025-07-13 22:01:56.553 INFO  - Accediendo a la página de ambulancia.
+2025-07-13 22:01:56.553 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 22:01:56.569 DEBUG - Cargadas 1 direcciones para el paciente teamoariana@gmail.com.
+2025-07-13 22:01:57.524 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-07-13 22:01:57.524 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 22:01:57.528 INFO  - [CitaServicio] - Buscando citas pendientes para Paciente ID: 2.
+2025-07-13 22:01:57.531 DEBUG - [CitaServicio] - Paciente encontrado para citas pendientes: ID 2
+2025-07-13 22:01:57.534 INFO  - [CitaServicio] - Buscando historial de citas para Paciente ID: 2.
+2025-07-13 22:01:57.537 DEBUG - [CitaServicio] - Paciente encontrado para historial de citas: ID 2
+2025-07-13 22:01:57.931 INFO  - Accediendo a la página de ambulancia.
+2025-07-13 22:01:57.932 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 22:01:57.935 DEBUG - Cargadas 1 direcciones para el paciente teamoariana@gmail.com.
+2025-07-13 22:02:01.894 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 22:02:01.918 INFO  - Solicitud de ambulancia recibida para paciente teamoariana@gmail.com en la dirección: Abc calle
+2025-07-13 22:02:03.945 INFO  - El usuario ha accedido a la página de inicio.
+2025-07-13 22:02:03.945 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 22:02:03.948 INFO  - Usuario teamoariana@gmail.com autenticado en la página de inicio.
+2025-07-13 22:04:09.215 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 22:04:17.217 INFO  - El usuario ha accedido a la página de inicio.
+2025-07-13 22:04:17.217 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 22:04:17.221 INFO  - Usuario teamoariana@gmail.com autenticado en la página de inicio.
+2025-07-13 22:04:22.854 INFO  - [ReservaControlador] - Accediendo a la página de reserva de cita (/reserva).
+2025-07-13 22:04:22.855 DEBUG - [ReservaControlador] - Intentando obtener paciente logueado.
+2025-07-13 22:04:22.855 INFO  - [ReservaControlador] - Usuario autenticado detectado: teamoariana@gmail.com. Buscando paciente en base de datos.
+2025-07-13 22:04:22.856 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 22:04:22.859 DEBUG - [ReservaControlador] - Paciente logueado encontrado: ID 2, Correo: teamoariana@gmail.com.
+2025-07-13 22:04:22.859 INFO  - [ReservaControlador] - Paciente logueado Jeanpierre Davila reconocido para la página de reserva.
+2025-07-13 22:04:22.914 INFO  - [ReservaControlador] - Solicitud API: Obtener todas las especialidades.
+2025-07-13 22:04:22.915 INFO  - [CitaServicio] - Cargando todas las especialidades.
+2025-07-13 22:04:22.924 DEBUG - [ReservaControlador] - Retornando 15 especialidades.
+2025-07-13 22:04:23.159 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-07-13 22:04:23.159 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 22:04:23.159 INFO  - [CitaServicio] - Buscando citas pendientes para Paciente ID: 2.
+2025-07-13 22:04:23.170 DEBUG - [CitaServicio] - Paciente encontrado para citas pendientes: ID 2
+2025-07-13 22:04:23.170 INFO  - [CitaServicio] - Buscando historial de citas para Paciente ID: 2.
+2025-07-13 22:04:23.170 DEBUG - [CitaServicio] - Paciente encontrado para historial de citas: ID 2
+2025-07-13 22:04:23.454 INFO  - Accediendo a la página de ambulancia.
+2025-07-13 22:04:23.454 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 22:04:23.457 DEBUG - Cargadas 1 direcciones para el paciente teamoariana@gmail.com.
+2025-07-13 22:04:23.823 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-07-13 22:04:23.823 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 22:04:23.825 INFO  - [CitaServicio] - Buscando citas pendientes para Paciente ID: 2.
+2025-07-13 22:04:23.825 DEBUG - [CitaServicio] - Paciente encontrado para citas pendientes: ID 2
+2025-07-13 22:04:23.834 INFO  - [CitaServicio] - Buscando historial de citas para Paciente ID: 2.
+2025-07-13 22:04:23.837 DEBUG - [CitaServicio] - Paciente encontrado para historial de citas: ID 2
+2025-07-13 22:04:24.103 INFO  - [ReservaControlador] - Accediendo a la página de reserva de cita (/reserva).
+2025-07-13 22:04:24.118 DEBUG - [ReservaControlador] - Intentando obtener paciente logueado.
+2025-07-13 22:04:24.118 INFO  - [ReservaControlador] - Usuario autenticado detectado: teamoariana@gmail.com. Buscando paciente en base de datos.
+2025-07-13 22:04:24.118 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 22:04:24.122 DEBUG - [ReservaControlador] - Paciente logueado encontrado: ID 2, Correo: teamoariana@gmail.com.
+2025-07-13 22:04:24.122 INFO  - [ReservaControlador] - Paciente logueado Jeanpierre Davila reconocido para la página de reserva.
+2025-07-13 22:04:24.163 INFO  - [ReservaControlador] - Solicitud API: Obtener todas las especialidades.
+2025-07-13 22:04:24.163 INFO  - [CitaServicio] - Cargando todas las especialidades.
+2025-07-13 22:04:24.166 DEBUG - [ReservaControlador] - Retornando 15 especialidades.
+2025-07-13 22:04:24.401 INFO  - El usuario ha accedido a la página de inicio.
+2025-07-13 22:04:24.401 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 22:04:24.405 INFO  - Usuario teamoariana@gmail.com autenticado en la página de inicio.
+2025-07-13 22:04:24.718 INFO  - [ReservaControlador] - Accediendo a la página de reserva de cita (/reserva).
+2025-07-13 22:04:24.719 DEBUG - [ReservaControlador] - Intentando obtener paciente logueado.
+2025-07-13 22:04:24.719 INFO  - [ReservaControlador] - Usuario autenticado detectado: teamoariana@gmail.com. Buscando paciente en base de datos.
+2025-07-13 22:04:24.719 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 22:04:24.722 DEBUG - [ReservaControlador] - Paciente logueado encontrado: ID 2, Correo: teamoariana@gmail.com.
+2025-07-13 22:04:24.722 INFO  - [ReservaControlador] - Paciente logueado Jeanpierre Davila reconocido para la página de reserva.
+2025-07-13 22:04:24.765 INFO  - [ReservaControlador] - Solicitud API: Obtener todas las especialidades.
+2025-07-13 22:04:24.767 INFO  - [CitaServicio] - Cargando todas las especialidades.
+2025-07-13 22:04:24.772 DEBUG - [ReservaControlador] - Retornando 15 especialidades.
+2025-07-13 22:04:24.970 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-07-13 22:04:24.971 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 22:04:24.973 INFO  - [CitaServicio] - Buscando citas pendientes para Paciente ID: 2.
+2025-07-13 22:04:24.973 DEBUG - [CitaServicio] - Paciente encontrado para citas pendientes: ID 2
+2025-07-13 22:04:24.973 INFO  - [CitaServicio] - Buscando historial de citas para Paciente ID: 2.
+2025-07-13 22:04:24.981 DEBUG - [CitaServicio] - Paciente encontrado para historial de citas: ID 2
+2025-07-13 22:04:25.244 INFO  - Accediendo a la página de ambulancia.
+2025-07-13 22:04:25.244 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 22:04:25.253 DEBUG - Cargadas 1 direcciones para el paciente teamoariana@gmail.com.
+2025-07-13 22:06:02.729 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 22:06:08.934 INFO  - El usuario ha accedido a la página de inicio.
+2025-07-13 22:06:08.934 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 22:06:08.939 INFO  - Usuario teamoariana@gmail.com autenticado en la página de inicio.
+2025-07-13 22:06:10.232 INFO  - [ReservaControlador] - Accediendo a la página de reserva de cita (/reserva).
+2025-07-13 22:06:10.233 DEBUG - [ReservaControlador] - Intentando obtener paciente logueado.
+2025-07-13 22:06:10.233 INFO  - [ReservaControlador] - Usuario autenticado detectado: teamoariana@gmail.com. Buscando paciente en base de datos.
+2025-07-13 22:06:10.233 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 22:06:10.237 DEBUG - [ReservaControlador] - Paciente logueado encontrado: ID 2, Correo: teamoariana@gmail.com.
+2025-07-13 22:06:10.238 INFO  - [ReservaControlador] - Paciente logueado Jeanpierre Davila reconocido para la página de reserva.
+2025-07-13 22:06:10.287 INFO  - [ReservaControlador] - Solicitud API: Obtener todas las especialidades.
+2025-07-13 22:06:10.288 INFO  - [CitaServicio] - Cargando todas las especialidades.
+2025-07-13 22:06:10.293 DEBUG - [ReservaControlador] - Retornando 15 especialidades.
+2025-07-13 22:06:10.565 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-07-13 22:06:10.565 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 22:06:10.568 INFO  - [CitaServicio] - Buscando citas pendientes para Paciente ID: 2.
+2025-07-13 22:06:10.570 DEBUG - [CitaServicio] - Paciente encontrado para citas pendientes: ID 2
+2025-07-13 22:06:10.574 INFO  - [CitaServicio] - Buscando historial de citas para Paciente ID: 2.
+2025-07-13 22:06:10.576 DEBUG - [CitaServicio] - Paciente encontrado para historial de citas: ID 2
+2025-07-13 22:06:10.859 INFO  - Accediendo a la página de ambulancia.
+2025-07-13 22:06:10.859 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 22:06:10.870 DEBUG - Cargadas 1 direcciones para el paciente teamoariana@gmail.com.
+2025-07-13 22:06:15.071 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 22:06:15.071 INFO  - Solicitud de ambulancia recibida para paciente teamoariana@gmail.com en la dirección: Abc calle
+2025-07-13 22:06:15.678 INFO  - El usuario ha accedido a la página de inicio.
+2025-07-13 22:06:15.678 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 22:06:15.682 INFO  - Usuario teamoariana@gmail.com autenticado en la página de inicio.
+2025-07-13 22:06:16.479 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-07-13 22:06:16.480 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 22:06:16.484 INFO  - [CitaServicio] - Buscando citas pendientes para Paciente ID: 2.
+2025-07-13 22:06:16.488 DEBUG - [CitaServicio] - Paciente encontrado para citas pendientes: ID 2
+2025-07-13 22:06:16.491 INFO  - [CitaServicio] - Buscando historial de citas para Paciente ID: 2.
+2025-07-13 22:06:16.495 DEBUG - [CitaServicio] - Paciente encontrado para historial de citas: ID 2
+2025-07-13 22:06:19.443 INFO  - Accediendo a la página de ambulancia.
+2025-07-13 22:06:19.443 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 22:06:19.450 DEBUG - Cargadas 1 direcciones para el paciente teamoariana@gmail.com.
+2025-07-13 22:06:19.787 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-07-13 22:06:19.788 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 22:06:19.792 INFO  - [CitaServicio] - Buscando citas pendientes para Paciente ID: 2.
+2025-07-13 22:06:19.793 DEBUG - [CitaServicio] - Paciente encontrado para citas pendientes: ID 2
+2025-07-13 22:06:19.793 INFO  - [CitaServicio] - Buscando historial de citas para Paciente ID: 2.
+2025-07-13 22:06:19.799 DEBUG - [CitaServicio] - Paciente encontrado para historial de citas: ID 2
+2025-07-13 22:06:20.080 INFO  - [ReservaControlador] - Accediendo a la página de reserva de cita (/reserva).
+2025-07-13 22:06:20.080 DEBUG - [ReservaControlador] - Intentando obtener paciente logueado.
+2025-07-13 22:06:20.080 INFO  - [ReservaControlador] - Usuario autenticado detectado: teamoariana@gmail.com. Buscando paciente en base de datos.
+2025-07-13 22:06:20.080 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 22:06:20.084 DEBUG - [ReservaControlador] - Paciente logueado encontrado: ID 2, Correo: teamoariana@gmail.com.
+2025-07-13 22:06:20.084 INFO  - [ReservaControlador] - Paciente logueado Jeanpierre Davila reconocido para la página de reserva.
+2025-07-13 22:06:20.126 INFO  - [ReservaControlador] - Solicitud API: Obtener todas las especialidades.
+2025-07-13 22:06:20.126 INFO  - [CitaServicio] - Cargando todas las especialidades.
+2025-07-13 22:06:20.131 DEBUG - [ReservaControlador] - Retornando 15 especialidades.
+2025-07-13 22:06:21.427 INFO  - [ReservaControlador] - Solicitud API: Obtener médicos para especialidad ID: 7.
+2025-07-13 22:06:21.428 INFO  - [CitaServicio] - Buscando médicos para la especialidad ID: 7.
+2025-07-13 22:06:21.440 DEBUG - [CitaServicio] - Especialidad encontrada: ID 7, Nombre: Oftalmología.
+2025-07-13 22:06:21.440 DEBUG - [ReservaControlador] - Retornando 3 médicos para especialidad ID 7.
+2025-07-13 22:06:25.504 INFO  - [ReservaControlador] - Solicitud API: Obtener horarios disponibles para médico ID: 20 en fecha: 2025-07-18.
+2025-07-13 22:06:25.506 INFO  - [CitaServicio] - Buscando horarios disponibles para Médico ID: 20 y Fecha: 2025-07-18.
+2025-07-13 22:06:25.512 DEBUG - [CitaServicio] - Médico encontrado para horarios disponibles: ID 20
+2025-07-13 22:06:25.527 DEBUG - [ReservaControlador] - Retornando 0 horarios para médico ID 20 en fecha 2025-07-18.
+2025-07-13 22:06:29.157 INFO  - El usuario ha accedido a la página de inicio.
+2025-07-13 22:06:29.158 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 22:06:29.161 INFO  - Usuario teamoariana@gmail.com autenticado en la página de inicio.
+2025-07-13 22:06:36.224 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 22:23:39.004 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 9944 (C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador\Sistema-Clinica-Angry\target\classes started by Jeanp in C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador\Sistema-Clinica-Angry)
+2025-07-13 22:23:39.007 DEBUG - Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-13 22:23:39.008 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-07-13 22:23:48.769 INFO  - AuthServicio inicializado con PacienteRepositorio y DireccionRepositorio.
+2025-07-13 22:23:48.911 INFO  - [NotificacionServicio] - Servicio inicializado. JavaMailSender inyectado.
+2025-07-13 22:23:48.914 INFO  - [CitaServicio] - Servicio inicializado con dependencias inyectadas.
+2025-07-13 22:23:48.936 INFO  - [ReservaControlador] - Controlador inicializado con CitaServicio y AuthServicio.
+2025-07-13 22:23:50.882 INFO  - Started SistemaApplication in 12.612 seconds (process running for 14.256)
+2025-07-13 22:23:50.916 INFO  - Iniciando carga de datos de especialidades, médicos y horarios...
+2025-07-13 22:23:50.916 INFO  - Procesando 15 especialidades...
+2025-07-13 22:23:51.195 INFO  - Especialidades procesadas.
+2025-07-13 22:23:51.195 INFO  - Procesando 45 médicos...
+2025-07-13 22:23:51.402 INFO  - Médicos procesados. Nuevos médicos creados: 0
+2025-07-13 22:23:51.402 INFO  - Procesando horarios del 2025-06-19 al 2025-06-21 para cada médico...
+2025-07-13 22:23:53.128 INFO  - Total de horarios procesados: 0
+2025-07-13 22:23:53.129 INFO  - Carga de datos iniciales completada.
+2025-07-13 22:24:40.106 INFO  - El usuario ha accedido a la página de inicio.
+2025-07-13 22:24:40.108 INFO  - Acceso a la página de inicio por usuario no autenticado.
+2025-07-13 22:24:40.656 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 22:24:42.733 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 22:24:50.476 INFO  - El usuario ha accedido a la página de inicio.
+2025-07-13 22:24:50.476 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 22:24:50.476 INFO  - Usuario teamoariana@gmail.com autenticado en la página de inicio.
+2025-07-13 23:05:55.871 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 2148 (C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador\Sistema-Clinica-Angry\target\classes started by Jeanp in C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador\Sistema-Clinica-Angry)
+2025-07-13 23:05:55.878 DEBUG - Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-13 23:05:55.878 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-07-13 23:06:04.815 INFO  - AuthServicio inicializado con PacienteRepositorio y DireccionRepositorio.
+2025-07-13 23:06:04.936 INFO  - [NotificacionServicio] - Servicio inicializado. JavaMailSender inyectado.
+2025-07-13 23:06:04.943 INFO  - [CitaServicio] - Servicio inicializado con dependencias inyectadas.
+2025-07-13 23:06:04.956 INFO  - [ReservaControlador] - Controlador inicializado con CitaServicio y AuthServicio.
+2025-07-13 23:06:06.682 INFO  - Started SistemaApplication in 11.627 seconds (process running for 13.595)
+2025-07-13 23:06:06.708 INFO  - Iniciando carga de datos de especialidades, médicos y horarios...
+2025-07-13 23:06:06.709 INFO  - Procesando 15 especialidades...
+2025-07-13 23:06:06.998 INFO  - Especialidades procesadas.
+2025-07-13 23:06:07.000 INFO  - Procesando 45 médicos...
+2025-07-13 23:06:07.208 INFO  - Médicos procesados. Nuevos médicos creados: 0
+2025-07-13 23:06:07.209 INFO  - Procesando horarios del 2025-06-19 al 2025-06-21 para cada médico...
+2025-07-13 23:06:08.788 INFO  - Total de horarios procesados: 0
+2025-07-13 23:06:08.788 INFO  - Carga de datos iniciales completada.
+2025-07-13 23:11:21.212 INFO  - El usuario ha accedido a la página de inicio.
+2025-07-13 23:11:21.216 INFO  - Acceso a la página de inicio por usuario no autenticado.
+2025-07-13 23:11:22.069 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 23:12:07.812 INFO  - El usuario ha accedido a la página de inicio.
+2025-07-13 23:12:07.814 INFO  - Acceso a la página de inicio por usuario no autenticado.
+2025-07-13 23:12:07.901 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 23:25:30.842 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 8256 (C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador\Sistema-Clinica-Angry\target\classes started by Jeanp in C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador\Sistema-Clinica-Angry)
+2025-07-13 23:25:30.844 DEBUG - Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-13 23:25:30.847 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-07-13 23:25:41.111 INFO  - AuthServicio inicializado con PacienteRepositorio y DireccionRepositorio.
+2025-07-13 23:25:41.269 INFO  - [NotificacionServicio] - Servicio inicializado. JavaMailSender inyectado.
+2025-07-13 23:25:41.282 INFO  - [CitaServicio] - Servicio inicializado con dependencias inyectadas.
+2025-07-13 23:25:41.308 INFO  - [ReservaControlador] - Controlador inicializado con CitaServicio y AuthServicio.
+2025-07-13 23:25:43.477 INFO  - Started SistemaApplication in 13.402 seconds (process running for 15.248)
+2025-07-13 23:25:43.513 INFO  - Iniciando carga de datos de especialidades, médicos y horarios...
+2025-07-13 23:25:43.517 INFO  - Procesando 15 especialidades...
+2025-07-13 23:25:43.854 INFO  - Especialidades procesadas.
+2025-07-13 23:25:43.854 INFO  - Procesando 45 médicos...
+2025-07-13 23:25:44.069 INFO  - Médicos procesados. Nuevos médicos creados: 0
+2025-07-13 23:25:44.072 INFO  - Procesando horarios del 2025-06-19 al 2025-06-21 para cada médico...
+2025-07-13 23:25:46.008 INFO  - Total de horarios procesados: 0
+2025-07-13 23:25:46.010 INFO  - Carga de datos iniciales completada.
+2025-07-13 23:28:37.139 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 23:29:46.786 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 8256 (C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador\Sistema-Clinica-Angry\target\classes started by Jeanp in C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador\Sistema-Clinica-Angry)
+2025-07-13 23:29:46.787 DEBUG - Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-13 23:29:46.793 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-07-13 23:29:48.844 INFO  - AuthServicio inicializado con PacienteRepositorio y DireccionRepositorio.
+2025-07-13 23:29:48.918 INFO  - [NotificacionServicio] - Servicio inicializado. JavaMailSender inyectado.
+2025-07-13 23:29:48.923 INFO  - [CitaServicio] - Servicio inicializado con dependencias inyectadas.
+2025-07-13 23:29:48.942 INFO  - [ReservaControlador] - Controlador inicializado con CitaServicio y AuthServicio.
+2025-07-13 23:29:49.354 INFO  - Started SistemaApplication in 2.672 seconds (process running for 261.126)
+2025-07-13 23:29:49.359 INFO  - Iniciando carga de datos de especialidades, médicos y horarios...
+2025-07-13 23:29:49.361 INFO  - Procesando 15 especialidades...
+2025-07-13 23:29:49.407 INFO  - Especialidades procesadas.
+2025-07-13 23:29:49.407 INFO  - Procesando 45 médicos...
+2025-07-13 23:29:49.532 INFO  - Médicos procesados. Nuevos médicos creados: 0
+2025-07-13 23:29:49.533 INFO  - Procesando horarios del 2025-06-19 al 2025-06-21 para cada médico...
+2025-07-13 23:29:50.639 INFO  - Total de horarios procesados: 0
+2025-07-13 23:29:50.640 INFO  - Carga de datos iniciales completada.
+2025-07-13 23:29:53.041 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 8256 (C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador\Sistema-Clinica-Angry\target\classes started by Jeanp in C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador\Sistema-Clinica-Angry)
+2025-07-13 23:29:53.041 DEBUG - Running with Spring Boot v3.5.3, Spring v6.2.8
+2025-07-13 23:29:53.041 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-07-13 23:29:54.519 INFO  - AuthServicio inicializado con PacienteRepositorio y DireccionRepositorio.
+2025-07-13 23:29:54.570 INFO  - [NotificacionServicio] - Servicio inicializado. JavaMailSender inyectado.
+2025-07-13 23:29:54.574 INFO  - [CitaServicio] - Servicio inicializado con dependencias inyectadas.
+2025-07-13 23:29:54.581 INFO  - [ReservaControlador] - Controlador inicializado con CitaServicio y AuthServicio.
+2025-07-13 23:29:54.857 INFO  - Started SistemaApplication in 1.87 seconds (process running for 266.628)
+2025-07-13 23:29:54.861 INFO  - Iniciando carga de datos de especialidades, médicos y horarios...
+2025-07-13 23:29:54.861 INFO  - Procesando 15 especialidades...
+2025-07-13 23:29:54.890 INFO  - Especialidades procesadas.
+2025-07-13 23:29:54.891 INFO  - Procesando 45 médicos...
+2025-07-13 23:29:54.986 INFO  - Médicos procesados. Nuevos médicos creados: 0
+2025-07-13 23:29:54.986 INFO  - Procesando horarios del 2025-06-19 al 2025-06-21 para cada médico...
+2025-07-13 23:29:55.931 INFO  - Total de horarios procesados: 0
+2025-07-13 23:29:55.931 INFO  - Carga de datos iniciales completada.
+2025-07-13 23:30:07.785 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 23:41:05.770 INFO  - El usuario ha accedido a la página de inicio.
+2025-07-13 23:41:05.774 INFO  - Acceso a la página de inicio por usuario no autenticado.
+2025-07-13 23:41:05.911 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 23:41:06.647 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 23:41:07.850 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 23:41:07.942 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 23:41:15.558 INFO  - El usuario ha accedido a la página de inicio.
+2025-07-13 23:41:15.559 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:41:15.564 INFO  - Usuario teamoariana@gmail.com autenticado en la página de inicio.
+2025-07-13 23:41:16.481 INFO  - [ReservaControlador] - Accediendo a la página de reserva de cita (/reserva).
+2025-07-13 23:41:16.481 DEBUG - [ReservaControlador] - Intentando obtener paciente logueado.
+2025-07-13 23:41:16.484 INFO  - [ReservaControlador] - Usuario autenticado detectado: teamoariana@gmail.com. Buscando paciente en base de datos.
+2025-07-13 23:41:16.485 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:41:16.491 DEBUG - [ReservaControlador] - Paciente logueado encontrado: ID 2, Correo: teamoariana@gmail.com.
+2025-07-13 23:41:16.492 INFO  - [ReservaControlador] - Paciente logueado Jeanpierre Davila reconocido para la página de reserva.
+2025-07-13 23:41:16.568 INFO  - [ReservaControlador] - Solicitud API: Obtener todas las especialidades.
+2025-07-13 23:41:16.568 INFO  - [CitaServicio] - Cargando todas las especialidades.
+2025-07-13 23:41:16.608 DEBUG - [ReservaControlador] - Retornando 15 especialidades.
+2025-07-13 23:41:16.897 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-07-13 23:41:16.898 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:41:16.904 INFO  - [CitaServicio] - Buscando citas pendientes para Paciente ID: 2.
+2025-07-13 23:41:16.938 DEBUG - [CitaServicio] - Paciente encontrado para citas pendientes: ID 2
+2025-07-13 23:41:16.972 INFO  - [CitaServicio] - Buscando historial de citas para Paciente ID: 2.
+2025-07-13 23:41:16.976 DEBUG - [CitaServicio] - Paciente encontrado para historial de citas: ID 2
+2025-07-13 23:41:17.200 INFO  - Accediendo a la página de ambulancia.
+2025-07-13 23:41:17.201 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:41:17.236 DEBUG - Cargadas 1 direcciones para el paciente teamoariana@gmail.com.
+2025-07-13 23:41:21.365 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:41:21.376 INFO  - Solicitud de ambulancia recibida para paciente teamoariana@gmail.com en la dirección: Abc calle
+2025-07-13 23:41:22.182 INFO  - El usuario ha accedido a la página de inicio.
+2025-07-13 23:41:22.183 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:41:22.190 INFO  - Usuario teamoariana@gmail.com autenticado en la página de inicio.
+2025-07-13 23:42:42.041 INFO  - [ReservaControlador] - Accediendo a la página de reserva de cita (/reserva).
+2025-07-13 23:42:42.042 DEBUG - [ReservaControlador] - Intentando obtener paciente logueado.
+2025-07-13 23:42:42.043 INFO  - [ReservaControlador] - Usuario autenticado detectado: teamoariana@gmail.com. Buscando paciente en base de datos.
+2025-07-13 23:42:42.044 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:42:42.059 DEBUG - [ReservaControlador] - Paciente logueado encontrado: ID 2, Correo: teamoariana@gmail.com.
+2025-07-13 23:42:42.060 INFO  - [ReservaControlador] - Paciente logueado Jeanpierre Davila reconocido para la página de reserva.
+2025-07-13 23:42:42.138 INFO  - [ReservaControlador] - Solicitud API: Obtener todas las especialidades.
+2025-07-13 23:42:42.139 INFO  - [CitaServicio] - Cargando todas las especialidades.
+2025-07-13 23:42:42.149 DEBUG - [ReservaControlador] - Retornando 15 especialidades.
+2025-07-13 23:42:43.392 INFO  - [ReservaControlador] - Solicitud API: Obtener médicos para especialidad ID: 12.
+2025-07-13 23:42:43.393 INFO  - [CitaServicio] - Buscando médicos para la especialidad ID: 12.
+2025-07-13 23:42:43.409 DEBUG - [CitaServicio] - Especialidad encontrada: ID 12, Nombre: Oncología.
+2025-07-13 23:42:43.418 DEBUG - [ReservaControlador] - Retornando 3 médicos para especialidad ID 12.
+2025-07-13 23:42:47.734 INFO  - [ReservaControlador] - Solicitud API: Obtener horarios disponibles para médico ID: 35 en fecha: 2025-07-17.
+2025-07-13 23:42:47.741 INFO  - [CitaServicio] - Buscando horarios disponibles para Médico ID: 35 y Fecha: 2025-07-17.
+2025-07-13 23:42:47.753 DEBUG - [CitaServicio] - Médico encontrado para horarios disponibles: ID 35
+2025-07-13 23:42:47.766 DEBUG - [ReservaControlador] - Retornando 0 horarios para médico ID 35 en fecha 2025-07-17.
+2025-07-13 23:42:51.901 INFO  - [ReservaControlador] - Solicitud API: Obtener horarios disponibles para médico ID: 35 en fecha: 2025-06-20.
+2025-07-13 23:42:51.902 INFO  - [CitaServicio] - Buscando horarios disponibles para Médico ID: 35 y Fecha: 2025-06-20.
+2025-07-13 23:42:51.909 DEBUG - [CitaServicio] - Médico encontrado para horarios disponibles: ID 35
+2025-07-13 23:42:51.916 DEBUG - [ReservaControlador] - Retornando 3 horarios para médico ID 35 en fecha 2025-06-20.
+2025-07-13 23:42:54.696 INFO  - [ReservaControlador] - INICIO: Solicitud POST para confirmar cita. Fecha: 2025-06-20, Hora: 11:00:00, ID Médico: 35.
+2025-07-13 23:42:54.697 DEBUG - [ReservaControlador] - Intentando obtener paciente logueado.
+2025-07-13 23:42:54.698 INFO  - [ReservaControlador] - Usuario autenticado detectado: teamoariana@gmail.com. Buscando paciente en base de datos.
+2025-07-13 23:42:54.698 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:42:54.702 DEBUG - [ReservaControlador] - Paciente logueado encontrado: ID 2, Correo: teamoariana@gmail.com.
+2025-07-13 23:42:54.703 DEBUG - [ReservaControlador] - Paciente logueado para confirmar cita: ID 2.
+2025-07-13 23:42:54.703 INFO  - [ReservaControlador] - Llamando a CitaServicio.crearCita con fecha: 2025-06-20, hora: 11:00:00, idMedico: 35, idPaciente: 2.
+2025-07-13 23:42:54.709 INFO  - [CitaServicio] - INICIO: Solicitud para crear cita con fecha: 2025-06-20, hora: 11:00:00, idMedico: 35, idPaciente: 2
+2025-07-13 23:42:54.710 DEBUG - [CitaServicio] - Datos parseados: fechaCita='2025-06-20', horaCita='11:00'
+2025-07-13 23:42:54.712 INFO  - [CitaServicio] - Buscando Paciente con ID: 2
+2025-07-13 23:42:54.715 INFO  - [CitaServicio] - Paciente encontrado: ID 2, Nombre: Jeanpierre Davila, Correo: teamoariana@gmail.com
+2025-07-13 23:42:54.716 INFO  - [CitaServicio] - Buscando Médico con ID: 35
+2025-07-13 23:42:54.723 INFO  - [CitaServicio] - Médico encontrado: ID 35, Nombre: Teresa, Especialidad: Especialidad{id=12, nombre='Oncología'}
+2025-07-13 23:42:54.726 INFO  - [CitaServicio] - Buscando Horario disponible para fecha: 2025-06-20, hora: 11:00, y médico ID: 35
+2025-07-13 23:42:54.750 INFO  - [CitaServicio] - Horario encontrado: ID 68, Fecha: 2025-06-20, Hora: 11:00, Disponible: true
+2025-07-13 23:42:54.751 INFO  - [CitaServicio] - Creando nueva instancia de Cita.
+2025-07-13 23:42:54.751 DEBUG - [CitaServicio] - Detalles de nueva cita antes de guardar: Fecha='2025-06-20', Hora='11:00', Estado='Pendiente', Paciente ID=2, Medico ID=35
+2025-07-13 23:42:54.752 INFO  - [CitaServicio] - Marcando horario ID 68 como no disponible.
+2025-07-13 23:42:54.765 INFO  - [CitaServicio] - Horario ID 68 guardado con disponibilidad: false. 
+2025-07-13 23:42:54.766 INFO  - [CitaServicio] - Guardando la Cita inicial en la base de datos.
+2025-07-13 23:42:54.884 INFO  - [CitaServicio] - Cita guardada exitosamente con ID: 2.
+2025-07-13 23:42:54.884 INFO  - [CitaServicio] - INICIO LÓGICA DE NOTIFICACIÓN para Cita ID: 2.
+2025-07-13 23:42:54.885 DEBUG - [CitaServicio] - Construyendo el mensaje de notificación para el paciente: teamoariana@gmail.com.
+2025-07-13 23:42:54.886 DEBUG - [CitaServicio] - Mensaje de notificación generado:
+Hola Jeanpierre Davila,
+
+Te confirmamos tu cita médica:
+Médico: Dr. Teresa Alarcón (Oncología)
+Fecha: 20/06/2025
+Hora: 11:00
+
+Por favor, sé puntual. ¡Te esperamos!
+
+Saludos cordiales,
+Clínica Angry
+
+2025-07-13 23:42:54.887 INFO  - [CitaServicio] - Creando nueva instancia de Notificacion.
+2025-07-13 23:42:54.888 DEBUG - [CitaServicio] - Detalles de Notificacion antes de asociar: Destinatario=teamoariana@gmail.com, FechaEnvio=2025-07-13
+2025-07-13 23:42:54.890 INFO  - [CitaServicio] - Asociando Notificacion a la Cita ID: 2.
+2025-07-13 23:42:54.891 INFO  - [CitaServicio] - Persistiendo la Cita (con la Notificacion asociada) en la base de datos.
+2025-07-13 23:42:54.925 INFO  - [CitaServicio] - Notificación creada y asociada exitosamente a la Cita ID: 2. Notificacion ID: null.
+2025-07-13 23:42:54.926 INFO  - [CitaServicio] - Llamando a NotificacionServicio para enviar correo a: teamoariana@gmail.com. Asunto: 'Confirmación de Cita Médica - Clínica Angry'
+2025-07-13 23:42:54.927 INFO  - [NotificacionServicio] - INICIO: Solicitud de envío de correo simple.
+2025-07-13 23:42:54.928 INFO  - [NotificacionServicio] - Destinatario: 'teamoariana@gmail.com', Asunto: 'Confirmación de Cita Médica - Clínica Angry'
+2025-07-13 23:42:54.929 DEBUG - [NotificacionServicio] - Contenido del mensaje:
+Hola Jeanpierre Davila,
+
+Te confirmamos tu cita médica:
+Médico: Dr. Teresa Alarcón (Oncología)
+Fecha: 20/06/2025
+Hora: 11:00
+
+Por favor, sé puntual. ¡Te esperamos!
+
+Saludos cordiales,
+Clínica Angry
+
+2025-07-13 23:42:54.930 DEBUG - [NotificacionServicio] - Objeto SimpleMailMessage creado. Remitente: 'chipa.robladillo@gmail.com', Destinatario: 'teamoariana@gmail.com', Asunto: 'Confirmación de Cita Médica - Clínica Angry'
+2025-07-13 23:42:54.931 INFO  - [NotificacionServicio] - Intentando enviar correo a través de JavaMailSender...
+2025-07-13 23:42:58.926 INFO  - [NotificacionServicio] - Correo enviado exitosamente a: 'teamoariana@gmail.com'
+2025-07-13 23:42:58.928 INFO  - [NotificacionServicio] - FIN: Proceso de envío de correo simple.
+2025-07-13 23:42:58.929 INFO  - [CitaServicio] - El método enviarCorreoSimple de NotificacionServicio ha sido invocado para el correo: teamoariana@gmail.com.
+2025-07-13 23:42:58.930 INFO  - [CitaServicio] - FIN LÓGICA DE NOTIFICACIÓN para Cita ID: 2.
+2025-07-13 23:42:58.931 INFO  - [CitaServicio] - FIN: Método crearCita. Retornando Cita ID: 2.
+2025-07-13 23:42:59.005 INFO  - [ReservaControlador] - Cita creada correctamente en el servicio para paciente ID: 2. Redireccionando a /historial.
+2025-07-13 23:42:59.021 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-07-13 23:42:59.022 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:42:59.029 INFO  - [CitaServicio] - Buscando citas pendientes para Paciente ID: 2.
+2025-07-13 23:42:59.035 DEBUG - [CitaServicio] - Paciente encontrado para citas pendientes: ID 2
+2025-07-13 23:42:59.053 INFO  - [CitaServicio] - Buscando historial de citas para Paciente ID: 2.
+2025-07-13 23:42:59.059 DEBUG - [CitaServicio] - Paciente encontrado para historial de citas: ID 2
+2025-07-13 23:43:03.299 INFO  - Accediendo a la página de ambulancia.
+2025-07-13 23:43:03.300 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:43:03.310 DEBUG - Cargadas 1 direcciones para el paciente teamoariana@gmail.com.
+2025-07-13 23:43:06.191 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:43:06.199 INFO  - Solicitud de ambulancia recibida para paciente teamoariana@gmail.com en la dirección: Abc calle
+2025-07-13 23:43:07.476 INFO  - El usuario ha accedido a la página de inicio.
+2025-07-13 23:43:07.478 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:43:07.485 INFO  - Usuario teamoariana@gmail.com autenticado en la página de inicio.
+2025-07-13 23:43:08.475 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 23:57:34.465 INFO  - El usuario ha accedido a la página de inicio.
+2025-07-13 23:57:34.466 INFO  - Acceso a la página de inicio por usuario no autenticado.
+2025-07-13 23:57:34.580 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 23:57:38.979 INFO  - El usuario ha accedido a la página de login.
+2025-07-13 23:57:45.749 INFO  - El usuario ha accedido a la página de inicio.
+2025-07-13 23:57:45.750 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:57:45.754 INFO  - Usuario teamoariana@gmail.com autenticado en la página de inicio.
+2025-07-13 23:57:47.174 INFO  - [ReservaControlador] - Accediendo a la página de reserva de cita (/reserva).
+2025-07-13 23:57:47.174 DEBUG - [ReservaControlador] - Intentando obtener paciente logueado.
+2025-07-13 23:57:47.175 INFO  - [ReservaControlador] - Usuario autenticado detectado: teamoariana@gmail.com. Buscando paciente en base de datos.
+2025-07-13 23:57:47.176 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:57:47.182 DEBUG - [ReservaControlador] - Paciente logueado encontrado: ID 2, Correo: teamoariana@gmail.com.
+2025-07-13 23:57:47.183 INFO  - [ReservaControlador] - Paciente logueado Jeanpierre Davila reconocido para la página de reserva.
+2025-07-13 23:57:47.288 INFO  - [ReservaControlador] - Solicitud API: Obtener todas las especialidades.
+2025-07-13 23:57:47.290 INFO  - [CitaServicio] - Cargando todas las especialidades.
+2025-07-13 23:57:47.300 DEBUG - [ReservaControlador] - Retornando 15 especialidades.
+2025-07-13 23:57:47.560 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-07-13 23:57:47.561 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:57:47.566 INFO  - [CitaServicio] - Buscando citas pendientes para Paciente ID: 2.
+2025-07-13 23:57:47.574 DEBUG - [CitaServicio] - Paciente encontrado para citas pendientes: ID 2
+2025-07-13 23:57:47.587 INFO  - [CitaServicio] - Buscando historial de citas para Paciente ID: 2.
+2025-07-13 23:57:47.594 DEBUG - [CitaServicio] - Paciente encontrado para historial de citas: ID 2
+2025-07-13 23:57:47.827 INFO  - Accediendo a la página de ambulancia.
+2025-07-13 23:57:47.829 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:57:47.836 DEBUG - Cargadas 1 direcciones para el paciente teamoariana@gmail.com.
+2025-07-13 23:59:36.544 INFO  - El usuario ha accedido a la página de inicio.
+2025-07-13 23:59:36.546 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:36.551 INFO  - Usuario teamoariana@gmail.com autenticado en la página de inicio.
+2025-07-13 23:59:36.812 INFO  - [ReservaControlador] - Accediendo a la página de reserva de cita (/reserva).
+2025-07-13 23:59:36.812 DEBUG - [ReservaControlador] - Intentando obtener paciente logueado.
+2025-07-13 23:59:36.812 INFO  - [ReservaControlador] - Usuario autenticado detectado: teamoariana@gmail.com. Buscando paciente en base de datos.
+2025-07-13 23:59:36.812 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:36.822 DEBUG - [ReservaControlador] - Paciente logueado encontrado: ID 2, Correo: teamoariana@gmail.com.
+2025-07-13 23:59:36.822 INFO  - [ReservaControlador] - Paciente logueado Jeanpierre Davila reconocido para la página de reserva.
+2025-07-13 23:59:36.901 INFO  - [ReservaControlador] - Solicitud API: Obtener todas las especialidades.
+2025-07-13 23:59:36.903 INFO  - [CitaServicio] - Cargando todas las especialidades.
+2025-07-13 23:59:36.916 DEBUG - [ReservaControlador] - Retornando 15 especialidades.
+2025-07-13 23:59:37.056 INFO  - El usuario ha accedido a la página de inicio.
+2025-07-13 23:59:37.056 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:37.062 INFO  - Usuario teamoariana@gmail.com autenticado en la página de inicio.
+2025-07-13 23:59:37.326 INFO  - [ReservaControlador] - Accediendo a la página de reserva de cita (/reserva).
+2025-07-13 23:59:37.326 DEBUG - [ReservaControlador] - Intentando obtener paciente logueado.
+2025-07-13 23:59:37.326 INFO  - [ReservaControlador] - Usuario autenticado detectado: teamoariana@gmail.com. Buscando paciente en base de datos.
+2025-07-13 23:59:37.329 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:37.333 DEBUG - [ReservaControlador] - Paciente logueado encontrado: ID 2, Correo: teamoariana@gmail.com.
+2025-07-13 23:59:37.333 INFO  - [ReservaControlador] - Paciente logueado Jeanpierre Davila reconocido para la página de reserva.
+2025-07-13 23:59:37.407 INFO  - [ReservaControlador] - Solicitud API: Obtener todas las especialidades.
+2025-07-13 23:59:37.408 INFO  - [CitaServicio] - Cargando todas las especialidades.
+2025-07-13 23:59:37.416 DEBUG - [ReservaControlador] - Retornando 15 especialidades.
+2025-07-13 23:59:37.944 INFO  - [ReservaControlador] - Accediendo a la página de reserva de cita (/reserva).
+2025-07-13 23:59:37.944 DEBUG - [ReservaControlador] - Intentando obtener paciente logueado.
+2025-07-13 23:59:37.944 INFO  - [ReservaControlador] - Usuario autenticado detectado: teamoariana@gmail.com. Buscando paciente en base de datos.
+2025-07-13 23:59:37.947 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:37.953 DEBUG - [ReservaControlador] - Paciente logueado encontrado: ID 2, Correo: teamoariana@gmail.com.
+2025-07-13 23:59:37.953 INFO  - [ReservaControlador] - Paciente logueado Jeanpierre Davila reconocido para la página de reserva.
+2025-07-13 23:59:38.006 INFO  - [ReservaControlador] - Solicitud API: Obtener todas las especialidades.
+2025-07-13 23:59:38.006 INFO  - [CitaServicio] - Cargando todas las especialidades.
+2025-07-13 23:59:38.018 DEBUG - [ReservaControlador] - Retornando 15 especialidades.
+2025-07-13 23:59:38.186 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-07-13 23:59:38.186 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:38.191 INFO  - [CitaServicio] - Buscando citas pendientes para Paciente ID: 2.
+2025-07-13 23:59:38.198 DEBUG - [CitaServicio] - Paciente encontrado para citas pendientes: ID 2
+2025-07-13 23:59:38.206 INFO  - [CitaServicio] - Buscando historial de citas para Paciente ID: 2.
+2025-07-13 23:59:38.206 DEBUG - [CitaServicio] - Paciente encontrado para historial de citas: ID 2
+2025-07-13 23:59:38.905 INFO  - Accediendo a la página de ambulancia.
+2025-07-13 23:59:38.906 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:38.912 DEBUG - Cargadas 1 direcciones para el paciente teamoariana@gmail.com.
+2025-07-13 23:59:39.250 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-07-13 23:59:39.253 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:39.258 INFO  - [CitaServicio] - Buscando citas pendientes para Paciente ID: 2.
+2025-07-13 23:59:39.264 DEBUG - [CitaServicio] - Paciente encontrado para citas pendientes: ID 2
+2025-07-13 23:59:39.274 INFO  - [CitaServicio] - Buscando historial de citas para Paciente ID: 2.
+2025-07-13 23:59:39.274 DEBUG - [CitaServicio] - Paciente encontrado para historial de citas: ID 2
+2025-07-13 23:59:39.610 INFO  - [ReservaControlador] - Accediendo a la página de reserva de cita (/reserva).
+2025-07-13 23:59:39.610 DEBUG - [ReservaControlador] - Intentando obtener paciente logueado.
+2025-07-13 23:59:39.611 INFO  - [ReservaControlador] - Usuario autenticado detectado: teamoariana@gmail.com. Buscando paciente en base de datos.
+2025-07-13 23:59:39.612 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:39.615 DEBUG - [ReservaControlador] - Paciente logueado encontrado: ID 2, Correo: teamoariana@gmail.com.
+2025-07-13 23:59:39.615 INFO  - [ReservaControlador] - Paciente logueado Jeanpierre Davila reconocido para la página de reserva.
+2025-07-13 23:59:39.704 INFO  - [ReservaControlador] - Solicitud API: Obtener todas las especialidades.
+2025-07-13 23:59:39.704 INFO  - [CitaServicio] - Cargando todas las especialidades.
+2025-07-13 23:59:39.716 DEBUG - [ReservaControlador] - Retornando 15 especialidades.
+2025-07-13 23:59:40.740 INFO  - El usuario ha accedido a la página de inicio.
+2025-07-13 23:59:40.743 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:40.749 INFO  - Usuario teamoariana@gmail.com autenticado en la página de inicio.
+2025-07-13 23:59:41.144 INFO  - [ReservaControlador] - Accediendo a la página de reserva de cita (/reserva).
+2025-07-13 23:59:41.144 DEBUG - [ReservaControlador] - Intentando obtener paciente logueado.
+2025-07-13 23:59:41.144 INFO  - [ReservaControlador] - Usuario autenticado detectado: teamoariana@gmail.com. Buscando paciente en base de datos.
+2025-07-13 23:59:41.144 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:41.149 DEBUG - [ReservaControlador] - Paciente logueado encontrado: ID 2, Correo: teamoariana@gmail.com.
+2025-07-13 23:59:41.149 INFO  - [ReservaControlador] - Paciente logueado Jeanpierre Davila reconocido para la página de reserva.
+2025-07-13 23:59:41.231 INFO  - [ReservaControlador] - Solicitud API: Obtener todas las especialidades.
+2025-07-13 23:59:41.235 INFO  - [CitaServicio] - Cargando todas las especialidades.
+2025-07-13 23:59:41.243 DEBUG - [ReservaControlador] - Retornando 15 especialidades.
+2025-07-13 23:59:41.498 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-07-13 23:59:41.498 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:41.503 INFO  - [CitaServicio] - Buscando citas pendientes para Paciente ID: 2.
+2025-07-13 23:59:41.510 DEBUG - [CitaServicio] - Paciente encontrado para citas pendientes: ID 2
+2025-07-13 23:59:41.511 INFO  - [CitaServicio] - Buscando historial de citas para Paciente ID: 2.
+2025-07-13 23:59:41.520 DEBUG - [CitaServicio] - Paciente encontrado para historial de citas: ID 2
+2025-07-13 23:59:41.833 INFO  - Accediendo a la página de ambulancia.
+2025-07-13 23:59:41.833 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:41.842 DEBUG - Cargadas 1 direcciones para el paciente teamoariana@gmail.com.
+2025-07-13 23:59:42.187 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-07-13 23:59:42.187 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:42.190 INFO  - [CitaServicio] - Buscando citas pendientes para Paciente ID: 2.
+2025-07-13 23:59:42.193 DEBUG - [CitaServicio] - Paciente encontrado para citas pendientes: ID 2
+2025-07-13 23:59:42.200 INFO  - [CitaServicio] - Buscando historial de citas para Paciente ID: 2.
+2025-07-13 23:59:42.200 DEBUG - [CitaServicio] - Paciente encontrado para historial de citas: ID 2
+2025-07-13 23:59:42.548 INFO  - [ReservaControlador] - Accediendo a la página de reserva de cita (/reserva).
+2025-07-13 23:59:42.548 DEBUG - [ReservaControlador] - Intentando obtener paciente logueado.
+2025-07-13 23:59:42.548 INFO  - [ReservaControlador] - Usuario autenticado detectado: teamoariana@gmail.com. Buscando paciente en base de datos.
+2025-07-13 23:59:42.548 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:42.550 DEBUG - [ReservaControlador] - Paciente logueado encontrado: ID 2, Correo: teamoariana@gmail.com.
+2025-07-13 23:59:42.552 INFO  - [ReservaControlador] - Paciente logueado Jeanpierre Davila reconocido para la página de reserva.
+2025-07-13 23:59:42.615 INFO  - [ReservaControlador] - Solicitud API: Obtener todas las especialidades.
+2025-07-13 23:59:42.619 INFO  - [CitaServicio] - Cargando todas las especialidades.
+2025-07-13 23:59:42.624 DEBUG - [ReservaControlador] - Retornando 15 especialidades.
+2025-07-13 23:59:43.344 INFO  - El usuario ha accedido a la página de inicio.
+2025-07-13 23:59:43.344 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:43.348 INFO  - Usuario teamoariana@gmail.com autenticado en la página de inicio.
+2025-07-13 23:59:43.734 INFO  - [ReservaControlador] - Accediendo a la página de reserva de cita (/reserva).
+2025-07-13 23:59:43.734 DEBUG - [ReservaControlador] - Intentando obtener paciente logueado.
+2025-07-13 23:59:43.738 INFO  - [ReservaControlador] - Usuario autenticado detectado: teamoariana@gmail.com. Buscando paciente en base de datos.
+2025-07-13 23:59:43.738 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:43.743 DEBUG - [ReservaControlador] - Paciente logueado encontrado: ID 2, Correo: teamoariana@gmail.com.
+2025-07-13 23:59:43.743 INFO  - [ReservaControlador] - Paciente logueado Jeanpierre Davila reconocido para la página de reserva.
+2025-07-13 23:59:43.821 INFO  - [ReservaControlador] - Solicitud API: Obtener todas las especialidades.
+2025-07-13 23:59:43.824 INFO  - [CitaServicio] - Cargando todas las especialidades.
+2025-07-13 23:59:43.832 DEBUG - [ReservaControlador] - Retornando 15 especialidades.
+2025-07-13 23:59:44.083 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-07-13 23:59:44.084 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:44.088 INFO  - [CitaServicio] - Buscando citas pendientes para Paciente ID: 2.
+2025-07-13 23:59:44.092 DEBUG - [CitaServicio] - Paciente encontrado para citas pendientes: ID 2
+2025-07-13 23:59:44.096 INFO  - [CitaServicio] - Buscando historial de citas para Paciente ID: 2.
+2025-07-13 23:59:44.105 DEBUG - [CitaServicio] - Paciente encontrado para historial de citas: ID 2
+2025-07-13 23:59:44.489 INFO  - Accediendo a la página de ambulancia.
+2025-07-13 23:59:44.491 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:44.499 DEBUG - Cargadas 1 direcciones para el paciente teamoariana@gmail.com.
+2025-07-13 23:59:44.865 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-07-13 23:59:44.865 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:44.869 INFO  - [CitaServicio] - Buscando citas pendientes para Paciente ID: 2.
+2025-07-13 23:59:44.876 DEBUG - [CitaServicio] - Paciente encontrado para citas pendientes: ID 2
+2025-07-13 23:59:44.879 INFO  - [CitaServicio] - Buscando historial de citas para Paciente ID: 2.
+2025-07-13 23:59:44.890 DEBUG - [CitaServicio] - Paciente encontrado para historial de citas: ID 2
+2025-07-13 23:59:45.215 INFO  - [ReservaControlador] - Accediendo a la página de reserva de cita (/reserva).
+2025-07-13 23:59:45.215 DEBUG - [ReservaControlador] - Intentando obtener paciente logueado.
+2025-07-13 23:59:45.215 INFO  - [ReservaControlador] - Usuario autenticado detectado: teamoariana@gmail.com. Buscando paciente en base de datos.
+2025-07-13 23:59:45.218 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:45.221 DEBUG - [ReservaControlador] - Paciente logueado encontrado: ID 2, Correo: teamoariana@gmail.com.
+2025-07-13 23:59:45.221 INFO  - [ReservaControlador] - Paciente logueado Jeanpierre Davila reconocido para la página de reserva.
+2025-07-13 23:59:45.302 INFO  - [ReservaControlador] - Solicitud API: Obtener todas las especialidades.
+2025-07-13 23:59:45.302 INFO  - [CitaServicio] - Cargando todas las especialidades.
+2025-07-13 23:59:45.308 DEBUG - [ReservaControlador] - Retornando 15 especialidades.
+2025-07-13 23:59:45.939 INFO  - [ReservaControlador] - Accediendo a la página de reserva de cita (/reserva).
+2025-07-13 23:59:45.940 DEBUG - [ReservaControlador] - Intentando obtener paciente logueado.
+2025-07-13 23:59:45.940 INFO  - [ReservaControlador] - Usuario autenticado detectado: teamoariana@gmail.com. Buscando paciente en base de datos.
+2025-07-13 23:59:45.940 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:45.947 DEBUG - [ReservaControlador] - Paciente logueado encontrado: ID 2, Correo: teamoariana@gmail.com.
+2025-07-13 23:59:45.947 INFO  - [ReservaControlador] - Paciente logueado Jeanpierre Davila reconocido para la página de reserva.
+2025-07-13 23:59:46.009 INFO  - [ReservaControlador] - Solicitud API: Obtener todas las especialidades.
+2025-07-13 23:59:46.009 INFO  - [CitaServicio] - Cargando todas las especialidades.
+2025-07-13 23:59:46.017 DEBUG - [ReservaControlador] - Retornando 15 especialidades.
+2025-07-13 23:59:46.090 INFO  - [ReservaControlador] - Accediendo a la página de reserva de cita (/reserva).
+2025-07-13 23:59:46.090 DEBUG - [ReservaControlador] - Intentando obtener paciente logueado.
+2025-07-13 23:59:46.090 INFO  - [ReservaControlador] - Usuario autenticado detectado: teamoariana@gmail.com. Buscando paciente en base de datos.
+2025-07-13 23:59:46.090 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:46.095 DEBUG - [ReservaControlador] - Paciente logueado encontrado: ID 2, Correo: teamoariana@gmail.com.
+2025-07-13 23:59:46.095 INFO  - [ReservaControlador] - Paciente logueado Jeanpierre Davila reconocido para la página de reserva.
+2025-07-13 23:59:46.138 INFO  - [ReservaControlador] - Solicitud API: Obtener todas las especialidades.
+2025-07-13 23:59:46.140 INFO  - [CitaServicio] - Cargando todas las especialidades.
+2025-07-13 23:59:46.147 DEBUG - [ReservaControlador] - Retornando 15 especialidades.
+2025-07-13 23:59:46.216 INFO  - [ReservaControlador] - Accediendo a la página de reserva de cita (/reserva).
+2025-07-13 23:59:46.218 DEBUG - [ReservaControlador] - Intentando obtener paciente logueado.
+2025-07-13 23:59:46.218 INFO  - [ReservaControlador] - Usuario autenticado detectado: teamoariana@gmail.com. Buscando paciente en base de datos.
+2025-07-13 23:59:46.218 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:46.221 DEBUG - [ReservaControlador] - Paciente logueado encontrado: ID 2, Correo: teamoariana@gmail.com.
+2025-07-13 23:59:46.221 INFO  - [ReservaControlador] - Paciente logueado Jeanpierre Davila reconocido para la página de reserva.
+2025-07-13 23:59:46.272 INFO  - [ReservaControlador] - Solicitud API: Obtener todas las especialidades.
+2025-07-13 23:59:46.272 INFO  - [CitaServicio] - Cargando todas las especialidades.
+2025-07-13 23:59:46.283 DEBUG - [ReservaControlador] - Retornando 15 especialidades.
+2025-07-13 23:59:46.360 INFO  - [ReservaControlador] - Accediendo a la página de reserva de cita (/reserva).
+2025-07-13 23:59:46.360 DEBUG - [ReservaControlador] - Intentando obtener paciente logueado.
+2025-07-13 23:59:46.368 INFO  - [ReservaControlador] - Usuario autenticado detectado: teamoariana@gmail.com. Buscando paciente en base de datos.
+2025-07-13 23:59:46.368 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:46.370 DEBUG - [ReservaControlador] - Paciente logueado encontrado: ID 2, Correo: teamoariana@gmail.com.
+2025-07-13 23:59:46.370 INFO  - [ReservaControlador] - Paciente logueado Jeanpierre Davila reconocido para la página de reserva.
+2025-07-13 23:59:46.401 INFO  - [ReservaControlador] - Solicitud API: Obtener todas las especialidades.
+2025-07-13 23:59:46.401 INFO  - [CitaServicio] - Cargando todas las especialidades.
+2025-07-13 23:59:46.405 DEBUG - [ReservaControlador] - Retornando 15 especialidades.
+2025-07-13 23:59:46.514 INFO  - [ReservaControlador] - Accediendo a la página de reserva de cita (/reserva).
+2025-07-13 23:59:46.521 DEBUG - [ReservaControlador] - Intentando obtener paciente logueado.
+2025-07-13 23:59:46.521 INFO  - [ReservaControlador] - Usuario autenticado detectado: teamoariana@gmail.com. Buscando paciente en base de datos.
+2025-07-13 23:59:46.521 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:46.523 DEBUG - [ReservaControlador] - Paciente logueado encontrado: ID 2, Correo: teamoariana@gmail.com.
+2025-07-13 23:59:46.523 INFO  - [ReservaControlador] - Paciente logueado Jeanpierre Davila reconocido para la página de reserva.
+2025-07-13 23:59:46.565 INFO  - [ReservaControlador] - Solicitud API: Obtener todas las especialidades.
+2025-07-13 23:59:46.565 INFO  - [CitaServicio] - Cargando todas las especialidades.
+2025-07-13 23:59:46.572 DEBUG - [ReservaControlador] - Retornando 15 especialidades.
+2025-07-13 23:59:46.666 INFO  - [ReservaControlador] - Accediendo a la página de reserva de cita (/reserva).
+2025-07-13 23:59:46.668 DEBUG - [ReservaControlador] - Intentando obtener paciente logueado.
+2025-07-13 23:59:46.668 INFO  - [ReservaControlador] - Usuario autenticado detectado: teamoariana@gmail.com. Buscando paciente en base de datos.
+2025-07-13 23:59:46.668 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:46.671 DEBUG - [ReservaControlador] - Paciente logueado encontrado: ID 2, Correo: teamoariana@gmail.com.
+2025-07-13 23:59:46.671 INFO  - [ReservaControlador] - Paciente logueado Jeanpierre Davila reconocido para la página de reserva.
+2025-07-13 23:59:46.724 INFO  - [ReservaControlador] - Solicitud API: Obtener todas las especialidades.
+2025-07-13 23:59:46.724 INFO  - [CitaServicio] - Cargando todas las especialidades.
+2025-07-13 23:59:46.730 DEBUG - [ReservaControlador] - Retornando 15 especialidades.
+2025-07-13 23:59:46.810 INFO  - [ReservaControlador] - Accediendo a la página de reserva de cita (/reserva).
+2025-07-13 23:59:46.810 DEBUG - [ReservaControlador] - Intentando obtener paciente logueado.
+2025-07-13 23:59:46.810 INFO  - [ReservaControlador] - Usuario autenticado detectado: teamoariana@gmail.com. Buscando paciente en base de datos.
+2025-07-13 23:59:46.810 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:46.814 DEBUG - [ReservaControlador] - Paciente logueado encontrado: ID 2, Correo: teamoariana@gmail.com.
+2025-07-13 23:59:46.814 INFO  - [ReservaControlador] - Paciente logueado Jeanpierre Davila reconocido para la página de reserva.
+2025-07-13 23:59:46.855 INFO  - [ReservaControlador] - Solicitud API: Obtener todas las especialidades.
+2025-07-13 23:59:46.856 INFO  - [CitaServicio] - Cargando todas las especialidades.
+2025-07-13 23:59:46.864 DEBUG - [ReservaControlador] - Retornando 15 especialidades.
+2025-07-13 23:59:46.985 INFO  - [ReservaControlador] - Accediendo a la página de reserva de cita (/reserva).
+2025-07-13 23:59:46.985 DEBUG - [ReservaControlador] - Intentando obtener paciente logueado.
+2025-07-13 23:59:46.985 INFO  - [ReservaControlador] - Usuario autenticado detectado: teamoariana@gmail.com. Buscando paciente en base de datos.
+2025-07-13 23:59:46.985 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:46.991 DEBUG - [ReservaControlador] - Paciente logueado encontrado: ID 2, Correo: teamoariana@gmail.com.
+2025-07-13 23:59:46.991 INFO  - [ReservaControlador] - Paciente logueado Jeanpierre Davila reconocido para la página de reserva.
+2025-07-13 23:59:47.040 INFO  - [ReservaControlador] - Solicitud API: Obtener todas las especialidades.
+2025-07-13 23:59:47.043 INFO  - [CitaServicio] - Cargando todas las especialidades.
+2025-07-13 23:59:47.052 DEBUG - [ReservaControlador] - Retornando 15 especialidades.
+2025-07-13 23:59:47.139 INFO  - [ReservaControlador] - Accediendo a la página de reserva de cita (/reserva).
+2025-07-13 23:59:47.139 DEBUG - [ReservaControlador] - Intentando obtener paciente logueado.
+2025-07-13 23:59:47.139 INFO  - [ReservaControlador] - Usuario autenticado detectado: teamoariana@gmail.com. Buscando paciente en base de datos.
+2025-07-13 23:59:47.141 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:47.143 DEBUG - [ReservaControlador] - Paciente logueado encontrado: ID 2, Correo: teamoariana@gmail.com.
+2025-07-13 23:59:47.143 INFO  - [ReservaControlador] - Paciente logueado Jeanpierre Davila reconocido para la página de reserva.
+2025-07-13 23:59:47.190 INFO  - [ReservaControlador] - Solicitud API: Obtener todas las especialidades.
+2025-07-13 23:59:47.190 INFO  - [CitaServicio] - Cargando todas las especialidades.
+2025-07-13 23:59:47.200 DEBUG - [ReservaControlador] - Retornando 15 especialidades.
+2025-07-13 23:59:47.274 INFO  - [ReservaControlador] - Accediendo a la página de reserva de cita (/reserva).
+2025-07-13 23:59:47.275 DEBUG - [ReservaControlador] - Intentando obtener paciente logueado.
+2025-07-13 23:59:47.275 INFO  - [ReservaControlador] - Usuario autenticado detectado: teamoariana@gmail.com. Buscando paciente en base de datos.
+2025-07-13 23:59:47.275 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:47.277 DEBUG - [ReservaControlador] - Paciente logueado encontrado: ID 2, Correo: teamoariana@gmail.com.
+2025-07-13 23:59:47.280 INFO  - [ReservaControlador] - Paciente logueado Jeanpierre Davila reconocido para la página de reserva.
+2025-07-13 23:59:47.323 INFO  - [ReservaControlador] - Solicitud API: Obtener todas las especialidades.
+2025-07-13 23:59:47.324 INFO  - [CitaServicio] - Cargando todas las especialidades.
+2025-07-13 23:59:47.330 DEBUG - [ReservaControlador] - Retornando 15 especialidades.
+2025-07-13 23:59:47.415 INFO  - [ReservaControlador] - Accediendo a la página de reserva de cita (/reserva).
+2025-07-13 23:59:47.422 DEBUG - [ReservaControlador] - Intentando obtener paciente logueado.
+2025-07-13 23:59:47.422 INFO  - [ReservaControlador] - Usuario autenticado detectado: teamoariana@gmail.com. Buscando paciente en base de datos.
+2025-07-13 23:59:47.422 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:47.426 DEBUG - [ReservaControlador] - Paciente logueado encontrado: ID 2, Correo: teamoariana@gmail.com.
+2025-07-13 23:59:47.426 INFO  - [ReservaControlador] - Paciente logueado Jeanpierre Davila reconocido para la página de reserva.
+2025-07-13 23:59:47.474 INFO  - [ReservaControlador] - Solicitud API: Obtener todas las especialidades.
+2025-07-13 23:59:47.479 INFO  - [CitaServicio] - Cargando todas las especialidades.
+2025-07-13 23:59:47.486 DEBUG - [ReservaControlador] - Retornando 15 especialidades.
+2025-07-13 23:59:47.571 INFO  - [ReservaControlador] - Accediendo a la página de reserva de cita (/reserva).
+2025-07-13 23:59:47.572 DEBUG - [ReservaControlador] - Intentando obtener paciente logueado.
+2025-07-13 23:59:47.572 INFO  - [ReservaControlador] - Usuario autenticado detectado: teamoariana@gmail.com. Buscando paciente en base de datos.
+2025-07-13 23:59:47.572 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:47.575 DEBUG - [ReservaControlador] - Paciente logueado encontrado: ID 2, Correo: teamoariana@gmail.com.
+2025-07-13 23:59:47.577 INFO  - [ReservaControlador] - Paciente logueado Jeanpierre Davila reconocido para la página de reserva.
+2025-07-13 23:59:47.627 INFO  - [ReservaControlador] - Solicitud API: Obtener todas las especialidades.
+2025-07-13 23:59:47.627 INFO  - [CitaServicio] - Cargando todas las especialidades.
+2025-07-13 23:59:47.637 DEBUG - [ReservaControlador] - Retornando 15 especialidades.
+2025-07-13 23:59:47.723 INFO  - [ReservaControlador] - Accediendo a la página de reserva de cita (/reserva).
+2025-07-13 23:59:47.724 DEBUG - [ReservaControlador] - Intentando obtener paciente logueado.
+2025-07-13 23:59:47.724 INFO  - [ReservaControlador] - Usuario autenticado detectado: teamoariana@gmail.com. Buscando paciente en base de datos.
+2025-07-13 23:59:47.724 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:47.724 DEBUG - [ReservaControlador] - Paciente logueado encontrado: ID 2, Correo: teamoariana@gmail.com.
+2025-07-13 23:59:47.724 INFO  - [ReservaControlador] - Paciente logueado Jeanpierre Davila reconocido para la página de reserva.
+2025-07-13 23:59:47.769 INFO  - [ReservaControlador] - Solicitud API: Obtener todas las especialidades.
+2025-07-13 23:59:47.771 INFO  - [CitaServicio] - Cargando todas las especialidades.
+2025-07-13 23:59:47.779 DEBUG - [ReservaControlador] - Retornando 15 especialidades.
+2025-07-13 23:59:47.858 INFO  - [ReservaControlador] - Accediendo a la página de reserva de cita (/reserva).
+2025-07-13 23:59:47.858 DEBUG - [ReservaControlador] - Intentando obtener paciente logueado.
+2025-07-13 23:59:47.858 INFO  - [ReservaControlador] - Usuario autenticado detectado: teamoariana@gmail.com. Buscando paciente en base de datos.
+2025-07-13 23:59:47.858 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:47.862 DEBUG - [ReservaControlador] - Paciente logueado encontrado: ID 2, Correo: teamoariana@gmail.com.
+2025-07-13 23:59:47.862 INFO  - [ReservaControlador] - Paciente logueado Jeanpierre Davila reconocido para la página de reserva.
+2025-07-13 23:59:47.906 INFO  - [ReservaControlador] - Solicitud API: Obtener todas las especialidades.
+2025-07-13 23:59:47.907 INFO  - [CitaServicio] - Cargando todas las especialidades.
+2025-07-13 23:59:47.913 DEBUG - [ReservaControlador] - Retornando 15 especialidades.
+2025-07-13 23:59:48.192 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-07-13 23:59:48.192 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:48.199 INFO  - [CitaServicio] - Buscando citas pendientes para Paciente ID: 2.
+2025-07-13 23:59:48.204 DEBUG - [CitaServicio] - Paciente encontrado para citas pendientes: ID 2
+2025-07-13 23:59:48.212 INFO  - [CitaServicio] - Buscando historial de citas para Paciente ID: 2.
+2025-07-13 23:59:48.217 DEBUG - [CitaServicio] - Paciente encontrado para historial de citas: ID 2
+2025-07-13 23:59:48.228 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-07-13 23:59:48.228 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:48.234 INFO  - [CitaServicio] - Buscando citas pendientes para Paciente ID: 2.
+2025-07-13 23:59:48.240 DEBUG - [CitaServicio] - Paciente encontrado para citas pendientes: ID 2
+2025-07-13 23:59:48.242 INFO  - [CitaServicio] - Buscando historial de citas para Paciente ID: 2.
+2025-07-13 23:59:48.253 DEBUG - [CitaServicio] - Paciente encontrado para historial de citas: ID 2
+2025-07-13 23:59:48.516 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-07-13 23:59:48.523 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:48.526 INFO  - [CitaServicio] - Buscando citas pendientes para Paciente ID: 2.
+2025-07-13 23:59:48.533 DEBUG - [CitaServicio] - Paciente encontrado para citas pendientes: ID 2
+2025-07-13 23:59:48.541 INFO  - [CitaServicio] - Buscando historial de citas para Paciente ID: 2.
+2025-07-13 23:59:48.547 DEBUG - [CitaServicio] - Paciente encontrado para historial de citas: ID 2
+2025-07-13 23:59:48.825 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-07-13 23:59:48.825 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:48.825 INFO  - [CitaServicio] - Buscando citas pendientes para Paciente ID: 2.
+2025-07-13 23:59:48.834 DEBUG - [CitaServicio] - Paciente encontrado para citas pendientes: ID 2
+2025-07-13 23:59:48.842 INFO  - [CitaServicio] - Buscando historial de citas para Paciente ID: 2.
+2025-07-13 23:59:48.842 DEBUG - [CitaServicio] - Paciente encontrado para historial de citas: ID 2
+2025-07-13 23:59:48.984 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-07-13 23:59:48.984 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:48.986 INFO  - [CitaServicio] - Buscando citas pendientes para Paciente ID: 2.
+2025-07-13 23:59:48.992 DEBUG - [CitaServicio] - Paciente encontrado para citas pendientes: ID 2
+2025-07-13 23:59:49.000 INFO  - [CitaServicio] - Buscando historial de citas para Paciente ID: 2.
+2025-07-13 23:59:49.004 DEBUG - [CitaServicio] - Paciente encontrado para historial de citas: ID 2
+2025-07-13 23:59:49.292 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-07-13 23:59:49.292 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:49.296 INFO  - [CitaServicio] - Buscando citas pendientes para Paciente ID: 2.
+2025-07-13 23:59:49.300 DEBUG - [CitaServicio] - Paciente encontrado para citas pendientes: ID 2
+2025-07-13 23:59:49.309 INFO  - [CitaServicio] - Buscando historial de citas para Paciente ID: 2.
+2025-07-13 23:59:49.313 DEBUG - [CitaServicio] - Paciente encontrado para historial de citas: ID 2
+2025-07-13 23:59:49.595 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-07-13 23:59:49.595 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:49.598 INFO  - [CitaServicio] - Buscando citas pendientes para Paciente ID: 2.
+2025-07-13 23:59:49.601 DEBUG - [CitaServicio] - Paciente encontrado para citas pendientes: ID 2
+2025-07-13 23:59:49.610 INFO  - [CitaServicio] - Buscando historial de citas para Paciente ID: 2.
+2025-07-13 23:59:49.610 DEBUG - [CitaServicio] - Paciente encontrado para historial de citas: ID 2
+2025-07-13 23:59:49.859 INFO  - El usuario ha accedido a la página de historial de citas.
+2025-07-13 23:59:49.859 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:49.862 INFO  - [CitaServicio] - Buscando citas pendientes para Paciente ID: 2.
+2025-07-13 23:59:49.870 DEBUG - [CitaServicio] - Paciente encontrado para citas pendientes: ID 2
+2025-07-13 23:59:49.876 INFO  - [CitaServicio] - Buscando historial de citas para Paciente ID: 2.
+2025-07-13 23:59:49.881 DEBUG - [CitaServicio] - Paciente encontrado para historial de citas: ID 2
+2025-07-13 23:59:50.185 INFO  - El usuario ha accedido a la página de inicio.
+2025-07-13 23:59:50.185 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:50.191 INFO  - Usuario teamoariana@gmail.com autenticado en la página de inicio.
+2025-07-13 23:59:50.497 INFO  - El usuario ha accedido a la página de inicio.
+2025-07-13 23:59:50.497 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:50.502 INFO  - Usuario teamoariana@gmail.com autenticado en la página de inicio.
+2025-07-13 23:59:50.660 INFO  - El usuario ha accedido a la página de inicio.
+2025-07-13 23:59:50.660 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:50.665 INFO  - Usuario teamoariana@gmail.com autenticado en la página de inicio.
+2025-07-13 23:59:50.850 INFO  - El usuario ha accedido a la página de inicio.
+2025-07-13 23:59:50.851 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:50.851 INFO  - Usuario teamoariana@gmail.com autenticado en la página de inicio.
+2025-07-13 23:59:51.161 INFO  - El usuario ha accedido a la página de inicio.
+2025-07-13 23:59:51.161 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:51.165 INFO  - Usuario teamoariana@gmail.com autenticado en la página de inicio.
+2025-07-13 23:59:51.329 INFO  - El usuario ha accedido a la página de inicio.
+2025-07-13 23:59:51.329 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:51.333 INFO  - Usuario teamoariana@gmail.com autenticado en la página de inicio.
+2025-07-13 23:59:51.623 INFO  - El usuario ha accedido a la página de inicio.
+2025-07-13 23:59:51.627 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:51.631 INFO  - Usuario teamoariana@gmail.com autenticado en la página de inicio.
+2025-07-13 23:59:51.777 INFO  - El usuario ha accedido a la página de inicio.
+2025-07-13 23:59:51.777 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:51.777 INFO  - Usuario teamoariana@gmail.com autenticado en la página de inicio.
+2025-07-13 23:59:51.937 INFO  - El usuario ha accedido a la página de inicio.
+2025-07-13 23:59:51.937 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:51.944 INFO  - Usuario teamoariana@gmail.com autenticado en la página de inicio.
+2025-07-13 23:59:52.077 INFO  - El usuario ha accedido a la página de inicio.
+2025-07-13 23:59:52.077 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:52.085 INFO  - Usuario teamoariana@gmail.com autenticado en la página de inicio.
+2025-07-13 23:59:52.241 INFO  - El usuario ha accedido a la página de inicio.
+2025-07-13 23:59:52.241 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:52.246 INFO  - Usuario teamoariana@gmail.com autenticado en la página de inicio.
+2025-07-13 23:59:52.625 INFO  - Accediendo a la página de ambulancia.
+2025-07-13 23:59:52.625 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:52.632 DEBUG - Cargadas 1 direcciones para el paciente teamoariana@gmail.com.
+2025-07-13 23:59:52.772 INFO  - Accediendo a la página de ambulancia.
+2025-07-13 23:59:52.772 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:52.777 DEBUG - Cargadas 1 direcciones para el paciente teamoariana@gmail.com.
+2025-07-13 23:59:52.984 INFO  - Accediendo a la página de ambulancia.
+2025-07-13 23:59:52.984 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:52.992 DEBUG - Cargadas 1 direcciones para el paciente teamoariana@gmail.com.
+2025-07-13 23:59:53.145 INFO  - Accediendo a la página de ambulancia.
+2025-07-13 23:59:53.145 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:53.151 DEBUG - Cargadas 1 direcciones para el paciente teamoariana@gmail.com.
+2025-07-13 23:59:53.289 INFO  - Accediendo a la página de ambulancia.
+2025-07-13 23:59:53.289 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:53.298 DEBUG - Cargadas 1 direcciones para el paciente teamoariana@gmail.com.
+2025-07-13 23:59:53.436 INFO  - Accediendo a la página de ambulancia.
+2025-07-13 23:59:53.436 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:53.443 DEBUG - Cargadas 1 direcciones para el paciente teamoariana@gmail.com.
+2025-07-13 23:59:53.715 INFO  - Accediendo a la página de ambulancia.
+2025-07-13 23:59:53.715 DEBUG - Buscando paciente por correo: teamoariana@gmail.com
+2025-07-13 23:59:53.722 DEBUG - Cargadas 1 direcciones para el paciente teamoariana@gmail.com.
