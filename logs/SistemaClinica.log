@@ -52,3 +52,268 @@
 2025-07-16 14:15:04.766 INFO  - Procesando horarios del 2025-06-19 al 2025-06-21 para cada médico...
 2025-07-16 14:15:06.026 INFO  - Total de horarios procesados: 0
 2025-07-16 14:15:06.026 INFO  - Carga de datos iniciales completada.
+2025-07-16 14:48:35.765 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 11332 (C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador 2\Sistema-Clinica-Angry\target\classes started by Jeanp in C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador 2\Sistema-Clinica-Angry)
+2025-07-16 14:48:35.768 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-07-16 14:48:44.449 INFO  - Started SistemaApplication in 9.395 seconds (process running for 10.509)
+2025-07-16 14:48:44.471 INFO  - Iniciando carga de datos de especialidades, médicos y horarios...
+2025-07-16 14:48:44.472 INFO  - Procesando 15 especialidades...
+2025-07-16 14:48:44.749 INFO  - Especialidades procesadas.
+2025-07-16 14:48:44.750 INFO  - Procesando 45 médicos...
+2025-07-16 14:48:44.909 INFO  - Médicos procesados. Nuevos médicos creados: 0
+2025-07-16 14:48:44.910 INFO  - Procesando horarios del 2025-06-19 al 2025-06-21 para cada médico...
+2025-07-16 14:48:46.270 INFO  - Total de horarios procesados: 0
+2025-07-16 14:48:46.271 INFO  - Carga de datos iniciales completada.
+2025-07-16 14:52:12.536 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 16428 (C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador 2\Sistema-Clinica-Angry\target\classes started by Jeanp in C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador 2\Sistema-Clinica-Angry)
+2025-07-16 14:52:12.538 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-07-16 14:52:20.525 INFO  - Started SistemaApplication in 8.66 seconds (process running for 9.79)
+2025-07-16 14:52:20.549 INFO  - Iniciando carga de datos de especialidades, médicos y horarios...
+2025-07-16 14:52:20.549 INFO  - Procesando 15 especialidades...
+2025-07-16 14:52:20.828 INFO  - Especialidades procesadas.
+2025-07-16 14:52:20.829 INFO  - Procesando 45 médicos...
+2025-07-16 14:52:20.990 INFO  - Médicos procesados. Nuevos médicos creados: 0
+2025-07-16 14:52:20.990 INFO  - Procesando horarios del 2025-06-19 al 2025-06-21 para cada médico...
+2025-07-16 14:52:22.402 INFO  - Total de horarios procesados: 0
+2025-07-16 14:52:22.403 INFO  - Carga de datos iniciales completada.
+2025-07-16 14:52:26.143 INFO  - El usuario ha accedido a la página de inicio de sesión.
+2025-07-16 14:52:29.779 INFO  - El usuario ha accedido a la página de inicio de sesión.
+2025-07-16 14:52:56.539 INFO  - El usuario ha accedido a la página de inicio de sesión.
+2025-07-16 14:53:08.680 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 3176 (C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador 2\Sistema-Clinica-Angry\target\classes started by Jeanp in C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador 2\Sistema-Clinica-Angry)
+2025-07-16 14:53:08.682 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-07-16 14:53:16.316 INFO  - Started SistemaApplication in 8.279 seconds (process running for 9.401)
+2025-07-16 14:53:16.337 INFO  - Iniciando carga de datos de especialidades, médicos y horarios...
+2025-07-16 14:53:16.338 INFO  - Procesando 15 especialidades...
+2025-07-16 14:53:16.595 INFO  - Especialidades procesadas.
+2025-07-16 14:53:16.597 INFO  - Procesando 45 médicos...
+2025-07-16 14:53:16.751 INFO  - Médicos procesados. Nuevos médicos creados: 0
+2025-07-16 14:53:16.751 INFO  - Procesando horarios del 2025-06-19 al 2025-06-21 para cada médico...
+2025-07-16 14:53:18.095 INFO  - Total de horarios procesados: 0
+2025-07-16 14:53:18.095 INFO  - Carga de datos iniciales completada.
+2025-07-16 14:53:21.314 INFO  - El usuario ha accedido a la página de inicio de sesión.
+2025-07-16 14:53:34.436 INFO  - El usuario ha accedido a la página de registro.
+2025-07-16 14:54:09.205 INFO  - Intento de registro de nuevo usuario.
+2025-07-16 14:54:09.395 INFO  - Registro exitoso para el usuario. ID: 3, Nombre: Jeanpierre Chipa, Correo: chipa.robladillo@gmail.com
+2025-07-16 14:54:09.395 INFO  - Fin del proceso de registro.
+2025-07-16 14:54:09.422 INFO  - El usuario ha accedido a la página de inicio de sesión.
+2025-07-16 15:28:29.294 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 12000 (C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador 2\Sistema-Clinica-Angry\target\classes started by Jeanp in C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador 2\Sistema-Clinica-Angry)
+2025-07-16 15:28:29.297 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-07-16 15:28:38.408 INFO  - Started SistemaApplication in 9.929 seconds (process running for 11.173)
+2025-07-16 15:28:38.445 INFO  - Iniciando carga de datos de especialidades, médicos y horarios...
+2025-07-16 15:28:38.447 INFO  - Procesando 15 especialidades...
+2025-07-16 15:28:38.712 INFO  - Especialidades procesadas.
+2025-07-16 15:28:38.714 INFO  - Procesando 45 médicos...
+2025-07-16 15:28:38.871 INFO  - Médicos procesados. Nuevos médicos creados: 0
+2025-07-16 15:28:38.872 INFO  - Procesando horarios del 2025-06-19 al 2025-06-21 para cada médico...
+2025-07-16 15:28:40.215 INFO  - Total de horarios procesados: 0
+2025-07-16 15:28:40.215 INFO  - Carga de datos iniciales completada.
+2025-07-16 15:28:40.430 INFO  - El usuario ha accedido a la pagina de login.
+2025-07-16 15:28:51.353 INFO  - El usuario ha accedido a la pagina de registro.
+2025-07-16 15:29:15.455 INFO  - Intento de registro de nuevo usuario. Datos recibidos: [Correo: chipa.robladillo@gmail.com, DNI: 71632364, Nombre: ariana, Apellido: davila, Direccion: Callao, La Perla, JrCahuide 1268. dep 304]
+2025-07-16 15:29:15.479 INFO  - Verificacion de existencia: Se encontro un paciente con correo: chipa.robladillo@gmail.com o DNI: 71632364. Existe: true
+2025-07-16 15:29:15.480 WARN  - Registro fallido: Ya existe un usuario con el correo: chipa.robladillo@gmail.com o DNI: 71632364.
+2025-07-16 15:29:15.508 INFO  - El usuario ha accedido a la pagina de registro.
+2025-07-16 15:29:59.536 INFO  - Intento de registro de nuevo usuario. Datos recibidos: [Correo: ariana.davila@gmail.com, DNI: 71632389, Nombre: Ariana, Apellido: Davila, Direccion: Callao, La Perla, JrCahuide 1268. dep 304]
+2025-07-16 15:29:59.542 INFO  - Verificacion de existencia: No se encontro un paciente con correo: ariana.davila@gmail.com o DNI: 71632389. Existe: false
+2025-07-16 15:29:59.544 INFO  - Intentando guardar nuevo paciente con DNI: 71632389 y correo: ariana.davila@gmail.com
+2025-07-16 15:29:59.708 INFO  - Paciente con DNI: 71632389 y correo: ariana.davila@gmail.com guardado exitosamente con ID: 4.
+2025-07-16 15:29:59.724 INFO  - Registro exitoso para el usuario con DNI: 71632389.
+2025-07-16 15:29:59.732 INFO  - El usuario ha accedido a la pagina de login.
+2025-07-16 15:30:20.371 INFO  - Intentando cargar usuario por correo electrónico: ariana.davila@gmail.com
+2025-07-16 15:30:20.422 INFO  - Usuario 'ariana.davila@gmail.com' (ID: 4) cargado exitosamente para autenticación.
+2025-07-16 15:30:20.513 INFO  - Paciente encontrado por correo: ariana.davila@gmail.com (ID: 4).
+2025-07-16 15:30:20.513 INFO  - Paciente encontrado para el correo: ariana.davila@gmail.com
+2025-07-16 15:30:20.514 INFO  - Usuario con DNI: 71632389 (ariana.davila@gmail.com) ha accedido a la pagina de inicio.
+2025-07-16 15:30:32.817 INFO  - Paciente encontrado por correo: ariana.davila@gmail.com (ID: 4).
+2025-07-16 15:30:32.818 INFO  - Usuario con DNI: 71632389 ha accedido a la pagina de reserva de citas.
+2025-07-16 15:30:32.875 INFO  - Se solicitó la obtención de todas las especialidades.
+2025-07-16 15:30:32.887 INFO  - Se recuperaron 15 especialidades de la base de datos.
+2025-07-16 15:30:33.483 INFO  - Accediendo a la pagina de historial de citas.
+2025-07-16 15:30:33.487 INFO  - Paciente encontrado por correo: ariana.davila@gmail.com (ID: 4).
+2025-07-16 15:30:33.487 INFO  - Usuario con DNI: 71632389 (ariana.davila@gmail.com) ha accedido a la pagina de historial de citas.
+2025-07-16 15:30:33.487 INFO  - Se solicitan citas pendientes para el paciente con ID: 4.
+2025-07-16 15:30:33.524 INFO  - Se encontraron 0 citas pendientes para el paciente 'Ariana Davila' (ID: 4).
+2025-07-16 15:30:33.525 INFO  - Se solicita el historial de citas para el paciente con ID: 4.
+2025-07-16 15:30:33.532 INFO  - Se encontraron 0 citas en el historial para el paciente 'Ariana Davila' (ID: 4).
+2025-07-16 15:30:33.533 INFO  - Citas pendientes: 0 y historial de citas: 0 cargados para el usuario con DNI: 71632389.
+2025-07-16 15:30:34.027 INFO  - El usuario ha accedido a la pagina de solicitud de ambulancia.
+2025-07-16 15:30:34.031 INFO  - Paciente encontrado por correo: ariana.davila@gmail.com (ID: 4).
+2025-07-16 15:30:34.031 INFO  - Usuario con DNI: 71632389 (ariana.davila@gmail.com) ha accedido a la pagina de solicitud de ambulancia.
+2025-07-16 15:30:34.031 INFO  - Solicitando direcciones para el paciente con ID: 4
+2025-07-16 15:30:34.036 INFO  - Se encontraron 1 direcciones para el paciente con ID: 4.
+2025-07-16 15:30:34.037 INFO  - Se cargaron 1 direcciones para el usuario con DNI: 71632389.
+2025-07-16 15:30:39.135 INFO  - Paciente encontrado por correo: ariana.davila@gmail.com (ID: 4).
+2025-07-16 15:30:39.135 INFO  - Paciente encontrado para el correo: ariana.davila@gmail.com
+2025-07-16 15:30:39.135 INFO  - Usuario con DNI: 71632389 (ariana.davila@gmail.com) ha accedido a la pagina de inicio.
+2025-07-16 15:30:40.094 INFO  - Paciente encontrado por correo: ariana.davila@gmail.com (ID: 4).
+2025-07-16 15:30:40.094 INFO  - Usuario con DNI: 71632389 ha accedido a la pagina de reserva de citas.
+2025-07-16 15:30:40.147 INFO  - Se solicitó la obtención de todas las especialidades.
+2025-07-16 15:30:40.154 INFO  - Se recuperaron 15 especialidades de la base de datos.
+2025-07-16 15:30:41.695 INFO  - Se solicitan médicos para la especialidad con ID: 8.
+2025-07-16 15:30:41.707 INFO  - Se encontraron 3 médicos para la especialidad 'Otorrinolaringología'.
+2025-07-16 15:30:44.873 INFO  - Se solicitan horarios disponibles para el médico con ID: 23 en la fecha: 2025-07-25.
+2025-07-16 15:30:44.884 INFO  - Se encontraron 0 horarios disponibles para el médico 'Elsa Fernández' en la fecha 2025-07-25.
+2025-07-16 15:30:55.592 INFO  - Se solicitan horarios disponibles para el médico con ID: 23 en la fecha: 2025-06-20.
+2025-07-16 15:30:55.603 INFO  - Se encontraron 3 horarios disponibles para el médico 'Elsa Fernández' en la fecha 2025-06-20.
+2025-07-16 15:30:59.561 INFO  - Paciente encontrado por correo: ariana.davila@gmail.com (ID: 4).
+2025-07-16 15:30:59.561 INFO  - Usuario con DNI: 71632389 (ariana.davila@gmail.com) intentando confirmar cita con los siguientes datos del formulario: [Fecha: 2025-06-20, Hora: 09:00:00, ID Medico: 23]
+2025-07-16 15:30:59.569 INFO  - El paciente con ID 4 está intentando crear una cita para el médico con ID 23 en la fecha 2025-06-20 a las 09:00:00.
+2025-07-16 15:30:59.571 INFO  - Horario ID 364 marcado como NO DISPONIBLE para médico Elsa Fernández en fecha 2025-06-20 a las 09:00.
+2025-07-16 15:30:59.587 INFO  - Cita ID 1 creada y guardada exitosamente para paciente Ariana Davila con médico Elsa Fernández en estado 'Pendiente'.
+2025-07-16 15:30:59.590 INFO  - Intentando enviar correo simple a: ariana.davila@gmail.com con asunto: 'Confirmación de Cita Médica - Clínica Angry' desde: chipa.robladillo@gmail.com.
+2025-07-16 15:31:20.763 ERROR - Error al enviar correo a: ariana.davila@gmail.com con asunto: 'Confirmación de Cita Médica - Clínica Angry'. Detalle: Mail server connection failed. Failed messages: org.eclipse.angus.mail.util.MailConnectException: Couldn't connect to host, port: smtp.gmail.com, 587; timeout -1;
+  nested exception is:
+	java.net.ConnectException: Connection timed out: connect
+org.springframework.mail.MailSendException: Mail server connection failed. Failed messages: org.eclipse.angus.mail.util.MailConnectException: Couldn't connect to host, port: smtp.gmail.com, 587; timeout -1;
+  nested exception is:
+	java.net.ConnectException: Connection timed out: connect
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:410)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:317)
+	at org.springframework.mail.MailSender.send(MailSender.java:42)
+	at com.clinica.sistema.Servicio.NotificacionServicio.enviarCorreoSimple(NotificacionServicio.java:49)
+	at com.clinica.sistema.Servicio.CitaServicio.crearCita(CitaServicio.java:149)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728)
+	at com.clinica.sistema.Servicio.CitaServicio$$SpringCGLIB$$0.crearCita(<generated>)
+	at com.clinica.sistema.Controlador.ReservaControlador.confirmarCita(ReservaControlador.java:101)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:125)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:235)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:229)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:319)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$4(HandlerMappingIntrospector.java:267)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:240)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.eclipse.angus.mail.util.MailConnectException: Couldn't connect to host, port: smtp.gmail.com, 587; timeout -1
+	at org.eclipse.angus.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2243)
+	at org.eclipse.angus.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:729)
+	at jakarta.mail.Service.connect(Service.java:345)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:480)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:399)
+	... 113 common frames omitted
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:589)
+	at java.base/sun.nio.ch.Net.connect(Net.java:578)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:583)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at java.base/java.net.Socket.connect(Socket.java:686)
+	at org.eclipse.angus.mail.util.SocketFetcher.createSocket(SocketFetcher.java:368)
+	at org.eclipse.angus.mail.util.SocketFetcher.getSocket(SocketFetcher.java:243)
+	at org.eclipse.angus.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2193)
+	... 117 common frames omitted
+2025-07-16 15:31:20.771 INFO  - Notificación de confirmación enviada al correo ariana.davila@gmail.com para la cita ID 1.
+2025-07-16 15:31:20.796 INFO  - Cita confirmada exitosamente para el usuario con DNI: 71632389 con Medico ID: 23 en Fecha: 2025-06-20 Hora: 09:00:00.
+2025-07-16 15:31:20.805 INFO  - Accediendo a la pagina de historial de citas.
+2025-07-16 15:31:20.809 INFO  - Paciente encontrado por correo: ariana.davila@gmail.com (ID: 4).
+2025-07-16 15:31:20.809 INFO  - Usuario con DNI: 71632389 (ariana.davila@gmail.com) ha accedido a la pagina de historial de citas.
+2025-07-16 15:31:20.809 INFO  - Se solicitan citas pendientes para el paciente con ID: 4.
+2025-07-16 15:31:20.823 INFO  - Se encontraron 1 citas pendientes para el paciente 'Ariana Davila' (ID: 4).
+2025-07-16 15:31:20.825 INFO  - Se solicita el historial de citas para el paciente con ID: 4.
+2025-07-16 15:31:20.831 INFO  - Se encontraron 0 citas en el historial para el paciente 'Ariana Davila' (ID: 4).
+2025-07-16 15:31:20.832 INFO  - Citas pendientes: 1 y historial de citas: 0 cargados para el usuario con DNI: 71632389.
+2025-07-16 15:34:22.532 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 12000 (C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador 2\Sistema-Clinica-Angry\target\classes started by Jeanp in C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador 2\Sistema-Clinica-Angry)
+2025-07-16 15:34:22.532 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-07-16 15:34:24.127 INFO  - Started SistemaApplication in 1.645 seconds (process running for 356.892)
+2025-07-16 15:34:24.129 INFO  - Iniciando carga de datos de especialidades, médicos y horarios...
+2025-07-16 15:34:24.131 INFO  - Procesando 15 especialidades...
+2025-07-16 15:34:24.182 INFO  - Especialidades procesadas.
+2025-07-16 15:34:24.183 INFO  - Procesando 45 médicos...
+2025-07-16 15:34:24.314 INFO  - Médicos procesados. Nuevos médicos creados: 0
+2025-07-16 15:34:24.315 INFO  - Procesando horarios del 2025-06-19 al 2025-06-21 para cada médico...
