@@ -1,17 +1,18 @@
 package com.clinica.sistema.Servicio;
 
-import com.clinica.sistema.Modelo.Paciente;
-import com.clinica.sistema.Modelo.Direccion; // Importar la entidad Direccion
-import com.clinica.sistema.Repositorio.PacienteRepositorio;
+import java.util.ArrayList;
+import java.util.Optional;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
-import java.util.Optional;
-import java.util.ArrayList; // Para inicializar la lista de direcciones
+import com.clinica.sistema.Modelo.Direccion;
+import com.clinica.sistema.Modelo.Paciente;
+import com.clinica.sistema.Repositorio.PacienteRepositorio;
 
 @Service
 public class AuthServicio {
@@ -88,7 +89,7 @@ public class AuthServicio {
 
         // 3. Establecer la relación bidireccional
         direccion.setPaciente(paciente);
-        paciente.getDirecciones().add(direccion); // Añadir la dirección a la lista del paciente
+        paciente.getDirecciones().add(direccion);
 
         // 4. Guardar el paciente (esto también guardará la dirección debido a CascadeType.ALL)
         Paciente pacienteGuardado = pacienteRepositorio.save(paciente);

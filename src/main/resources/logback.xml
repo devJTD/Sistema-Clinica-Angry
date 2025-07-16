@@ -1,30 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
 
+    <!-- Appender para mostrar logs en la consola -->
     <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
+            <!-- Formato del log: fecha, nivel, y mensaje -->
             <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level - %msg%n</pattern>
         </encoder>
     </appender>
 
+    <!-- Appender para guardar logs en un archivo con rotación por tamaño y fecha -->
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        
+        <!-- Ruta y nombre base del archivo de log -->
         <file>logs/SistemaClinica.log</file>
+        
+        <!-- Política de rotación: por tamaño y por fecha -->
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-    <fileNamePattern>logs/SistemaClinica.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
-    <maxFileSize>10MB</maxFileSize>
-    <maxHistory>30</maxHistory>
-    <totalSizeCap>1GB</totalSizeCap>
-</rollingPolicy>
+            
+            <!-- Patrón de nombre para archivos rotados -->
+            <fileNamePattern>logs/SistemaClinica.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            
+            <!-- Tamaño máximo de cada archivo antes de rotar -->
+            <maxFileSize>30MB</maxFileSize>
+            
+            <!-- Cuántos archivos históricos mantener -->
+            <maxHistory>100</maxHistory>
+            
+            <!-- Tamaño total máximo de todos los archivos de log almacenados -->
+            <totalSizeCap>2GB</totalSizeCap>
+        </rollingPolicy>
+        
         <encoder>
+            <!-- Formato del log en archivo -->
             <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level - %msg%n</pattern>
         </encoder>
     </appender>
 
+    <!-- Logger específico para la aplicación con nivel INFO -->
     <logger name="com.clinica.sistema" level="INFO" additivity="false">
+        <!-- Referencia a los appenders definidos -->
         <appender-ref ref="CONSOLE" />
         <appender-ref ref="FILE" />
     </logger>
 
+    <!-- Logger raíz con nivel ERROR (usado si no se especifica un logger para algún paquete) -->
     <root level="ERROR">
         <appender-ref ref="CONSOLE" />
     </root>

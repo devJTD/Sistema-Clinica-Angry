@@ -1,14 +1,17 @@
 package com.clinica.sistema.Controlador;
 
-import com.clinica.sistema.Modelo.Paciente;
-import com.clinica.sistema.Modelo.Direccion; // Importar la nueva entidad Direccion
-import com.clinica.sistema.Servicio.AuthServicio;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory; // Importar la nueva entidad Direccion
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.clinica.sistema.Modelo.Direccion;
+import com.clinica.sistema.Modelo.Paciente;
+import com.clinica.sistema.Servicio.AuthServicio;
 
 @Controller
 public class AuthControlador {
@@ -61,7 +64,7 @@ public class AuthControlador {
             // Validación de la dirección
             if (direccionCompleta == null || direccionCompleta.isBlank()) {
                 logger.warn("Registro fallido: el campo de dirección está vacío.");
-                return "redirect:/registro?error=direccionvacia"; // Nuevo error para dirección vacía
+                return "redirect:/registro?error=direccionvacia";
             }
 
             if (authServicio.existePacientePorEmailODni(paciente.getCorreo(), paciente.getDni())) {
@@ -75,7 +78,7 @@ public class AuthControlador {
             // La relación con paciente se establecerá en el servicio o se asume que se propaga vía CascadeType.ALL
 
             // Llamar al servicio para guardar el paciente y la dirección
-            authServicio.guardarPaciente(paciente, direccion); // Nuevo método en el servicio
+            authServicio.guardarPaciente(paciente, direccion); 
 
             logger.info("Paciente y dirección registrados exitosamente para el correo: {}", paciente.getCorreo());
             return "redirect:/login?registroExitoso";
