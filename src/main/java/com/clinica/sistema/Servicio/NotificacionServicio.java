@@ -1,7 +1,7 @@
 package com.clinica.sistema.Servicio;
 
-import org.slf4j.Logger; // Importar Logger
-import org.slf4j.LoggerFactory; // Importar LoggerFactory
+import org.slf4j.Logger; 
+import org.slf4j.LoggerFactory; 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.MailException;
 import org.springframework.mail.SimpleMailMessage;
@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class NotificacionServicio {
 
-    private final Logger logger = LoggerFactory.getLogger(NotificacionServicio.class); // Instancia del logger
+    private final Logger logger = LoggerFactory.getLogger(NotificacionServicio.class); 
 
     private final JavaMailSender mailSender;
 
@@ -23,15 +23,17 @@ public class NotificacionServicio {
     }
 
     public void enviarCorreoSimple(String destinatarioEmail, String asunto, String contenidoMensaje) {
-        // Validacion basica de los parametros
+        // Valida que el email del destinatario no esté vacío
         if (destinatarioEmail == null || destinatarioEmail.isBlank()) {
             logger.warn("Validacion fallida: No se puede enviar correo, el email del destinatario esta vacio o es nulo.");
             throw new IllegalArgumentException("El correo del destinatario no puede estar vacio.");
         }
+        // Valida que el asunto no esté vacío
         if (asunto == null || asunto.isBlank()) {
             logger.warn("Validacion fallida: No se puede enviar correo a {}, el asunto esta vacio o es nulo.", destinatarioEmail);
             throw new IllegalArgumentException("El asunto del correo no puede estar vacio.");
         }
+        // Valida que el contenido del mensaje no esté vacío
         if (contenidoMensaje == null || contenidoMensaje.isBlank()) {
             logger.warn("Validacion fallida: No se puede enviar correo a {}, el contenido del mensaje esta vacio o es nulo. Asunto: {}", destinatarioEmail, asunto);
             throw new IllegalArgumentException("El contenido del mensaje no puede estar vacio.");
@@ -50,13 +52,13 @@ public class NotificacionServicio {
             logger.info("Correo enviado exitosamente a: {} con asunto: '{}'.", destinatarioEmail, asunto);
 
         } catch (MailException e) {
-            // Log especifico para excepciones relacionadas con el envio de correo
+            // Maneja excepciones específicas de envío de correo
             logger.error("Error al enviar correo a: {} con asunto: '{}'. Detalle: {}", destinatarioEmail, asunto, e.getMessage(), e);
-            // Puedes considerar relanzar la excepcion como una excepcion de negocio si es necesario
-            // throw new ServicioCorreoException("No se pudo enviar el correo de notificacion a " + destinatarioEmail, e);
+            throw new RuntimeException("Fallo al enviar el correo debido a un problema con el servicio de correo.", e);
         } catch (Exception e) {
-            // Captura y log de cualquier otra excepcion inesperada
+            // Maneja cualquier otra excepción inesperada
             logger.error("Ocurrio un error inesperado al intentar enviar correo a: {} con asunto: '{}'. Detalle: {}", destinatarioEmail, asunto, e.getMessage(), e);
+            throw new RuntimeException("Ocurrió un error inesperado al intentar enviar el correo.", e);
         }
     }
 }

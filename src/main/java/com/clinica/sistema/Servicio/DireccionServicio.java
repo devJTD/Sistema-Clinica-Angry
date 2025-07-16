@@ -22,39 +22,44 @@ public class DireccionServicio {
         this.direccionRepositorio = direccionRepositorio;
     }
 
+    // Obtiene una lista de direcciones asociadas a un ID de paciente específico.
     public List<Direccion> obtenerDireccionesPorPaciente(Long pacienteId) {
-        // Validar que el pacienteId no sea nulo o invalido
+        // Valida que el pacienteId no sea nulo o inválido.
         if (pacienteId == null || pacienteId <= 0) {
             logger.warn("Validacion fallida: El ID del paciente no puede ser nulo o negativo al intentar obtener direcciones. ID recibido: {}", pacienteId);
             throw new IllegalArgumentException("El ID del paciente no puede ser nulo o negativo.");
         }
         logger.info("Solicitando direcciones para el paciente con ID: {}", pacienteId);
+        // Busca las direcciones por el ID del paciente.
         List<Direccion> direcciones = direccionRepositorio.findByPacienteId(pacienteId);
         logger.info("Se encontraron {} direcciones para el paciente con ID: {}.", direcciones.size(), pacienteId);
         return direcciones;
     }
 
+    // Guarda una nueva dirección en la base de datos.
     @Transactional
     public Direccion guardarDireccion(Direccion direccion) {
-        // Validar que el objeto Direccion no sea nulo
+        // Valida que el objeto Direccion no sea nulo.
         if (direccion == null) {
             logger.warn("Validacion fallida al intentar guardar una direccion: La direccion proporcionada es nula.");
             throw new IllegalArgumentException("La direccion a guardar no puede ser nula.");
         }
-        // Validar que el paciente asociado no sea nulo y tenga ID
+        // Valida que la dirección esté asociada a un paciente válido.
         if (direccion.getPaciente() == null || direccion.getPaciente().getId() == null || direccion.getPaciente().getId() <= 0) {
             logger.warn("Validacion fallida al intentar guardar direccion: La direccion debe estar asociada a un paciente valido. Direccion Completa: {}", direccion.getDireccionCompleta());
             throw new IllegalArgumentException("La direccion debe estar asociada a un paciente valido.");
         }
 
         logger.info("Guardando nueva direccion para el paciente con ID: {} (Direccion: {}).", direccion.getPaciente().getId(), direccion.getDireccionCompleta());
+        // Guarda la dirección en el repositorio.
         Direccion direccionGuardada = direccionRepositorio.save(direccion);
         logger.info("Direccion ID {} guardada exitosamente para el paciente con ID {}.", direccionGuardada.getId(), direccionGuardada.getPaciente().getId());
         return direccionGuardada;
     }
 
+    // Busca una dirección por su ID y el ID del paciente al que pertenece.
     public Optional<Direccion> buscarPorIdYPacienteId(Long id, Long pacienteId) {
-        // Validar que los IDs no sean nulos o invalidos
+        // Valida que los IDs no sean nulos o inválidos.
         if (id == null || id <= 0) {
             logger.warn("Validacion fallida: El ID de la direccion no puede ser nulo o negativo al buscar por ID de paciente. ID recibido: {}", id);
             throw new IllegalArgumentException("El ID de la direccion no puede ser nulo o negativo.");
@@ -65,6 +70,7 @@ public class DireccionServicio {
         }
 
         logger.info("Buscando direccion con ID: {} para el paciente con ID: {}.", id, pacienteId);
+        // Busca la dirección por ambos IDs.
         Optional<Direccion> direccion = direccionRepositorio.findByIdAndPacienteId(id, pacienteId);
         if (direccion.isPresent()) {
             logger.info("Direccion ID {} encontrada para el paciente ID {}.", id, pacienteId);

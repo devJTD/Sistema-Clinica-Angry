@@ -44,17 +44,22 @@ public class HistorialControlador {
         this.authServicio = authServicio;
     }
 
+    // Obtiene el objeto Paciente del usuario actualmente logueado.
     private Paciente getPacienteLogueado() {
+        // Obtiene la información de autenticación del contexto de seguridad de Spring.
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        // Verifica si el usuario está autenticado y si el principal es un objeto UserDetails (no una cadena anónima).
         if (authentication == null || !authentication.isAuthenticated() || authentication.getPrincipal() instanceof String) {
             logger.debug("No hay usuario autenticado o el principal no es un UserDetails.");
             return null;
         }
 
+        // Extrae los detalles del usuario y su correo electrónico.
         UserDetails userDetails = (UserDetails) authentication.getPrincipal();
         String correoUsuario = userDetails.getUsername();
         logger.debug("Buscando paciente logueado con correo: {}", correoUsuario);
 
+        // Busca el paciente en la base de datos usando el correo.
         Optional<Paciente> pacienteOpt = authServicio.buscarPorCorreo(correoUsuario);
         if (pacienteOpt.isPresent()) {
             logger.debug("Paciente logueado encontrado con ID: {} y correo: {}", pacienteOpt.get().getId(), correoUsuario);
@@ -64,10 +69,13 @@ public class HistorialControlador {
         return pacienteOpt.orElse(null);
     }
 
+    // Muestra la página del historial de citas del paciente, incluyendo citas pendientes y pasadas.
     @GetMapping("/historial")
     public String mostrarPaginaHistorialCitas(Model model) {
         logger.info("Accediendo a la pagina de historial de citas.");
+        // Obtiene el paciente logueado.
         Paciente usuario = getPacienteLogueado();
+        // Si no hay un usuario logueado o su ID es nulo, redirige a la página de login.
         if (usuario == null || usuario.getId() == null) {
             logger.warn("Usuario no logueado intento acceder a la pagina de historial de citas. Redirigiendo a login.");
             return "redirect:/login?error=nologin";
@@ -76,9 +84,11 @@ public class HistorialControlador {
         logger.info("Usuario con DNI: {} ({}) ha accedido a la pagina de historial de citas.", usuario.getDni(), usuario.getCorreo());
 
         try {
+            // Obtiene las citas pendientes y el historial de citas del paciente.
             List<Cita> citasPendientes = citaServicio.obtenerCitasPendientesPorPaciente(usuario.getId());
             List<Cita> historialCitas = citaServicio.obtenerHistorialCitasPorPaciente(usuario.getId());
 
+            // Añade los atributos al modelo para que la vista los muestre.
             model.addAttribute("citasPendientes", citasPendientes);
             model.addAttribute("historialCitas", historialCitas);
             model.addAttribute("nombreUsuario", usuario.getNombre() + " " + usuario.getApellido());
@@ -99,9 +109,12 @@ public class HistorialControlador {
         return "historialCita";
     }
 
+    // Exporta el historial completo de citas del paciente a un archivo Excel.
     @GetMapping("/historial/exportar/excel")
     public ResponseEntity<byte[]> exportarHistorialCitasExcel() {
+        // Obtiene el paciente logueado.
         Paciente pacienteLogueado = getPacienteLogueado();
+        // Si no está logueado, retorna un error de no autorizado.
         if (pacienteLogueado == null || pacienteLogueado.getId() == null) {
             logger.warn("Intento de exportar historial de citas por usuario no logueado o sin ID de paciente. Retornando no autorizado.");
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("No autorizado: Debes iniciar sesion para exportar.".getBytes());
@@ -110,15 +123,18 @@ public class HistorialControlador {
         logger.info("Usuario con DNI: {} ({}) ha solicitado exportar su historial de citas a Excel.", pacienteLogueado.getDni(), pacienteLogueado.getCorreo());
 
         try {
+            // Obtiene todas las citas del paciente (pendientes y de historial).
             List<Cita> citasDelPaciente = citaServicio.obtenerCitasPendientesPorPaciente(pacienteLogueado.getId());
             citasDelPaciente.addAll(citaServicio.obtenerHistorialCitasPorPaciente(pacienteLogueado.getId()));
             logger.debug("Se recuperaron {} citas (pendientes y de historial) para la exportacion de Excel del usuario con DNI: {}.", citasDelPaciente.size(), pacienteLogueado.getDni());
 
+            // Crea un nuevo libro de Excel y una hoja.
             try (Workbook workbook = new XSSFWorkbook();
                  ByteArrayOutputStream outputStream = new ByteArrayOutputStream()) {
                 Sheet sheet = workbook.createSheet(
                                         "Historial Citas - " + pacienteLogueado.getNombre() + " " + pacienteLogueado.getApellido());
 
+                // Crea la fila de encabezados para el archivo Excel.
                 Row headerRow = sheet.createRow(0);
                 String[] headers = { "ID Cita", "Fecha", "Hora", "Estado", "Medico", "Especialidad" };
                 for (int i = 0; i < headers.length; i++) {
@@ -126,6 +142,7 @@ public class HistorialControlador {
                     cell.setCellValue(headers[i]);
                 }
 
+                // Llena el resto de las filas con los datos de las citas.
                 int rowNum = 1;
                 for (Cita cita : citasDelPaciente) {
                     Row row = sheet.createRow(rowNum++);
@@ -147,25 +164,29 @@ public class HistorialControlador {
                     }
                 }
 
+                // Ajusta automáticamente el tamaño de las columnas.
                 for (int i = 0; i < headers.length; i++) {
                     sheet.autoSizeColumn(i);
                 }
 
+                // Escribe el contenido del libro de Excel en un flujo de salida.
                 workbook.write(outputStream);
                 logger.info("Reporte Excel generado exitosamente para el usuario con DNI: {}. Tamano: {} bytes.", pacienteLogueado.getDni(), outputStream.toByteArray().length);
 
+                // Configura los encabezados HTTP para la descarga del archivo.
                 HttpHeaders httpHeaders = new HttpHeaders();
                 httpHeaders.setContentType(MediaType.APPLICATION_OCTET_STREAM);
                 httpHeaders.setContentDispositionFormData("attachment",
                         "historial_citas_" + pacienteLogueado.getId() + ".xlsx");
                 httpHeaders.setContentLength(outputStream.toByteArray().length);
 
+                // Retorna la respuesta con el archivo Excel.
                 return ResponseEntity.ok().headers(httpHeaders).body(outputStream.toByteArray());
 
             } catch (IOException e) {
                 logger.error("Error de IO al generar el reporte Excel para el usuario con DNI: {}: {}", pacienteLogueado.getDni(), e.getMessage(), e);
                 return ResponseEntity.internalServerError()
-                        .body(("Error al generar el reporte: " + e.getMessage()).getBytes());
+                    .body(("Error al generar el reporte: " + e.getMessage()).getBytes());
             }
 
         } catch (IllegalArgumentException e) {
@@ -177,11 +198,13 @@ public class HistorialControlador {
         }
     }
 
+    // Permite al usuario cancelar una cita específica.
     @PostMapping("/cancelar-cita")
     @ResponseBody
     public ResponseEntity<String> cancelarCita(@RequestParam Long id) {
         logger.info("Solicitud para cancelar cita con ID: {}", id);
         try {
+            // Intenta cancelar la cita usando el servicio.
             boolean exito = citaServicio.cancelarCita(id);
             if (exito) {
                 logger.info("Cita con ID: {} cancelada correctamente.", id);

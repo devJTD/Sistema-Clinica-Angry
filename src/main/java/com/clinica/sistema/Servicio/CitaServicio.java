@@ -46,10 +46,12 @@ public class CitaServicio {
         this.notificacionServicio = notificacionServicio;
     }
 
+    // Crea una nueva cita en el sistema.
     @Transactional
     public Cita crearCita(String fechaStr, String horaStr, Long idMedico, Long idPaciente) {
         logger.info("El paciente con ID {} esta intentando crear una cita para el medico con ID {} en la fecha {} a las {}.", idPaciente, idMedico, fechaStr, horaStr);
 
+        // Valida que los parámetros de fecha, hora, ID de médico e ID de paciente no sean nulos o vacíos.
         if (fechaStr == null || fechaStr.isBlank()) {
             logger.warn("Validacion fallida: La fecha de la cita no puede estar vacia. Paciente ID: {}", idPaciente);
             throw new IllegalArgumentException("La fecha de la cita no puede estar vacia.");
@@ -67,10 +69,12 @@ public class CitaServicio {
             throw new IllegalArgumentException("El ID del paciente no puede ser nulo o negativo.");
         }
 
+        // Parsea las cadenas de fecha y hora a objetos LocalDate y LocalTime.
         LocalDate fechaCita = LocalDate.parse(fechaStr);
         LocalTime horaCita = LocalTime.parse(horaStr);
         logger.debug("Fecha parseada: {}, Hora parseada: {}.", fechaCita, horaCita);
 
+        // Obtiene el paciente por su ID, lanzando una excepción si no se encuentra.
         Paciente paciente = pacienteRepositorio.findById(idPaciente)
                 .orElseThrow(() -> {
                     logger.error("Error al crear cita: Paciente con ID {} no encontrado.", idPaciente);
@@ -78,6 +82,7 @@ public class CitaServicio {
                 });
         logger.debug("Paciente '{} {}' (ID: {}) encontrado para la creacion de cita.", paciente.getNombre(), paciente.getApellido(), paciente.getId());
 
+        // Obtiene el médico por su ID, lanzando una excepción si no se encuentra.
         Medico medico = medicoRepositorio.findById(idMedico)
                 .orElseThrow(() -> {
                     logger.error("Error al crear cita para paciente ID {}: Medico con ID {} no encontrado.", idPaciente, idMedico);
@@ -85,7 +90,9 @@ public class CitaServicio {
                 });
         logger.debug("Medico 'Dr. {} {}' (ID: {}) encontrado para la creacion de cita.", medico.getNombre(), medico.getApellido(), medico.getId());
 
+        // Busca el horario específico para la fecha, hora y médico.
         Optional<Horario> horarioOptional = horarioRepositorio.findByFechaAndHoraAndMedico(fechaCita, horaCita, medico);
+        // Lanza una excepción si el horario no está disponible.
         Horario horario = horarioOptional.orElseThrow(() -> {
             logger.error("Error al crear cita para paciente ID {} y medico ID {}: Horario disponible no encontrado para fecha {} y hora {}.", idPaciente, idMedico, fechaCita, horaCita);
             return new IllegalArgumentException(
@@ -93,11 +100,13 @@ public class CitaServicio {
         });
         logger.debug("Horario ID {} encontrado. Disponibilidad actual: {}.", horario.getId(), horario.isDisponible());
 
+        // Lanza una excepción si el horario no está disponible.
         if (!horario.isDisponible()) {
             logger.warn("El horario seleccionado (ID: {}) ya no esta disponible para la cita del paciente ID {}.", horario.getId(), idPaciente);
             throw new IllegalStateException("El horario seleccionado ya no esta disponible.");
         }
 
+        // Crea una nueva instancia de Cita y establece sus propiedades.
         Cita nuevaCita = new Cita();
         nuevaCita.setFecha(fechaCita);
         nuevaCita.setHora(horaCita);
@@ -106,14 +115,17 @@ public class CitaServicio {
         nuevaCita.setMedico(medico);
         logger.debug("Cita inicial construida: Fecha {}, Hora {}, Paciente ID {}, Medico ID {}. Estado: 'Pendiente'.", fechaCita, horaCita, idPaciente, idMedico);
 
+        // Marca el horario como no disponible y lo guarda.
         horario.setDisponible(false);
         horarioRepositorio.save(horario);
         logger.info("Horario ID {} marcado como NO DISPONIBLE para medico {} en fecha {} a las {}.", horario.getId(), medico.getNombre() + " " + medico.getApellido(), horario.getFecha(), horario.getHora());
 
+        // Guarda la nueva cita en el repositorio.
         Cita citaGuardada = citaRepositorio.save(nuevaCita);
         logger.info("Cita ID {} creada y guardada exitosamente para paciente {} con medico {} en estado 'Pendiente'.", citaGuardada.getId(), paciente.getNombre() + " " + paciente.getApellido(), medico.getNombre() + " " + medico.getApellido());
 
         try {
+            // Construye el mensaje de confirmación de la cita.
             String mensajeContenido = String.format(
                     """
                             Hola %s,
@@ -136,16 +148,19 @@ public class CitaServicio {
                     horario.getHora()
                             .format(DateTimeFormatter.ofPattern("HH:mm"))); 
 
+            // Crea y configura la notificación para la cita.
             Notificacion nuevaNotificacion = new Notificacion();
             nuevaNotificacion.setMensaje(mensajeContenido);
             nuevaNotificacion.setEmailDestinatario(paciente.getCorreo());
             nuevaNotificacion.setFechaEnvio(LocalDate.now());
 
+            // Asocia la notificación con la cita y guarda la cita actualizada.
             citaGuardada.setNotificacion(nuevaNotificacion);
             nuevaNotificacion.setCita(citaGuardada);
 
             citaRepositorio.save(citaGuardada); 
 
+            // Envía el correo de confirmación.
             notificacionServicio.enviarCorreoSimple(
                     paciente.getCorreo(),
                     "Confirmacion de Cita Medica - Clinica Angry",
@@ -156,42 +171,52 @@ public class CitaServicio {
         return citaGuardada;
     }
 
+    // Obtiene todas las citas registradas en el sistema.
     public List<Cita> obtenerTodasLasCitas() {
         logger.info("Se solicito la obtencion de todas las citas.");
+        // Obtiene todas las citas del repositorio.
         List<Cita> citas = citaRepositorio.findAll();
         logger.info("Se recuperaron {} citas de la base de datos.", citas.size());
         return citas;
     }
 
+    // Obtiene las citas pendientes para un paciente específico.
     public List<Cita> obtenerCitasPendientesPorPaciente(Long idPaciente) {
         logger.info("Se solicitan citas pendientes para el paciente con ID: {}.", idPaciente);
+        // Obtiene el paciente por su ID.
         Paciente paciente = pacienteRepositorio.findById(idPaciente)
                 .orElseThrow(() -> {
                     logger.error("Error al obtener citas pendientes: Paciente con ID {} no encontrado.", idPaciente);
                     return new IllegalArgumentException(
                             "Paciente con ID " + idPaciente + " no encontrado.");
                 });
+        // Obtiene las citas del paciente con estado "Pendiente".
         List<Cita> citasPendientes = citaRepositorio.findByPacienteAndEstado(paciente, "Pendiente");
         logger.info("Se encontraron {} citas pendientes para el paciente '{} {}' (ID: {}).", citasPendientes.size(), paciente.getNombre(), paciente.getApellido(), idPaciente);
         return citasPendientes;
     }
 
+    // Obtiene el historial de citas de un paciente.
     public List<Cita> obtenerHistorialCitasPorPaciente(Long idPaciente) {
         logger.info("Se solicita el historial de citas para el paciente con ID: {}.", idPaciente);
+        // Obtiene el paciente por su ID.
         Paciente paciente = pacienteRepositorio.findById(idPaciente)
                 .orElseThrow(() -> {
                     logger.error("Error al obtener historial de citas: Paciente con ID {} no encontrado.", idPaciente);
                     return new IllegalArgumentException(
                             "Paciente con ID " + idPaciente + " no encontrado.");
                 });
+        // Obtiene las citas del paciente cuyo estado no es "Pendiente".
         List<Cita> historialCitas = citaRepositorio.findByPacienteAndEstadoNot(paciente, "Pendiente");
         logger.info("Se encontraron {} citas en el historial para el paciente '{} {}' (ID: {}).", historialCitas.size(), paciente.getNombre(), paciente.getApellido(), idPaciente);
         return historialCitas;
     }
 
+    // Cancela una cita específica.
     @Transactional
     public boolean cancelarCita(Long idCita) {
         logger.info("Se solicito la cancelacion de la cita con ID: {}.", idCita);
+        // Busca la cita por su ID.
         Optional<Cita> citaOptional = citaRepositorio.findById(idCita);
 
         if (citaOptional.isPresent()) {
@@ -201,10 +226,12 @@ public class CitaServicio {
 
             logger.info("Cita encontrada (ID: {}) para el paciente '{}' y medico '{}'. Estado actual: '{}'.", idCita, nombrePaciente, nombreMedico, cita.getEstado());
             
+            // Cambia el estado de la cita a "Cancelada".
             cita.setEstado("Cancelada");
             citaRepositorio.save(cita);
             logger.info("Cita ID {} del paciente '{}' y medico '{}' ha sido CANCELADA.", idCita, nombrePaciente, nombreMedico);
 
+            // Busca el horario asociado a la cita y lo marca como disponible.
             Optional<Horario> horarioOptional = horarioRepositorio.findByFechaAndHoraAndMedico(
                     cita.getFecha(),
                     cita.getHora(), cita.getMedico());
@@ -223,19 +250,24 @@ public class CitaServicio {
         }
     }
 
+    // Obtiene todas las especialidades disponibles.
     public List<Especialidad> obtenerTodasLasEspecialidades() {
         logger.info("Se solicito la obtencion de todas las especialidades.");
+        // Obtiene todas las especialidades del repositorio.
         List<Especialidad> especialidades = especialidadRepositorio.findAll();
         logger.info("Se recuperaron {} especialidades de la base de datos.", especialidades.size());
         return especialidades;
     }
 
+    // Obtiene médicos por una especialidad específica.
     public List<Medico> obtenerMedicosPorEspecialidad(Long idEspecialidad) {
         logger.info("Se solicitan medicos para la especialidad con ID: {}.", idEspecialidad);
+        // Valida que el ID de la especialidad no sea nulo o negativo.
         if (idEspecialidad == null || idEspecialidad <= 0) {
             logger.warn("Validacion fallida: El ID de la especialidad no puede ser nulo o negativo. ID recibido: {}", idEspecialidad);
             throw new IllegalArgumentException("El ID de la especialidad no puede ser nulo o negativo.");
         }
+        // Obtiene la especialidad por su ID.
         Especialidad especialidad = especialidadRepositorio.findById(idEspecialidad)
                 .orElseThrow(() -> {
                     logger.error("Error al obtener medicos: Especialidad con ID {} no encontrada.", idEspecialidad);
@@ -243,13 +275,16 @@ public class CitaServicio {
                             "Especialidad con ID " + idEspecialidad + " no encontrada.");
                 });
         logger.debug("Especialidad '{}' (ID: {}) encontrada.", especialidad.getNombre(), idEspecialidad);
+        // Obtiene los médicos asociados a la especialidad.
         List<Medico> medicos = medicoRepositorio.findByEspecialidad(especialidad);
         logger.info("Se encontraron {} medicos para la especialidad '{}'.", medicos.size(), especialidad.getNombre());
         return medicos;
     }
 
+    // Obtiene los horarios disponibles para un médico en una fecha determinada.
     public List<Horario> obtenerHorariosDisponiblesPorMedicoYFecha(Long idMedico, LocalDate fecha) {
         logger.info("Se solicitan horarios disponibles para el medico con ID: {} en la fecha: {}.", idMedico, fecha);
+        // Valida que el ID del médico y la fecha no sean nulos o inválidos.
         if (idMedico == null || idMedico <= 0) {
             logger.warn("Validacion fallida: El ID del medico no puede ser nulo o negativo. ID recibido: {}", idMedico);
             throw new IllegalArgumentException("El ID del medico no puede ser nulo o negativo.");
@@ -258,12 +293,14 @@ public class CitaServicio {
             logger.warn("Validacion fallida: La fecha no puede ser nula para buscar horarios del medico ID {}.", idMedico);
             throw new IllegalArgumentException("La fecha no puede ser nula.");
         }
+        // Obtiene el médico por su ID.
         Medico medico = medicoRepositorio.findById(idMedico)
                 .orElseThrow(() -> {
                     logger.error("Error al obtener horarios: Medico con ID {} no encontrado.", idMedico);
                     return new IllegalArgumentException("Medico con ID " + idMedico + " no encontrado.");
                 });
         logger.debug("Medico 'Dr. {} {}' (ID: {}) encontrado para buscar horarios.", medico.getNombre(), medico.getApellido(), idMedico);
+        // Obtiene los horarios disponibles para el médico y la fecha.
         List<Horario> horarios = horarioRepositorio.findByMedicoAndFechaAndDisponibleTrue(medico, fecha);
         logger.info("Se encontraron {} horarios disponibles para el medico '{}' en la fecha {}.", horarios.size(), medico.getNombre() + " " + medico.getApellido(), fecha);
         return horarios;

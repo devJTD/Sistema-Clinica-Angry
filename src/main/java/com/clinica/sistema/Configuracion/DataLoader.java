@@ -30,6 +30,7 @@ public class DataLoader implements CommandLineRunner {
     private final MedicoRepositorio medicoRepositorio;
     private final HorarioRepositorio horarioRepositorio;
 
+    // Constructor que inyecta los repositorios necesarios.
     public DataLoader(EspecialidadRepositorio especialidadRepositorio,
                       MedicoRepositorio medicoRepositorio,
                       HorarioRepositorio horarioRepositorio) {
@@ -40,6 +41,7 @@ public class DataLoader implements CommandLineRunner {
 
     @Override
     @Transactional
+    // Este método se ejecuta al iniciar la aplicación para cargar datos iniciales.
     public void run(String... args) throws Exception {
         logger.info("Iniciando carga de datos de especialidades, medicos y horarios...");
 
@@ -64,6 +66,7 @@ public class DataLoader implements CommandLineRunner {
         );
 
         logger.info("Procesando {} especialidades...", especialidadesData.size());
+        // Itera sobre los datos de especialidades para crearlas o recuperarlas si ya existen.
         for (Map<String, Object> data : especialidadesData) {
             String nombreEspecialidad = (String) data.get("nombre");
             Long idReferencia = (Long) data.get("id");
@@ -135,6 +138,7 @@ public class DataLoader implements CommandLineRunner {
 
         logger.info("Procesando {} medicos...", medicosData.size());
         int medicosNuevosCount = 0;
+        // Itera sobre los datos de medicos para crearlos o recuperarlos si ya existen.
         for (Map<String, Object> data : medicosData) {
             String nombreCompleto = (String) data.get("nombreCompleto");
             Long idEspecialidadRef = (Long) data.get("idEspecialidad");
@@ -145,6 +149,7 @@ public class DataLoader implements CommandLineRunner {
             String cleanedNombre = nombreCompleto.replace("Dr. ", "").replace("Dra. ", "").trim();
             int lastSpaceIndex = cleanedNombre.lastIndexOf(" ");
 
+            // Divide el nombre completo en nombre y apellido.
             if (lastSpaceIndex != -1) {
                 nombre = cleanedNombre.substring(0, lastSpaceIndex);
                 apellido = cleanedNombre.substring(lastSpaceIndex + 1);
@@ -164,6 +169,7 @@ public class DataLoader implements CommandLineRunner {
                 medico.setNombre(nombre);
                 medico.setApellido(apellido);
 
+                // Asigna la especialidad al medico.
                 Especialidad especialidad = especialidadesMap.get(idEspecialidadRef);
                 if (especialidad == null) {
                     logger.error("No se encontro especialidad con ID de referencia {} para el medico {}. Este medico se creara sin especialidad.", idEspecialidadRef, nombreCompleto);
@@ -186,9 +192,11 @@ public class DataLoader implements CommandLineRunner {
 
         logger.info("Procesando horarios del {} al {} para cada medico...", startDate, endDate);
         int horariosCreadosCount = 0;
+        // Genera y guarda horarios disponibles para cada medico.
         for (Medico medico : medicosMap.values()) {
             for (LocalDate date = startDate; !date.isAfter(endDate); date = date.plusDays(1)) {
                 for (LocalTime time : horasDisponibles) {
+                    // Verifica si el horario ya existe para evitar duplicados.
                     Optional<Horario> existingHorario = horarioRepositorio.findByMedicoAndFechaAndHora(medico, date, time);
                     if (existingHorario.isPresent()) {
                         continue;
@@ -198,7 +206,7 @@ public class DataLoader implements CommandLineRunner {
                     horario.setMedico(medico);
                     horario.setFecha(date);
                     horario.setHora(time);
-                    horario.setDisponible(true);
+                    horario.setDisponible(true); 
                     horarioRepositorio.save(horario);
                     horariosCreadosCount++;
                 }

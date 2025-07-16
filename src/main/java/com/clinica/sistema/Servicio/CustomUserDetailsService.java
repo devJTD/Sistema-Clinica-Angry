@@ -23,11 +23,14 @@ public class CustomUserDetailsService implements UserDetailsService {
         this.pacienteRepositorio = pacienteRepositorio;
     }
 
+    // Carga los detalles de un usuario para autenticación por su correo electrónico.
     @Override
     public UserDetails loadUserByUsername(String correo) throws UsernameNotFoundException {
         logger.info("Intentando cargar usuario por correo electronico: {}", correo);
 
+        // Busca el paciente en el repositorio por su correo electrónico.
         Paciente paciente = pacienteRepositorio.findByCorreo(correo)
+            // Si el paciente no se encuentra, lanza una excepción UsernameNotFoundException.
             .orElseThrow(() -> {
                 logger.warn("Fallo en autenticacion: Usuario no encontrado con correo electronico: {}", correo);
                 return new UsernameNotFoundException("Usuario no encontrado con correo: " + correo);
@@ -35,9 +38,10 @@ public class CustomUserDetailsService implements UserDetailsService {
 
         logger.info("Usuario '{}' (ID: {}) cargado exitosamente para autenticacion.", paciente.getCorreo(), paciente.getId());
 
+        // Retorna un objeto UserDetails de Spring Security con el correo, contraseña y sin roles específicos.
         return new User(
             paciente.getCorreo(),
-            paciente.getContraseña(), // Note: The 'ñ' in 'Contraseña' is a character, not an accent. It remains.
+            paciente.getContraseña(), 
             Collections.emptyList() 
         );
     }

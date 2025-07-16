@@ -28,20 +28,25 @@ public class AuthServicio {
         this.pacienteRepositorio = pacienteRepositorio;
     }
 
+    // Verifica la existencia de un paciente por correo electrónico o DNI.
     public boolean existePacientePorEmailODni(String email, String dni) {
         logger.debug("Verificando existencia de paciente por correo: {} o DNI: {}", email, dni);
+        // Lanza una excepción si el correo es nulo o vacío.
         if (email == null || email.isBlank()) {
             logger.warn("Validacion fallida en existePacientePorEmailODni: El correo no puede estar vacio.");
             throw new IllegalArgumentException("El correo no puede estar vacio.");
         }
+        // Lanza una excepción si el DNI es nulo o vacío.
         if (dni == null || dni.isBlank()) {
             logger.warn("Validacion fallida en existePacientePorEmailODni: El DNI no puede estar vacio.");
             throw new IllegalArgumentException("El DNI no puede estar vacio.");
         }
 
+        // Busca el paciente por correo y DNI.
         Optional<Paciente> pacientePorCorreo = pacienteRepositorio.findByCorreo(email);
         Optional<Paciente> pacientePorDni = pacienteRepositorio.findByDni(dni);
 
+        // Retorna verdadero si el paciente existe por correo o DNI.
         boolean existe = pacientePorCorreo.isPresent() || pacientePorDni.isPresent();
         
         if (existe) {
@@ -52,10 +57,12 @@ public class AuthServicio {
         return existe;
     }
 
+    // Guarda un nuevo paciente en la base de datos.
     @SuppressWarnings("unused")
     @Transactional
     public Paciente guardarPaciente(Paciente paciente, Direccion direccion) {
         logger.info("Intentando guardar nuevo paciente con DNI: {} y correo: {}", paciente.getDni(), paciente.getCorreo());
+        // Lanza excepciones si los campos obligatorios del paciente son nulos o vacíos.
         if (paciente == null) {
             logger.warn("Validacion fallida en guardarPaciente: El paciente a guardar es nulo.");
             throw new IllegalArgumentException("El paciente a guardar no puede ser nulo.");
@@ -76,40 +83,48 @@ public class AuthServicio {
             logger.warn("Validacion fallida en guardarPaciente para correo {}: El DNI del paciente no puede estar vacio.", paciente.getCorreo());
             throw new IllegalArgumentException("El DNI del paciente no puede estar vacio.");
         }
-        if (paciente.getContraseña() == null || paciente.getContraseña().isBlank()) { // "Contraseña" contains 'ñ', which is a character, not an accent. It stays.
+        if (paciente.getContraseña() == null || paciente.getContraseña().isBlank()) {
             logger.warn("Validacion fallida en guardarPaciente para DNI {}: La contrasena del paciente no puede estar vacia.", paciente.getDni());
             throw new IllegalArgumentException("La contrasena del paciente no puede estar vacia.");
         }
         
+        // Lanza una excepción si la dirección es nula o vacía.
         if (direccion == null || direccion.getDireccionCompleta() == null || direccion.getDireccionCompleta().isBlank()) {
             logger.warn("Validacion fallida en guardarPaciente para DNI {}: La direccion no puede ser nula o vacia.", paciente.getDni());
             throw new IllegalArgumentException("La direccion no puede ser nula o vacia.");
         }
 
+        // Encripta la contraseña del paciente antes de guardarla.
         logger.debug("Encriptando contrasena para el paciente con DNI: {}", paciente.getDni());
         String hashedPassword = passwordEncoder.encode(paciente.getContraseña());
         paciente.setContraseña(hashedPassword);
 
+        // Inicializa la lista de direcciones si es nula.
         if (paciente.getDirecciones() == null) {
             paciente.setDirecciones(new ArrayList<>());
             logger.debug("Inicializando lista de direcciones para el paciente con DNI: {}.", paciente.getDni());
         }
 
+        // Asocia la dirección al paciente y la añade a la lista de direcciones.
         direccion.setPaciente(paciente);
         paciente.getDirecciones().add(direccion);
         logger.debug("Asignando direccion al paciente con DNI: {}. Direccion: {}", paciente.getDni(), direccion.getDireccionCompleta());
 
+        // Guarda el paciente en el repositorio.
         Paciente pacienteGuardado = pacienteRepositorio.save(paciente);
         logger.info("Paciente con DNI: {} y correo: {} guardado exitosamente con ID: {}.", pacienteGuardado.getDni(), pacienteGuardado.getCorreo(), pacienteGuardado.getId());
         return pacienteGuardado;
     }
 
+    // Busca un paciente por su correo electrónico.
     public Optional<Paciente> buscarPorCorreo(String correo) {
         logger.debug("Buscando paciente por correo: {}", correo);
+        // Lanza una excepción si el correo es nulo o vacío.
         if (correo == null || correo.isBlank()) {
             logger.warn("Validacion fallida en buscarPorCorreo: El correo no puede estar vacio para la busqueda.");
             throw new IllegalArgumentException("El correo no puede estar vacio para la busqueda.");
         }
+        // Obtiene el paciente del repositorio.
         Optional<Paciente> paciente = pacienteRepositorio.findByCorreo(correo);
         if (paciente.isPresent()) {
             logger.info("Paciente encontrado por correo: {} (ID: {}).", correo, paciente.get().getId());
@@ -119,12 +134,15 @@ public class AuthServicio {
         return paciente;
     }
 
+    // Busca un paciente por su ID.
     public Optional<Paciente> buscarPacientePorId(Long id) {
         logger.debug("Buscando paciente por ID: {}", id);
+        // Lanza una excepción si el ID es nulo o no válido.
         if (id == null || id <= 0) {
             logger.warn("Validacion fallida en buscarPacientePorId: El ID del paciente no puede ser nulo o negativo. ID: {}", id);
             throw new IllegalArgumentException("El ID del paciente no puede ser nulo o negativo.");
         }
+        // Obtiene el paciente del repositorio.
         Optional<Paciente> paciente = pacienteRepositorio.findById(id);
         if (paciente.isPresent()) {
             logger.info("Paciente encontrado por ID: {} (DNI: {}).", id, paciente.get().getDni());
