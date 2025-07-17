@@ -2,12 +2,12 @@ package com.clinica.sistema.Servicio;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.time.format.DateTimeFormatter; 
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Optional;
 
-import org.slf4j.Logger; 
-import org.slf4j.LoggerFactory; 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -26,7 +26,7 @@ import com.clinica.sistema.Repositorio.PacienteRepositorio;
 @Service
 public class CitaServicio {
 
-    private final Logger logger = LoggerFactory.getLogger(CitaServicio.class); 
+    private final Logger logger = LoggerFactory.getLogger(CitaServicio.class);
 
     private final CitaRepositorio citaRepositorio;
     private final PacienteRepositorio pacienteRepositorio;
@@ -110,7 +110,7 @@ public class CitaServicio {
         Cita nuevaCita = new Cita();
         nuevaCita.setFecha(fechaCita);
         nuevaCita.setHora(horaCita);
-        nuevaCita.setEstado("Pendiente"); 
+        nuevaCita.setEstado("Pendiente");
         nuevaCita.setPaciente(paciente);
         nuevaCita.setMedico(medico);
         logger.debug("Cita inicial construida: Fecha {}, Hora {}, Paciente ID {}, Medico ID {}. Estado: 'Pendiente'.", fechaCita, horaCita, idPaciente, idMedico);
@@ -144,9 +144,9 @@ public class CitaServicio {
                     medico.getNombre() + " " + medico.getApellido(),
                     medico.getEspecialidad().getNombre(),
                     horario.getFecha().format(
-                            DateTimeFormatter.ofPattern("dd/MM/yyyy")), 
+                            DateTimeFormatter.ofPattern("dd/MM/yyyy")),
                     horario.getHora()
-                            .format(DateTimeFormatter.ofPattern("HH:mm"))); 
+                            .format(DateTimeFormatter.ofPattern("HH:mm")));
 
             // Crea y configura la notificación para la cita.
             Notificacion nuevaNotificacion = new Notificacion();
@@ -158,7 +158,7 @@ public class CitaServicio {
             citaGuardada.setNotificacion(nuevaNotificacion);
             nuevaNotificacion.setCita(citaGuardada);
 
-            citaRepositorio.save(citaGuardada); 
+            citaRepositorio.save(citaGuardada);
 
             // Envía el correo de confirmación.
             notificacionServicio.enviarCorreoSimple(
@@ -171,12 +171,23 @@ public class CitaServicio {
         return citaGuardada;
     }
 
-    // Obtiene todas las citas registradas en el sistema.
-    public List<Cita> obtenerTodasLasCitas() {
-        logger.info("Se solicito la obtencion de todas las citas.");
-        // Obtiene todas las citas del repositorio.
-        List<Cita> citas = citaRepositorio.findAll();
-        logger.info("Se recuperaron {} citas de la base de datos.", citas.size());
+    /**
+     * Obtiene todas las citas de un paciente.
+     * Es útil para operaciones donde se necesita procesar la totalidad de las citas del usuario,
+     * como la actualización de estados basada en la fecha/hora.
+     * @param idPaciente El ID del paciente.
+     * @return Una lista de todas las citas asociadas al paciente.
+     * @throws IllegalArgumentException si el paciente no es encontrado.
+     */
+    public List<Cita> obtenerTodasLasCitasPorPaciente(Long idPaciente) {
+        logger.info("Se solicitan TODAS las citas para el paciente con ID: {}.", idPaciente);
+        Paciente paciente = pacienteRepositorio.findById(idPaciente)
+                .orElseThrow(() -> {
+                    logger.error("Error al obtener todas las citas: Paciente con ID {} no encontrado.", idPaciente);
+                    return new IllegalArgumentException("Paciente con ID " + idPaciente + " no encontrado.");
+                });
+        List<Cita> citas = citaRepositorio.findByPaciente(paciente);
+        logger.info("Se recuperaron {} citas del paciente '{} {}' (ID: {}).", citas.size(), paciente.getNombre(), paciente.getApellido(), idPaciente);
         return citas;
     }
 
@@ -225,7 +236,7 @@ public class CitaServicio {
             String nombreMedico = cita.getMedico() != null ? cita.getMedico().getNombre() + " " + cita.getMedico().getApellido() : "Desconocido";
 
             logger.info("Cita encontrada (ID: {}) para el paciente '{}' y medico '{}'. Estado actual: '{}'.", idCita, nombrePaciente, nombreMedico, cita.getEstado());
-            
+
             // Cambia el estado de la cita a "Cancelada".
             cita.setEstado("Cancelada");
             citaRepositorio.save(cita);
@@ -248,6 +259,12 @@ public class CitaServicio {
             logger.warn("Intento fallido de cancelar cita: No se encontro ninguna cita con ID {}.", idCita);
             return false;
         }
+    }
+
+    @Transactional
+    public void guardarCitas(List<Cita> citas) {
+        citaRepositorio.saveAll(citas);
+        logger.debug("Se guardaron {} citas en la base de datos.", citas.size());
     }
 
     // Obtiene todas las especialidades disponibles.

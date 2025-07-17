@@ -2,8 +2,13 @@ package com.clinica.sistema.Controlador;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
@@ -84,15 +89,58 @@ public class HistorialControlador {
         logger.info("Usuario con DNI: {} ({}) ha accedido a la pagina de historial de citas.", usuario.getDni(), usuario.getCorreo());
 
         try {
-            // Obtiene las citas pendientes y el historial de citas del paciente.
-            List<Cita> citasPendientes = citaServicio.obtenerCitasPendientesPorPaciente(usuario.getId());
-            List<Cita> historialCitas = citaServicio.obtenerHistorialCitasPorPaciente(usuario.getId());
+            // Obtiene TODAS las citas del paciente, incluyendo las pendientes y ya pasadas.
+            List<Cita> todasLasCitas = citaServicio.obtenerTodasLasCitasPorPaciente(usuario.getId());
+            logger.debug("Se recuperaron {} citas totales para el usuario con DNI: {}.", todasLasCitas.size(), usuario.getDni());
+
+            LocalDate fechaActual = LocalDate.now();
+            LocalTime horaActual = LocalTime.now();
+            
+            List<Cita> citasActualizadas = new ArrayList<>();
+            List<Cita> citasPendientes = new ArrayList<>();
+            List<Cita> historialCitas = new ArrayList<>();
+
+            // Itera sobre todas las citas para verificar y actualizar su estado si es necesario.
+            for (Cita cita : todasLasCitas) {
+                // Solo actualiza citas que están "Pendiente" y cuya fecha/hora ya pasó.
+                if ("Pendiente".equals(cita.getEstado()) && 
+                    (cita.getFecha().isBefore(fechaActual) || 
+                    (cita.getFecha().isEqual(fechaActual) && cita.getHora().isBefore(horaActual)))) {
+                    
+                    cita.setEstado("Completada"); // Cambia el estado a "Completada"
+                    citasActualizadas.add(cita); // Añade la cita a la lista de citas a actualizar
+                    logger.info("Cita ID {} (Fecha: {}, Hora: {}) del paciente ID {} marcada como 'Completada' porque ha pasado su hora.", cita.getId(), cita.getFecha(), cita.getHora(), usuario.getId());
+                }
+
+                // Clasifica la cita en la lista correspondiente (pendientes o historial).
+                if ("Pendiente".equals(cita.getEstado())) {
+                    citasPendientes.add(cita);
+                } else {
+                    historialCitas.add(cita);
+                }
+            }
+
+            // Guarda todas las citas que fueron actualizadas en la base de datos en una sola transacción.
+            if (!citasActualizadas.isEmpty()) {
+                citaServicio.guardarCitas(citasActualizadas);
+                logger.info("Se actualizaron {} citas a estado 'Completada' en la base de datos para el paciente ID {}.", citasActualizadas.size(), usuario.getId());
+            }
+
+            // Ordena las citas pendientes por fecha y hora (ascendente)
+            citasPendientes.sort(Comparator
+                .comparing(Cita::getFecha)
+                .thenComparing(Cita::getHora));
+            
+            // Ordena las citas de historial por fecha y hora (descendente)
+            historialCitas.sort(Comparator
+                .comparing(Cita::getFecha, Comparator.reverseOrder())
+                .thenComparing(Cita::getHora, Comparator.reverseOrder()));
 
             // Añade los atributos al modelo para que la vista los muestre.
             model.addAttribute("citasPendientes", citasPendientes);
             model.addAttribute("historialCitas", historialCitas);
             model.addAttribute("nombreUsuario", usuario.getNombre() + " " + usuario.getApellido());
-            logger.info("Citas pendientes: {} y historial de citas: {} cargados para el usuario con DNI: {}.", citasPendientes.size(), historialCitas.size(), usuario.getDni());
+            logger.info("Citas pendientes: {} y historial de citas: {} cargados y actualizados para el usuario con DNI: {}.", citasPendientes.size(), historialCitas.size(), usuario.getDni());
 
         } catch (IllegalArgumentException e) {
             logger.error("Error al cargar las citas del usuario con DNI: {}: {}", usuario.getDni(), e.getMessage());
@@ -123,10 +171,27 @@ public class HistorialControlador {
         logger.info("Usuario con DNI: {} ({}) ha solicitado exportar su historial de citas a Excel.", pacienteLogueado.getDni(), pacienteLogueado.getCorreo());
 
         try {
-            // Obtiene todas las citas del paciente (pendientes y de historial).
-            List<Cita> citasDelPaciente = citaServicio.obtenerCitasPendientesPorPaciente(pacienteLogueado.getId());
-            citasDelPaciente.addAll(citaServicio.obtenerHistorialCitasPorPaciente(pacienteLogueado.getId()));
-            logger.debug("Se recuperaron {} citas (pendientes y de historial) para la exportacion de Excel del usuario con DNI: {}.", citasDelPaciente.size(), pacienteLogueado.getDni());
+            // Obtiene todas las citas del paciente.
+            // NOTA: Con la lógica de actualización en mostrarPaginaHistorialCitas(), las citas ya deberían estar en el estado correcto.
+            List<Cita> citasDelPaciente = citaServicio.obtenerTodasLasCitasPorPaciente(pacienteLogueado.getId());
+            logger.debug("Se recuperaron {} citas totales para la exportacion de Excel del usuario con DNI: {}.", citasDelPaciente.size(), pacienteLogueado.getDni());
+
+            // Filtra y prepara las listas para la exportación.
+            List<Cita> citasPendientes = citasDelPaciente.stream()
+                .filter(cita -> "Pendiente".equals(cita.getEstado()))
+                .collect(Collectors.toList());
+
+            List<Cita> historialCitas = citasDelPaciente.stream()
+                .filter(cita -> !"Pendiente".equals(cita.getEstado()))
+                .collect(Collectors.toList());
+
+            // Combina ambas listas para la exportación total si es necesario, o exporta por separado.
+            // Para este caso, combinamos para un solo archivo de historial completo.
+            List<Cita> todasLasCitasParaExportar = new ArrayList<>(citasPendientes);
+            todasLasCitasParaExportar.addAll(historialCitas);
+            todasLasCitasParaExportar.sort(Comparator
+                .comparing(Cita::getFecha)
+                .thenComparing(Cita::getHora));
 
             // Crea un nuevo libro de Excel y una hoja.
             try (Workbook workbook = new XSSFWorkbook();
@@ -144,7 +209,7 @@ public class HistorialControlador {
 
                 // Llena el resto de las filas con los datos de las citas.
                 int rowNum = 1;
-                for (Cita cita : citasDelPaciente) {
+                for (Cita cita : todasLasCitasParaExportar) {
                     Row row = sheet.createRow(rowNum++);
                     row.createCell(0).setCellValue(cita.getId());
                     row.createCell(1).setCellValue(cita.getFecha().toString());
