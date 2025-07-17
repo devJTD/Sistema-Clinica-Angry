@@ -55,3 +55,89 @@
 2025-07-17 00:10:46.363 INFO  - Paciente encontrado por correo: chipa.robladillo@gmail.com (ID: 1).
 2025-07-17 00:10:46.365 INFO  - Paciente encontrado para el correo: chipa.robladillo@gmail.com
 2025-07-17 00:10:46.366 INFO  - Usuario con DNI: 71632364 (chipa.robladillo@gmail.com) ha accedido a la pagina de inicio.
+2025-07-17 00:12:20.738 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 9428 (C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador 2\Sistema-Clinica-Angry\target\classes started by Jeanp in C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador 2\Sistema-Clinica-Angry)
+2025-07-17 00:12:20.742 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-07-17 00:12:31.301 INFO  - Started SistemaApplication in 11.509 seconds (process running for 13.301)
+2025-07-17 00:12:31.324 INFO  - Iniciando carga de datos de especialidades, medicos, pacientes y horarios...
+2025-07-17 00:12:31.325 INFO  - Procesando 15 especialidades...
+2025-07-17 00:12:31.606 INFO  - Especialidades procesadas.
+2025-07-17 00:12:31.607 INFO  - Procesando 45 medicos...
+2025-07-17 00:12:31.800 INFO  - Medicos procesados. Nuevos medicos creados: 0
+2025-07-17 00:12:31.800 INFO  - Iniciando carga de datos de pacientes...
+2025-07-17 00:12:31.827 INFO  - Paciente con DNI '71632364' o correo 'chipa.robladillo@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 00:12:31.838 INFO  - Paciente con DNI '71631245' o correo 'ariana.davila@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 00:12:31.847 INFO  - Paciente con DNI '71645689' o correo 'jeremy.rojas@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 00:12:31.848 INFO  - Pacientes procesados. Nuevos pacientes creados: 0
+2025-07-17 00:12:31.849 INFO  - Procesando horarios del 2025-07-15 al 2026-12-31 para cada medico...
+2025-07-17 00:12:32.354 INFO  - Se encontraron 72225 horarios existentes (mayor o igual a 100). Asumiendo que los horarios ya estan cargados y omitiendo la creacion detallada.
+2025-07-17 00:12:32.355 INFO  - Carga de datos iniciales completada.
+2025-07-17 00:12:42.716 INFO  - El usuario ha accedido a la pagina de login.
+2025-07-17 00:13:03.605 INFO  - El usuario ha accedido a la pagina de login.
+2025-07-17 00:13:13.655 INFO  - El usuario ha accedido a la pagina de registro.
+2025-07-17 00:13:27.461 INFO  - El usuario ha accedido a la pagina de registro.
+2025-07-17 00:13:29.639 INFO  - El usuario ha accedido a la pagina de login.
+2025-07-17 00:13:35.068 INFO  - Intentando cargar usuario por correo electronico: chipa.robladillo@gmail.com
+2025-07-17 00:13:35.160 INFO  - Usuario 'chipa.robladillo@gmail.com' (ID: 1) cargado exitosamente para autenticacion.
+2025-07-17 00:13:35.293 INFO  - Paciente encontrado por correo: chipa.robladillo@gmail.com (ID: 1).
+2025-07-17 00:13:35.293 INFO  - Paciente encontrado para el correo: chipa.robladillo@gmail.com
+2025-07-17 00:13:35.296 INFO  - Usuario con DNI: 71632364 (chipa.robladillo@gmail.com) ha accedido a la pagina de inicio.
+2025-07-17 00:13:52.061 INFO  - Paciente encontrado por correo: chipa.robladillo@gmail.com (ID: 1).
+2025-07-17 00:13:52.061 INFO  - Paciente encontrado para el correo: chipa.robladillo@gmail.com
+2025-07-17 00:13:52.061 INFO  - Usuario con DNI: 71632364 (chipa.robladillo@gmail.com) ha accedido a la pagina de inicio.
+2025-07-17 00:13:53.848 INFO  - Paciente encontrado por correo: chipa.robladillo@gmail.com (ID: 1).
+2025-07-17 00:13:53.850 INFO  - Usuario con DNI: 71632364 ha accedido a la pagina de reserva de citas.
+2025-07-17 00:13:53.933 INFO  - Se solicito la obtencion de todas las especialidades.
+2025-07-17 00:13:53.949 INFO  - Se recuperaron 15 especialidades de la base de datos.
+2025-07-17 00:14:03.857 INFO  - Paciente encontrado por correo: chipa.robladillo@gmail.com (ID: 1).
+2025-07-17 00:14:03.858 INFO  - Usuario con DNI: 71632364 ha accedido a la pagina de reserva de citas.
+2025-07-17 00:14:03.913 INFO  - Se solicito la obtencion de todas las especialidades.
+2025-07-17 00:14:03.923 INFO  - Se recuperaron 15 especialidades de la base de datos.
+2025-07-17 00:14:04.841 INFO  - Accediendo a la pagina de historial de citas.
+2025-07-17 00:14:04.846 INFO  - Paciente encontrado por correo: chipa.robladillo@gmail.com (ID: 1).
+2025-07-17 00:14:04.847 INFO  - Usuario con DNI: 71632364 (chipa.robladillo@gmail.com) ha accedido a la pagina de historial de citas.
+2025-07-17 00:14:04.847 INFO  - Se solicitan citas pendientes para el paciente con ID: 1.
+2025-07-17 00:14:04.939 INFO  - Se encontraron 2 citas pendientes para el paciente 'Jeanpierre Chipa' (ID: 1).
+2025-07-17 00:14:04.940 INFO  - Se solicita el historial de citas para el paciente con ID: 1.
+2025-07-17 00:14:04.949 INFO  - Se encontraron 0 citas en el historial para el paciente 'Jeanpierre Chipa' (ID: 1).
+2025-07-17 00:14:04.950 INFO  - Citas pendientes: 2 y historial de citas: 0 cargados para el usuario con DNI: 71632364.
+2025-07-17 00:14:15.991 INFO  - El usuario ha accedido a la pagina de solicitud de ambulancia.
+2025-07-17 00:14:15.999 INFO  - Paciente encontrado por correo: chipa.robladillo@gmail.com (ID: 1).
+2025-07-17 00:14:16.001 INFO  - Usuario con DNI: 71632364 (chipa.robladillo@gmail.com) ha accedido a la pagina de solicitud de ambulancia.
+2025-07-17 00:14:16.004 INFO  - Solicitando direcciones para el paciente con ID: 1
+2025-07-17 00:14:16.014 INFO  - Se encontraron 1 direcciones para el paciente con ID: 1.
+2025-07-17 00:14:16.014 INFO  - Se cargaron 1 direcciones para el usuario con DNI: 71632364.
+2025-07-17 00:14:39.196 INFO  - Paciente encontrado por correo: chipa.robladillo@gmail.com (ID: 1).
+2025-07-17 00:14:39.197 INFO  - Usuario con DNI: 71632364 (chipa.robladillo@gmail.com) intentando solicitar ambulancia. Datos recibidos: [ID Direccion Seleccionada: 1]
+2025-07-17 00:14:39.197 INFO  - Buscando direccion con ID: 1 para el paciente con ID: 1.
+2025-07-17 00:14:39.202 INFO  - Direccion ID 1 encontrada para el paciente ID 1.
+2025-07-17 00:14:39.202 INFO  - Solicitud de ambulancia procesada exitosamente para el usuario con DNI: 71632364 con direccion: Av. San Juan 123, Urb. Los Olivos (ID: 1).
+2025-07-17 00:14:41.382 INFO  - Paciente encontrado por correo: chipa.robladillo@gmail.com (ID: 1).
+2025-07-17 00:14:41.384 INFO  - Paciente encontrado para el correo: chipa.robladillo@gmail.com
+2025-07-17 00:14:41.385 INFO  - Usuario con DNI: 71632364 (chipa.robladillo@gmail.com) ha accedido a la pagina de inicio.
+2025-07-17 00:14:53.216 INFO  - Accediendo a la pagina de historial de citas.
+2025-07-17 00:14:53.227 INFO  - Paciente encontrado por correo: chipa.robladillo@gmail.com (ID: 1).
+2025-07-17 00:14:53.227 INFO  - Usuario con DNI: 71632364 (chipa.robladillo@gmail.com) ha accedido a la pagina de historial de citas.
+2025-07-17 00:14:53.227 INFO  - Se solicitan citas pendientes para el paciente con ID: 1.
+2025-07-17 00:14:53.258 INFO  - Se encontraron 2 citas pendientes para el paciente 'Jeanpierre Chipa' (ID: 1).
+2025-07-17 00:14:53.258 INFO  - Se solicita el historial de citas para el paciente con ID: 1.
+2025-07-17 00:14:53.269 INFO  - Se encontraron 0 citas en el historial para el paciente 'Jeanpierre Chipa' (ID: 1).
+2025-07-17 00:14:53.269 INFO  - Citas pendientes: 2 y historial de citas: 0 cargados para el usuario con DNI: 71632364.
+2025-07-17 00:14:55.041 INFO  - Paciente encontrado por correo: chipa.robladillo@gmail.com (ID: 1).
+2025-07-17 00:14:55.044 INFO  - Paciente encontrado para el correo: chipa.robladillo@gmail.com
+2025-07-17 00:14:55.045 INFO  - Usuario con DNI: 71632364 (chipa.robladillo@gmail.com) ha accedido a la pagina de inicio.
+2025-07-17 00:14:55.719 INFO  - Paciente encontrado por correo: chipa.robladillo@gmail.com (ID: 1).
+2025-07-17 00:14:55.720 INFO  - Usuario con DNI: 71632364 ha accedido a la pagina de reserva de citas.
+2025-07-17 00:14:55.810 INFO  - Se solicito la obtencion de todas las especialidades.
+2025-07-17 00:14:55.823 INFO  - Se recuperaron 15 especialidades de la base de datos.
+2025-07-17 00:14:56.457 INFO  - Paciente encontrado por correo: chipa.robladillo@gmail.com (ID: 1).
+2025-07-17 00:14:56.462 INFO  - Paciente encontrado para el correo: chipa.robladillo@gmail.com
+2025-07-17 00:14:56.465 INFO  - Usuario con DNI: 71632364 (chipa.robladillo@gmail.com) ha accedido a la pagina de inicio.
+2025-07-17 00:14:57.187 INFO  - El usuario ha accedido a la pagina de solicitud de ambulancia.
+2025-07-17 00:14:57.198 INFO  - Paciente encontrado por correo: chipa.robladillo@gmail.com (ID: 1).
+2025-07-17 00:14:57.199 INFO  - Usuario con DNI: 71632364 (chipa.robladillo@gmail.com) ha accedido a la pagina de solicitud de ambulancia.
+2025-07-17 00:14:57.200 INFO  - Solicitando direcciones para el paciente con ID: 1
+2025-07-17 00:14:57.206 INFO  - Se encontraron 1 direcciones para el paciente con ID: 1.
+2025-07-17 00:14:57.206 INFO  - Se cargaron 1 direcciones para el usuario con DNI: 71632364.
+2025-07-17 00:14:58.498 INFO  - Paciente encontrado por correo: chipa.robladillo@gmail.com (ID: 1).
+2025-07-17 00:14:58.500 INFO  - Paciente encontrado para el correo: chipa.robladillo@gmail.com
+2025-07-17 00:14:58.501 INFO  - Usuario con DNI: 71632364 (chipa.robladillo@gmail.com) ha accedido a la pagina de inicio.
