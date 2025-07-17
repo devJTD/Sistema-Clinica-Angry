@@ -25,35 +25,72 @@ public class AuthControlador {
 
     private final Logger logger = LoggerFactory.getLogger(AuthControlador.class); 
 
-    // Constructor que inyecta el servicio de autenticación.
+    // Constructor que inyecta el servicio de autenticacion.
     public AuthControlador(AuthServicio authServicio) {
         this.authServicio = authServicio;
     }
 
-    // Maneja las solicitudes GET a /login, mostrando la página de inicio de sesión.
+    // Maneja las solicitudes GET a /login, mostrando la pagina de inicio de sesion.
     @GetMapping("/login")
     public String mostrarFormularioLogin() {
-        logger.info("El usuario ha accedido a la página de login.");
+        logger.info("El usuario ha accedido a la pagina de login.");
         return "login"; 
     }
 
-    // Maneja las solicitudes POST a /logout, procesando el cierre de sesión del usuario.
+    // Metodo para procesar el login con validacion manual
+    @PostMapping("/login")
+    public String procesarLogin(
+            @RequestParam("correo") String correo,
+            @RequestParam("contraseña") String contraseña,
+            Model model
+    ) {
+        // Log de los datos recibidos (antes de cualquier validacion)
+        logger.info("Intento de login. Datos recibidos: [Correo: '{}', Contrasena_longitud_ingresada: '{}']",
+                    correo, (contraseña != null ? contraseña.length() : "N/A - Contrasena nula"));
+
+        // Validacion manual de Correo
+        if (correo == null || correo.isBlank()) {
+            logger.warn("Fallo de login: Correo electronico vacio. Valor ingresado: '{}'", correo);
+            model.addAttribute("error", "El correo electronico no puede estar vacio.");
+            return "login";
+        }
+        
+        // Validacion de formato de correo (una expresion regular simple)
+        if (!correo.matches("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,6}$")) {
+            logger.warn("Fallo de login: Formato de correo electronico invalido. Valor ingresado: '{}'", correo);
+            model.addAttribute("error", "Por favor, ingresa un correo electronico valido.");
+            return "login";
+        }
+
+        // Validacion manual de Contrasena
+        if (contraseña == null || contraseña.isBlank()) {
+            logger.warn("Fallo de login: Contrasena vacia. Correo ingresado: '{}'", correo);
+            model.addAttribute("error", "La contrasena no puede estar vacia.");
+            return "login";
+        }
+
+        logger.warn("Fallo de login: Validaciones de formato y nulidad pasadas, pero autenticacion no implementada aun. Correo: '{}'", correo);
+        model.addAttribute("error", "Usuario o contrasena incorrectos.");
+        return "login";
+    }
+
+    // Maneja las solicitudes POST a /logout, procesando el cierre de sesion del usuario.
     @PostMapping("/logout")
     public String cerrarSesion() {
-        logger.info("El usuario ha cerrado sesión.");
+        logger.info("El usuario ha cerrado sesion."); 
         return "redirect:/login?logout"; 
     }
 
     // Maneja las solicitudes GET a /registro, mostrando el formulario de registro de nuevos pacientes.
     @GetMapping("/registro")
     public String mostrarFormularioRegistro(Model model) {
-        logger.info("El usuario ha accedido a la página de registro."); 
+        logger.info("El usuario ha accedido a la pagina de registro."); 
         model.addAttribute("paciente", new Paciente());
         return "registro"; 
     }
 
-    // Maneja las solicitudes POST a /registro, procesando el envío del formulario de registro.
-    // Valida los datos del paciente y su dirección, y guarda al nuevo paciente.
+    // Maneja las solicitudes POST a /registro, procesando el envio del formulario de registro.
+    // Valida los datos del paciente y su direccion, y guarda al nuevo paciente.
     @PostMapping("/registro")
     public String procesarRegistro(
             @ModelAttribute @Valid Paciente paciente, 
@@ -62,31 +99,30 @@ public class AuthControlador {
             @RequestParam("contraseña") String rawContraseña,
             Model model
     ) {
-        // Detalles de los datos recibidos (antes de cualquier validación) ---
-        logger.info("Intento de registro de nuevo usuario. Datos recibidos: [Nombre: '{}', Apellido: '{}', DNI: '{}', Teléfono: '{}', Correo: '{}', Contraseña_longitud_ingresada: '{}', Direccion: '{}']",
+        // Detalles de los datos recibidos (antes de cualquier validacion)
+        logger.info("Intento de registro de nuevo usuario. Datos recibidos: [Nombre: '{}', Apellido: '{}', DNI: '{}', Telefono: '{}', Correo: '{}', Contrasena_longitud_ingresada: '{}', Direccion: '{}']",
                 paciente.getNombre(), paciente.getApellido(), paciente.getDni(), paciente.getTelefono(), paciente.getCorreo(),
-                (rawContraseña != null ? rawContraseña.length() : "N/A - Contraseña nula"), direccionCompleta);
+                (rawContraseña != null ? rawContraseña.length() : "N/A - Contrasena nula"), direccionCompleta);
 
-        // VALIDACIÓN DE CONTRASEÑA
+        // VALIDACION DE CONTRASENA
         if (rawContraseña == null || rawContraseña.isBlank()) {
-            bindingResult.rejectValue("contraseña", "contrasena.vacia", "La contraseña no puede estar vacía.");
-            logger.error("Error de validación de contraseña: Contraseña vacía. Valor ingresado: '{}'", rawContraseña);
+            bindingResult.rejectValue("contraseña", "contrasena.vacia", "La contrasena no puede estar vacia.");
+            logger.error("Error de validacion de contrasena: Contrasena vacia. Valor ingresado: '{}'", rawContraseña);
         } else if (rawContraseña.length() < 8 || rawContraseña.length() > 30) {
-            bindingResult.rejectValue("contraseña", "contrasena.longitud", "La contraseña debe tener entre 8 y 30 caracteres.");
-            logger.error("Error de validación de contraseña: Longitud inválida. Valor ingresado: '{}', Longitud: {}", rawContraseña, rawContraseña.length());
+            bindingResult.rejectValue("contraseña", "contrasena.longitud", "La contrasena debe tener entre 8 y 30 caracteres.");
+            logger.error("Error de validacion de contrasena: Longitud invalida. Valor ingresado: '{}', Longitud: {}", rawContraseña, rawContraseña.length());
         } else {
-            // Si la contraseña cumple la validación, la establecemos en el objeto paciente.
+            // Si la contrasena cumple la validacion, la establecemos en el objeto paciente.
             paciente.setContraseña(rawContraseña); 
         }
 
-        // --- VALIDACIÓN MANUAL DE CORREO ELECTRÓNICO (para .com o similar) ---
-        // Aunque @Email y @Pattern ya validan el formato, esta es una validación extra solicitada para .com
+        // VALIDACION MANUAL DE CORREO ELECTRONICO (para .com o similar)
         if (paciente.getCorreo() != null && !paciente.getCorreo().matches(".*\\.(com|org|net|es|io|co|info|biz|gob|edu)$")) {
-            bindingResult.rejectValue("correo", "correo.dominioInvalido", "El correo electrónico debe terminar con un dominio válido como .com, .org, .net, etc.");
-            logger.error("Error de validación de correo: Dominio inválido. Valor ingresado: '{}'", paciente.getCorreo());
+            bindingResult.rejectValue("correo", "correo.dominioInvalido", "El correo electronico debe terminar con un dominio valido como .com, .org, .net, etc.");
+            logger.error("Error de validacion de correo: Dominio invalido. Valor ingresado: '{}'", paciente.getCorreo());
         }
 
-        // --- VALIDACIÓN DE DIRECCIÓN (usando las anotaciones de Direccion.java) ---
+        // VALIDACION DE DIRECCION (usando las anotaciones de Direccion.java)
         Direccion tempDireccion = new Direccion();
         tempDireccion.setDireccionCompleta(direccionCompleta);
         
@@ -96,14 +132,14 @@ public class AuthControlador {
         if (!violations.isEmpty()) {
             for (ConstraintViolation<Direccion> violation : violations) {
                 bindingResult.rejectValue("direcciones", "direccionCompleta." + violation.getPropertyPath().toString(), violation.getMessage());
-                logger.error("Error de validación en la dirección. Campo: '{}', Valor ingresado: '{}', Mensaje: '{}'", 
+                logger.error("Error de validacion en la direccion. Campo: '{}', Valor ingresado: '{}', Mensaje: '{}'", 
                              violation.getPropertyPath().toString(), direccionCompleta, violation.getMessage());
             }
         }
 
-        // MANEJO DE ERRORES DE VALIDACIÓN (incluyendo la validación manual de contraseña y correo)
+        // MANEJO DE ERRORES DE VALIDACION (incluyendo la validacion manual de contrasena y correo)
         if (bindingResult.hasErrors()) {
-            logger.error("Registro fallido: Se encontraron errores de validación en el formulario.");
+            logger.error("Registro fallido: Se encontraron errores de validacion en el formulario.");
             for (FieldError error : bindingResult.getFieldErrors()) {
                 logger.error("Campo: '{}', Valor ingresado: '{}', Mensaje de error: '{}'",
                              error.getField(), error.getRejectedValue(), error.getDefaultMessage());
@@ -115,10 +151,10 @@ public class AuthControlador {
         }
 
         try {
-            // VERIFICACIÓN DE DUPLICADOS dni y correo
+            // VERIFICACION DE DUPLICADOS dni y correo
             if (authServicio.existePacientePorEmailODni(paciente.getCorreo(), paciente.getDni())) {
                 String errorMessage = "Ya existe un paciente con el correo: " + paciente.getCorreo() + " o DNI: " + paciente.getDni() + ".";
-                logger.error("Error de lógica de negocio: {}", errorMessage);
+                logger.error("Error de logica de negocio: {}", errorMessage);
                 model.addAttribute("error", errorMessage); 
                 model.addAttribute("paciente", paciente);
                 model.addAttribute("direccionCompleta", direccionCompleta);
@@ -136,16 +172,16 @@ public class AuthControlador {
             return "redirect:/login?registroExitoso";
 
         } catch (IllegalArgumentException e) {
-            // Errores de lógica de negocio o validaciones lanzadas desde el servicio (si las hubiera)
-            logger.error("Excepción de argumento inválido o lógica de negocio durante el registro del usuario con correo {}: {}. Detalles: {}", paciente.getCorreo(), e.getMessage(), e.toString());
+            // Errores de logica de negocio o validaciones lanzadas desde el servicio (si las hubiera)
+            logger.error("Excepcion de argumento invalido o logica de negocio durante el registro del usuario con correo {}: {}. Detalles: {}", paciente.getCorreo(), e.getMessage(), e.toString());
             model.addAttribute("error", e.getMessage());
             model.addAttribute("paciente", paciente);
             model.addAttribute("direccionCompleta", direccionCompleta);
             return "registro";
         } catch (Exception e) {
-            // Cualquier otra excepción inesperada
+            // Cualquier otra excepcion inesperada
             logger.error("Error inesperado al intentar registrar al usuario con correo {}: {}. Stack trace completo:", paciente.getCorreo(), e.getMessage(), e);
-            model.addAttribute("error", "Ocurrió un error inesperado al procesar su registro. Inténtelo de nuevo más tarde.");
+            model.addAttribute("error", "Ocurrio un error inesperado al procesar su registro. Intentelo de nuevo mas tarde.");
             model.addAttribute("paciente", paciente);
             model.addAttribute("direccionCompleta", direccionCompleta);
             return "registro";
