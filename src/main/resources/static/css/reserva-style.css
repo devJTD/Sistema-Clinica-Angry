@@ -1,8 +1,8 @@
 /* =================== VARIABLES DE COLOR =================== */ 
 :root {
-    --azul-primario: #3498db;       
+    --azul-primario: #3498db;          
     --azul-secundario: #2980b9;
-    --verde-suave: #2ecc71;          
+    --verde-suave: #2ecc71;            
     --celeste-claro: #ecf0f1;
     --texto-oscuro: #34495e;
     --texto-claro: #7f8c8d;
@@ -229,31 +229,10 @@ button:hover {
     color: var(--verde-suave);
 }
 
-/* Responsive */
-@media (max-width: 640px) {
-    .reserva-container {
-        margin: 20px 15px 40px 15px;
-        padding: 25px 20px;
-    }
-
-    .reserva-container h2 {
-        font-size: 2em;
-    }
-
-    .input-group input[type="date"],
-    .input-group select,
-    .input-group textarea {
-        font-size: 0.95em;
-    }
-
-    .btn-primary {
-        font-size: 1.1em;
-        padding: 13px 0;
-    }
-}
-
+/* Modal Styles */
 .modal {
-    display: none;
+    /* Corrected: display set to none by default */
+    display: none; 
     position: fixed;
     z-index: 1000;
     left: 0;
@@ -262,18 +241,162 @@ button:hover {
     height: 100%;
     overflow: auto;
     background-color: rgba(0,0,0,0.5);
+    /* These styles below are for centering when the modal IS displayed by JS */
+    justify-content: center; 
+    align-items: center; 
 }
 
 .modal-contenido {
     background-color: #fff;
-    margin: 15% auto;
-    padding: 20px;
+    margin: auto; /* Changed margin to auto for centering with flexbox */
+    padding: 30px; /* Increased padding for better appearance */
     border-radius: 8px;
-    width: 80%;
+    width: 90%; /* Increased width for better mobile fit */
     max-width: 400px;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Added subtle shadow */
+}
+
+.modal-contenido h3 {
+    margin-top: 0;
+    color: var(--texto-oscuro);
+    font-size: 1.8em; /* Slightly larger heading */
+}
+
+.modal-contenido p {
+    color: var(--texto-claro);
+    margin-bottom: 25px;
+    font-size: 1.1em; /* Slightly larger text */
 }
 
 .modal-acciones button {
-    margin: 10px;
+    margin: 0 10px; /* Adjusted margin for buttons */
+    padding: 12px 25px; /* Increased padding for better touch targets */
+    font-size: 1em;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.modal-acciones button:first-child {
+    background-color: var(--verde-suave);
+    color: var(--blanco);
+}
+
+.modal-acciones button:first-child:hover {
+    background-color: var(--azul-primario);
+    transform: translateY(-2px);
+}
+
+.modal-acciones button:last-child {
+    background-color: var(--celeste-claro);
+    color: var(--texto-oscuro);
+    border: 1px solid var(--texto-claro); /* Added a subtle border */
+}
+
+.modal-acciones button:last-child:hover {
+    background-color: #dbe4e6; /* Lighter shade on hover */
+    transform: translateY(-2px);
+}
+
+
+/* =================== RESPONSIVE =================== */
+@media (max-width: 768px) {
+    .contenido-encabezado {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .navegacion-principal ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .navegacion-principal ul li {
+        margin-left: 0;
+    }
+
+    .informacion-usuario {
+        margin-top: 15px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Adjustments for the reservation container on smaller screens */
+    .reserva-container {
+        margin: 20px 15px 40px 15px; /* More padding on smaller screens */
+        padding: 25px 20px;
+    }
+
+    .reserva-container h2 {
+        font-size: 2em; /* Smaller heading */
+    }
+
+    .input-group label {
+        font-size: 1em; /* Smaller label font size */
+    }
+
+    .input-group input[type="date"],
+    .input-group select,
+    .input-group textarea {
+        font-size: 0.95em; /* Smaller input font size */
+        padding: 12px; /* Slightly more padding for touch targets */
+    }
+
+    .btn-primary {
+        font-size: 1.1em; /* Smaller button font size */
+        padding: 13px 0;
+    }
+
+    /* Modal adjustments for mobile */
+    .modal-contenido {
+        width: 95%; /* Wider modal on very small screens */
+        padding: 20px;
+    }
+
+    .modal-acciones button {
+        width: calc(50% - 20px); /* Make buttons take up half width, with gap */
+        display: inline-block; /* Allow them to sit side-by-side */
+        box-sizing: border-box; /* Include padding and border in the width */
+        font-size: 0.9em; /* Smaller font for buttons */
+        padding: 10px 15px;
+    }
+
+    .modal-acciones button:first-child {
+        margin-right: 10px; /* Space between buttons */
+    }
+
+    .modal-acciones button:last-child {
+        margin-left: 10px; /* Space between buttons */
+    }
+}
+
+@media (max-width: 480px) {
+    .seccion-banner h2 { /* This rule seems to apply to the banner, not the reserva page */
+        font-size: 2em;
+    }
+    .seccion-banner p { /* This rule seems to apply to the banner, not the reserva page */
+        font-size: 1em;
+    }
+
+    /* Further refine input sizes for very small screens */
+    .input-group input[type="date"],
+    .input-group select,
+    .input-group textarea {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+
+    .btn-primary {
+        font-size: 1em;
+        padding: 12px 0;
+    }
+    
+    .modal-acciones button {
+        display: block; /* Stack buttons vertically on very small screens */
+        width: 100%;
+        margin: 10px 0; /* Add vertical margin */
+    }
 }
