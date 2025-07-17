@@ -29,6 +29,7 @@ public class AuthServicio {
     }
 
     // Verifica la existencia de un paciente por correo electrónico o DNI.
+    // Se mantienen las validaciones de nulidad/blank aquí, ya que este método podría ser llamado directamente.
     public boolean existePacientePorEmailODni(String email, String dni) {
         logger.debug("Verificando existencia de paciente por correo: {} o DNI: {}", email, dni);
         // Lanza una excepción si el correo es nulo o vacío.
@@ -58,37 +59,22 @@ public class AuthServicio {
     }
 
     // Guarda un nuevo paciente en la base de datos.
+    // Las validaciones de campos individuales del Paciente (nombre, apellido, correo, DNI, contraseña)
+    // ahora son manejadas principalmente por las anotaciones @NotBlank, @Size, etc., en la clase Paciente
+    // y son capturadas en el controlador. Por eso, las validaciones redundantes se eliminaron aquí,
+    // excepto la verificación de que el objeto Paciente no sea nulo.
     @SuppressWarnings("unused")
     @Transactional
     public Paciente guardarPaciente(Paciente paciente, Direccion direccion) {
         logger.info("Intentando guardar nuevo paciente con DNI: {} y correo: {}", paciente.getDni(), paciente.getCorreo());
-        // Lanza excepciones si los campos obligatorios del paciente son nulos o vacíos.
+        
+        // Se mantiene la validación si el objeto paciente completo es nulo.
         if (paciente == null) {
             logger.warn("Validacion fallida en guardarPaciente: El paciente a guardar es nulo.");
             throw new IllegalArgumentException("El paciente a guardar no puede ser nulo.");
         }
-        if (paciente.getNombre() == null || paciente.getNombre().isBlank()) {
-            logger.warn("Validacion fallida en guardarPaciente para DNI {}: El nombre del paciente no puede estar vacio.", paciente.getDni());
-            throw new IllegalArgumentException("El nombre del paciente no puede estar vacio.");
-        }
-        if (paciente.getApellido() == null || paciente.getApellido().isBlank()) {
-            logger.warn("Validacion fallida en guardarPaciente para DNI {}: El apellido del paciente no puede estar vacio.", paciente.getDni());
-            throw new IllegalArgumentException("El apellido del paciente no puede estar vacio.");
-        }
-        if (paciente.getCorreo() == null || paciente.getCorreo().isBlank()) {
-            logger.warn("Validacion fallida en guardarPaciente para DNI {}: El correo del paciente no puede estar vacio.", paciente.getDni());
-            throw new IllegalArgumentException("El correo del paciente no puede estar vacio.");
-        }
-        if (paciente.getDni() == null || paciente.getDni().isBlank()) {
-            logger.warn("Validacion fallida en guardarPaciente para correo {}: El DNI del paciente no puede estar vacio.", paciente.getCorreo());
-            throw new IllegalArgumentException("El DNI del paciente no puede estar vacio.");
-        }
-        if (paciente.getContraseña() == null || paciente.getContraseña().isBlank()) {
-            logger.warn("Validacion fallida en guardarPaciente para DNI {}: La contrasena del paciente no puede estar vacia.", paciente.getDni());
-            throw new IllegalArgumentException("La contrasena del paciente no puede estar vacia.");
-        }
         
-        // Lanza una excepción si la dirección es nula o vacía.
+        // Se mantiene la validación si la dirección es nula o vacía, ya que se pasa como un parámetro separado.
         if (direccion == null || direccion.getDireccionCompleta() == null || direccion.getDireccionCompleta().isBlank()) {
             logger.warn("Validacion fallida en guardarPaciente para DNI {}: La direccion no puede ser nula o vacia.", paciente.getDni());
             throw new IllegalArgumentException("La direccion no puede ser nula o vacia.");

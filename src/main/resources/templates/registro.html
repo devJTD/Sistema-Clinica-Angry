@@ -8,49 +8,120 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <form class="form" th:action="@{/registro}" method="post" th:object="${paciente}">
-            <h2>Crea tu Cuenta</h2>
+    <div class="main-wrapper">
+        <div class="container">
+            <form id="registroForm" class="form" th:action="@{/registro}" method="post" th:object="${paciente}" novalidate>
+                <h2>Crea tu Cuenta</h2>
 
-            <div class="message-container error-message" th:if="${param.error}">Ya existe un paciente con ese correo o DNI.</div>
-            <div class="message-container success-message" th:if="${param.success}">¡Cuenta creada exitosamente!</div>
+                <div class="message-container error-message" th:if="${error}">
+                    <span th:text="${error}"></span>
+                </div>
+                <div class="message-container success-message" th:if="${param.registroExitoso}">¡Cuenta creada exitosamente!</div>
 
-            <div class="input-group">
-                <i class="fas fa-user"></i>
-                <input type="text" th:field="*{nombre}" placeholder="Nombre"  />
-            </div>
-            <div class="input-group">
-                <i class="fas fa-user"></i>
-                <input type="text" th:field="*{apellido}" placeholder="Apellido"  />
-            </div>
-            <div class="input-group">
-                <i class="fas fa-id-card"></i>
-                <input type="text" th:field="*{dni}" placeholder="DNI"  />
-            </div>
-            <div class="input-group">
-                <i class="fas fa-phone"></i>
-                <input type="tel" th:field="*{telefono}" placeholder="Teléfono"  />
-            </div>
-            <div class="input-group">
-                <i class="fas fa-map-marker-alt"></i> <input type="text" id="direccion" name="direccion" placeholder="Dirección Completa" />
-            </div>
-            <div class="input-group">
-                <i class="fas fa-envelope"></i>
-                <input type="email" th:field="*{correo}" placeholder="Correo Electrónico"  />
-            </div>
-            <div class="input-group">
-                <i class="fas fa-lock"></i>
-                <input type="password" th:field="*{contraseña}" placeholder="Contraseña"  />
-            </div>
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" th:field="*{nombre}" placeholder="Nombre" required minlength="2" maxlength="50" pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$" data-error-message="El nombre debe tener entre 2 y 50 caracteres y solo letras/espacios." />
+                    </div>
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" th:field="*{apellido}" placeholder="Apellido" required minlength="2" maxlength="50" pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$" data-error-message="El apellido debe tener entre 2 y 50 caracteres y solo letras/espacios." />
+                    </div>
+                <div class="input-group">
+                    <i class="fas fa-id-card"></i>
+                    <input type="text" th:field="*{dni}" placeholder="DNI" required pattern="^[0-9]{8}$" data-error-message="El DNI debe contener exactamente 8 dígitos numéricos." />
+                    </div>
+                <div class="input-group">
+                    <i class="fas fa-phone"></i>
+                    <input type="tel" th:field="*{telefono}" placeholder="Teléfono (ej. 987654321)" required pattern="^[0-9]{9}$" data-error-message="El teléfono debe contener exactamente 9 dígitos numéricos." />
+                    </div>
+                <div class="input-group">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <input type="text" id="direccionCompleta" name="direccionCompleta" th:value="${direccionCompleta}" placeholder="Dirección Completa" required minlength="5" maxlength="200" pattern="^[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ\s.,#\-/]+$" data-error-message="La dirección debe tener entre 5 y 200 caracteres y solo caracteres básicos." />
+                    </div>
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" th:field="*{correo}" placeholder="Correo Electrónico" required maxlength="100" 
+                           pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.(com|org|net|es|io|co|info|biz|gob|edu)$" 
+                           data-error-message="El correo debe tener el formato usuario@dominio.com, .org, .net, .es, etc." />
+                    </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="contraseña" name="contraseña" placeholder="Contraseña" required minlength="8" maxlength="30" data-error-message="La contraseña debe tener entre 8 y 30 caracteres." />
+                    </div>
 
-            <div class="main-button-container">
-                <button type="submit" class="register-btn">Registrarme</button>
-            </div>
-            
-            <div class="login-link-message">
-                ¿Ya tienes una cuenta? <a th:href="@{/login}">Inicia sesión aquí</a>
-            </div>
-        </form>
+                <div class="main-button-container">
+                    <button type="submit" class="register-btn">Registrarme</button>
+                </div>
+                
+                <div class="login-link-message">
+                    ¿Ya tienes una cuenta? <a th:href="@{/login}">Inicia sesión aquí</a>
+                </div>
+            </form>
+        </div>
+
+        <div id="errorSummaryContainer" class="error-summary-container">
+            <h3>Errores de Formulario:</h3>
+            <ul id="errorList">
+                </ul>
+        </div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('registroForm');
+            const errorSummaryContainer = document.getElementById('errorSummaryContainer');
+            const errorList = document.getElementById('errorList');
+
+            // Desactiva la validación nativa del navegador para controlar los mensajes manualmente
+            form.setAttribute('novalidate', '');
+
+            form.addEventListener('submit', function(event) {
+                // Limpia los errores anteriores
+                errorList.innerHTML = '';
+                errorSummaryContainer.style.display = 'none';
+                let hasErrors = false;
+                const errors = [];
+
+                // Itera sobre todos los campos del formulario
+                Array.from(form.elements).forEach(input => {
+                    // Ignora botones, fieldsets y otros elementos que no son campos de entrada
+                    if (!input.willValidate || input.tagName === 'BUTTON') {
+                        return;
+                    }
+
+                    // Valida el campo usando el método checkValidity() de HTML5
+                    if (!input.checkValidity()) {
+                        hasErrors = true;
+                        let errorMessage = 'Campo inválido.';
+
+                        // Usa el data-error-message personalizado si existe
+                        if (input.dataset.errorMessage) {
+                            errorMessage = input.dataset.errorMessage;
+                        } else if (input.validationMessage) {
+                            // Si no hay data-error-message, usa el mensaje de validación nativo del navegador
+                            errorMessage = input.validationMessage;
+                        }
+                        
+                        // Añade el nombre del campo para mayor claridad (opcional)
+                        const fieldName = input.placeholder || input.name || input.id || 'Campo desconocido';
+                        errors.push(`${fieldName}: ${errorMessage}`);
+                    }
+                });
+
+                if (hasErrors) {
+                    event.preventDefault(); // Detiene el envío del formulario
+                    
+                    // Muestra los errores en el contenedor lateral
+                    errors.forEach(err => {
+                        const li = document.createElement('li');
+                        li.textContent = err;
+                        errorList.appendChild(li);
+                    });
+                    errorSummaryContainer.style.display = 'flex'; // Muestra el contenedor
+                }
+                // Si no hay errores de JavaScript, el formulario se enviará normalmente y Spring Validation lo manejará.
+            });
+        });
+    </script>
 </body>
 </html>

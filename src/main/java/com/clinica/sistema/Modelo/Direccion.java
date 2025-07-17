@@ -10,6 +10,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 
 @Entity
 @Table(name = "direcciones")
@@ -19,6 +21,8 @@ public class Direccion {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank(message = "La dirección no puede estar vacía.")
+    @Size(min = 5, max = 200, message = "La dirección debe tener entre 5 y 200 caracteres.")
     @Column(nullable = false, length = 500)
     private String direccionCompleta;
 

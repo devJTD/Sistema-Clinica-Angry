@@ -13,6 +13,11 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Size;
+
 @Entity
 @Table(name = "pacientes")
 public class Paciente {
@@ -21,21 +26,36 @@ public class Paciente {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank(message = "El nombre no puede estar vacío.")
+    @Size(min = 2, max = 50, message = "El nombre debe tener entre 2 y 50 caracteres.")
+    @Pattern(regexp = "^[a-zA-ZáéíóúÁÉÍÓÚñÑ\\s]+$", message = "El nombre solo puede contener letras y espacios.")
     @Column(nullable = false, length = 100)
     private String nombre;
 
+    @NotBlank(message = "El apellido no puede estar vacío.")
+    @Size(min = 2, max = 50, message = "El apellido debe tener entre 2 y 50 caracteres.")
+    @Pattern(regexp = "^[a-zA-ZáéíóúÁÉÍÓÚñÑ\\s]+$", message = "El apellido solo puede contener letras y espacios.")
     @Column(nullable = false, length = 100)
     private String apellido;
 
+    @NotBlank(message = "El DNI no puede estar vacío.")
+    @Pattern(regexp = "^[0-9]{8}$", message = "El DNI debe contener exactamente 8 dígitos numéricos.")
     @Column(nullable = false, unique = true, length = 8)
     private String dni;
 
-    @Column(length = 20)
+    @NotBlank(message = "El teléfono no puede estar vacío.")
+    @Pattern(regexp = "^[0-9]{9}$", message = "El teléfono debe contener exactamente 9 dígitos numéricos.")
+    @Column(nullable = true, length = 20)
     private String telefono;
 
+    @NotBlank(message = "El correo electrónico no puede estar vacío.")
+    @Email(message = "El formato del correo electrónico es inválido.")
+    @Pattern(regexp = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$", message = "El correo electrónico debe tener un formato válido (ej. usuario@dominio.com).")
+    @Size(max = 100, message = "El correo electrónico no puede exceder los 100 caracteres.")
     @Column(nullable = false, unique = true, length = 100)
     private String correo;
 
+ 
     @Column(nullable = false, length = 255)
     private String contraseña;
 
@@ -58,7 +78,7 @@ public class Paciente {
         this.direcciones = direcciones;
     }
 
-    // Getters y Setters
+    // Getters y Setters (sin cambios en su lógica)
 
     public Long getId() {
         return id;
@@ -133,7 +153,7 @@ public class Paciente {
                 ", dni='" + dni + '\'' +
                 ", telefono='" + telefono + '\'' +
                 ", correo='" + correo + '\'' +
-                ", contraseña='[PROTEGIDA]'" + // Evitar mostrar contraseñas
+                ", contraseña='[PROTEGIDA]'" + // No imprimir la contraseña real aquí
                 ", direcciones=" + (direcciones != null ? direcciones.size() : 0) +
                 '}';
     }
