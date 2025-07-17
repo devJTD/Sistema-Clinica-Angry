@@ -997,3 +997,67 @@ Caused by: java.net.ConnectException: Connection timed out: connect
 2025-07-17 01:01:37.490 INFO  - Usuario con DNI: 71632364 ha accedido a la pagina de reserva de citas.
 2025-07-17 01:01:37.533 INFO  - Se solicito la obtencion de todas las especialidades.
 2025-07-17 01:01:37.539 INFO  - Se recuperaron 15 especialidades de la base de datos.
+2025-07-17 01:08:11.228 INFO  - Starting SistemaApplicationTests using Java 21.0.7 with PID 20476 (started by Jeanp in C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador 2\Sistema-Clinica-Angry)
+2025-07-17 01:08:11.231 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-07-17 01:08:19.368 INFO  - Started SistemaApplicationTests in 8.595 seconds (process running for 10.568)
+2025-07-17 01:08:19.394 INFO  - Iniciando carga de datos de especialidades, medicos, pacientes y horarios...
+2025-07-17 01:08:19.394 INFO  - Procesando 15 especialidades...
+2025-07-17 01:08:19.690 INFO  - Especialidades procesadas.
+2025-07-17 01:08:19.690 INFO  - Procesando 45 medicos...
+2025-07-17 01:08:19.848 INFO  - Medicos procesados. Nuevos medicos creados: 0
+2025-07-17 01:08:19.849 INFO  - Iniciando carga de datos de pacientes...
+2025-07-17 01:08:19.879 INFO  - Paciente con DNI '71632364' o correo 'chipa.robladillo@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 01:08:19.886 INFO  - Paciente con DNI '71631245' o correo 'ariana.davila@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 01:08:19.892 INFO  - Paciente con DNI '71645689' o correo 'jeremy.rojas@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 01:08:19.893 INFO  - Pacientes procesados. Nuevos pacientes creados: 0
+2025-07-17 01:08:19.893 INFO  - Procesando horarios del 2025-07-15 al 2026-12-31 para cada medico...
+2025-07-17 01:08:20.359 INFO  - Se encontraron 72225 horarios existentes (mayor o igual a 100). Asumiendo que los horarios ya estan cargados y omitiendo la creacion detallada.
+2025-07-17 01:08:20.361 INFO  - Carga de datos iniciales completada.
+2025-07-17 01:09:21.456 INFO  - Starting SistemaApplicationTests using Java 21.0.7 with PID 21996 (started by Jeanp in C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador 2\Sistema-Clinica-Angry)
+2025-07-17 01:09:21.458 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-07-17 01:09:30.033 INFO  - Started SistemaApplicationTests in 9.031 seconds (process running for 11.09)
+2025-07-17 01:09:30.060 INFO  - Iniciando carga de datos de especialidades, medicos, pacientes y horarios...
+2025-07-17 01:09:30.060 INFO  - Procesando 15 especialidades...
+2025-07-17 01:09:30.483 INFO  - Especialidades procesadas.
+2025-07-17 01:09:30.483 INFO  - Procesando 45 medicos...
+2025-07-17 01:09:30.703 INFO  - Medicos procesados. Nuevos medicos creados: 0
+2025-07-17 01:09:30.704 INFO  - Iniciando carga de datos de pacientes...
+2025-07-17 01:09:30.733 INFO  - Paciente con DNI '71632364' o correo 'chipa.robladillo@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 01:09:30.748 INFO  - Paciente con DNI '71631245' o correo 'ariana.davila@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 01:09:30.748 INFO  - Paciente con DNI '71645689' o correo 'jeremy.rojas@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 01:09:30.748 INFO  - Pacientes procesados. Nuevos pacientes creados: 0
+2025-07-17 01:09:30.748 INFO  - Procesando horarios del 2025-07-15 al 2026-12-31 para cada medico...
+2025-07-17 01:09:31.364 INFO  - Se encontraron 72225 horarios existentes (mayor o igual a 100). Asumiendo que los horarios ya estan cargados y omitiendo la creacion detallada.
+2025-07-17 01:09:31.365 INFO  - Carga de datos iniciales completada.
+2025-07-17 01:40:52.046 INFO  - Starting SistemaApplicationTests using Java 21.0.7 with PID 11768 (started by Jeanp in C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador 2\Sistema-Clinica-Angry)
+2025-07-17 01:40:52.050 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-07-17 01:41:00.562 INFO  - Started SistemaApplicationTests in 9.014 seconds (process running for 11.15)
+2025-07-17 01:41:00.590 INFO  - Iniciando carga de datos de especialidades, medicos, pacientes y horarios...
+2025-07-17 01:41:00.590 INFO  - Procesando 15 especialidades...
+2025-07-17 01:41:00.901 INFO  - Especialidades procesadas.
+2025-07-17 01:41:00.902 INFO  - Procesando 45 medicos...
+2025-07-17 01:41:01.070 INFO  - Medicos procesados. Nuevos medicos creados: 0
+2025-07-17 01:41:01.070 INFO  - Iniciando carga de datos de pacientes...
+2025-07-17 01:41:01.106 INFO  - Paciente con DNI '71632364' o correo 'chipa.robladillo@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 01:41:01.112 INFO  - Paciente con DNI '71631245' o correo 'ariana.davila@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 01:41:01.120 INFO  - Paciente con DNI '71645689' o correo 'jeremy.rojas@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 01:41:01.120 INFO  - Pacientes procesados. Nuevos pacientes creados: 0
+2025-07-17 01:41:01.120 INFO  - Procesando horarios del 2025-07-15 al 2026-12-31 para cada medico...
+2025-07-17 01:41:01.587 INFO  - Se encontraron 72225 horarios existentes (mayor o igual a 100). Asumiendo que los horarios ya estan cargados y omitiendo la creacion detallada.
+2025-07-17 01:41:01.588 INFO  - Carga de datos iniciales completada.
+2025-07-17 01:46:23.271 INFO  - Starting SistemaApplicationTests using Java 21.0.7 with PID 20088 (started by Jeanp in C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador 2\Sistema-Clinica-Angry)
+2025-07-17 01:46:23.274 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-07-17 01:46:31.347 INFO  - Started SistemaApplicationTests in 8.541 seconds (process running for 10.845)
+2025-07-17 01:46:31.368 INFO  - Iniciando carga de datos de especialidades, medicos, pacientes y horarios...
+2025-07-17 01:46:31.369 INFO  - Procesando 15 especialidades...
+2025-07-17 01:46:31.662 INFO  - Especialidades procesadas.
+2025-07-17 01:46:31.662 INFO  - Procesando 45 medicos...
+2025-07-17 01:46:31.822 INFO  - Medicos procesados. Nuevos medicos creados: 0
+2025-07-17 01:46:31.822 INFO  - Iniciando carga de datos de pacientes...
+2025-07-17 01:46:31.836 INFO  - Paciente con DNI '71632364' o correo 'chipa.robladillo@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 01:46:31.855 INFO  - Paciente con DNI '71631245' o correo 'ariana.davila@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 01:46:31.861 INFO  - Paciente con DNI '71645689' o correo 'jeremy.rojas@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 01:46:31.861 INFO  - Pacientes procesados. Nuevos pacientes creados: 0
+2025-07-17 01:46:31.861 INFO  - Procesando horarios del 2025-07-15 al 2026-12-31 para cada medico...
+2025-07-17 01:46:32.265 INFO  - Se encontraron 72225 horarios existentes (mayor o igual a 100). Asumiendo que los horarios ya estan cargados y omitiendo la creacion detallada.
+2025-07-17 01:46:32.265 INFO  - Carga de datos iniciales completada.
