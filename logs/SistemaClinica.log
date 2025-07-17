@@ -26,3 +26,32 @@
 2025-07-17 00:07:51.024 INFO  - Paciente encontrado por correo: chipa.robladillo@gmail.com (ID: 1).
 2025-07-17 00:07:51.025 INFO  - Paciente encontrado para el correo: chipa.robladillo@gmail.com
 2025-07-17 00:07:51.027 INFO  - Usuario con DNI: 71632364 (chipa.robladillo@gmail.com) ha accedido a la pagina de inicio.
+2025-07-17 00:09:39.269 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 7776 (C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador 2\Sistema-Clinica-Angry\target\classes started by Jeanp in C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador 2\Sistema-Clinica-Angry)
+2025-07-17 00:09:39.272 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-07-17 00:09:49.277 INFO  - Started SistemaApplication in 10.888 seconds (process running for 12.439)
+2025-07-17 00:09:49.295 INFO  - Iniciando carga de datos de especialidades, medicos, pacientes y horarios...
+2025-07-17 00:09:49.296 INFO  - Procesando 15 especialidades...
+2025-07-17 00:09:49.592 INFO  - Especialidades procesadas.
+2025-07-17 00:09:49.593 INFO  - Procesando 45 medicos...
+2025-07-17 00:09:49.765 INFO  - Medicos procesados. Nuevos medicos creados: 0
+2025-07-17 00:09:49.765 INFO  - Iniciando carga de datos de pacientes...
+2025-07-17 00:09:49.792 INFO  - Paciente con DNI '71632364' o correo 'chipa.robladillo@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 00:09:49.801 INFO  - Paciente con DNI '71631245' o correo 'ariana.davila@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 00:09:49.810 INFO  - Paciente con DNI '71645689' o correo 'jeremy.rojas@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 00:09:49.810 INFO  - Pacientes procesados. Nuevos pacientes creados: 0
+2025-07-17 00:09:49.810 INFO  - Procesando horarios del 2025-07-15 al 2026-12-31 para cada medico...
+2025-07-17 00:09:50.272 INFO  - Se encontraron 72225 horarios existentes (mayor o igual a 100). Asumiendo que los horarios ya estan cargados y omitiendo la creacion detallada.
+2025-07-17 00:09:50.273 INFO  - Carga de datos iniciales completada.
+2025-07-17 00:09:54.933 INFO  - El usuario ha accedido a la pagina de login.
+2025-07-17 00:09:57.678 INFO  - El usuario ha accedido a la pagina de login.
+2025-07-17 00:10:13.428 INFO  - Intentando cargar usuario por correo electronico: chipa.robladillo@gmail
+2025-07-17 00:10:13.512 WARN  - Fallo en autenticacion: Usuario no encontrado con correo electronico: chipa.robladillo@gmail
+2025-07-17 00:10:13.647 INFO  - El usuario ha accedido a la pagina de login.
+2025-07-17 00:10:36.322 INFO  - Intentando cargar usuario por correo electronico: chipa.robladillo@gmail
+2025-07-17 00:10:36.332 WARN  - Fallo en autenticacion: Usuario no encontrado con correo electronico: chipa.robladillo@gmail
+2025-07-17 00:10:36.450 INFO  - El usuario ha accedido a la pagina de login.
+2025-07-17 00:10:46.209 INFO  - Intentando cargar usuario por correo electronico: chipa.robladillo@gmail.com
+2025-07-17 00:10:46.220 INFO  - Usuario 'chipa.robladillo@gmail.com' (ID: 1) cargado exitosamente para autenticacion.
+2025-07-17 00:10:46.363 INFO  - Paciente encontrado por correo: chipa.robladillo@gmail.com (ID: 1).
+2025-07-17 00:10:46.365 INFO  - Paciente encontrado para el correo: chipa.robladillo@gmail.com
+2025-07-17 00:10:46.366 INFO  - Usuario con DNI: 71632364 (chipa.robladillo@gmail.com) ha accedido a la pagina de inicio.
