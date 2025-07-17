@@ -42,16 +42,20 @@
 
         <div class="responsability-message">
             <h3>Mensaje Importante de Responsabilidad:</h3>
-            <p>Este servicio está diseñado para emergencias médicas reales. Por favor, utilícelo de manera responsable. El uso indebido puede afectar la disponibilidad de recursos para quienes realmente los necesitan. En situaciones de vida o muerte, siempre marque directamente al 911 (o su número de emergencia local) de inmediato.</p>
+            <p>Este servicio está diseñado para emergencias médicas reales. Por favor, utilícelo de manera responsable.
+                El uso indebido puede afectar la disponibilidad de recursos para quienes realmente los necesitan. En
+                situaciones de vida o muerte, siempre marque directamente al 911 (o su número de emergencia local) de
+                inmediato.</p>
         </div>
 
         <div class="direccion-section">
             <h3>Mis Direcciones Registradas:</h3>
-            <p th:if="${#lists.isEmpty(direccionesPaciente)}">No tienes direcciones registradas aún. Por favor, añade una.</p>
+            <p th:if="${#lists.isEmpty(direccionesPaciente)}">No tienes direcciones registradas aún. Por favor, añade
+                una.</p>
             <ul class="direcciones-list">
                 <li th:each="direccion : ${direccionesPaciente}">
-                    <input type="radio" name="selectedDireccion" th:id="'direccion-' + ${direccion.id}" th:value="${direccion.id}" 
-                           onclick="highlightSelected(this)" />
+                    <input type="radio" name="selectedDireccion" th:id="'direccion-' + ${direccion.id}"
+                        th:value="${direccion.id}" onclick="highlightSelected(this)" />
                     <label th:for="'direccion-' + ${direccion.id}" th:text="${direccion.direccionCompleta}"></label>
                 </li>
             </ul>
@@ -60,8 +64,9 @@
             </button>
         </div>
 
-        <p>Por favor, seleccione una dirección de las opciones anteriores o añada una nueva para el servicio de ambulancia.</p>
-        
+        <p>Por favor, seleccione una dirección de las opciones anteriores o añada una nueva para el servicio de
+            ambulancia.</p>
+
         <button type="button" class="btn-solicitar" onclick="mostrarConfirmacionAmbulancia()">
             Confirmar Solicitud de Ambulancia
         </button>
@@ -72,11 +77,13 @@
                 <form id="formAddDireccion" class="modal-form">
                     <div class="input-group">
                         <label for="nuevaDireccionCompleta">Dirección Completa:</label>
-                        <textarea id="nuevaDireccionCompleta" name="direccionCompleta" rows="3" placeholder="Ej. Av. Siempreviva 123, Urb. Los Jardines, Lima"></textarea>
+                        <textarea id="nuevaDireccionCompleta" name="direccionCompleta" rows="3"
+                            placeholder="Ej. Av. Siempreviva 123, Urb. Los Jardines, Lima"></textarea>
                     </div>
                     <div class="modal-acciones">
                         <button type="button" onclick="guardarNuevaDireccion()">Guardar Dirección</button>
-                        <button type="button" class="cancel-btn" onclick="cerrarModal('modalAddDireccion')">Cancelar</button>
+                        <button type="button" class="cancel-btn"
+                            onclick="cerrarModal('modalAddDireccion')">Cancelar</button>
                     </div>
                 </form>
             </div>
@@ -88,7 +95,8 @@
                 <p>¿Estás seguro de que deseas solicitar una ambulancia a la dirección seleccionada?</p>
                 <div class="modal-acciones">
                     <button type="button" onclick="procesarSolicitudAmbulancia()">Sí, Solicitar</button>
-                    <button type="button" class="cancel-btn" onclick="cerrarModal('modalConfirmacionAmbulancia')">Cancelar</button>
+                    <button type="button" class="cancel-btn"
+                        onclick="cerrarModal('modalConfirmacionAmbulancia')">Cancelar</button>
                 </div>
             </div>
         </div>
@@ -101,7 +109,8 @@
                 <p><strong id="direccionConfirmada"></strong></p>
                 <p>Manténgase tranquilo y siga las instrucciones del personal de emergencia.</p>
                 <div class="modal-acciones">
-                    <button type="button" onclick="cerrarModal('modalAmbulanciaEnCamino'); window.location.href='/'">Aceptar</button>
+                    <button type="button"
+                        onclick="cerrarModal('modalAmbulanciaEnCamino'); window.location.href = /*[[@{/}]]*/ '';">Aceptar</button>
                 </div>
             </div>
         </div>
@@ -114,7 +123,7 @@
     <script th:inline="javascript">
         /*<![CDATA[*/
         // Obtener la lista de direcciones del modelo de Spring
-        const direccionesDelPaciente = /*[[${direccionesPaciente}]]*/ [];
+        const direccionesDelPaciente = /*[[${direccionesPaciente}]]*/[];
         /*]]>*/
 
         function highlightSelected(radio) {
@@ -147,7 +156,7 @@
 
             try {
                 // Envía la nueva dirección al backend
-                const response = await fetch('/paciente/direcciones', {
+                const response = await fetch('/sistema-0.0.1-SNAPSHOT/paciente/direcciones', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -166,7 +175,7 @@
                     `;
                     ul.appendChild(li);
                     highlightSelected(li.querySelector('input[type="radio"]')); // Seleccionar y resaltar
-                    
+
                     alert("Dirección guardada exitosamente.");
                     cerrarModal('modalAddDireccion');
                     document.getElementById('nuevaDireccionCompleta').value = ''; // Limpiar el campo
@@ -205,10 +214,10 @@
 
             // Encuentra la dirección completa para mostrarla en el modal final
             const direccionCompletaTexto = selectedRadio.nextElementSibling.textContent;
-            
+
             try {
                 // Aquí enviarías la solicitud al backend con la dirección seleccionada
-                const response = await fetch('/solicitar-ambulancia', {
+                const response = await fetch('/sistema-0.0.1-SNAPSHOT/solicitar-ambulancia', { // ¡MODIFICADO!
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'

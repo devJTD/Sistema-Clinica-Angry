@@ -54,6 +54,23 @@ public class HistorialControlador {
         this.authServicio = authServicio;
     }
 
+    // Metodo auxiliar para establecer informacion del paciente en el MDC
+    private void setPacienteMDCContext(Paciente paciente) {
+        if (paciente != null) {
+            MDC.put(MDC_USER_FULL_NAME, paciente.getNombre() + " " + paciente.getApellido());
+            MDC.put(MDC_USER_ID, String.valueOf(paciente.getId()));
+            MDC.put(MDC_USER_DNI, paciente.getDni());
+        }
+    }
+
+    // Metodo auxiliar para limpiar informacion del paciente del MDC
+    private void clearPacienteMDCContext() {
+        MDC.remove(MDC_USER_FULL_NAME);
+        MDC.remove(MDC_USER_ID);
+        MDC.remove(MDC_USER_DNI);
+    }
+
+    // Este metodo solo obtiene el paciente, no gestiona el MDC.
     private Paciente getPacienteLogueado() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         if (authentication == null || !authentication.isAuthenticated() || authentication.getPrincipal() instanceof String) {
@@ -68,9 +85,7 @@ public class HistorialControlador {
         Optional<Paciente> pacienteOpt = authServicio.buscarPorCorreo(correoUsuario);
         if (pacienteOpt.isPresent()) {
             Paciente paciente = pacienteOpt.get();
-            MDC.put(MDC_USER_FULL_NAME, paciente.getNombre() + " " + paciente.getApellido());
-            MDC.put(MDC_USER_ID, String.valueOf(paciente.getId()));
-            MDC.put(MDC_USER_DNI, paciente.getDni());
+            // Ya no ponemos MDC aqui, lo hara el metodo del controlador que llama a esto
             logger.debug("Paciente logueado encontrado con ID: {} y correo: {}", paciente.getId(), correoUsuario);
         } else {
             logger.warn("No se encontro paciente en la base de datos para el correo: {}", correoUsuario);
@@ -80,13 +95,15 @@ public class HistorialControlador {
 
     @GetMapping("/historial")
     public String mostrarPaginaHistorialCitas(Model model) {
-        logger.info("Accediendo a la pagina de historial de citas.");
         Paciente usuario = getPacienteLogueado();
+
         if (usuario == null || usuario.getId() == null) {
-            logger.warn("Usuario no logueado intento acceder a la pagina de historial de citas. Redirigiendo a login.");
-            return "redirect:/login?error=nologin";
+            logger.warn("Usuario no logueado o sin ID de paciente intento acceder a la pagina de historial de citas. Redirigiendo a login.");
+            return "redirect:/login?error=Sesion expirada o no iniciada. Por favor, vuelve a iniciar sesion.";
         }
 
+        // Establecer MDC al inicio del metodo del controlador
+        setPacienteMDCContext(usuario);
         logger.info("El usuario {} (ID: {}, DNI: {}) ha accedido a la pagina de historial de citas.", 
                      MDC.get(MDC_USER_FULL_NAME), MDC.get(MDC_USER_ID), MDC.get(MDC_USER_DNI));
 
@@ -109,7 +126,7 @@ public class HistorialControlador {
                     cita.setEstado("Completada"); 
                     citasActualizadas.add(cita); 
                     logger.info("Cita ID {} (Fecha: {}, Hora: {}) del paciente {} (ID: {}, DNI: {}) marcada como 'Completada' porque ha pasado su hora.", 
-                                cita.getId(), cita.getFecha(), cita.getHora(), MDC.get(MDC_USER_FULL_NAME), MDC.get(MDC_USER_ID), MDC.get(MDC_USER_DNI));
+                                 cita.getId(), cita.getFecha(), cita.getHora(), MDC.get(MDC_USER_FULL_NAME), MDC.get(MDC_USER_ID), MDC.get(MDC_USER_DNI));
                 }
 
                 if ("Pendiente".equals(cita.getEstado())) {
@@ -122,7 +139,7 @@ public class HistorialControlador {
             if (!citasActualizadas.isEmpty()) {
                 citaServicio.guardarCitas(citasActualizadas);
                 logger.info("Se actualizaron {} citas a estado 'Completada' en la base de datos para el paciente {} (ID: {}, DNI: {}).", 
-                            citasActualizadas.size(), MDC.get(MDC_USER_FULL_NAME), MDC.get(MDC_USER_ID), MDC.get(MDC_USER_DNI));
+                             citasActualizadas.size(), MDC.get(MDC_USER_FULL_NAME), MDC.get(MDC_USER_ID), MDC.get(MDC_USER_DNI));
             }
 
             citasPendientes.sort(Comparator
@@ -137,7 +154,7 @@ public class HistorialControlador {
             model.addAttribute("historialCitas", historialCitas);
             model.addAttribute("nombreUsuario", usuario.getNombre() + " " + usuario.getApellido());
             logger.info("Citas pendientes: {} y historial de citas: {} cargados y actualizados para el usuario {} (ID: {}, DNI: {}).", 
-                        citasPendientes.size(), historialCitas.size(), MDC.get(MDC_USER_FULL_NAME), MDC.get(MDC_USER_ID), MDC.get(MDC_USER_DNI));
+                         citasPendientes.size(), historialCitas.size(), MDC.get(MDC_USER_FULL_NAME), MDC.get(MDC_USER_ID), MDC.get(MDC_USER_DNI));
 
         } catch (IllegalArgumentException e) {
             logger.error("Error al cargar las citas del usuario {} (ID: {}, DNI: {}): {}", 
@@ -151,6 +168,9 @@ public class HistorialControlador {
             model.addAttribute("error", "Ocurrio un error inesperado al cargar sus citas.");
             model.addAttribute("citasPendientes", List.of());
             model.addAttribute("historialCitas", List.of());
+        } finally {
+            // Limpiar MDC al finalizar el metodo del controlador
+            clearPacienteMDCContext();
         }
 
         return "historialCita";
@@ -159,11 +179,14 @@ public class HistorialControlador {
     @GetMapping("/historial/exportar/excel")
     public ResponseEntity<byte[]> exportarHistorialCitasExcel() {
         Paciente pacienteLogueado = getPacienteLogueado();
+
         if (pacienteLogueado == null || pacienteLogueado.getId() == null) {
             logger.warn("Intento de exportar historial de citas por usuario no logueado o sin ID de paciente. Retornando no autorizado.");
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("No autorizado: Debes iniciar sesion para exportar.".getBytes());
         }
 
+        // Establecer MDC al inicio del metodo del controlador
+        setPacienteMDCContext(pacienteLogueado);
         logger.info("El usuario {} (ID: {}, DNI: {}) ha solicitado exportar su historial de citas a Excel.", 
                      MDC.get(MDC_USER_FULL_NAME), MDC.get(MDC_USER_ID), MDC.get(MDC_USER_DNI));
 
@@ -189,7 +212,7 @@ public class HistorialControlador {
             try (Workbook workbook = new XSSFWorkbook();
                  ByteArrayOutputStream outputStream = new ByteArrayOutputStream()) {
                 Sheet sheet = workbook.createSheet(
-                                         "Historial Citas - " + pacienteLogueado.getNombre() + " " + pacienteLogueado.getApellido());
+                                     "Historial Citas - " + pacienteLogueado.getNombre() + " " + pacienteLogueado.getApellido());
 
                 Row headerRow = sheet.createRow(0);
                 String[] headers = { "ID Cita", "Fecha", "Hora", "Estado", "Medico", "Especialidad" };
@@ -225,7 +248,7 @@ public class HistorialControlador {
 
                 workbook.write(outputStream);
                 logger.info("Reporte Excel generado exitosamente para el usuario {} (ID: {}, DNI: {}). Tamano: {} bytes.", 
-                            MDC.get(MDC_USER_FULL_NAME), MDC.get(MDC_USER_ID), MDC.get(MDC_USER_DNI), outputStream.toByteArray().length);
+                             MDC.get(MDC_USER_FULL_NAME), MDC.get(MDC_USER_ID), MDC.get(MDC_USER_DNI), outputStream.toByteArray().length);
 
                 HttpHeaders httpHeaders = new HttpHeaders();
                 httpHeaders.setContentType(MediaType.APPLICATION_OCTET_STREAM);
@@ -237,7 +260,7 @@ public class HistorialControlador {
 
             } catch (IOException e) {
                 logger.error("Error de IO al generar el reporte Excel para el usuario {} (ID: {}, DNI: {}): {}", 
-                            MDC.get(MDC_USER_FULL_NAME), MDC.get(MDC_USER_ID), MDC.get(MDC_USER_DNI), e.getMessage(), e);
+                             MDC.get(MDC_USER_FULL_NAME), MDC.get(MDC_USER_ID), MDC.get(MDC_USER_DNI), e.getMessage(), e);
                 return ResponseEntity.internalServerError()
                     .body(("Error al generar el reporte: " + e.getMessage()).getBytes());
             }
@@ -250,6 +273,9 @@ public class HistorialControlador {
             logger.error("Error inesperado al exportar historial de citas para el usuario {} (ID: {}, DNI: {}): {}", 
                          MDC.get(MDC_USER_FULL_NAME), MDC.get(MDC_USER_ID), MDC.get(MDC_USER_DNI), e.getMessage(), e);
             return ResponseEntity.internalServerError().body(("Error inesperado al generar el reporte: " + e.getMessage()).getBytes());
+        } finally {
+            // Limpiar MDC al finalizar el metodo del controlador
+            clearPacienteMDCContext();
         }
     }
 
@@ -257,11 +283,18 @@ public class HistorialControlador {
     @ResponseBody
     public ResponseEntity<String> cancelarCita(@RequestParam Long id) {
         Paciente pacienteLogueado = getPacienteLogueado();
-        String userDetails = (pacienteLogueado != null) ? 
-                             "usuario " + MDC.get(MDC_USER_FULL_NAME) + " (ID: " + MDC.get(MDC_USER_ID) + ", DNI: " + MDC.get(MDC_USER_DNI) + ")" : 
-                             "usuario no autenticado";
 
-        logger.info("Solicitud de cancelación de cita con ID: {} por parte del {}.", id, userDetails);
+        if (pacienteLogueado == null || pacienteLogueado.getId() == null) {
+            logger.warn("Solicitud de cancelacion de cita con ID: {} por un usuario no logueado o sin ID de paciente.", id);
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("No autorizado: Debes iniciar sesion para cancelar citas.");
+        }
+
+        // Establecer MDC al inicio del metodo del controlador
+        setPacienteMDCContext(pacienteLogueado);
+        
+        String userDetails = "usuario " + MDC.get(MDC_USER_FULL_NAME) + " (ID: " + MDC.get(MDC_USER_ID) + ", DNI: " + MDC.get(MDC_USER_DNI) + ")";
+        logger.info("Solicitud de cancelacion de cita con ID: {} por parte del {}.", id, userDetails);
+
         try {
             boolean exito = citaServicio.cancelarCita(id);
             if (exito) {
@@ -277,6 +310,9 @@ public class HistorialControlador {
         } catch (Exception e) {
             logger.error("Error interno al cancelar la cita con ID: {} por parte del {}: {}", id, userDetails, e.getMessage(), e);
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error interno al cancelar la cita.");
+        } finally {
+            // Limpiar MDC al finalizar el metodo del controlador
+            clearPacienteMDCContext();
         }
     }
 }

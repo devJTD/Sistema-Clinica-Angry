@@ -31,7 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // Función para cargar especialidades
     const loadEspecialidades = async () => {
         try {
-            const response = await fetch("/api/especialidades");
+            // CAMBIO: Añadir el prefijo del contexto de la aplicación
+            const response = await fetch("/sistema-0.0.1-SNAPSHOT/api/especialidades");
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
@@ -54,7 +55,8 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!idEspecialidad) return;
 
         try {
-            const response = await fetch(`/api/medicos-por-especialidad?idEspecialidad=${idEspecialidad}`);
+            // CAMBIO: Añadir el prefijo del contexto de la aplicación
+            const response = await fetch(`/sistema-0.0.1-SNAPSHOT/api/medicos-por-especialidad?idEspecialidad=${idEspecialidad}`);
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
@@ -80,7 +82,8 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!idMedico || !fechaCita) return;
 
         try {
-            const response = await fetch(`/api/horarios-disponibles?idMedico=${idMedico}&fechaCita=${fechaCita}`);
+            // CAMBIO: Añadir el prefijo del contexto de la aplicación
+            const response = await fetch(`/sistema-0.0.1-SNAPSHOT/api/horarios-disponibles?idMedico=${idMedico}&fechaCita=${fechaCita}`);
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }

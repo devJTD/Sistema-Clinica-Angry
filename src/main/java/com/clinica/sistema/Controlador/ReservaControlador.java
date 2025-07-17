@@ -83,10 +83,10 @@ public class ReservaControlador {
         if (pacienteLogueado != null) {
             model.addAttribute("nombreUsuario", pacienteLogueado.getNombre() + " " + pacienteLogueado.getApellido());
             logger.info("El usuario {} (ID: {}, DNI: {}) ha accedido a la pagina de reserva de citas.", 
-                         MDC.get(MDC_USER_FULL_NAME), MDC.get(MDC_USER_ID), MDC.get(MDC_USER_DNI));
+                        MDC.get(MDC_USER_FULL_NAME), MDC.get(MDC_USER_ID), MDC.get(MDC_USER_DNI));
         } else {
             logger.warn("Usuario no logueado intento acceder a la pagina de reserva de citas, redirigiendo a login.");
-            return "redirect:/login?error=nologin";
+            return "redirect:/login?error=Sesion expirada o no iniciada. Por favor, vuelve a iniciar sesion.";
         }
         return "reservarCita";
     }
@@ -105,25 +105,25 @@ public class ReservaControlador {
         Long idPacienteActual = pacienteLogueado.getId();
         
         logger.info("Usuario con DNI: {} (ID: {}) intentando confirmar cita con los siguientes datos del formulario: [Fecha: {}, Hora: {}, ID Medico: {}]",
-                     MDC.get(MDC_USER_DNI), MDC.get(MDC_USER_ID), fechaStr, horaStr, idMedico);
+                    MDC.get(MDC_USER_DNI), MDC.get(MDC_USER_ID), fechaStr, horaStr, idMedico);
 
         try {
             citaServicio.crearCita(fechaStr, horaStr, idMedico, idPacienteActual);
             logger.info("Cita confirmada exitosamente para el usuario {} (ID: {}, DNI: {}) con Medico ID: {} en Fecha: {} Hora: {}.",
-                         MDC.get(MDC_USER_FULL_NAME), MDC.get(MDC_USER_ID), MDC.get(MDC_USER_DNI), idMedico, fechaStr, horaStr);
+                        MDC.get(MDC_USER_FULL_NAME), MDC.get(MDC_USER_ID), MDC.get(MDC_USER_DNI), idMedico, fechaStr, horaStr);
             return "redirect:/historial";
 
         } catch (IllegalArgumentException e) {
             logger.error("Error al confirmar cita para el usuario {} (ID: {}, DNI: {}). Causa: {}", 
-                         MDC.get(MDC_USER_FULL_NAME), MDC.get(MDC_USER_ID), MDC.get(MDC_USER_DNI), e.getMessage());
+                        MDC.get(MDC_USER_FULL_NAME), MDC.get(MDC_USER_ID), MDC.get(MDC_USER_DNI), e.getMessage());
             return "redirect:/reserva?error=" + e.getMessage();
         } catch (IllegalStateException e) {
             logger.error("Estado invalido al confirmar cita para el usuario {} (ID: {}, DNI: {}). Causa: {}", 
-                         MDC.get(MDC_USER_FULL_NAME), MDC.get(MDC_USER_ID), MDC.get(MDC_USER_DNI), e.getMessage());
+                        MDC.get(MDC_USER_FULL_NAME), MDC.get(MDC_USER_ID), MDC.get(MDC_USER_DNI), e.getMessage());
             return "redirect:/reserva?error=" + e.getMessage();
         } catch (Exception e) {
             logger.error("Error inesperado al confirmar cita para el usuario {} (ID: {}, DNI: {}): {}", 
-                         MDC.get(MDC_USER_FULL_NAME), MDC.get(MDC_USER_ID), MDC.get(MDC_USER_DNI), e.getMessage(), e);
+                        MDC.get(MDC_USER_FULL_NAME), MDC.get(MDC_USER_ID), MDC.get(MDC_USER_DNI), e.getMessage(), e);
             return "redirect:/reserva?error=Ha ocurrido un error inesperado al reservar la cita.";
         }
     }
@@ -132,7 +132,7 @@ public class ReservaControlador {
     @ResponseBody
     public List<Especialidad> obtenerTodasLasEspecialidades() {
         List<Especialidad> especialidades = citaServicio.obtenerTodasLasEspecialidades();
-        logger.debug("API: {} (ID: {}) solicitó y se devolvieron {} especialidades.", 
+        logger.debug("API: {} (ID: {}) solicito y se devolvieron {} especialidades.", 
                      MDC.get(MDC_USER_FULL_NAME) != null ? MDC.get(MDC_USER_FULL_NAME) : "Usuario no logueado",
                      MDC.get(MDC_USER_ID) != null ? MDC.get(MDC_USER_ID) : "N/A", 
                      especialidades.size());
@@ -142,12 +142,12 @@ public class ReservaControlador {
     @GetMapping("/api/medicos-por-especialidad")
     @ResponseBody
     public List<Medico> obtenerMedicosPorEspecialidad(@RequestParam("idEspecialidad") Long idEspecialidad) {
-        logger.debug("API: {} (ID: {}) solicitó medicos para especialidad con ID: {}", 
+        logger.debug("API: {} (ID: {}) solicito medicos para especialidad con ID: {}", 
                      MDC.get(MDC_USER_FULL_NAME) != null ? MDC.get(MDC_USER_FULL_NAME) : "Usuario no logueado",
                      MDC.get(MDC_USER_ID) != null ? MDC.get(MDC_USER_ID) : "N/A", 
                      idEspecialidad);
         List<Medico> medicos = citaServicio.obtenerMedicosPorEspecialidad(idEspecialidad);
-        logger.debug("API: {} (ID: {}) recibió {} medicos para la especialidad ID: {}.", 
+        logger.debug("API: {} (ID: {}) recibio {} medicos para la especialidad ID: {}.", 
                      MDC.get(MDC_USER_FULL_NAME) != null ? MDC.get(MDC_USER_FULL_NAME) : "Usuario no logueado",
                      MDC.get(MDC_USER_ID) != null ? MDC.get(MDC_USER_ID) : "N/A", 
                      medicos.size(), idEspecialidad);
@@ -160,12 +160,12 @@ public class ReservaControlador {
             @RequestParam("idMedico") Long idMedico,
             @RequestParam("fechaCita") String fechaCitaStr) {
         LocalDate fecha = LocalDate.parse(fechaCitaStr);
-        logger.debug("API: {} (ID: {}) solicitó horarios disponibles para Medico ID: {} en Fecha: {}", 
+        logger.debug("API: {} (ID: {}) solicito horarios disponibles para Medico ID: {} en Fecha: {}", 
                      MDC.get(MDC_USER_FULL_NAME) != null ? MDC.get(MDC_USER_FULL_NAME) : "Usuario no logueado",
                      MDC.get(MDC_USER_ID) != null ? MDC.get(MDC_USER_ID) : "N/A", 
                      idMedico, fechaCitaStr);
         List<Horario> horarios = citaServicio.obtenerHorariosDisponiblesPorMedicoYFecha(idMedico, fecha);
-        logger.debug("API: {} (ID: {}) recibió {} horarios disponibles para Medico ID: {} en Fecha: {}.", 
+        logger.debug("API: {} (ID: {}) recibio {} horarios disponibles para Medico ID: {} en Fecha: {}.", 
                      MDC.get(MDC_USER_FULL_NAME) != null ? MDC.get(MDC_USER_FULL_NAME) : "Usuario no logueado",
                      MDC.get(MDC_USER_ID) != null ? MDC.get(MDC_USER_ID) : "N/A", 
                      horarios.size(), idMedico, fechaCitaStr);

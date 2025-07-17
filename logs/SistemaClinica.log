@@ -1061,3 +1061,395 @@ Caused by: java.net.ConnectException: Connection timed out: connect
 2025-07-17 01:46:31.861 INFO  - Procesando horarios del 2025-07-15 al 2026-12-31 para cada medico...
 2025-07-17 01:46:32.265 INFO  - Se encontraron 72225 horarios existentes (mayor o igual a 100). Asumiendo que los horarios ya estan cargados y omitiendo la creacion detallada.
 2025-07-17 01:46:32.265 INFO  - Carga de datos iniciales completada.
+2025-07-17 02:10:36.986 INFO  - Starting SistemaApplicationTests using Java 21.0.7 with PID 25452 (started by Jeanp in C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador 2\Sistema-Clinica-Angry)
+2025-07-17 02:10:36.989 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-07-17 02:10:44.717 INFO  - Started SistemaApplicationTests in 8.247 seconds (process running for 10.547)
+2025-07-17 02:10:44.736 INFO  - Iniciando carga de datos de especialidades, medicos, pacientes y horarios...
+2025-07-17 02:10:44.736 INFO  - Procesando 15 especialidades...
+2025-07-17 02:10:45.032 INFO  - Especialidades procesadas.
+2025-07-17 02:10:45.033 INFO  - Procesando 45 medicos...
+2025-07-17 02:10:45.206 INFO  - Medicos procesados. Nuevos medicos creados: 0
+2025-07-17 02:10:45.207 INFO  - Iniciando carga de datos de pacientes...
+2025-07-17 02:10:45.237 INFO  - Paciente con DNI '71632364' o correo 'chipa.robladillo@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 02:10:45.245 INFO  - Paciente con DNI '71631245' o correo 'ariana.davila@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 02:10:45.253 INFO  - Paciente con DNI '71645689' o correo 'jeremy.rojas@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 02:10:45.253 INFO  - Pacientes procesados. Nuevos pacientes creados: 0
+2025-07-17 02:10:45.253 INFO  - Procesando horarios del 2025-07-15 al 2026-12-31 para cada medico...
+2025-07-17 02:10:45.709 INFO  - Se encontraron 72225 horarios existentes (mayor o igual a 100). Asumiendo que los horarios ya estan cargados y omitiendo la creacion detallada.
+2025-07-17 02:10:45.709 INFO  - Carga de datos iniciales completada.
+2025-07-17 02:18:59.771 INFO  - Starting SistemaApplicationTests using Java 21.0.7 with PID 21764 (started by Jeanp in C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador 2\Sistema-Clinica-Angry)
+2025-07-17 02:18:59.774 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-07-17 02:19:10.228 INFO  - Started SistemaApplicationTests in 10.972 seconds (process running for 13.326)
+2025-07-17 02:19:10.258 INFO  - Iniciando carga de datos de especialidades, medicos, pacientes y horarios...
+2025-07-17 02:19:10.259 INFO  - Procesando 15 especialidades...
+2025-07-17 02:19:10.665 INFO  - Especialidades procesadas.
+2025-07-17 02:19:10.665 INFO  - Procesando 45 medicos...
+2025-07-17 02:19:10.842 INFO  - Medicos procesados. Nuevos medicos creados: 0
+2025-07-17 02:19:10.842 INFO  - Iniciando carga de datos de pacientes...
+2025-07-17 02:19:10.869 INFO  - Paciente con DNI '71632364' o correo 'chipa.robladillo@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 02:19:10.879 INFO  - Paciente con DNI '71631245' o correo 'ariana.davila@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 02:19:10.886 INFO  - Paciente con DNI '71645689' o correo 'jeremy.rojas@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 02:19:10.886 INFO  - Pacientes procesados. Nuevos pacientes creados: 0
+2025-07-17 02:19:10.886 INFO  - Procesando horarios del 2025-07-15 al 2026-12-31 para cada medico...
+2025-07-17 02:19:11.409 INFO  - Se encontraron 72225 horarios existentes (mayor o igual a 100). Asumiendo que los horarios ya estan cargados y omitiendo la creacion detallada.
+2025-07-17 02:19:11.410 INFO  - Carga de datos iniciales completada.
+2025-07-17 02:33:43.306 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 16092 (C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador 2\Sistema-Clinica-Angry\target\classes started by Jeanp in C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador 2\Sistema-Clinica-Angry)
+2025-07-17 02:33:43.310 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-07-17 02:33:52.569 INFO  - Started SistemaApplication in 10.187 seconds (process running for 11.809)
+2025-07-17 02:33:52.590 INFO  - Iniciando carga de datos de especialidades, medicos, pacientes y horarios...
+2025-07-17 02:33:52.592 INFO  - Procesando 15 especialidades...
+2025-07-17 02:33:52.911 INFO  - Especialidades procesadas.
+2025-07-17 02:33:52.912 INFO  - Procesando 45 medicos...
+2025-07-17 02:33:53.099 INFO  - Medicos procesados. Nuevos medicos creados: 0
+2025-07-17 02:33:53.099 INFO  - Iniciando carga de datos de pacientes...
+2025-07-17 02:33:53.131 INFO  - Paciente con DNI '71632364' o correo 'chipa.robladillo@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 02:33:53.138 INFO  - Paciente con DNI '71631245' o correo 'ariana.davila@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 02:33:53.148 INFO  - Paciente con DNI '71645689' o correo 'jeremy.rojas@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 02:33:53.148 INFO  - Pacientes procesados. Nuevos pacientes creados: 0
+2025-07-17 02:33:53.148 INFO  - Procesando horarios del 2025-07-15 al 2026-12-31 para cada medico...
+2025-07-17 02:33:53.612 INFO  - Se encontraron 72225 horarios existentes (mayor o igual a 100). Asumiendo que los horarios ya estan cargados y omitiendo la creacion detallada.
+2025-07-17 02:33:53.612 INFO  - Carga de datos iniciales completada.
+2025-07-17 02:34:18.406 INFO  - El usuario ha accedido a la pagina de login.
+2025-07-17 02:34:24.068 INFO  - Intentando cargar usuario por correo electronico: ariana.davila@gmail.com
+2025-07-17 02:34:24.169 INFO  - Usuario 'ariana.davila@gmail.com' (ID: 2) cargado exitosamente para autenticacion.
+2025-07-17 02:34:24.300 INFO  - Paciente encontrado por correo: ariana.davila@gmail.com (ID: 2).
+2025-07-17 02:34:24.301 INFO  - Paciente encontrado para el correo: ariana.davila@gmail.com
+2025-07-17 02:34:24.302 INFO  - El usuario Ariana Davila (ID: 2, DNI: 71631245) ha accedido a la pagina de inicio.
+2025-07-17 02:34:27.245 INFO  - Accediendo a la pagina de historial de citas.
+2025-07-17 02:34:27.253 INFO  - Paciente encontrado por correo: ariana.davila@gmail.com (ID: 2).
+2025-07-17 02:34:27.254 INFO  - El usuario Ariana Davila (ID: 2, DNI: 71631245) ha accedido a la pagina de historial de citas.
+2025-07-17 02:34:27.293 INFO  - El paciente Ariana Davila (ID: 2, DNI: 71631245) esta solicitando todas sus citas.
+2025-07-17 02:34:27.344 INFO  - El paciente Ariana Davila (ID: 2, DNI: 71631245) ha recuperado 1 citas.
+2025-07-17 02:34:27.348 INFO  - Citas pendientes: 0 y historial de citas: 1 cargados y actualizados para el usuario null (ID: null, DNI: null).
+2025-07-17 02:38:08.780 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 3084 (C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador 2\Sistema-Clinica-Angry\target\classes started by Jeanp in C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador 2\Sistema-Clinica-Angry)
+2025-07-17 02:38:08.784 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-07-17 02:38:18.523 INFO  - Started SistemaApplication in 10.616 seconds (process running for 12.174)
+2025-07-17 02:38:18.547 INFO  - Iniciando carga de datos de especialidades, medicos, pacientes y horarios...
+2025-07-17 02:38:18.548 INFO  - Procesando 15 especialidades...
+2025-07-17 02:38:18.842 INFO  - Especialidades procesadas.
+2025-07-17 02:38:18.842 INFO  - Procesando 45 medicos...
+2025-07-17 02:38:19.042 INFO  - Medicos procesados. Nuevos medicos creados: 0
+2025-07-17 02:38:19.043 INFO  - Iniciando carga de datos de pacientes...
+2025-07-17 02:38:19.076 INFO  - Paciente con DNI '71632364' o correo 'chipa.robladillo@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 02:38:19.085 INFO  - Paciente con DNI '71631245' o correo 'ariana.davila@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 02:38:19.094 INFO  - Paciente con DNI '71645689' o correo 'jeremy.rojas@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 02:38:19.094 INFO  - Pacientes procesados. Nuevos pacientes creados: 0
+2025-07-17 02:38:19.095 INFO  - Procesando horarios del 2025-07-15 al 2026-12-31 para cada medico...
+2025-07-17 02:38:19.546 INFO  - Se encontraron 72225 horarios existentes (mayor o igual a 100). Asumiendo que los horarios ya estan cargados y omitiendo la creacion detallada.
+2025-07-17 02:38:19.546 INFO  - Carga de datos iniciales completada.
+2025-07-17 02:38:30.395 INFO  - El usuario ha accedido a la pagina de login.
+2025-07-17 02:38:33.024 INFO  - El usuario ha accedido a la pagina de login.
+2025-07-17 02:38:38.441 INFO  - Intentando cargar usuario por correo electronico: ariana.davila@gmail.com
+2025-07-17 02:38:38.538 INFO  - Usuario 'ariana.davila@gmail.com' (ID: 2) cargado exitosamente para autenticacion.
+2025-07-17 02:38:38.706 INFO  - Paciente encontrado por correo: ariana.davila@gmail.com (ID: 2).
+2025-07-17 02:38:38.707 INFO  - Paciente encontrado para el correo: ariana.davila@gmail.com
+2025-07-17 02:38:38.708 INFO  - El usuario Ariana Davila (ID: 2, DNI: 71631245) ha accedido a la pagina de inicio.
+2025-07-17 02:38:44.092 INFO  - Paciente encontrado por correo: ariana.davila@gmail.com (ID: 2).
+2025-07-17 02:38:44.093 INFO  - El usuario Ariana Davila (ID: 2, DNI: 71631245) ha accedido a la pagina de historial de citas.
+2025-07-17 02:38:44.133 INFO  - El paciente Ariana Davila (ID: 2, DNI: 71631245) esta solicitando todas sus citas.
+2025-07-17 02:38:44.181 INFO  - El paciente Ariana Davila (ID: 2, DNI: 71631245) ha recuperado 1 citas.
+2025-07-17 02:38:44.185 INFO  - Citas pendientes: 0 y historial de citas: 1 cargados y actualizados para el usuario null (ID: null, DNI: null).
+2025-07-17 02:42:54.984 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 3328 (C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador 2\Sistema-Clinica-Angry\target\classes started by Jeanp in C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador 2\Sistema-Clinica-Angry)
+2025-07-17 02:42:54.988 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-07-17 02:43:03.878 INFO  - Started SistemaApplication in 9.742 seconds (process running for 11.251)
+2025-07-17 02:43:03.907 INFO  - Iniciando carga de datos de especialidades, medicos, pacientes y horarios...
+2025-07-17 02:43:03.908 INFO  - Procesando 15 especialidades...
+2025-07-17 02:43:04.179 INFO  - Especialidades procesadas.
+2025-07-17 02:43:04.179 INFO  - Procesando 45 medicos...
+2025-07-17 02:43:04.365 INFO  - Medicos procesados. Nuevos medicos creados: 0
+2025-07-17 02:43:04.366 INFO  - Iniciando carga de datos de pacientes...
+2025-07-17 02:43:04.396 INFO  - Paciente con DNI '71632364' o correo 'chipa.robladillo@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 02:43:04.406 INFO  - Paciente con DNI '71631245' o correo 'ariana.davila@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 02:43:04.415 INFO  - Paciente con DNI '71645689' o correo 'jeremy.rojas@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 02:43:04.415 INFO  - Pacientes procesados. Nuevos pacientes creados: 0
+2025-07-17 02:43:04.415 INFO  - Procesando horarios del 2025-07-15 al 2026-12-31 para cada medico...
+2025-07-17 02:43:04.855 INFO  - Se encontraron 72225 horarios existentes (mayor o igual a 100). Asumiendo que los horarios ya estan cargados y omitiendo la creacion detallada.
+2025-07-17 02:43:04.856 INFO  - Carga de datos iniciales completada.
+2025-07-17 02:43:14.739 INFO  - El usuario ha accedido a la pagina de login.
+2025-07-17 02:43:20.409 INFO  - Intentando cargar usuario por correo electronico: ariana.davila@gmail.com
+2025-07-17 02:43:20.501 INFO  - Usuario 'ariana.davila@gmail.com' (ID: 2) cargado exitosamente para autenticacion.
+2025-07-17 02:43:20.664 INFO  - Paciente encontrado por correo: ariana.davila@gmail.com (ID: 2).
+2025-07-17 02:43:20.665 INFO  - Paciente encontrado para el correo: ariana.davila@gmail.com
+2025-07-17 02:43:20.666 INFO  - El usuario Ariana Davila (ID: 2, DNI: 71631245) ha accedido a la pagina de inicio.
+2025-07-17 02:43:21.968 INFO  - Paciente encontrado por correo: ariana.davila@gmail.com (ID: 2).
+2025-07-17 02:43:21.969 INFO  - El usuario Ariana Davila (ID: 2, DNI: 71631245) ha accedido a la pagina de historial de citas.
+2025-07-17 02:43:22.002 INFO  - El paciente Ariana Davila (ID: 2, DNI: 71631245) esta solicitando todas sus citas.
+2025-07-17 02:43:22.052 INFO  - El paciente Ariana Davila (ID: 2, DNI: 71631245) ha recuperado 1 citas.
+2025-07-17 02:43:22.056 INFO  - Citas pendientes: 0 y historial de citas: 1 cargados y actualizados para el usuario null (ID: null, DNI: null).
+2025-07-17 02:50:35.859 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 12296 (C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador 2\Sistema-Clinica-Angry\target\classes started by Jeanp in C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador 2\Sistema-Clinica-Angry)
+2025-07-17 02:50:35.863 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-07-17 02:50:45.268 INFO  - Started SistemaApplication in 10.314 seconds (process running for 11.868)
+2025-07-17 02:50:45.293 INFO  - Iniciando carga de datos de especialidades, medicos, pacientes y horarios...
+2025-07-17 02:50:45.295 INFO  - Procesando 15 especialidades...
+2025-07-17 02:50:45.569 INFO  - Especialidades procesadas.
+2025-07-17 02:50:45.569 INFO  - Procesando 45 medicos...
+2025-07-17 02:50:45.742 INFO  - Medicos procesados. Nuevos medicos creados: 0
+2025-07-17 02:50:45.742 INFO  - Iniciando carga de datos de pacientes...
+2025-07-17 02:50:45.765 INFO  - Paciente con DNI '71632364' o correo 'chipa.robladillo@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 02:50:45.774 INFO  - Paciente con DNI '71631245' o correo 'ariana.davila@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 02:50:45.782 INFO  - Paciente con DNI '71645689' o correo 'jeremy.rojas@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 02:50:45.783 INFO  - Pacientes procesados. Nuevos pacientes creados: 0
+2025-07-17 02:50:45.783 INFO  - Procesando horarios del 2025-07-15 al 2026-12-31 para cada medico...
+2025-07-17 02:50:46.300 INFO  - Se encontraron 72225 horarios existentes (mayor o igual a 100). Asumiendo que los horarios ya estan cargados y omitiendo la creacion detallada.
+2025-07-17 02:50:46.301 INFO  - Carga de datos iniciales completada.
+2025-07-17 02:50:54.897 INFO  - El usuario ha accedido a la pagina de login.
+2025-07-17 02:50:58.467 INFO  - El usuario ha accedido a la pagina de login.
+2025-07-17 02:51:07.208 INFO  - El usuario ha accedido a la pagina de login.
+2025-07-17 02:51:10.024 INFO  - El usuario ha accedido a la pagina de login.
+2025-07-17 02:51:15.424 INFO  - Intentando cargar usuario por correo electronico: ariana.davila@gmail.com
+2025-07-17 02:51:15.570 INFO  - Usuario 'ariana.davila@gmail.com' (ID: 2) cargado exitosamente para autenticacion.
+2025-07-17 02:51:15.724 INFO  - Paciente encontrado por correo: ariana.davila@gmail.com (ID: 2).
+2025-07-17 02:51:15.726 INFO  - Paciente encontrado para el correo: ariana.davila@gmail.com
+2025-07-17 02:51:15.727 INFO  - El usuario Ariana Davila (ID: 2, DNI: 71631245) ha accedido a la pagina de inicio.
+2025-07-17 02:51:22.623 INFO  - Paciente encontrado por correo: ariana.davila@gmail.com (ID: 2).
+2025-07-17 02:51:22.624 INFO  - El usuario Ariana Davila (ID: 2, DNI: 71631245) ha accedido a la pagina de reserva de citas.
+2025-07-17 02:51:35.996 INFO  - Paciente encontrado por correo: ariana.davila@gmail.com (ID: 2).
+2025-07-17 02:51:35.996 INFO  - El usuario Ariana Davila (ID: 2, DNI: 71631245) ha accedido a la pagina de historial de citas.
+2025-07-17 02:51:35.996 INFO  - Solicitando todas las citas para el paciente con ID: 2.
+2025-07-17 02:51:36.088 INFO  - Recuperadas 1 citas para el paciente con ID: 2.
+2025-07-17 02:51:36.091 INFO  - Citas pendientes: 0 y historial de citas: 1 cargados y actualizados para el usuario Ariana Davila (ID: 2, DNI: 71631245).
+2025-07-17 02:51:45.746 INFO  - Paciente encontrado por correo: ariana.davila@gmail.com (ID: 2).
+2025-07-17 02:51:45.747 INFO  - El paciente Ariana Davila (ID: 2, DNI: 71631245) ha accedido a la página de solicitud de ambulancia.
+2025-07-17 02:51:45.762 INFO  - El paciente Ariana Davila (ID: 2, DNI: 71631245) está solicitando sus direcciones.
+2025-07-17 02:51:45.774 INFO  - El paciente Ariana Davila (ID: 2, DNI: 71631245) ha recuperado 1 direcciones.
+2025-07-17 02:51:45.775 INFO  - El paciente null (ID: null, DNI: null) ha cargado 1 direcciones.
+2025-07-17 02:51:45.817 INFO  - Paciente encontrado por correo: ariana.davila@gmail.com (ID: 2).
+2025-07-17 02:51:45.818 INFO  - El paciente Ariana Davila (ID: 2, DNI: 71631245) ha accedido a la página de solicitud de ambulancia.
+2025-07-17 02:51:45.824 INFO  - El paciente Ariana Davila (ID: 2, DNI: 71631245) está solicitando sus direcciones.
+2025-07-17 02:51:45.832 INFO  - El paciente Ariana Davila (ID: 2, DNI: 71631245) ha recuperado 1 direcciones.
+2025-07-17 02:51:45.832 INFO  - El paciente null (ID: null, DNI: null) ha cargado 1 direcciones.
+2025-07-17 02:52:16.874 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 11984 (C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador 2\Sistema-Clinica-Angry\target\classes started by Jeanp in C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador 2\Sistema-Clinica-Angry)
+2025-07-17 02:52:16.878 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-07-17 02:52:26.302 INFO  - Started SistemaApplication in 10.386 seconds (process running for 11.93)
+2025-07-17 02:52:26.330 INFO  - Iniciando carga de datos de especialidades, medicos, pacientes y horarios...
+2025-07-17 02:52:26.331 INFO  - Procesando 15 especialidades...
+2025-07-17 02:52:26.699 INFO  - Especialidades procesadas.
+2025-07-17 02:52:26.699 INFO  - Procesando 45 medicos...
+2025-07-17 02:52:26.909 INFO  - Medicos procesados. Nuevos medicos creados: 0
+2025-07-17 02:52:26.909 INFO  - Iniciando carga de datos de pacientes...
+2025-07-17 02:52:26.942 INFO  - Paciente con DNI '71632364' o correo 'chipa.robladillo@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 02:52:26.952 INFO  - Paciente con DNI '71631245' o correo 'ariana.davila@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 02:52:26.963 INFO  - Paciente con DNI '71645689' o correo 'jeremy.rojas@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 02:52:26.964 INFO  - Pacientes procesados. Nuevos pacientes creados: 0
+2025-07-17 02:52:26.965 INFO  - Procesando horarios del 2025-07-15 al 2026-12-31 para cada medico...
+2025-07-17 02:52:27.414 INFO  - Se encontraron 72225 horarios existentes (mayor o igual a 100). Asumiendo que los horarios ya estan cargados y omitiendo la creacion detallada.
+2025-07-17 02:52:27.415 INFO  - Carga de datos iniciales completada.
+2025-07-17 02:52:30.989 INFO  - El usuario ha accedido a la pagina de login.
+2025-07-17 02:52:38.778 INFO  - Intentando cargar usuario por correo electronico: ariana.davila@gmail.com
+2025-07-17 02:52:38.922 INFO  - Usuario 'ariana.davila@gmail.com' (ID: 2) cargado exitosamente para autenticacion.
+2025-07-17 02:52:39.061 INFO  - Paciente encontrado por correo: ariana.davila@gmail.com (ID: 2).
+2025-07-17 02:52:39.062 INFO  - Paciente encontrado para el correo: ariana.davila@gmail.com
+2025-07-17 02:52:39.063 INFO  - El usuario Ariana Davila (ID: 2, DNI: 71631245) ha accedido a la pagina de inicio.
+2025-07-17 02:52:40.567 INFO  - Paciente encontrado por correo: ariana.davila@gmail.com (ID: 2).
+2025-07-17 02:52:40.569 INFO  - El paciente Ariana Davila (ID: 2, DNI: 71631245) ha accedido a la página de solicitud de ambulancia.
+2025-07-17 02:52:40.613 INFO  - El paciente Ariana Davila (ID: 2, DNI: 71631245) está solicitando sus direcciones.
+2025-07-17 02:52:40.633 INFO  - El paciente Ariana Davila (ID: 2, DNI: 71631245) ha recuperado 1 direcciones.
+2025-07-17 02:52:40.633 INFO  - El paciente null (ID: null, DNI: null) ha cargado 1 direcciones.
+2025-07-17 02:56:38.900 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 7248 (C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador 2\Sistema-Clinica-Angry\target\classes started by Jeanp in C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador 2\Sistema-Clinica-Angry)
+2025-07-17 02:56:38.902 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-07-17 02:56:47.291 INFO  - Started SistemaApplication in 9.139 seconds (process running for 10.408)
+2025-07-17 02:56:47.312 INFO  - Iniciando carga de datos de especialidades, medicos, pacientes y horarios...
+2025-07-17 02:56:47.314 INFO  - Procesando 15 especialidades...
+2025-07-17 02:56:47.607 INFO  - Especialidades procesadas.
+2025-07-17 02:56:47.608 INFO  - Procesando 45 medicos...
+2025-07-17 02:56:47.801 INFO  - Medicos procesados. Nuevos medicos creados: 0
+2025-07-17 02:56:47.801 INFO  - Iniciando carga de datos de pacientes...
+2025-07-17 02:56:47.827 INFO  - Paciente con DNI '71632364' o correo 'chipa.robladillo@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 02:56:47.836 INFO  - Paciente con DNI '71631245' o correo 'ariana.davila@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 02:56:47.844 INFO  - Paciente con DNI '71645689' o correo 'jeremy.rojas@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 02:56:47.845 INFO  - Pacientes procesados. Nuevos pacientes creados: 0
+2025-07-17 02:56:47.845 INFO  - Procesando horarios del 2025-07-15 al 2026-12-31 para cada medico...
+2025-07-17 02:56:48.304 INFO  - Se encontraron 72225 horarios existentes (mayor o igual a 100). Asumiendo que los horarios ya estan cargados y omitiendo la creacion detallada.
+2025-07-17 02:56:48.305 INFO  - Carga de datos iniciales completada.
+2025-07-17 02:57:20.405 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 23048 (C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador 2\Sistema-Clinica-Angry\target\classes started by Jeanp in C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador 2\Sistema-Clinica-Angry)
+2025-07-17 02:57:20.408 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-07-17 02:57:29.242 INFO  - Started SistemaApplication in 9.716 seconds (process running for 11.286)
+2025-07-17 02:57:29.263 INFO  - Iniciando carga de datos de especialidades, medicos, pacientes y horarios...
+2025-07-17 02:57:29.265 INFO  - Procesando 15 especialidades...
+2025-07-17 02:57:29.555 INFO  - Especialidades procesadas.
+2025-07-17 02:57:29.556 INFO  - Procesando 45 medicos...
+2025-07-17 02:57:29.761 INFO  - Medicos procesados. Nuevos medicos creados: 0
+2025-07-17 02:57:29.762 INFO  - Iniciando carga de datos de pacientes...
+2025-07-17 02:57:29.792 INFO  - Paciente con DNI '71632364' o correo 'chipa.robladillo@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 02:57:29.803 INFO  - Paciente con DNI '71631245' o correo 'ariana.davila@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 02:57:29.812 INFO  - Paciente con DNI '71645689' o correo 'jeremy.rojas@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 02:57:29.813 INFO  - Pacientes procesados. Nuevos pacientes creados: 0
+2025-07-17 02:57:29.813 INFO  - Procesando horarios del 2025-07-15 al 2026-12-31 para cada medico...
+2025-07-17 02:57:30.295 INFO  - Se encontraron 72225 horarios existentes (mayor o igual a 100). Asumiendo que los horarios ya estan cargados y omitiendo la creacion detallada.
+2025-07-17 02:57:30.296 INFO  - Carga de datos iniciales completada.
+2025-07-17 02:57:39.318 INFO  - El usuario ha accedido a la pagina de login.
+2025-07-17 02:57:42.616 INFO  - El usuario ha accedido a la pagina de login.
+2025-07-17 02:57:46.767 INFO  - Intentando cargar usuario por correo electronico: ariana.davila@gmail.com
+2025-07-17 02:57:46.864 INFO  - Usuario 'ariana.davila@gmail.com' (ID: 2) cargado exitosamente para autenticacion.
+2025-07-17 02:57:47.058 INFO  - Paciente encontrado por correo: ariana.davila@gmail.com (ID: 2).
+2025-07-17 02:57:47.058 INFO  - Paciente encontrado para el correo: ariana.davila@gmail.com
+2025-07-17 02:57:47.060 INFO  - El usuario Ariana Davila (ID: 2, DNI: 71631245) ha accedido a la pagina de inicio.
+2025-07-17 02:57:49.953 INFO  - Paciente encontrado por correo: ariana.davila@gmail.com (ID: 2).
+2025-07-17 02:57:49.955 INFO  - El usuario Ariana Davila (ID: 2, DNI: 71631245) ha accedido a la pagina de historial de citas.
+2025-07-17 02:57:49.957 INFO  - Solicitando todas las citas para el paciente con ID: 2.
+2025-07-17 02:57:50.036 INFO  - Recuperadas 1 citas para el paciente con ID: 2.
+2025-07-17 02:57:50.041 INFO  - Citas pendientes: 0 y historial de citas: 1 cargados y actualizados para el usuario Ariana Davila (ID: 2, DNI: 71631245).
+2025-07-17 02:57:56.287 INFO  - Paciente encontrado por correo: ariana.davila@gmail.com (ID: 2).
+2025-07-17 02:57:56.288 INFO  - El paciente Ariana Davila (ID: 2, DNI: 71631245) ha accedido a la página de solicitud de ambulancia.
+2025-07-17 02:57:56.297 INFO  - El paciente Ariana Davila (ID: 2, DNI: 71631245) está solicitando sus direcciones.
+2025-07-17 02:57:56.309 INFO  - El paciente Ariana Davila (ID: 2, DNI: 71631245) ha recuperado 1 direcciones.
+2025-07-17 02:57:56.310 INFO  - El paciente null (ID: null, DNI: null) ha cargado 1 direcciones.
+2025-07-17 03:00:20.784 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 19360 (C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador 2\Sistema-Clinica-Angry\target\classes started by Jeanp in C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador 2\Sistema-Clinica-Angry)
+2025-07-17 03:00:20.786 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-07-17 03:00:29.456 INFO  - Started SistemaApplication in 9.534 seconds (process running for 11.014)
+2025-07-17 03:00:29.478 INFO  - Iniciando carga de datos de especialidades, medicos, pacientes y horarios...
+2025-07-17 03:00:29.479 INFO  - Procesando 15 especialidades...
+2025-07-17 03:00:29.824 INFO  - Especialidades procesadas.
+2025-07-17 03:00:29.825 INFO  - Procesando 45 medicos...
+2025-07-17 03:00:30.021 INFO  - Medicos procesados. Nuevos medicos creados: 0
+2025-07-17 03:00:30.021 INFO  - Iniciando carga de datos de pacientes...
+2025-07-17 03:00:30.049 INFO  - Paciente con DNI '71632364' o correo 'chipa.robladillo@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 03:00:30.058 INFO  - Paciente con DNI '71631245' o correo 'ariana.davila@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 03:00:30.066 INFO  - Paciente con DNI '71645689' o correo 'jeremy.rojas@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 03:00:30.066 INFO  - Pacientes procesados. Nuevos pacientes creados: 0
+2025-07-17 03:00:30.066 INFO  - Procesando horarios del 2025-07-15 al 2026-12-31 para cada medico...
+2025-07-17 03:00:30.538 INFO  - Se encontraron 72225 horarios existentes (mayor o igual a 100). Asumiendo que los horarios ya estan cargados y omitiendo la creacion detallada.
+2025-07-17 03:00:30.539 INFO  - Carga de datos iniciales completada.
+2025-07-17 03:00:36.117 INFO  - El usuario ha accedido a la pagina de login.
+2025-07-17 03:00:41.970 INFO  - Intentando cargar usuario por correo electronico: ariana.davila@gmail.com
+2025-07-17 03:00:42.099 INFO  - Usuario 'ariana.davila@gmail.com' (ID: 2) cargado exitosamente para autenticacion.
+2025-07-17 03:00:42.267 INFO  - Paciente encontrado por correo: ariana.davila@gmail.com (ID: 2).
+2025-07-17 03:00:42.267 INFO  - Paciente encontrado para el correo: ariana.davila@gmail.com
+2025-07-17 03:00:42.269 INFO  - El usuario Ariana Davila (ID: 2, DNI: 71631245) ha accedido a la pagina de inicio.
+2025-07-17 03:00:45.491 INFO  - Paciente encontrado por correo: ariana.davila@gmail.com (ID: 2).
+2025-07-17 03:00:45.493 INFO  - El usuario Ariana Davila (ID: 2, DNI: 71631245) ha accedido a la pagina de historial de citas.
+2025-07-17 03:00:45.495 INFO  - Solicitando todas las citas para el paciente con ID: 2.
+2025-07-17 03:00:45.579 INFO  - Recuperadas 1 citas para el paciente con ID: 2.
+2025-07-17 03:00:45.583 INFO  - Citas pendientes: 0 y historial de citas: 1 cargados y actualizados para el usuario Ariana Davila (ID: 2, DNI: 71631245).
+2025-07-17 03:00:48.387 INFO  - Paciente encontrado por correo: ariana.davila@gmail.com (ID: 2).
+2025-07-17 03:00:48.388 INFO  - El paciente Ariana Davila (ID: 2, DNI: 71631245) ha accedido a la página de solicitud de ambulancia.
+2025-07-17 03:00:48.390 INFO  - El paciente con ID 2 está solicitando sus direcciones.
+2025-07-17 03:00:48.402 INFO  - El paciente con ID 2 ha recuperado 1 direcciones.
+2025-07-17 03:00:48.403 INFO  - El paciente Ariana Davila (ID: 2, DNI: 71631245) ha cargado 1 direcciones.
+2025-07-17 03:04:30.065 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 14588 (C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador 2\Sistema-Clinica-Angry\target\classes started by Jeanp in C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador 2\Sistema-Clinica-Angry)
+2025-07-17 03:04:30.068 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-07-17 03:04:39.250 INFO  - Started SistemaApplication in 9.998 seconds (process running for 11.532)
+2025-07-17 03:04:39.271 INFO  - Iniciando carga de datos de especialidades, medicos, pacientes y horarios...
+2025-07-17 03:04:39.272 INFO  - Procesando 15 especialidades...
+2025-07-17 03:04:39.583 INFO  - Especialidades procesadas.
+2025-07-17 03:04:39.584 INFO  - Procesando 45 medicos...
+2025-07-17 03:04:39.789 INFO  - Medicos procesados. Nuevos medicos creados: 0
+2025-07-17 03:04:39.789 INFO  - Iniciando carga de datos de pacientes...
+2025-07-17 03:04:39.823 INFO  - Paciente con DNI '71632364' o correo 'chipa.robladillo@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 03:04:39.834 INFO  - Paciente con DNI '71631245' o correo 'ariana.davila@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 03:04:39.845 INFO  - Paciente con DNI '71645689' o correo 'jeremy.rojas@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 03:04:39.845 INFO  - Pacientes procesados. Nuevos pacientes creados: 0
+2025-07-17 03:04:39.846 INFO  - Procesando horarios del 2025-07-15 al 2026-12-31 para cada medico...
+2025-07-17 03:04:40.345 INFO  - Se encontraron 72225 horarios existentes (mayor o igual a 100). Asumiendo que los horarios ya estan cargados y omitiendo la creacion detallada.
+2025-07-17 03:04:40.345 INFO  - Carga de datos iniciales completada.
+2025-07-17 03:04:44.353 INFO  - El usuario ha accedido a la pagina de login.
+2025-07-17 03:04:50.005 INFO  - Intentando cargar usuario por correo electronico: ariana.davila@gmail.com
+2025-07-17 03:04:50.077 INFO  - Usuario 'ariana.davila@gmail.com' (ID: 2) cargado exitosamente para autenticacion.
+2025-07-17 03:04:50.253 INFO  - Paciente encontrado por correo: ariana.davila@gmail.com (ID: 2).
+2025-07-17 03:04:50.254 INFO  - Paciente encontrado para el correo: ariana.davila@gmail.com
+2025-07-17 03:04:50.255 INFO  - El usuario Ariana Davila (ID: 2, DNI: 71631245) ha accedido a la pagina de inicio.
+2025-07-17 03:04:52.506 INFO  - Paciente encontrado por correo: ariana.davila@gmail.com (ID: 2).
+2025-07-17 03:04:52.509 INFO  - El usuario Ariana Davila (ID: 2, DNI: 71631245) ha accedido a la pagina de historial de citas.
+2025-07-17 03:04:52.553 INFO  - El Ariana Davila (ID: 2, DNI: 71631245) está solicitando todas sus citas.
+2025-07-17 03:04:52.611 INFO  - El Ariana Davila (ID: 2, DNI: 71631245) ha recuperado 1 citas.
+2025-07-17 03:04:52.617 INFO  - Citas pendientes: 0 y historial de citas: 1 cargados y actualizados para el usuario Ariana Davila (ID: 2, DNI: 71631245).
+2025-07-17 03:04:58.311 INFO  - Paciente encontrado por correo: ariana.davila@gmail.com (ID: 2).
+2025-07-17 03:04:58.313 INFO  - El paciente Ariana Davila (ID: 2, DNI: 71631245) ha accedido a la página de solicitud de ambulancia.
+2025-07-17 03:04:58.322 INFO  - El Paciente Ariana Davila (ID: 2, DNI: 71631245) está solicitando sus direcciones.
+2025-07-17 03:04:58.333 INFO  - El Paciente Ariana Davila (ID: 2, DNI: 71631245) ha recuperado 1 direcciones.
+2025-07-17 03:04:58.334 INFO  - El paciente Ariana Davila (ID: 2, DNI: 71631245) ha cargado 1 direcciones.
+2025-07-17 03:08:55.741 INFO  - Starting SistemaApplicationTests using Java 21.0.7 with PID 18684 (started by Jeanp in C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador 2\Sistema-Clinica-Angry)
+2025-07-17 03:08:55.745 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-07-17 03:09:04.752 INFO  - Started SistemaApplicationTests in 9.51 seconds (process running for 11.759)
+2025-07-17 03:09:04.793 INFO  - Iniciando carga de datos de especialidades, medicos, pacientes y horarios...
+2025-07-17 03:09:04.794 INFO  - Procesando 15 especialidades...
+2025-07-17 03:09:05.111 INFO  - Especialidades procesadas.
+2025-07-17 03:09:05.111 INFO  - Procesando 45 medicos...
+2025-07-17 03:09:05.286 INFO  - Medicos procesados. Nuevos medicos creados: 0
+2025-07-17 03:09:05.286 INFO  - Iniciando carga de datos de pacientes...
+2025-07-17 03:09:05.316 INFO  - Paciente con DNI '71632364' o correo 'chipa.robladillo@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 03:09:05.321 INFO  - Paciente con DNI '71631245' o correo 'ariana.davila@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 03:09:05.332 INFO  - Paciente con DNI '71645689' o correo 'jeremy.rojas@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 03:09:05.332 INFO  - Pacientes procesados. Nuevos pacientes creados: 0
+2025-07-17 03:09:05.332 INFO  - Procesando horarios del 2025-07-15 al 2026-12-31 para cada medico...
+2025-07-17 03:09:05.852 INFO  - Se encontraron 72225 horarios existentes (mayor o igual a 100). Asumiendo que los horarios ya estan cargados y omitiendo la creacion detallada.
+2025-07-17 03:09:05.852 INFO  - Carga de datos iniciales completada.
+2025-07-17 03:19:42.527 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 11900 (C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador 2\Sistema-Clinica-Angry\target\classes started by Jeanp in C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador 2\Sistema-Clinica-Angry)
+2025-07-17 03:19:42.527 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-07-17 03:19:51.630 INFO  - Started SistemaApplication in 9.797 seconds (process running for 11.062)
+2025-07-17 03:19:51.657 INFO  - Iniciando carga de datos de especialidades, medicos, pacientes y horarios...
+2025-07-17 03:19:51.657 INFO  - Procesando 15 especialidades...
+2025-07-17 03:19:51.931 INFO  - Especialidades procesadas.
+2025-07-17 03:19:51.933 INFO  - Procesando 45 medicos...
+2025-07-17 03:19:52.109 INFO  - Medicos procesados. Nuevos medicos creados: 0
+2025-07-17 03:19:52.109 INFO  - Iniciando carga de datos de pacientes...
+2025-07-17 03:19:52.138 INFO  - Paciente con DNI '71632364' o correo 'chipa.robladillo@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 03:19:52.146 INFO  - Paciente con DNI '71631245' o correo 'ariana.davila@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 03:19:52.156 INFO  - Paciente con DNI '71645689' o correo 'jeremy.rojas@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 03:19:52.157 INFO  - Pacientes procesados. Nuevos pacientes creados: 0
+2025-07-17 03:19:52.157 INFO  - Procesando horarios del 2025-07-15 al 2026-12-31 para cada medico...
+2025-07-17 03:19:52.602 INFO  - Se encontraron 72225 horarios existentes (mayor o igual a 100). Asumiendo que los horarios ya estan cargados y omitiendo la creacion detallada.
+2025-07-17 03:19:52.603 INFO  - Carga de datos iniciales completada.
+2025-07-17 03:19:59.293 INFO  - El usuario ha accedido a la pagina de login.
+2025-07-17 03:20:03.726 INFO  - Intentando cargar usuario por correo electronico: ariana.davila@gmail.com
+2025-07-17 03:20:03.818 INFO  - Usuario 'ariana.davila@gmail.com' (ID: 2) cargado exitosamente para autenticacion.
+2025-07-17 03:20:03.955 INFO  - Paciente encontrado por correo: ariana.davila@gmail.com (ID: 2).
+2025-07-17 03:20:03.955 INFO  - Paciente encontrado para el correo: ariana.davila@gmail.com
+2025-07-17 03:20:03.958 INFO  - El usuario Ariana Davila (ID: 2, DNI: 71631245) ha accedido a la pagina de inicio.
+2025-07-17 03:20:06.154 INFO  - El usuario ha accedido a la pagina de login.
+2025-07-17 03:21:13.182 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 12340 (C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador 2\Sistema-Clinica-Angry\target\classes started by Jeanp in C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador 2\Sistema-Clinica-Angry)
+2025-07-17 03:21:13.185 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-07-17 03:21:13.794 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 21480 (C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador 2\Sistema-Clinica-Angry\target\classes started by Jeanp in C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador 2\Sistema-Clinica-Angry)
+2025-07-17 03:21:13.798 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-07-17 03:21:23.232 INFO  - Started SistemaApplication in 10.874 seconds (process running for 12.177)
+2025-07-17 03:21:23.249 INFO  - Iniciando carga de datos de especialidades, medicos, pacientes y horarios...
+2025-07-17 03:21:23.251 INFO  - Procesando 15 especialidades...
+2025-07-17 03:21:23.498 INFO  - Especialidades procesadas.
+2025-07-17 03:21:23.498 INFO  - Procesando 45 medicos...
+2025-07-17 03:21:23.677 INFO  - Medicos procesados. Nuevos medicos creados: 0
+2025-07-17 03:21:23.677 INFO  - Iniciando carga de datos de pacientes...
+2025-07-17 03:21:23.707 INFO  - Paciente con DNI '71632364' o correo 'chipa.robladillo@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 03:21:23.714 INFO  - Paciente con DNI '71631245' o correo 'ariana.davila@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 03:21:23.723 INFO  - Paciente con DNI '71645689' o correo 'jeremy.rojas@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 03:21:23.723 INFO  - Pacientes procesados. Nuevos pacientes creados: 0
+2025-07-17 03:21:23.724 INFO  - Procesando horarios del 2025-07-15 al 2026-12-31 para cada medico...
+2025-07-17 03:21:24.241 INFO  - Se encontraron 72225 horarios existentes (mayor o igual a 100). Asumiendo que los horarios ya estan cargados y omitiendo la creacion detallada.
+2025-07-17 03:21:24.243 INFO  - Carga de datos iniciales completada.
+2025-07-17 03:21:32.151 INFO  - Intentando cargar usuario por correo electronico: ariana.davila@gmail.com
+2025-07-17 03:21:32.236 INFO  - Usuario 'ariana.davila@gmail.com' (ID: 2) cargado exitosamente para autenticacion.
+2025-07-17 03:21:32.460 INFO  - Paciente encontrado por correo: ariana.davila@gmail.com (ID: 2).
+2025-07-17 03:21:32.461 INFO  - Paciente encontrado para el correo: ariana.davila@gmail.com
+2025-07-17 03:21:32.463 INFO  - El usuario Ariana Davila (ID: 2, DNI: 71631245) ha accedido a la pagina de inicio.
+2025-07-17 03:21:34.116 INFO  - El usuario ha accedido a la pagina de login.
+2025-07-17 03:26:52.902 INFO  - Starting SistemaApplication using Java 21.0.7 with PID 12340 (C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador 2\Sistema-Clinica-Angry\target\classes started by Jeanp in C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador 2\Sistema-Clinica-Angry)
+2025-07-17 03:26:52.903 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-07-17 03:26:54.680 INFO  - Started SistemaApplication in 1.867 seconds (process running for 343.625)
+2025-07-17 03:26:54.684 INFO  - Iniciando carga de datos de especialidades, medicos, pacientes y horarios...
+2025-07-17 03:26:54.685 INFO  - Procesando 15 especialidades...
+2025-07-17 03:26:54.756 INFO  - Especialidades procesadas.
+2025-07-17 03:26:54.756 INFO  - Procesando 45 medicos...
+2025-07-17 03:26:54.923 INFO  - Medicos procesados. Nuevos medicos creados: 0
+2025-07-17 03:26:54.924 INFO  - Iniciando carga de datos de pacientes...
+2025-07-17 03:26:54.932 INFO  - Paciente con DNI '71632364' o correo 'chipa.robladillo@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 03:26:54.939 INFO  - Paciente con DNI '71631245' o correo 'ariana.davila@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 03:26:54.947 INFO  - Paciente con DNI '71645689' o correo 'jeremy.rojas@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 03:26:54.948 INFO  - Pacientes procesados. Nuevos pacientes creados: 0
+2025-07-17 03:26:54.948 INFO  - Procesando horarios del 2025-07-15 al 2026-12-31 para cada medico...
+2025-07-17 03:26:54.968 INFO  - Se encontraron 72225 horarios existentes (mayor o igual a 100). Asumiendo que los horarios ya estan cargados y omitiendo la creacion detallada.
+2025-07-17 03:26:54.970 INFO  - Carga de datos iniciales completada.
+2025-07-17 03:32:28.465 INFO  - Starting SistemaApplicationTests using Java 21.0.7 with PID 12588 (started by Jeanp in C:\Users\Jeanp\Desktop\PERSONAL\Proyecto Integrador 2\Sistema-Clinica-Angry)
+2025-07-17 03:32:28.469 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-07-17 03:32:37.375 INFO  - Started SistemaApplicationTests in 9.413 seconds (process running for 11.723)
+2025-07-17 03:32:37.397 INFO  - Iniciando carga de datos de especialidades, medicos, pacientes y horarios...
+2025-07-17 03:32:37.398 INFO  - Procesando 15 especialidades...
+2025-07-17 03:32:37.737 INFO  - Especialidades procesadas.
+2025-07-17 03:32:37.738 INFO  - Procesando 45 medicos...
+2025-07-17 03:32:37.920 INFO  - Medicos procesados. Nuevos medicos creados: 0
+2025-07-17 03:32:37.920 INFO  - Iniciando carga de datos de pacientes...
+2025-07-17 03:32:37.948 INFO  - Paciente con DNI '71632364' o correo 'chipa.robladillo@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 03:32:37.957 INFO  - Paciente con DNI '71631245' o correo 'ariana.davila@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 03:32:37.964 INFO  - Paciente con DNI '71645689' o correo 'jeremy.rojas@gmail.com' ya existe. Omitiendo creacion.
+2025-07-17 03:32:37.964 INFO  - Pacientes procesados. Nuevos pacientes creados: 0
+2025-07-17 03:32:37.965 INFO  - Procesando horarios del 2025-07-15 al 2026-12-31 para cada medico...
+2025-07-17 03:32:38.460 INFO  - Se encontraron 72225 horarios existentes (mayor o igual a 100). Asumiendo que los horarios ya estan cargados y omitiendo la creacion detallada.
+2025-07-17 03:32:38.461 INFO  - Carga de datos iniciales completada.

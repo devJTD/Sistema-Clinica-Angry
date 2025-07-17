@@ -2,7 +2,6 @@ package com.clinica.sistema.Controlador;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.slf4j.MDC;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -26,10 +25,6 @@ public class AuthControlador {
     private final AuthServicio authServicio;
 
     private final Logger logger = LoggerFactory.getLogger(AuthControlador.class); 
-
-    private static final String MDC_USER_FULL_NAME = "userFullName";
-    private static final String MDC_USER_ID = "userId";
-    private static final String MDC_USER_DNI = "userDni";
 
     public AuthControlador(AuthServicio authServicio) {
         this.authServicio = authServicio;
@@ -68,25 +63,6 @@ public class AuthControlador {
             return "login";
         }
 
-        // Aquí es donde debería ir tu lógica de autenticación real.
-        // Si el login es exitoso y obtienes un objeto Paciente autenticado,
-        // establece la información en el MDC en ese punto.
-
-        // Ejemplo de cómo se establecería el MDC *si* la autenticación fuera exitosa y tuvieras un objeto Paciente:
-        // Paciente pacienteAutenticado = authServicio.autenticarUsuario(correo, contraseña); 
-        // if (pacienteAutenticado != null) {
-        //     MDC.put(MDC_USER_FULL_NAME, pacienteAutenticado.getNombre() + " " + pacienteAutenticado.getApellido());
-        //     MDC.put(MDC_USER_ID, String.valueOf(pacienteAutenticado.getId()));
-        //     MDC.put(MDC_USER_DNI, pacienteAutenticado.getDni());
-        //     logger.info("El usuario {} (ID: {}, DNI: {}) ha iniciado sesión exitosamente.", 
-        //                  MDC.get(MDC_USER_FULL_NAME), MDC.get(MDC_USER_ID), MDC.get(MDC_USER_DNI));
-        //     return "redirect:/dashboard"; 
-        // } else {
-        //     logger.warn("Fallo de login: Credenciales incorrectas para el correo: '{}'", correo);
-        //     model.addAttribute("error", "Usuario o contrasena incorrectos.");
-        //     return "login";
-        // }
-
         logger.warn("Fallo de login: Validaciones de formato y nulidad pasadas, pero autenticacion no implementada aun. Correo: '{}'", correo);
         model.addAttribute("error", "Usuario o contrasena incorrectos.");
         return "login";
@@ -94,18 +70,6 @@ public class AuthControlador {
 
     @PostMapping("/logout")
     public String cerrarSesion() {
-        String userFullName = MDC.get(MDC_USER_FULL_NAME);
-        String userId = MDC.get(MDC_USER_ID);
-        String userDni = MDC.get(MDC_USER_DNI);
-
-        MDC.remove(MDC_USER_FULL_NAME);
-        MDC.remove(MDC_USER_ID);
-        MDC.remove(MDC_USER_DNI);
-
-        logger.info("El usuario {} (ID: {}, DNI: {}) ha cerrado sesion.", 
-                    userFullName != null ? userFullName : "Desconocido", 
-                    userId != null ? userId : "N/A",
-                    userDni != null ? userDni : "N/A"); 
         return "redirect:/login?logout"; 
     }
 
