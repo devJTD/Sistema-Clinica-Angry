@@ -32,7 +32,7 @@ public class SeguridadConfiguracion {
         http
             .authorizeHttpRequests(authorize -> authorize
                 // Permite acceso sin autenticación a estas rutas y recursos estáticos.
-                .requestMatchers("/login", "/registro", "/", "/css/**", "/js/**", "/images/**").permitAll()
+                .requestMatchers("/login", "/registro", "/css/**", "/js/**", "/images/**").permitAll()
                 // Cualquier otra petición debe ser autenticada.
                 .anyRequest().authenticated()
             )

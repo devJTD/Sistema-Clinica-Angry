@@ -85,11 +85,30 @@ document.addEventListener("DOMContentLoaded", () => {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             const data = await response.json();
-            
-            if (data && data.length > 0) {
-                data.forEach((horario) => {
+
+            // Obtener la fecha y hora actual
+            const now = new Date();
+            const todayDateString = getTodayDate(); // Reutiliza la función que ya tienes
+
+            // Si la fecha seleccionada es hoy, filtra los horarios pasados
+            const isToday = fechaCita === todayDateString;
+
+            const availableHorarios = data.filter((horario) => {
+                if (isToday) {
+                    // Combina la fecha actual con la hora del horario para crear un objeto Date completo
+                    const [hour, minute] = horario.hora.split(':').map(Number);
+                    const horarioDateTime = new Date(now.getFullYear(), now.getMonth(), now.getDate(), hour, minute);
+
+                    // Compara con la hora actual. Añade un pequeño margen (ej. 1 minuto) para evitar problemas con segundos exactos.
+                    return horarioDateTime > now;
+                }
+                return true; // Si no es hoy, todos los horarios son válidos
+            });
+
+            if (availableHorarios && availableHorarios.length > 0) {
+                availableHorarios.forEach((horario) => {
                     const option = document.createElement("option");
-                    option.value = horario.hora; // Asumiendo que el objeto horario tiene un campo 'hora'
+                    option.value = horario.hora;
                     option.textContent = horario.hora;
                     horaSelect.appendChild(option);
                 });
@@ -102,6 +121,7 @@ document.addEventListener("DOMContentLoaded", () => {
             alert("No se pudieron cargar los horarios disponibles. Por favor, intenta de nuevo.");
         }
     };
+
 
     // Event Listeners
     especialidadSelect.addEventListener("change", () => {
@@ -132,7 +152,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setMinDate(); // Establecer la fecha mínima al cargar la página por primera vez
 
     // Funciones del Modal (estas se mantienen igual)
-    window.mostrarConfirmacion = function() {
+    window.mostrarConfirmacion = function () {
         // Validación básica antes de mostrar el modal
         if (!especialidadSelect.value || !medicoSelect.value || !fechaInput.value || !horaSelect.value) {
             alert("Por favor, completa todos los campos antes de confirmar la cita.");
@@ -141,11 +161,11 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("modalConfirmacion").style.display = "block";
     };
 
-    window.cerrarModal = function() {
+    window.cerrarModal = function () {
         document.getElementById("modalConfirmacion").style.display = "none";
     };
 
-    window.confirmarCita = function() {
+    window.confirmarCita = function () {
         document.querySelector('.reserva-form').submit();
     };
 });
