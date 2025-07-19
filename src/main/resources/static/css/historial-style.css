@@ -1,8 +1,8 @@
 /* =================== VARIABLES DE COLOR =================== */
 :root {
-    --azul-primario: #3498db;       
+    --azul-primario: #3498db;
     --azul-secundario: #2980b9;
-    --verde-suave: #2ecc71;          
+    --verde-suave: #2ecc71;
     --celeste-claro: #ecf0f1;
     --texto-oscuro: #34495e;
     --texto-claro: #7f8c8d;
@@ -18,6 +18,13 @@ body {
     background-color: var(--fondo-gris);
     color: var(--texto-oscuro);
     line-height: 1.6;
+    /* Ensure consistent box model across all elements */
+    box-sizing: border-box; 
+}
+
+/* Apply box-sizing to all elements for predictable sizing */
+*, *::before, *::after {
+    box-sizing: inherit;
 }
 
 .contenedor {
@@ -61,21 +68,21 @@ button:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
 }
 
 .espacio-logo {
-    display: flex; 
+    display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 5px;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 .logo {
     max-width: 100%;
     max-height: 70px; /* Aumentado el tamaño */
-    object-fit: contain; 
+    object-fit: contain;
     display: block;
 }
 
@@ -141,9 +148,11 @@ button:hover {
 /* =================== CONTENEDOR PRINCIPAL =================== */
 .container {
     background: var(--blanco);
-    width: 90%;
+    /* Changed width to 95% for better full-screen mobile fit, but retain max-width */
+    width: 95%; 
     max-width: 900px;
-    margin: 40px auto 60px;
+    /* Use simpler auto margins for horizontal centering, relying on width for spacing */
+    margin: 40px auto 60px auto; 
     padding: 30px;
     border-radius: 16px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -171,7 +180,7 @@ h2::after {
     border-radius: 2px;
 }
 
-/* =================== LEYENDA =================== */
+/* =================== LEYENDA (Not present in original, added for completeness if needed) =================== */
 .legend {
     display: flex;
     justify-content: center;
@@ -203,12 +212,36 @@ h2::after {
     background-color: #e53935;
 }
 
+/* =================== EXPORT BUTTON =================== */
+.excel-export-button {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.btn-exportar {
+    background-color: #28a745; /* Green color for Excel */
+    color: var(--blanco);
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: 500;
+    display: inline-flex; /* Align icon and text */
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-exportar:hover {
+    background-color: #218838;
+}
+
 /* =================== TABS =================== */
 .tabs {
     display: flex;
     margin-bottom: 25px;
     border-bottom: 2px solid var(--celeste-claro);
     justify-content: center;
+    flex-wrap: wrap; /* Allow tabs to wrap on smaller screens */
+    gap: 10px; /* Space between tabs when wrapped */
 }
 
 .tab {
@@ -222,13 +255,13 @@ h2::after {
     color: var(--texto-oscuro);
     transition: border-bottom 0.3s ease, color 0.3s ease;
     border-bottom: 3px solid transparent;
-    margin: 0 8px;
+    margin: 0; /* Remove horizontal margin as gap handles spacing */
 }
 
 .tab:hover {
     color: var(--azul-primario);
     border-bottom-color: var(--azul-primario);
-    background-color: transparent; /* No cambiar fondo */
+    background-color: transparent;
 }
 
 .tab.active {
@@ -254,6 +287,7 @@ h2::after {
     padding: 30px 10px;
 }
 
+/* =================== LISTA DE CITAS =================== */
 .lista-citas {
     display: flex;
     flex-direction: column;
@@ -269,24 +303,184 @@ h2::after {
     border: 1px solid #ccc;
     border-radius: 8px;
     background-color: #f9f9f9;
+    flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Subtle shadow for each card */
+}
+
+.info-cita {
+    flex-grow: 1; /* Allow info section to take available space */
+    flex-basis: 70%; 
 }
 
 .info-cita p {
     margin: 0.2rem 0;
     font-size: 0.95rem;
+    color: var(--texto-oscuro);
+}
+
+.info-cita p strong {
+    color: var(--azul-secundario); /* Highlight labels */
+}
+
+.acciones-cita {
+    flex-shrink: 0; /* Prevent actions from shrinking */
+    margin-left: 15px; /* Space between info and actions */
+    text-align: right;
+    flex-basis: auto; 
 }
 
 .btn-cancelar {
     background-color: #d9534f;
     border: none;
     color: white;
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1.2rem; /* Slightly more padding */
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
     transition: background-color 0.3s ease;
+    font-size: 0.9em;
 }
 
 .btn-cancelar:hover {
     background-color: #c9302c;
+}
+
+.icono-completado {
+    color: var(--verde-suave);
+    font-size: 1.8em; /* Larger icon for completed status */
+    margin-left: 10px;
+}
+
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-size: 0.95em;
+}
+
+.alert-danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+
+/* =================== RESPONSIVE =================== */
+@media (max-width: 768px) {
+    .contenido-encabezado {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .navegacion-principal ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .navegacion-principal ul li {
+        margin-left: 0;
+    }
+
+    .informacion-usuario {
+        margin-top: 15px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .container {
+        /* Adjusted width to be 95% with 10px horizontal margin */
+        width: calc(100% - 30px); /* 100% minus 15px on each side */
+        margin: 20px auto 40px auto; /* Keep auto for horizontal centering */
+        padding: 25px 20px;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    .tabs {
+        flex-direction: column; /* Stack tabs vertically */
+        align-items: stretch; /* Make them full width */
+        gap: 5px; /* Smaller gap when stacked */
+        border-bottom: none; /* Remove bottom border for stacked tabs */
+    }
+
+    .tab {
+        border-bottom: 2px solid var(--celeste-claro); /* Add individual borders */
+        margin: 0;
+        padding: 10px 15px;
+        font-size: 1em;
+    }
+
+    .tab.active {
+        border-bottom-color: var(--azul-primario);
+    }
+
+    .excel-export-button {
+        text-align: center; /* Center export button on mobile */
+        margin-bottom: 25px;
+    }
+
+    .cita-contenedor {
+        flex-direction: column; /* Stack info and actions vertically */
+        align-items: flex-start; /* Align text to the start */
+        gap: 10px; /* Space between stacked elements */
+        padding: 15px; /* Slightly more padding for cards */
+    }
+
+    .info-cita {
+        width: 100%; /* Take full width */
+        margin-bottom: 10px; /* Space before actions */
+    }
+
+    .acciones-cita {
+        width: 100%; /* Take full width */
+        text-align: center; /* Center actions */
+        margin-left: 0; /* Remove left margin */
+    }
+
+    .btn-cancelar {
+        width: 100%; /* Full width button */
+        padding: 10px; /* Adjust padding */
+        font-size: 1em;
+    }
+    
+    .icono-completado {
+        display: block; /* Ensure it takes its own line if it clashes */
+        margin: 10px auto 0; /* Center it below text */
+        font-size: 2em; /* Make it more prominent */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        /* Even narrower for very small screens, 10px on each side */
+        width: calc(100% - 20px); 
+        padding: 20px 15px; /* Reduce padding slightly */
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+
+    .btn-exportar {
+        padding: 8px 12px;
+        font-size: 0.9em;
+    }
+
+    .info-cita p {
+        font-size: 0.9rem;
+    }
+
+    .icono-completado {
+        font-size: 1.8em; /* Adjusted for very small screens */
+    }
+    
+    .btn-cancelar {
+        width: 100%;
+        margin-top: 5px; /* Add a little space if stacked */
+    }
 }

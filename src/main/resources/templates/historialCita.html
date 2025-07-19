@@ -63,14 +63,17 @@
                 <div th:each="cita : ${citasPendientes}" class="cita-contenedor">
                     <div class="info-cita">
                         <p><strong>ID de Cita:</strong> <span th:text="${cita.id}"></span></p>
-                        <p><strong>Fecha:</strong> <span th:text="${#temporals.format(cita.fecha, 'dd/MM/yyyy')}"></span></p>
+                        <p><strong>Fecha:</strong> <span
+                                th:text="${#temporals.format(cita.fecha, 'dd/MM/yyyy')}"></span></p>
                         <p><strong>Hora:</strong> <span th:text="${#temporals.format(cita.hora, 'HH:mm')}"></span></p>
-                        <p><strong>Médico:</strong> Dr. <span th:text="${cita.medico.nombre + ' ' + cita.medico.apellido}"></span></p>
+                        <p><strong>Médico:</strong> Dr. <span
+                                th:text="${cita.medico.nombre + ' ' + cita.medico.apellido}"></span></p>
                         <p><strong>Especialidad:</strong> <span th:text="${cita.medico.especialidad.nombre}"></span></p>
                         <p><strong>Estado:</strong> <span th:text="${cita.estado}"></span></p>
                     </div>
                     <div class="acciones-cita">
-                        <button class="btn-cancelar" th:onclick="'cancelarCita(' + ${cita.id} + ')'">Cancelar Cita</button>
+                        <button class="btn-cancelar" th:onclick="'cancelarCita(' + ${cita.id} + ')'">Cancelar
+                            Cita</button>
                     </div>
                 </div>
             </div>
@@ -87,15 +90,18 @@
                 <div th:each="cita : ${historialCitas}" class="cita-contenedor">
                     <div class="info-cita">
                         <p><strong>ID de Cita:</strong> <span th:text="${cita.id}"></span></p>
-                        <p><strong>Fecha:</strong> <span th:text="${#temporals.format(cita.fecha, 'dd/MM/yyyy')}"></span></p>
+                        <p><strong>Fecha:</strong> <span
+                                th:text="${#temporals.format(cita.fecha, 'dd/MM/yyyy')}"></span></p>
                         <p><strong>Hora:</strong> <span th:text="${#temporals.format(cita.hora, 'HH:mm')}"></span></p>
-                        <p><strong>Médico:</strong> Dr. <span th:text="${cita.medico.nombre + ' ' + cita.medico.apellido}"></span></p>
+                        <p><strong>Médico:</strong> Dr. <span
+                                th:text="${cita.medico.nombre + ' ' + cita.medico.apellido}"></span></p>
                         <p><strong>Especialidad:</strong> <span th:text="${cita.medico.especialidad.nombre}"></span></p>
                         <p><strong>Estado:</strong> <span th:text="${cita.estado}"></span></p>
                     </div>
                     <div class="acciones-cita">
-                        <span th:if="${cita.estado == 'Completada'}"><i class="fas fa-check-circle icono-completado"></i></span>
-                        </div>
+                        <span th:if="${cita.estado == 'Completada'}"><i
+                                class="fas fa-check-circle icono-completado"></i></span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -134,7 +140,7 @@
 
         function cancelarCita(id) {
             if (confirm("¿Estás segura que deseas cancelar esta cita?")) {
-                fetch(`/cancelar-cita?id=${id}`, {
+                fetch(`/sistema-0.0.1-SNAPSHOT/cancelar-cita?id=${id}`, {
                     method: 'POST'
                 }).then(response => {
                     if (response.ok) {
