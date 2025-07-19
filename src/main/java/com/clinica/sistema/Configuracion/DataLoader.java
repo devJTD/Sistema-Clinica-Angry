@@ -240,7 +240,7 @@ public class DataLoader implements CommandLineRunner {
         logger.info("Pacientes procesados. Nuevos pacientes creados: {}", pacientesNuevosCount);
 
         LocalDate startDate = LocalDate.of(2025, 7, 15);
-        LocalDate endDate = LocalDate.of(2026, 12, 31);
+        LocalDate endDate = LocalDate.of(2025, 8, 15);
         List<LocalTime> horasDisponibles = Arrays.asList(
                 LocalTime.of(9, 0),
                 LocalTime.of(11, 0),
