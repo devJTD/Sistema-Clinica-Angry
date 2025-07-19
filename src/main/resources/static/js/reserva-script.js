@@ -4,17 +4,31 @@ document.addEventListener("DOMContentLoaded", () => {
     const fechaInput = document.getElementById("fechaCita");
     const horaSelect = document.getElementById("horaCita");
 
-    // Clear previous options and disable initially
+    // Función para obtener la fecha actual en formato YYYY-MM-DD
+    const getTodayDate = () => {
+        const today = new Date();
+        const year = today.getFullYear();
+        const month = String(today.getMonth() + 1).padStart(2, '0'); // Meses son 0-11
+        const day = String(today.getDate()).padStart(2, '0');
+        return `${year}-${month}-${day}`;
+    };
+
+    // Establece la fecha mínima para el campo de fecha
+    const setMinDate = () => {
+        fechaInput.min = getTodayDate();
+    };
+
+    // Limpiar opciones previas y deshabilitar inicialmente
     function resetMedicoFechaHora() {
         medicoSelect.innerHTML = '<option value="">Selecciona un médico</option>';
         medicoSelect.disabled = true;
         fechaInput.disabled = true;
-        fechaInput.value = ''; // Clear date
+        fechaInput.value = '';
         horaSelect.innerHTML = '<option value="">Selecciona una hora</option>';
         horaSelect.disabled = true;
     }
 
-    // Function to load specialties
+    // Función para cargar especialidades
     const loadEspecialidades = async () => {
         try {
             const response = await fetch("/api/especialidades");
@@ -30,14 +44,13 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         } catch (error) {
             console.error("Error al cargar especialidades:", error);
-            // Optionally, display an error message to the user
             alert("No se pudieron cargar las especialidades. Por favor, intenta de nuevo más tarde.");
         }
     };
 
-    // Function to load doctors based on specialty
+    // Función para cargar médicos según la especialidad
     const loadMedicos = async (idEspecialidad) => {
-        resetMedicoFechaHora(); // Reset lower fields when specialty changes
+        resetMedicoFechaHora(); // Resetear campos inferiores cuando la especialidad cambia
         if (!idEspecialidad) return;
 
         try {
@@ -49,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
             data.forEach((med) => {
                 const option = document.createElement("option");
                 option.value = med.id;
-                option.textContent = `${med.nombre} ${med.apellido}`; // Assuming medico has nombre and apellido
+                option.textContent = `${med.nombre} ${med.apellido}`; // Asumiendo que el médico tiene nombre y apellido
                 medicoSelect.appendChild(option);
             });
             medicoSelect.disabled = false;
@@ -59,10 +72,10 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    // Function to load available hours based on doctor and date
+    // Función para cargar horarios disponibles según el médico y la fecha
     const loadHorarios = async (idMedico, fechaCita) => {
-        horaSelect.innerHTML = '<option value="">Selecciona una hora</option>'; // Clear current hours
-        horaSelect.disabled = true; // Disable until loaded
+        horaSelect.innerHTML = '<option value="">Selecciona una hora</option>'; // Limpiar horas actuales
+        horaSelect.disabled = true; // Deshabilitar hasta que se carguen
 
         if (!idMedico || !fechaCita) return;
 
@@ -72,11 +85,30 @@ document.addEventListener("DOMContentLoaded", () => {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             const data = await response.json();
-            
-            if (data && data.length > 0) {
-                data.forEach((horario) => {
+
+            // Obtener la fecha y hora actual
+            const now = new Date();
+            const todayDateString = getTodayDate(); // Reutiliza la función que ya tienes
+
+            // Si la fecha seleccionada es hoy, filtra los horarios pasados
+            const isToday = fechaCita === todayDateString;
+
+            const availableHorarios = data.filter((horario) => {
+                if (isToday) {
+                    // Combina la fecha actual con la hora del horario para crear un objeto Date completo
+                    const [hour, minute] = horario.hora.split(':').map(Number);
+                    const horarioDateTime = new Date(now.getFullYear(), now.getMonth(), now.getDate(), hour, minute);
+
+                    // Compara con la hora actual. Añade un pequeño margen (ej. 1 minuto) para evitar problemas con segundos exactos.
+                    return horarioDateTime > now;
+                }
+                return true; // Si no es hoy, todos los horarios son válidos
+            });
+
+            if (availableHorarios && availableHorarios.length > 0) {
+                availableHorarios.forEach((horario) => {
                     const option = document.createElement("option");
-                    option.value = horario.hora; // Assuming horario object has a 'hora' field
+                    option.value = horario.hora;
                     option.textContent = horario.hora;
                     horaSelect.appendChild(option);
                 });
@@ -90,6 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
+
     // Event Listeners
     especialidadSelect.addEventListener("change", () => {
         const idEspecialidad = especialidadSelect.value;
@@ -97,11 +130,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     medicoSelect.addEventListener("change", () => {
-        // Only enable date if a doctor is selected
+        // Solo habilitar la fecha si se selecciona un médico
         fechaInput.disabled = !medicoSelect.value;
-        fechaInput.value = ''; // Clear date when doctor changes
+        fechaInput.value = ''; // Limpiar fecha cuando el médico cambia
         horaSelect.innerHTML = '<option value="">Selecciona una hora</option>';
         horaSelect.disabled = true;
+        // Establecer la fecha mínima cuando el campo se habilita
+        if (!fechaInput.disabled) {
+            setMinDate();
+        }
     });
 
     fechaInput.addEventListener("change", () => {
@@ -110,12 +147,13 @@ document.addEventListener("DOMContentLoaded", () => {
         loadHorarios(idMedico, fechaSeleccionada);
     });
 
-    // Initial load
-    loadEspecialidades(); // Load specialties when the page loads
+    // Carga inicial
+    loadEspecialidades(); // Cargar especialidades cuando la página carga
+    setMinDate(); // Establecer la fecha mínima al cargar la página por primera vez
 
-    // Modal functions (these remain the same)
-    window.mostrarConfirmacion = function() {
-        // Basic validation before showing modal
+    // Funciones del Modal (estas se mantienen igual)
+    window.mostrarConfirmacion = function () {
+        // Validación básica antes de mostrar el modal
         if (!especialidadSelect.value || !medicoSelect.value || !fechaInput.value || !horaSelect.value) {
             alert("Por favor, completa todos los campos antes de confirmar la cita.");
             return;
@@ -123,11 +161,11 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("modalConfirmacion").style.display = "block";
     };
 
-    window.cerrarModal = function() {
+    window.cerrarModal = function () {
         document.getElementById("modalConfirmacion").style.display = "none";
     };
 
-    window.confirmarCita = function() {
+    window.confirmarCita = function () {
         document.querySelector('.reserva-form').submit();
     };
 });

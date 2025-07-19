@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Historial de Citas - Clínica</title>
+    <title>Historial de citas - Clínica Angry</title>
 
     <link th:href="@{/css/historial-style.css}" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
@@ -38,42 +38,36 @@
     <div class="container">
         <h2>Historial de Citas</h2>
 
+        <div th:if="${error}" class="alert alert-danger" role="alert">
+            <p th:text="${error}"></p>
+        </div>
+
         <div class="excel-export-button">
             <a th:href="@{/historial/exportar/excel}" class="btn btn-exportar">
                 <i class="fas fa-file-excel"></i> Exportar a Excel
             </a>
         </div>
 
-        <div class="legend">
-            <div class="legend-item">
-                <span class="legend-color color-procedimiento"></span>
-                Procedimiento
-            </div>
-            <div class="legend-item">
-                <span class="legend-color color-cita"></span>
-                Cita Médica
-            </div>
-        </div>
-
         <div class="tabs">
-            <button class="tab active" onclick="mostrarSeccion('programadas')">Programadas</button>
-            <button class="tab" onclick="mostrarSeccion('historial')">Historial</button>
+            <button class="tab active" onclick="mostrarSeccion('programadas')">Citas Programadas</button>
+            <button class="tab" onclick="mostrarSeccion('historial')">Historial de Citas</button>
         </div>
 
         <div id="programadas" class="seccion">
-
+            <h3>Citas Programadas (Pendientes)</h3>
             <div th:if="${#lists.isEmpty(citasPendientes)}" class="empty-state">
-                No hay citas programadas aún.
+                No tienes citas programadas pendientes.
             </div>
 
-            <div th:if="${!#lists.isEmpty(citasPendientes)}" class="lista-citas">
+            <div th:unless="${#lists.isEmpty(citasPendientes)}" class="lista-citas">
                 <div th:each="cita : ${citasPendientes}" class="cita-contenedor">
                     <div class="info-cita">
-                        <p><strong>ID:</strong> <span th:text="${cita.id}">1</span></p>
-                        <p><strong>Fecha:</strong> <span th:text="${cita.fecha}">2025-06-05</span></p>
-                        <p><strong>Hora:</strong> <span th:text="${cita.hora}">10:00</span></p>
-                        <p><strong>Médico:</strong> <span th:text="${cita.medico.id}">105</span>
-                        </p>
+                        <p><strong>ID de Cita:</strong> <span th:text="${cita.id}"></span></p>
+                        <p><strong>Fecha:</strong> <span th:text="${#temporals.format(cita.fecha, 'dd/MM/yyyy')}"></span></p>
+                        <p><strong>Hora:</strong> <span th:text="${#temporals.format(cita.hora, 'HH:mm')}"></span></p>
+                        <p><strong>Médico:</strong> Dr. <span th:text="${cita.medico.nombre + ' ' + cita.medico.apellido}"></span></p>
+                        <p><strong>Especialidad:</strong> <span th:text="${cita.medico.especialidad.nombre}"></span></p>
+                        <p><strong>Estado:</strong> <span th:text="${cita.estado}"></span></p>
                     </div>
                     <div class="acciones-cita">
                         <button class="btn-cancelar" th:onclick="'cancelarCita(' + ${cita.id} + ')'">Cancelar Cita</button>
@@ -84,8 +78,25 @@
 
 
         <div id="historial" class="seccion oculto">
-            <div class="empty-state">
-                No hay citas anteriores por el momento.
+            <h3>Historial de Citas (Completadas o Canceladas)</h3>
+            <div th:if="${#lists.isEmpty(historialCitas)}" class="empty-state">
+                No hay citas en tu historial aún.
+            </div>
+
+            <div th:unless="${#lists.isEmpty(historialCitas)}" class="lista-citas">
+                <div th:each="cita : ${historialCitas}" class="cita-contenedor">
+                    <div class="info-cita">
+                        <p><strong>ID de Cita:</strong> <span th:text="${cita.id}"></span></p>
+                        <p><strong>Fecha:</strong> <span th:text="${#temporals.format(cita.fecha, 'dd/MM/yyyy')}"></span></p>
+                        <p><strong>Hora:</strong> <span th:text="${#temporals.format(cita.hora, 'HH:mm')}"></span></p>
+                        <p><strong>Médico:</strong> Dr. <span th:text="${cita.medico.nombre + ' ' + cita.medico.apellido}"></span></p>
+                        <p><strong>Especialidad:</strong> <span th:text="${cita.medico.especialidad.nombre}"></span></p>
+                        <p><strong>Estado:</strong> <span th:text="${cita.estado}"></span></p>
+                    </div>
+                    <div class="acciones-cita">
+                        <span th:if="${cita.estado == 'Completada'}"><i class="fas fa-check-circle icono-completado"></i></span>
+                        </div>
+                </div>
             </div>
         </div>
     </div>
@@ -107,8 +118,15 @@
 
             // Añade la clase 'active' a la pestaña clicada
             const pestañaActiva = Array.from(document.querySelectorAll('.tab')).find(tab => {
-                return tab.textContent.trim().toLowerCase() === idSeccion.toLowerCase();
+                const buttonText = tab.textContent.trim().toLowerCase();
+                if (idSeccion === 'programadas') {
+                    return buttonText.includes('programadas');
+                } else if (idSeccion === 'historial') {
+                    return buttonText.includes('historial');
+                }
+                return false;
             });
+
             if (pestañaActiva) {
                 pestañaActiva.classList.add('active');
             }
@@ -123,8 +141,15 @@
                         alert("Cita cancelada exitosamente");
                         location.reload(); // recarga para actualizar
                     } else {
-                        alert("Hubo un error al cancelar la cita");
+                        response.text().then(errorMessage => {
+                            alert("Hubo un error al cancelar la cita: " + errorMessage);
+                        }).catch(() => {
+                            alert("Hubo un error desconocido al cancelar la cita.");
+                        });
                     }
+                }).catch(error => {
+                    console.error('Error en la solicitud:', error);
+                    alert("No se pudo conectar con el servidor para cancelar la cita.");
                 });
             }
         }

@@ -3,24 +3,40 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Iniciar Sesión</title>
+    <title>Iniciar Sesión - Clínica Angry</title>
     <link rel="stylesheet" th:href="@{/css/login-style.css}" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Estilos básicos para el mensaje de error de validación de JS */
+        .client-validation-error {
+            color: #d8000c;
+            background-color: #fdd;
+            border: 1px solid #d8000c;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 15px;
+            font-size: 0.9em;
+            display: none; /* Oculto por defecto */
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <div class="login-container">
         <h1>Iniciar Sesión</h1>
-        <form id="loginForm" th:action="@{/login}" method="post">
+        <form id="loginForm" th:action="@{/login}" method="post" novalidate>
             <div class="input-group">
                 <i class="fas fa-envelope"></i>
-                <input type="email" name="correo" placeholder="Correo Electrónico" />
+                <input type="email" id="correoInput" name="correo" placeholder="Correo Electrónico" required />
             </div>
             <div class="input-group">
                 <i class="fas fa-lock"></i>
-                <input type="password" name="contraseña" placeholder="Contraseña"  />
+                <input type="password" id="contraseñaInput" name="contraseña" placeholder="Contraseña" required />
             </div>
             <button type="submit" class="btn">Iniciar Sesión</button>
         </form>
+
+        <div id="clientErrorMessages" class="client-validation-error"></div>
 
         <div class="message-container error-message" th:if="${param.error}">Usuario o contraseña incorrectos.</div>
         <div class="message-container success-message" th:if="${param.logout}">Has cerrado sesión exitosamente.</div>
@@ -30,5 +46,46 @@
             <a th:href="@{/registro}">¿No tienes cuenta? Regístrate aquí</a>
         </div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginForm = document.getElementById('loginForm');
+            const correoInput = document.getElementById('correoInput');
+            const contraseñaInput = document.getElementById('contraseñaInput');
+            const clientErrorMessages = document.getElementById('clientErrorMessages');
+
+            loginForm.addEventListener('submit', function(event) {
+                let hasErrors = false;
+                let errorMessages = [];
+
+                // Limpiar mensajes de error anteriores
+                clientErrorMessages.textContent = '';
+                clientErrorMessages.style.display = 'none';
+
+                // Validar Correo Electrónico
+                if (!correoInput.value.trim()) {
+                    hasErrors = true;
+                    errorMessages.push('El correo electrónico no puede estar vacío.');
+                } else if (!correoInput.checkValidity()) {
+                    hasErrors = true;
+                    errorMessages.push('Por favor, ingresa un correo electrónico válido (ej. usuario@dominio.com).');
+                }
+
+                // Validar Contraseña
+                if (!contraseñaInput.value.trim()) {
+                    hasErrors = true;
+                    errorMessages.push('La contraseña no puede estar vacía.');
+                }
+
+                if (hasErrors) {
+                    event.preventDefault(); // Detener el envío del formulario
+                    clientErrorMessages.textContent = errorMessages.join(' '); // Unir todos los mensajes en uno solo
+                    clientErrorMessages.style.display = 'block'; // Mostrar el div de errores
+                }
+                // Si no hay errores, el formulario se enviará y Spring Security lo manejará (si está configurado).
+                // Si no, tu controlador de Spring lo manejará manualmente.
+            });
+        });
+    </script>
 </body>
 </html>
